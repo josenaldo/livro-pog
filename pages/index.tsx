@@ -1,59 +1,58 @@
-import styles from '../styles/Home.module.css'
+import { Box, Container } from "@mui/material";
 
 export default function Home() {
-  return (
-    <div className={styles.container}>
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+    const videoId = "6YlYO8BN7Nk";
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+    return (
+        <Box component="main" sx={{ margin: "0", padding: "0" }}>
+            <Container>
+                <Box
+                    my={4}
+                    sx={{
+                        height: { xs: "90vh", md: "100%" },
+                        width: "100%",
+                        display: "flex",
+                        justifyContent: "flex-start",
+                        itemsAlign: "flex-start",
+                        flexDirection: { xs: "column", md: "row" },
+                        gap: 2,
+                    }}
+                >
+                    <Box
+                        sx={{
+                            position: "relative",
+                            pb: "56.25%",
+                            height: "0",
+                            display: "flex",
+                            width: "100%",
+                        }}
+                    >
+                        <Box
+                            component="iframe"
+                            className="ratio ratio-16x9 "
+                            frameBorder="0"
+                            src={`https://www.youtube.com/embed/${videoId}`}
+                            allow="autoplay;"
+                            sx={{
+                                position: "absolute",
+                                top: "0",
+                                left: "0",
+                                width: "100%",
+                                height: "100%",
+                            }}
+                        ></Box>
+                    </Box>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+                    <Box
+                        component="iframe"
+                        src={`https://www.youtube.com/live_chat?v=${videoId}&embed_domain=localhost`}
+                        frameBorder="0"
+                        sx={{
+                            flexGrow: "1",
+                        }}
+                    />
+                </Box>
+            </Container>
+        </Box>
+    );
 }
