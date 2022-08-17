@@ -57,8 +57,8 @@ const Home = () => {
                     display: 'flex',
                 }}
             >
-                <Button variant="contained" color="primary">
-                    Primary
+                <Button variant="contained" color="primary" href="/teste">
+                    Teste
                 </Button>
                 <Button variant="contained" color="secondary">
                     Secondary

@@ -1,0 +1,1 @@
+export { SeoConfig } from './SeoConfig'

@@ -13,6 +13,7 @@
     "@mui/material": "^5.10.1",
     "next": "latest",
     "next-pwa": "5.5.4",
+    "next-seo": "^5.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
