@@ -1,4 +1,4 @@
-import { Box, Container } from '@mui/material'
+import { Box, Container, Button } from '@mui/material'
 
 const Home = () => {
     const videoId = 'FP9I_07p2dY'
@@ -50,6 +50,31 @@ const Home = () => {
                         flexGrow: '1',
                     }}
                 />
+            </Box>
+            <Box
+                sx={{
+                    gap: 2,
+                    display: 'flex',
+                }}
+            >
+                <Button variant="contained" color="primary">
+                    Primary
+                </Button>
+                <Button variant="contained" color="secondary">
+                    Secondary
+                </Button>
+                <Button variant="contained" color="success">
+                    Success
+                </Button>
+                <Button variant="contained" color="info">
+                    info
+                </Button>
+                <Button variant="contained" color="warning">
+                    Warning
+                </Button>
+                <Button variant="contained" color="error">
+                    Error
+                </Button>
             </Box>
         </Container>
     )

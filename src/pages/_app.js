@@ -1,7 +1,9 @@
 import Head from 'next/head'
 import CssBaseline from '@mui/material/CssBaseline'
+import { ThemeProvider } from '@mui/material/styles'
 import { Box } from '@mui/material'
 
+import { Theme } from '@ciro/styles'
 import { Layout } from '@ciro/components'
 
 export default function MyApp({ Component, pageProps }) {
@@ -34,10 +36,10 @@ export default function MyApp({ Component, pageProps }) {
                 <link rel="apple-touch-icon" href="/apple-icon.png"></link>
                 <meta name="theme-color" content="#317EFB" />
             </Head>
-            <Box>
+            <ThemeProvider theme={Theme}>
                 <CssBaseline />
                 <Component {...pageProps} />
-            </Box>
+            </ThemeProvider>
         </Layout>
     )
 }
