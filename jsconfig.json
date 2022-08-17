@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@ciro/*": ["src/*"]
+        }
+    },
+    "exclude": ["node_modules"]
+}

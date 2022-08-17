@@ -1,12 +1,10 @@
-import Head from "next/head";
-import "../styles/globals.css";
-import { AppProps } from "next/app";
-import CssBaseline from "@mui/material/CssBaseline";
-import { Box } from "@mui/material";
+import Head from 'next/head'
+import CssBaseline from '@mui/material/CssBaseline'
+import { Box } from '@mui/material'
 
-import Layout from "../src/components/Layout";
+import { Layout } from '@ciro/components'
 
-export default function MyApp({ Component, pageProps }: AppProps) {
+export default function MyApp({ Component, pageProps }) {
     return (
         <Layout>
             <Head>
@@ -41,5 +39,5 @@ export default function MyApp({ Component, pageProps }: AppProps) {
                 <Component {...pageProps} />
             </Box>
         </Layout>
-    );
+    )
 }

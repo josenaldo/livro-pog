@@ -1,13 +1,15 @@
-import React from "react";
+import React from 'react'
 
-import { Box } from "@mui/material";
+import { Box } from '@mui/material'
 
-export default function Layout({ children }) {
+const Layout = ({ children }) => {
     return (
         <>
             <Box />
             <main>{children}</main>
             <Box />
         </>
-    );
+    )
 }
+
+export { Layout }
