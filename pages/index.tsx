@@ -44,7 +44,7 @@ export default function Home() {
 
                 <Box
                     component="iframe"
-                    src={`https://www.youtube.com/live_chat?v=${videoId}&embed_domain=localhost`}
+                    src={`https://www.youtube.com/live_chat?v=${videoId}&embed_domain=${process.env.NEXT_PUBLIC_EMBED_DOMAIN}`}
                     frameBorder="0"
                     sx={{
                         flexGrow: "1",
