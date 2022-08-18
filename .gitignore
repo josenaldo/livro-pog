@@ -38,3 +38,6 @@ public/sw.js
 public/sw.js.map
 public/workbox-eac1af49.js
 public/workbox-eac1af49.js.map
+
+# VSCode
+.vscode
