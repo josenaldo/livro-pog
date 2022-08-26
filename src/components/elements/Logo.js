@@ -21,7 +21,14 @@ const Logo = () => {
                     width="48px"
                     height="48px"
                 />
-                <Typography fontWeight="bold">POG</Typography>
+                <Typography
+                    fontWeight="bold"
+                    sx={{
+                        display: { xs: 'none', sm: 'flex' },
+                    }}
+                >
+                    POG
+                </Typography>
             </Box>
         </Link>
     )

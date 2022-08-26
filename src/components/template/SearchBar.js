@@ -11,6 +11,7 @@ const SearchBar = () => {
     return (
         <TextField
             id="search"
+            placeholder="Pesquisar"
             sx={{}}
             InputProps={{
                 endAdornment: (

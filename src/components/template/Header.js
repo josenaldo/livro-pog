@@ -11,8 +11,7 @@ const Header = () => {
                 <Toolbar
                     sx={{
                         padding: '0.5rem',
-                        display: 'grid',
-                        gridTemplateColumns: '1fr 1fr 1fr',
+                        display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'space-between',
                     }}
@@ -31,21 +30,12 @@ const Header = () => {
                         sx={{
                             display: 'flex',
                             flexDirection: 'row',
-                            justifyContent: 'center',
+                            justifyContent: 'flex-end',
                             alignItems: 'center',
+                            flexGrow: 1,
                         }}
                     >
                         <SearchBar />
-                    </Box>
-                    <Box
-                        sx={{
-                            display: 'flex',
-                            flexDirection: 'row',
-                            justifyContent: 'flex-end',
-                            alignItems: 'center',
-                        }}
-                    >
-                        <FontSettings />
                     </Box>
                 </Toolbar>
             </AppBar>
