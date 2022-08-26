@@ -1,26 +1,53 @@
-import { AppBar, Box, Button } from '@mui/material'
+import { AppBar, Box, Toolbar } from '@mui/material'
 
 import { Logo } from '@pog/components/elements'
 
-import { Menu, FontSettings } from '@pog/components/template'
+import { Menu, FontSettings, SearchBar } from '@pog/components/template'
 
 const Header = () => {
     return (
         <Box component="header">
-            <AppBar
-                sx={{
-                    padding: '0.5rem',
-                    display: 'flex',
-                    flexDirection: 'row',
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
-                }}
-            >
-                <Logo />
-                <Box>
-                    <FontSettings />
-                    <Menu />
-                </Box>
+            <AppBar position="sticky">
+                <Toolbar
+                    sx={{
+                        padding: '0.5rem',
+                        display: 'grid',
+                        gridTemplateColumns: '1fr 1fr 1fr',
+                        alignItems: 'center',
+                        justifyContent: 'space-between',
+                    }}
+                >
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            flexDirection: 'row',
+                        }}
+                    >
+                        <Menu />
+                        <Logo />
+                    </Box>
+
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            flexDirection: 'row',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                        }}
+                    >
+                        <SearchBar />
+                    </Box>
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            flexDirection: 'row',
+                            justifyContent: 'flex-end',
+                            alignItems: 'center',
+                        }}
+                    >
+                        <FontSettings />
+                    </Box>
+                </Toolbar>
             </AppBar>
         </Box>
     )
