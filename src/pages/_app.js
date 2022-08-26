@@ -3,10 +3,10 @@ import CssBaseline from '@mui/material/CssBaseline'
 import { ThemeProvider } from '@mui/material/styles'
 import { DefaultSeo } from 'next-seo'
 
-import { SeoConfig } from '@ciro/config'
+import { SeoConfig } from '@pog/config'
 
-import { Theme } from '@ciro/styles'
-import { Layout } from '@ciro/components/templates'
+import { Theme } from '@pog/styles'
+import { Layout } from '@pog/components/template'
 
 export default function MyApp({ Component, pageProps }) {
     return (

@@ -34,8 +34,8 @@ const SeoConfig = {
         ],
     },
     twitter: {
-        handle: '@cirogomes',
-        site: '@cirogomes',
+        handle: '@vudureverso',
+        site: '@vudureverso',
         cardType: 'summary_large_image',
     },
 }
