@@ -7,7 +7,11 @@ import { BaseTheme, extendTheme, Palettes } from '@pog/styles'
 const ColorModeContext = React.createContext({})
 
 const ColorModeProvider = ({ children }) => {
-    const [colorMode, setColorMode] = React.useState('dark')
+    const COLOR_MODES = {
+        light: 'light',
+        dark: 'dark',
+    }
+    const [colorMode, setColorMode] = React.useState(COLOR_MODES.dark)
 
     const theme = React.useMemo(() => {
         BaseTheme.palette = Palettes[colorMode]
@@ -17,7 +21,10 @@ const ColorModeProvider = ({ children }) => {
     }, [colorMode])
 
     const toggleColorMode = () => {
-        const newColorMode = colorMode === 'dark' ? 'light' : 'dark'
+        const newColorMode =
+            colorMode === COLOR_MODES.dark
+                ? COLOR_MODES.light
+                : COLOR_MODES.dark
         localStorage.setItem('colorMode', newColorMode)
         setColorMode(newColorMode)
     }
@@ -30,7 +37,9 @@ const ColorModeProvider = ({ children }) => {
     }, [])
 
     return (
-        <ColorModeContext.Provider value={{ colorMode, toggleColorMode }}>
+        <ColorModeContext.Provider
+            value={{ colorMode, toggleColorMode, COLOR_MODES }}
+        >
             <CssBaseline />
 
             <ThemeProvider theme={theme}>{children}</ThemeProvider>

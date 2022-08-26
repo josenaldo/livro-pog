@@ -1,8 +1,10 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Box, Typography } from '@mui/material'
+import { useColorMode } from '@pog/contexts'
 
 const Logo = () => {
+    const { colorMode, COLOR_MODES } = useColorMode()
     return (
         <Link href="/" passHref>
             <Box
@@ -16,7 +18,7 @@ const Logo = () => {
                 }}
             >
                 <Image
-                    src="/images/logo/brand.png"
+                    src={`/images/logo/brand-${colorMode}.png`}
                     alt="Logo do livro Programação Orientada a Gambiarra"
                     width="48px"
                     height="48px"
