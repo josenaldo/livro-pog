@@ -5,10 +5,12 @@ import { DefaultSeo } from 'next-seo'
 
 import { SeoConfig } from '@pog/config'
 
-import { Theme } from '@pog/styles'
+// import { Theme } from '@pog/styles'
+import { ColorModeProvider, useColorMode } from '@pog/contexts'
 import { Layout } from '@pog/components/template'
 
 export default function MyApp({ Component, pageProps }) {
+    const { theme } = useColorMode()
     return (
         <>
             <Head>
@@ -20,12 +22,14 @@ export default function MyApp({ Component, pageProps }) {
                 />
             </Head>
             <DefaultSeo {...SeoConfig} />
-            <ThemeProvider theme={Theme}>
-                <CssBaseline />
+            <ColorModeProvider>
+                {/* <ThemeProvider theme={Theme}> */}
+                {/* <CssBaseline /> */}
                 <Layout>
                     <Component {...pageProps} />
                 </Layout>
-            </ThemeProvider>
+                {/* </ThemeProvider> */}
+            </ColorModeProvider>
         </>
     )
 }

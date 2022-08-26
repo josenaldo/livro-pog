@@ -1,2 +1,2 @@
-export { darkPalette, lightPalette } from './Palettes'
-export { Theme } from './Theme'
+export { Palettes } from './Palettes'
+export { BaseTheme, extendTheme } from './Theme'

@@ -16,10 +16,21 @@ import TextDecreaseIcon from '@mui/icons-material/TextDecrease'
 import TextIncreaseIcon from '@mui/icons-material/TextIncrease'
 import DarkModeIcon from '@mui/icons-material/DarkMode'
 import LightModeIcon from '@mui/icons-material/LightMode'
+import { useTheme } from '@mui/material/styles'
+
+import { darkPalette, lightPalette } from '@pog/styles'
+import { useColorMode } from '@pog/contexts'
 
 const SettingsDialog = ({ open, setOpen }) => {
+    const theme = useTheme()
+    const { colorMode, toggleColorMode } = useColorMode()
+
     const handleClose = () => {
         setOpen(false)
+    }
+
+    const handleChangeTheme = (palette) => {
+        toggleColorMode()
     }
 
     return (
@@ -75,10 +86,20 @@ const SettingsDialog = ({ open, setOpen }) => {
                             aria-label="outlined primary button group"
                             fullWidth
                         >
-                            <Button>
+                            <Button
+                                disabled={colorMode === 'dark'}
+                                onClick={() => {
+                                    handleChangeTheme(darkPalette)
+                                }}
+                            >
                                 <DarkModeIcon />
                             </Button>
-                            <Button>
+                            <Button
+                                disabled={colorMode === 'light'}
+                                onClick={() => {
+                                    handleChangeTheme(lightPalette)
+                                }}
+                            >
                                 <LightModeIcon />
                             </Button>
                         </ButtonGroup>

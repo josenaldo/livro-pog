@@ -1,9 +1,9 @@
 import { createTheme } from '@mui/material/styles'
-import { darkPalette } from '@pog/styles'
+import { Palettes } from '@pog/styles'
 import { grey } from '@mui/material/colors'
 
-const Theme = createTheme({
-    palette: darkPalette,
+const BaseTheme = {
+    palette: Palettes['dark'],
     scroll: {
         '&::-webkit-scrollbar': {
             width: '8px',
@@ -23,38 +23,40 @@ const Theme = createTheme({
             bgcolor: `${grey[500]}`,
         },
     },
-})
-
-Theme.typography.h1 = {
-    fontSize: '2.0rem',
-    [Theme.breakpoints.up('sm')]: {
-        fontSize: '2.25rem',
-    },
-    [Theme.breakpoints.up('md')]: {
-        fontSize: '2.50rem',
-    },
-    [Theme.breakpoints.up('lg')]: {
-        fontSize: '2.75rem',
-    },
-    [Theme.breakpoints.up('xl')]: {
-        fontSize: '3.0rem',
-    },
 }
 
-Theme.typography.h2 = {
-    fontSize: '1.75rem',
-    [Theme.breakpoints.up('sm')]: {
-        fontSize: '2.00rem',
-    },
-    [Theme.breakpoints.up('md')]: {
-        fontSize: '2.25rem',
-    },
-    [Theme.breakpoints.up('lg')]: {
-        fontSize: '2.50rem',
-    },
-    [Theme.breakpoints.up('xl')]: {
-        fontSize: '2.75rem',
-    },
+const extendTheme = (theme) => {
+    theme.typography.h1 = {
+        fontSize: '2.0rem',
+        [theme.breakpoints.up('sm')]: {
+            fontSize: '2.25rem',
+        },
+        [theme.breakpoints.up('md')]: {
+            fontSize: '2.50rem',
+        },
+        [theme.breakpoints.up('lg')]: {
+            fontSize: '2.75rem',
+        },
+        [theme.breakpoints.up('xl')]: {
+            fontSize: '3.0rem',
+        },
+    }
+
+    theme.typography.h2 = {
+        fontSize: '1.75rem',
+        [theme.breakpoints.up('sm')]: {
+            fontSize: '2.00rem',
+        },
+        [theme.breakpoints.up('md')]: {
+            fontSize: '2.25rem',
+        },
+        [theme.breakpoints.up('lg')]: {
+            fontSize: '2.50rem',
+        },
+        [theme.breakpoints.up('xl')]: {
+            fontSize: '2.75rem',
+        },
+    }
 }
 
-export { Theme }
+export { BaseTheme, extendTheme }

@@ -221,4 +221,9 @@ const lightPalette = {
     },
 }
 
-export { darkPalette, lightPalette }
+const Palettes = {
+    dark: darkPalette,
+    light: lightPalette,
+}
+
+export { Palettes }
