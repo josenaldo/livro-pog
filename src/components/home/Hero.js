@@ -9,7 +9,10 @@ const Hero = () => {
             sx={{
                 backgroundColor: 'background.cover',
                 backgroundImage:
-                    'linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8)), url("/images/cover/hero-lg.jpg")',
+                    'linear-gradient(rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.85)), url("/images/cover/hero-hd.jpg")',
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: 'cover',
+                backgroundPosition: 'top',
             }}
         >
             <Container
@@ -50,41 +53,26 @@ const Hero = () => {
                         amostra grátis do seu trabalho!
                     </Typography>
                     <Stack spacing={2} direction="row" width="50%">
-                        <Button
-                            component="Link"
-                            variant="contained"
-                            color="primary"
-                            href="/capitulos"
-                            fullWidth
-                        >
-                            Começar a ler
-                        </Button>
-                        <Button
-                            component="Link"
-                            variant="contained"
-                            color="secondary"
-                            href="/ajude"
-                            fullWidth
-                        >
-                            Ajude esse projeto
-                        </Button>
+                        <Link href="/capitulos">
+                            <Button
+                                variant="contained"
+                                color="primary"
+                                fullWidth
+                            >
+                                Começar a ler
+                            </Button>
+                        </Link>
+                        <Link href="/ajude">
+                            <Button
+                                variant="contained"
+                                color="secondary"
+                                fullWidth
+                            >
+                                Ajude esse projeto
+                            </Button>
+                        </Link>
                     </Stack>
                 </Box>
-                {/* <Box
-                    sx={{
-                        display: { xs: 'none', sm: 'block' },
-                        width: { xs: '100%', sm: '50%' },
-                        position: 'relative',
-                    }}
-                >
-                    <Image
-                        src="/images/cover/hero-lg.jpg"
-                        width="500px"
-                        height="400px"
-                        alt="Programação Orientada a Gambiarra"
-                        layout="responsive"
-                    />
-                </Box> */}
             </Container>
         </Box>
     )
