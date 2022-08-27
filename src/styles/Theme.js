@@ -57,6 +57,24 @@ const extendTheme = (theme) => {
             fontSize: '2.75rem',
         },
     }
+
+    theme.typography.footerH2 = {
+        fontSize: '1rem',
+        fontWeight: 'bold',
+        color: theme.palette.secondary.contrastTextColor.darker,
+        [theme.breakpoints.up('sm')]: {
+            fontSize: '1.10rem',
+        },
+        [theme.breakpoints.up('md')]: {
+            fontSize: '1.15rem',
+        },
+        [theme.breakpoints.up('lg')]: {
+            fontSize: '1.20rem',
+        },
+        [theme.breakpoints.up('xl')]: {
+            fontSize: '1.25rem',
+        },
+    }
 }
 
 export { BaseTheme, extendTheme }

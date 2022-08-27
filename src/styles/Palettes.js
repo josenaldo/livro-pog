@@ -1,4 +1,12 @@
-import { pink, blueGrey, green, blue, orange, red } from '@mui/material/colors'
+import {
+    pink,
+    blueGrey,
+    green,
+    blue,
+    orange,
+    red,
+    grey,
+} from '@mui/material/colors'
 
 const primaryColor = pink
 const secondaryColor = blueGrey
@@ -8,8 +16,8 @@ const infoColor = blue
 const warningColor = orange
 const errorColor = red
 
-const darkTextColor = '#000'
-const lightTextColor = '#fff'
+const darkTextColor = grey[900]
+const lightTextColor = grey[300]
 
 const darkPalette = {
     mode: 'dark',
