@@ -4,6 +4,7 @@ import { grey } from '@mui/material/colors'
 
 const BaseTheme = {
     palette: Palettes['dark'],
+
     scroll: {
         '&::-webkit-scrollbar': {
             width: '8px',
@@ -35,7 +36,7 @@ const extendTheme = (theme) => {
             fontSize: '2.50rem',
         },
         [theme.breakpoints.up('lg')]: {
-            fontSize: '2.75rem',
+            fontSize: '3.0rem',
         },
         [theme.breakpoints.up('xl')]: {
             fontSize: '3.0rem',

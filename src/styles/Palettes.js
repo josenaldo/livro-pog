@@ -19,8 +19,8 @@ const infoColor = blue
 const warningColor = orange
 const errorColor = red
 
-const darkTextColor = primaryColor[900]
-const lightTextColor = primaryColor[50]
+const darkTextColor = 'rgb(0, 0, 0, 0.87)'
+const lightTextColor = '#fff'
 
 const darkPalette = {
     mode: 'dark',
@@ -124,6 +124,11 @@ const darkPalette = {
             dark: darkTextColor,
             darker: lightTextColor,
         },
+    },
+    background: {
+        default: '#121212',
+        paper: '#121212',
+        cover: '#212121',
     },
 }
 
@@ -229,6 +234,11 @@ const lightPalette = {
             dark: darkTextColor,
             darker: lightTextColor,
         },
+    },
+    background: {
+        default: '#fff',
+        paper: '#fff',
+        cover: '#90a4ae',
     },
 }
 

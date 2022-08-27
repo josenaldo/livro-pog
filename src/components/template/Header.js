@@ -1,10 +1,9 @@
 import { AppBar, Box, Toolbar } from '@mui/material'
 
 import { Logo } from '@pog/components/elements'
-
-import { Menu, FontSettings, SearchBar } from '@pog/components/template'
-
+import { Menu, SearchBar } from '@pog/components/template'
 import { useColorMode } from '@pog/contexts'
+
 const Header = () => {
     const { colorMode, COLOR_MODES } = useColorMode()
     return (
@@ -14,7 +13,7 @@ const Header = () => {
                 bgcolor:
                     colorMode === COLOR_MODES.dark
                         ? 'background.paper'
-                        : 'primary.light',
+                        : 'secondary.light',
             }}
         >
             <Toolbar

@@ -25,12 +25,7 @@ const Footer = () => {
                 flexDirection: 'column',
                 alignItems: 'center',
                 pt: 2,
-                backgroundColor:
-                    colorMode === COLOR_MODES.dark
-                        ? 'background.paper'
-                        : 'primary.light',
-                backgroundImage:
-                    'linear-gradient(rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.09))',
+                backgroundColor: 'background.cover',
             }}
         >
             <Container
