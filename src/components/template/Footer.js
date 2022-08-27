@@ -10,8 +10,8 @@ import InstagramIcon from '@mui/icons-material/Instagram'
 
 import { useColorMode } from '@pog/contexts'
 
-const iconColor = 'secondary.contrastTextColor.darker'
-const textColor = 'secondary.contrastTextColor.darker'
+const iconColor = 'text.primary'
+const textColor = 'text.primary'
 
 const Footer = () => {
     const { colorMode, COLOR_MODES } = useColorMode()
@@ -28,7 +28,7 @@ const Footer = () => {
                 backgroundColor:
                     colorMode === COLOR_MODES.dark
                         ? 'background.paper'
-                        : 'secondary.dark',
+                        : 'primary.light',
                 backgroundImage:
                     'linear-gradient(rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.09))',
             }}

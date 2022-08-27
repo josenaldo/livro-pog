@@ -24,6 +24,7 @@ const Logo = () => {
                     height="48px"
                 />
                 <Typography
+                    color="text.primary"
                     fontWeight="bold"
                     sx={{
                         display: { xs: 'none', sm: 'flex' },

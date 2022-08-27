@@ -62,7 +62,7 @@ const extendTheme = (theme) => {
         fontSize: '1rem',
         fontWeight: 'bold',
         textAlign: 'center',
-        color: theme.palette.secondary.contrastTextColor.darker,
+        // color: theme.palette.secondary.contrastTextColor.darker,
         [theme.breakpoints.up('sm')]: {
             fontSize: '1.10rem',
         },

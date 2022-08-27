@@ -19,8 +19,8 @@ const infoColor = blue
 const warningColor = orange
 const errorColor = red
 
-const darkTextColor = grey[900]
-const lightTextColor = grey[50]
+const darkTextColor = primaryColor[900]
+const lightTextColor = primaryColor[50]
 
 const darkPalette = {
     mode: 'dark',
@@ -31,7 +31,7 @@ const darkPalette = {
         dark: primaryColor[300],
         darker: primaryColor[400],
 
-        contrastText: darkTextColor,
+        // contrastText: darkTextColor,
         contrastTextColor: {
             lighter: darkTextColor,
             light: darkTextColor,
@@ -48,7 +48,7 @@ const darkPalette = {
         dark: secondaryColor[300],
         darker: secondaryColor[400],
 
-        contrastText: darkTextColor,
+        // contrastText: darkTextColor,
         contrastTextColor: {
             lighter: darkTextColor,
             light: darkTextColor,
@@ -65,7 +65,7 @@ const darkPalette = {
         dark: errorColor[300],
         darker: errorColor[400],
 
-        contrastText: darkTextColor,
+        // contrastText: darkTextColor,
         contrastTextColor: {
             lighter: darkTextColor,
             light: darkTextColor,
@@ -82,7 +82,7 @@ const darkPalette = {
         dark: warningColor[300],
         darker: warningColor[400],
 
-        contrastText: darkTextColor,
+        // contrastText: darkTextColor,
         contrastTextColor: {
             lighter: darkTextColor,
             light: darkTextColor,
@@ -99,7 +99,7 @@ const darkPalette = {
         dark: infoColor[300],
         darker: infoColor[400],
 
-        contrastText: darkTextColor,
+        // contrastText: darkTextColor,
         contrastTextColor: {
             lighter: darkTextColor,
             light: darkTextColor,
@@ -116,7 +116,7 @@ const darkPalette = {
         dark: successColor[300],
         darker: successColor[400],
 
-        contrastText: darkTextColor,
+        // contrastText: darkTextColor,
         contrastTextColor: {
             lighter: darkTextColor,
             light: darkTextColor,
@@ -136,7 +136,7 @@ const lightPalette = {
         dark: primaryColor[700],
         darker: primaryColor[900],
 
-        contrastText: lightTextColor,
+        // contrastText: lightTextColor,
         contrastTextColor: {
             lighter: darkTextColor,
             light: darkTextColor,
@@ -153,7 +153,7 @@ const lightPalette = {
         dark: secondaryColor[700],
         darker: secondaryColor[900],
 
-        contrastText: darkTextColor,
+        // contrastText: darkTextColor,
         contrastTextColor: {
             lighter: darkTextColor,
             light: darkTextColor,
@@ -170,7 +170,7 @@ const lightPalette = {
         dark: errorColor[700],
         darker: errorColor[900],
 
-        contrastText: darkTextColor,
+        // contrastText: darkTextColor,
         contrastTextColor: {
             lighter: darkTextColor,
             light: darkTextColor,
@@ -187,7 +187,7 @@ const lightPalette = {
         dark: warningColor[700],
         darker: warningColor[900],
 
-        contrastText: darkTextColor,
+        // contrastText: darkTextColor,
         contrastTextColor: {
             lighter: darkTextColor,
             light: darkTextColor,
@@ -204,7 +204,7 @@ const lightPalette = {
         dark: infoColor[700],
         darker: infoColor[900],
 
-        contrastText: darkTextColor,
+        // contrastText: darkTextColor,
         contrastTextColor: {
             lighter: darkTextColor,
             light: darkTextColor,
@@ -221,7 +221,7 @@ const lightPalette = {
         dark: successColor[700],
         darker: successColor[900],
 
-        contrastText: darkTextColor,
+        // contrastText: darkTextColor,
         contrastTextColor: {
             lighter: darkTextColor,
             light: darkTextColor,

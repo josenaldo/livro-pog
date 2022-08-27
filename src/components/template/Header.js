@@ -14,7 +14,7 @@ const Header = () => {
                 bgcolor:
                     colorMode === COLOR_MODES.dark
                         ? 'background.paper'
-                        : 'secondary.main',
+                        : 'primary.light',
             }}
         >
             <Toolbar
