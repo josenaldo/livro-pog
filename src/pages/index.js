@@ -1,9 +1,9 @@
-import { Box, Container, Button } from '@mui/material'
+import { Box, Container, Button, Typography } from '@mui/material'
 
 const Home = () => {
     return (
         <Container>
-            <Box>Olá mundo</Box>
+            <Typography>Olá mundo</Typography>
         </Container>
     )
 }

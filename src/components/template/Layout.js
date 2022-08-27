@@ -5,7 +5,12 @@ import { Header, Footer } from '@pog/components/template'
 
 const Layout = ({ children }) => {
     return (
-        <Box>
+        <Box
+            sx={{
+                backgroundColor: 'background.paper',
+                color: 'text.primary',
+            }}
+        >
             <Header />
             <main>{children}</main>
             <Footer />

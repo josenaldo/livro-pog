@@ -4,42 +4,50 @@ import { Logo } from '@pog/components/elements'
 
 import { Menu, FontSettings, SearchBar } from '@pog/components/template'
 
+import { useColorMode } from '@pog/contexts'
 const Header = () => {
+    const { colorMode, COLOR_MODES } = useColorMode()
     return (
-        <Box component="header">
-            <AppBar position="sticky">
-                <Toolbar
+        <AppBar
+            position="sticky"
+            sx={{
+                bgcolor:
+                    colorMode === COLOR_MODES.dark
+                        ? 'background.paper'
+                        : 'secondary.main',
+            }}
+        >
+            <Toolbar
+                sx={{
+                    padding: '0.5rem',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                }}
+            >
+                <Box
                     sx={{
-                        padding: '0.5rem',
                         display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'space-between',
+                        flexDirection: 'row',
                     }}
                 >
-                    <Box
-                        sx={{
-                            display: 'flex',
-                            flexDirection: 'row',
-                        }}
-                    >
-                        <Menu />
-                        <Logo />
-                    </Box>
+                    <Menu />
+                    <Logo />
+                </Box>
 
-                    <Box
-                        sx={{
-                            display: 'flex',
-                            flexDirection: 'row',
-                            justifyContent: 'flex-end',
-                            alignItems: 'center',
-                            flexGrow: 1,
-                        }}
-                    >
-                        <SearchBar />
-                    </Box>
-                </Toolbar>
-            </AppBar>
-        </Box>
+                <Box
+                    sx={{
+                        display: 'flex',
+                        flexDirection: 'row',
+                        justifyContent: 'flex-end',
+                        alignItems: 'center',
+                        flexGrow: 1,
+                    }}
+                >
+                    <SearchBar />
+                </Box>
+            </Toolbar>
+        </AppBar>
     )
 }
 

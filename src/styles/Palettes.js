@@ -6,9 +6,12 @@ import {
     orange,
     red,
     grey,
+    deepOrange,
+    deepPurple,
+    cyan,
 } from '@mui/material/colors'
 
-const primaryColor = pink
+const primaryColor = deepPurple
 const secondaryColor = blueGrey
 
 const successColor = green
@@ -17,7 +20,7 @@ const warningColor = orange
 const errorColor = red
 
 const darkTextColor = grey[900]
-const lightTextColor = grey[300]
+const lightTextColor = grey[50]
 
 const darkPalette = {
     mode: 'dark',
@@ -133,7 +136,7 @@ const lightPalette = {
         dark: primaryColor[700],
         darker: primaryColor[900],
 
-        contrastText: darkTextColor,
+        contrastText: lightTextColor,
         contrastTextColor: {
             lighter: darkTextColor,
             light: darkTextColor,

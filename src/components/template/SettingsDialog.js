@@ -23,7 +23,7 @@ import { useColorMode } from '@pog/contexts'
 
 const SettingsDialog = ({ open, setOpen }) => {
     const theme = useTheme()
-    const { colorMode, toggleColorMode } = useColorMode()
+    const { colorMode, toggleColorMode, COLOR_MODES } = useColorMode()
 
     const handleClose = () => {
         setOpen(false)
@@ -87,7 +87,7 @@ const SettingsDialog = ({ open, setOpen }) => {
                             fullWidth
                         >
                             <Button
-                                disabled={colorMode === 'dark'}
+                                disabled={colorMode === COLOR_MODES.dark}
                                 onClick={() => {
                                     handleChangeTheme(darkPalette)
                                 }}
@@ -95,7 +95,7 @@ const SettingsDialog = ({ open, setOpen }) => {
                                 <DarkModeIcon />
                             </Button>
                             <Button
-                                disabled={colorMode === 'light'}
+                                disabled={colorMode === COLOR_MODES.light}
                                 onClick={() => {
                                     handleChangeTheme(lightPalette)
                                 }}

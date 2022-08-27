@@ -14,10 +14,11 @@ const iconColor = 'secondary.contrastTextColor.darker'
 const textColor = 'secondary.contrastTextColor.darker'
 
 const Footer = () => {
-    const { colorMode } = useColorMode()
+    const { colorMode, COLOR_MODES } = useColorMode()
 
     return (
         <Box
+            component="footer"
             elevation={12}
             sx={{
                 display: 'flex',
@@ -25,13 +26,14 @@ const Footer = () => {
                 alignItems: 'center',
                 pt: 2,
                 backgroundColor:
-                    colorMode === 'dark'
+                    colorMode === COLOR_MODES.dark
                         ? 'background.paper'
                         : 'secondary.dark',
+                backgroundImage:
+                    'linear-gradient(rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.09))',
             }}
         >
             <Container
-                component="footer"
                 sx={{
                     display: 'grid',
                     gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr 1fr' },
