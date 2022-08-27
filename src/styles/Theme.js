@@ -61,6 +61,7 @@ const extendTheme = (theme) => {
     theme.typography.footerH2 = {
         fontSize: '1rem',
         fontWeight: 'bold',
+        textAlign: 'center',
         color: theme.palette.secondary.contrastTextColor.darker,
         [theme.breakpoints.up('sm')]: {
             fontSize: '1.10rem',

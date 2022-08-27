@@ -9,10 +9,12 @@ import FacebookIcon from '@mui/icons-material/Facebook'
 import InstagramIcon from '@mui/icons-material/Instagram'
 
 import { useColorMode } from '@pog/contexts'
+
+const iconColor = 'secondary.contrastTextColor.darker'
+const textColor = 'secondary.contrastTextColor.darker'
+
 const Footer = () => {
     const { colorMode } = useColorMode()
-    const iconColor = 'secondary.contrastTextColor.darker'
-    const textColor = 'secondary.contrastTextColor.darker'
 
     return (
         <Box
@@ -36,6 +38,7 @@ const Footer = () => {
                     flexDirection: { xs: 'column', sm: 'row' },
                     alignItems: 'flex-Start',
                     justifyContent: 'center',
+                    gap: 2,
                 }}
             >
                 <Box
@@ -49,11 +52,12 @@ const Footer = () => {
                     <Typography variant="footerH2">
                         Encontre esse projeto no Github
                     </Typography>
-                    <IconButton>
-                        <GitHubIcon
-                            sx={{ fontSize: '48px', color: iconColor }}
-                        />
-                    </IconButton>
+
+                    <FooterIcon
+                        targetBlank
+                        href="https://github.com/josenaldo/livro-pog/"
+                        icon={<GitHubIcon />}
+                    />
                 </Box>
                 <Box
                     sx={{
@@ -66,12 +70,7 @@ const Footer = () => {
                     <Typography variant="footerH2">
                         Ajude esse projeto
                     </Typography>
-                    <IconButton>
-                        <HandshakeIcon
-                            color={iconColor}
-                            sx={{ fontSize: '48px', color: iconColor }}
-                        />
-                    </IconButton>
+                    <FooterIcon href="/ajude" icon={<HandshakeIcon />} />
                 </Box>
                 <Box
                     sx={{
@@ -87,42 +86,42 @@ const Footer = () => {
                     <Box
                         sx={{
                             display: 'grid',
-                            gridTemplateColumns: {
-                                xs: '1fr 1fr',
-                                md: '1fr 1fr 1fr',
-                            },
+                            gridTemplateColumns: '1fr 1fr 1fr',
                         }}
                     >
-                        <IconButton href="https://github.com/josenaldo">
-                            <GitHubIcon
-                                sx={{ fontSize: '48px', color: iconColor }}
-                            />
-                        </IconButton>
-                        <IconButton href="mailto:josenaldo@gmail.com">
-                            <EmailIcon
-                                sx={{ fontSize: '48px', color: iconColor }}
-                            />
-                        </IconButton>
-                        <IconButton href="https://twitter.com/vudureverso">
-                            <TwitterIcon
-                                sx={{ fontSize: '48px', color: iconColor }}
-                            />
-                        </IconButton>
-                        <IconButton href="https://linkedin.com/in/josenaldo">
-                            <LinkedInIcon
-                                sx={{ fontSize: '48px', color: iconColor }}
-                            />
-                        </IconButton>
-                        <IconButton href="https://facebook.com/josenaldo.matos">
-                            <FacebookIcon
-                                sx={{ fontSize: '48px', color: iconColor }}
-                            />
-                        </IconButton>
-                        <IconButton href="https://instagram.com/vudureverso">
-                            <InstagramIcon
-                                sx={{ fontSize: '48px', color: iconColor }}
-                            />
-                        </IconButton>
+                        <FooterIcon
+                            targetBlank
+                            href="https://github.com/josenaldo"
+                            icon={<GitHubIcon />}
+                        />
+                        <FooterIcon
+                            targetBlank
+                            href="mailto:josenaldo@gmail.com"
+                            icon={<EmailIcon />}
+                        />
+
+                        <FooterIcon
+                            targetBlank
+                            href="https://twitter.com/vudureverso"
+                            icon={<TwitterIcon />}
+                        />
+                        <FooterIcon
+                            targetBlank
+                            href="https://linkedin.com/in/josenaldo"
+                            icon={<LinkedInIcon />}
+                        />
+
+                        <FooterIcon
+                            targetBlank
+                            href="https://facebook.com/josenaldo.matos"
+                            icon={<FacebookIcon />}
+                        />
+
+                        <FooterIcon
+                            targetBlank
+                            href="https://instagram.com/vudureverso"
+                            icon={<InstagramIcon />}
+                        />
                     </Box>
                 </Box>
             </Container>
@@ -135,6 +134,23 @@ const Footer = () => {
                 Copyright © 2021 - Vudu Reverso - Tudo nessa porra é reservado
             </Typography>
         </Box>
+    )
+}
+
+const FooterIcon = ({ href, icon, targetBlank = false }) => {
+    return (
+        <IconButton
+            href={href}
+            target={targetBlank ? '_blank' : '_self'}
+            sx={{
+                '& svg': {
+                    fontSize: '48px',
+                    color: iconColor,
+                },
+            }}
+        >
+            {icon}
+        </IconButton>
     )
 }
 
