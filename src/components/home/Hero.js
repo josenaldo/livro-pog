@@ -9,7 +9,7 @@ const Hero = () => {
             sx={{
                 backgroundColor: 'background.cover',
                 backgroundImage:
-                    'linear-gradient(rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.85)), url("/images/cover/hero-hd.jpg")',
+                    'linear-gradient(rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.95)), url("/images/cover/hero-hd.jpg")',
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
                 backgroundPosition: 'top',

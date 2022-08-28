@@ -1,1 +1,5 @@
+export { Code } from './Code'
+export { Link } from './Link'
 export { Logo } from './Logo'
+export { MDXContent } from './MDXContent'
+export { ResponsiveImage } from './ResponsiveImage'
