@@ -2,11 +2,11 @@
 title: Introdução
 description: Introdução ao mundo das Gambiarras
 sentence: Esta é a solução ótima, não temos tempo para isso. Faça a solução boa! O ótimo é inimigo do bom.
-sentence-author: Líder de Projeto, sobre uma solução não pog
+sentence_author: Líder de Projeto, sobre uma solução não pog
 order_number: 1001
 date: 2020-04-16 00:00
 image:
-    path: "assets/images/capitulos/introducao.jpg"
+    path: "/images/capitulos/introducao.jpg"
     width: "1200"
     height: "628"
 name: introducao

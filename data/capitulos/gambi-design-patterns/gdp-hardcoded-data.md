@@ -3,7 +3,7 @@ title: Hardcoded Data
 description:
 image:
 sentence: É só gerar tudo de novo, provavelmente deu erro na especificação.
-sentence-author: POGgramador com sua desculpa POG para o problema
+sentence_author: POGgramador com sua desculpa POG para o problema
 order_number: 14000
 date: 2020-04-16 00:13
 name: gdp-hardcoded-data

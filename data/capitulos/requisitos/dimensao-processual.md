@@ -2,7 +2,7 @@
 title: Dimensão Processual
 description: Quando os processos são uma receita para o desastre
 sentence:
-sentence-author:
+sentence_author:
 order_number: 4400
 date: 2021-12-21 00:00
 name: dimensao-processual

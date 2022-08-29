@@ -2,11 +2,11 @@
 title: História da POG
 description: Como assim um papa foi o primeiro POGramador da história?
 sentence: O Papa é POG
-sentence-author: Engenheiros do Hawaii sobre POG
+sentence_author: Engenheiros do Hawaii sobre POG
 order_number: 3000
 date: 2020-04-16 00:02
 image:
-    path: "assets/images/capitulos/historia.jpg"
+    path: "images/capitulos/historia.jpg"
     width: "1200"
     height: "628"
 name: historia

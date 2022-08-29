@@ -77,6 +77,66 @@ const extendTheme = (theme) => {
             fontSize: '1.25rem',
         },
     }
+
+    theme.typography.subtitle = {
+        fontWeight: 'bold',
+        textAlign: 'center',
+        fontSize: '1.2rem',
+        marginTop: '1rem',
+        marginBotton: '1rem',
+        [theme.breakpoints.up('sm')]: {
+            fontSize: '1.3rem',
+        },
+        [theme.breakpoints.up('md')]: {
+            fontSize: '1.4rem',
+        },
+        [theme.breakpoints.up('lg')]: {
+            fontSize: '1.5rem',
+        },
+        [theme.breakpoints.up('xl')]: {
+            fontSize: '1.6rem',
+        },
+    }
+
+    theme.typography.sentence = {
+        fontWeight: 'bold',
+        textAlign: 'center',
+
+        fontSize: '0.90rem',
+        color: theme.palette.grey[500],
+        [theme.breakpoints.up('sm')]: {
+            fontSize: '0.92rem',
+        },
+        [theme.breakpoints.up('md')]: {
+            fontSize: '0.94rem',
+        },
+        [theme.breakpoints.up('lg')]: {
+            fontSize: '0.96rem',
+        },
+        [theme.breakpoints.up('xl')]: {
+            fontSize: '0.98rem',
+        },
+    }
+
+    theme.typography.sentenceAuthor = {
+        fontStyle: 'italic',
+        textAlign: 'center',
+        color: theme.palette.grey[500],
+
+        fontSize: '0.70rem',
+        [theme.breakpoints.up('sm')]: {
+            fontSize: '0.72rem',
+        },
+        [theme.breakpoints.up('md')]: {
+            fontSize: '0.74rem',
+        },
+        [theme.breakpoints.up('lg')]: {
+            fontSize: '0.76rem',
+        },
+        [theme.breakpoints.up('xl')]: {
+            fontSize: '0.78rem',
+        },
+    }
 }
 
 export { BaseTheme, extendTheme }

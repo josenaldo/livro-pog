@@ -3,7 +3,7 @@ title: Forceps
 description:
 image:
 sentence: O código tá certo, deve ser problema na massa de dados.
-sentence-author: POGgramador Experiente, com várias certificações em POG
+sentence_author: POGgramador Experiente, com várias certificações em POG
 order_number: 15000
 date: 2020-04-16 00:14
 name: gdp-forceps

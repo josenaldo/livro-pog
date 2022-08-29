@@ -7,6 +7,7 @@ import {
     Box,
     IconButton,
     Card,
+    CardContent,
     Container,
     Divider,
     List,
@@ -69,46 +70,54 @@ const PaginaCapitulos = ({ chapters }) => {
             <Card
                 sx={{
                     my: 5,
-                    py: 5,
-                    px: { xs: 2, sm: 2, md: 5, lg: 12 },
                 }}
             >
-                <Typography variant="h1" textAlign="center">
-                    Capítulos
-                </Typography>
-                <List sx={{ my: 5 }}>
-                    {chapters.map((chapter) => (
-                        <>
-                            <Link href={`capitulos/${chapter.slug}`}>
-                                <ListItemButton
-                                    component="a"
-                                    key={chapter.slug}
-                                    alignItems="flex-start"
-                                    sx={{
-                                        pl: chapter.parent ? 5 : 0,
-                                    }}
-                                >
-                                    <ListItemAvatar>
-                                        <Avatar>
-                                            {getChapterTypeIcon(chapter)}
-                                        </Avatar>
-                                    </ListItemAvatar>
-                                    <ListItemText
-                                        primary={chapter.title}
-                                        secondary={chapter.description}
+                <CardContent
+                    sx={{
+                        my: 5,
+                        py: 5,
+                        px: { xs: 2, sm: 2, md: 5, lg: 12 },
+                    }}
+                >
+                    <Typography variant="h1" textAlign="center">
+                        Capítulos
+                    </Typography>
+                    <List sx={{ my: 5 }}>
+                        {chapters.map((chapter) => (
+                            <>
+                                <Link href={`capitulos/${chapter.slug}`}>
+                                    <ListItemButton
+                                        component="a"
+                                        key={chapter.slug}
+                                        alignItems="flex-start"
                                         sx={{
-                                            pr: 1,
+                                            pl: chapter.parent ? 5 : 0,
                                         }}
-                                    />
-                                    <ListItemSecondaryAction>
-                                        <ChapterProgress chapter={chapter} />
-                                    </ListItemSecondaryAction>
-                                </ListItemButton>
-                            </Link>
-                            <Divider variant="inset" component="li" />
-                        </>
-                    ))}
-                </List>
+                                    >
+                                        <ListItemAvatar>
+                                            <Avatar>
+                                                {getChapterTypeIcon(chapter)}
+                                            </Avatar>
+                                        </ListItemAvatar>
+                                        <ListItemText
+                                            primary={chapter.title}
+                                            secondary={chapter.description}
+                                            sx={{
+                                                pr: 1,
+                                            }}
+                                        />
+                                        <ListItemSecondaryAction>
+                                            <ChapterProgress
+                                                chapter={chapter}
+                                            />
+                                        </ListItemSecondaryAction>
+                                    </ListItemButton>
+                                </Link>
+                                <Divider variant="inset" component="li" />
+                            </>
+                        ))}
+                    </List>
+                </CardContent>
             </Card>
         </Container>
     )

@@ -2,11 +2,11 @@
 title: Agradecimentos
 description: Agradecimentos que eu só farei quando terminar essa porra
 sentence: Claro que não! É essa lib/SO/compilador que está toda bugada!!
-sentence-author: Estagiário-chefe apoiando justificativa do estagiário ao gerente
+sentence_author: Estagiário-chefe apoiando justificativa do estagiário ao gerente
 order_number: 1000
 date: 2020-04-16 00:00
 image:
-    path: "assets/images/capitulos/agradecimentos.jpg"
+    path: "/images/capitulos/agradecimentos.jpg"
     width: "1200"
     height: "628"
 name: agradecimentos

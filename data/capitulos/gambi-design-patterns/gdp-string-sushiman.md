@@ -3,7 +3,7 @@ title: String Sushiman
 description:
 image:
 sentence: Quando eu testei, funcionou!
-sentence-author: POGramador demonstrando as gambiarras para seu Gerente Sem Noção
+sentence_author: POGramador demonstrando as gambiarras para seu Gerente Sem Noção
 order_number: 23000
 date: 2020-04-16 00:22
 name: gdp-string-sushiman

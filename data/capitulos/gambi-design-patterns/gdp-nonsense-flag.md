@@ -3,7 +3,7 @@ title: Nonsense Flag Nonsense Naming
 description:
 image:
 sentence: É só reiniciar que funciona!
-sentence-author: POGgramador logo de manhã com copo de café na mão
+sentence_author: POGgramador logo de manhã com copo de café na mão
 order_number: 17000
 date: 2020-04-16 00:16
 name: gdp-nonsense-flag

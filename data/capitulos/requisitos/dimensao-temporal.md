@@ -2,7 +2,7 @@
 title: Dimensão Temporal
 description: Quando o tempo se resume a uma contagem para o apocalipse
 sentence:
-sentence-author:
+sentence_author:
 order_number: 4500
 date: 2021-12-21 00:00
 name: dimensao-temporal

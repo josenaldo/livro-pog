@@ -5,7 +5,7 @@ date: 2020-04-17 02:52:00 -0300
 category: novidades
 author: Vudu Reverso
 image:
-    path: "assets/images/posts/2020-04-17-inicio-da-gambiarra.jpg"
+    path: "/images/posts/2020-04-17-inicio-da-gambiarra.jpg"
     width: "1200"
     height: "628"
 ---
@@ -23,5 +23,5 @@ Há muito tempo atrás, eu ministrei essa palestra em alguns eventos e empresas.
 
 Vamos ver o que vai acontecer.
 
-**POGaê**  
+**POGaê**
 (O POGramador que habita em mim saúda o POGramador que habita em você)

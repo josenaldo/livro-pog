@@ -3,7 +3,7 @@ title: No More Layers
 description:
 image:
 sentence: Deu erro...comenta!
-sentence-author: Alunos descobrindo como fazer POG, na faculdade.
+sentence_author: Alunos descobrindo como fazer POG, na faculdade.
 order_number: 29000
 date: 2020-04-16 00:28
 name: gdp-no-more-layers

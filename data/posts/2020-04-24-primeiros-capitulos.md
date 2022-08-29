@@ -5,7 +5,7 @@ date: 2020-04-24 20:21:00 -0300
 category: novidades
 author: Vudu Reverso
 image:
-    path: "assets/images/posts/2020-04-24-primeiros-capitulos.jpg"
+    path: "/images/posts/2020-04-24-primeiros-capitulos.jpg"
     width: "1200"
     height: "628"
 ---
@@ -29,7 +29,7 @@ Obviamente que irei mudar esses capítulos no futuro, então aproveitem pra obse
 
 Divirtam-se e lembrem-se: em casa de ferreiro, quem com ferro fere tanto bate até que fura.
 
-**POGaê**  
+**POGaê**
 (O POGramador que habita em mim saúda o POGramador que habita em você)
 
 ---

@@ -3,7 +3,7 @@ title: Commented Code Implementation Comments Forever
 description:
 image:
 sentence: Bom, deixa estourar a bomba lá, aí quando vierem me pentelhar aqui eu vejo o que faço...
-sentence-author: POGgramador, para outro POGgramador, só esperando o problema voltar
+sentence_author: POGgramador, para outro POGgramador, só esperando o problema voltar
 order_number: 18000
 date: 2020-04-16 00:17
 name: gdp-commented-code-implementation

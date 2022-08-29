@@ -5,7 +5,7 @@ date: 2020-05-02 07:23:00 -0300
 category: novidades
 author: Vudu Reverso
 image:
-    path: "assets/images/posts/2020-05-02-me-ajudem-com-a-historia-da-pog.jpg"
+    path: "/images/posts/2020-05-02-me-ajudem-com-a-historia-da-pog.jpg"
     width: "1200"
     height: "628"
 ---
@@ -38,7 +38,7 @@ Se, por acaso, você acha que esse projeto merece seu dinheiro, se acha que vale
 
 Por favor, invista a quantia que achar justo. E faça isso antes de procurar ajuda médica (você precisa disso, você sabe).
 
-**Muito obrigado por acompanhar esse projeto e POGaê**  
+**Muito obrigado por acompanhar esse projeto e POGaê**
 (O POGramador que habita em mim saúda o POGramador que habita em você)
 
 ---

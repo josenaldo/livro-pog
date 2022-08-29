@@ -3,7 +3,7 @@ title: Perfectness Execution Bulletproof
 description:
 image:
 sentence: ...ah!!! Isto é um erro comum do Windows!
-sentence-author: POGramador tentando ganhar tempo para corrigir seu código
+sentence_author: POGramador tentando ganhar tempo para corrigir seu código
 order_number: 21000
 date: 2020-04-16 00:20
 name: gdp-bulletproof

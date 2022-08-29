@@ -2,7 +2,7 @@
 title: Dimensão Estrutural
 description: Quando a infra estrutura é um berço de capirotagens
 sentence: Esse problema só acontece quando vira o horário de verão, depois o sistema volta normal.
-sentence-author: POGramador com esperança (novamente) de que o sistema ainda irá funcionar
+sentence_author: POGramador com esperança (novamente) de que o sistema ainda irá funcionar
 order_number: 4300
 date: 2021-12-21 00:00
 name: dimensao-estrutural
