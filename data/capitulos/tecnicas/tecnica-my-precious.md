@@ -7,7 +7,9 @@ sentence-author: POGramador dando uma desculpa sobre POG
 order_number: 9000
 date: 2020-04-16 00:08
 name: tecnica-my-precious
-parent:
+parent: tecnicas
+isParent: false
+status: backlog
 ---
 Querem alterar seu código?
 

@@ -1,13 +1,15 @@
 ---
 title: Nonsense Flag Nonsense Naming
-description: 
-image: 
+description:
+image:
 sentence: É só reiniciar que funciona!
 sentence-author: POGgramador logo de manhã com copo de café na mão
 order_number: 17000
 date: 2020-04-16 00:16
 name: gdp-nonsense-flag
-parent:
+parent: gambi-design-patterns
+isParent: false
+status: backlog
 ---
 
 Pra que quebrar a cabeça para usar nomes óbvios? Isso é uma falha de segurança!

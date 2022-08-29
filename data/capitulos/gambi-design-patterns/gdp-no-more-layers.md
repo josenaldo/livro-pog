@@ -1,13 +1,15 @@
 ---
 title: No More Layers
-description: 
-image: 
+description:
+image:
 sentence: Deu erro...comenta!
 sentence-author: Alunos descobrindo como fazer POG, na faculdade.
 order_number: 29000
 date: 2020-04-16 00:28
 name: gdp-no-more-layers
-parent:
+parent: gambi-design-patterns
+isParent: false
+status: backlog
 ---
 Frameworks e camadas são coisas para fracos
 Faça tudo diretamente na tela!

@@ -7,6 +7,8 @@ order_number: 6000
 date: 2020-04-16 00:05
 name: tecnicas
 parent:
+isParent: true
+status: backlog
 ---
 
 ### Hoi teste

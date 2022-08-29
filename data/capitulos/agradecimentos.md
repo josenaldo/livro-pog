@@ -11,6 +11,8 @@ image:
     height: "628"
 name: agradecimentos
 parent:
+isParent: false
+status: review
 ---
 
 Há muitas pessoas a quem eu devo agradecer. Se eu fosse nomear todas aqui, isso seria uma listagem maior que uma nota fiscal de quem comprou uma bala no supermercado. Então, vou agradecer apenas algumas pessoas muito queridas.

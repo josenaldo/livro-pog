@@ -11,6 +11,8 @@ image:
     height: "628"
 name: historia
 parent:
+isParent: false
+status: review
 ---
 
 Quando procuramos definir a primeira POG da história, a maior dificuldade está no fato de que o bom POGramador não deixa rastros de seus méritos, pois POGramador não usa comentários(a não ser que sejam inúteis).

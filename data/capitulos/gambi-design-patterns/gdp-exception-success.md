@@ -1,13 +1,15 @@
 ---
 title: Exception Success
-description: 
-image: 
+description:
+image:
 sentence: Quando eu cheguei já tava assim!!!
 sentence-author: POGramador, querendo tirar o seu da reta!
 order_number: 22000
 date: 2020-04-16 00:21
 name: gdp-exception-success
-parent:
+parent: gambi-design-patterns
+isParent: false
+status: backlog
 ---
 Use exceções para o controle de fluxo do POGrama!
 

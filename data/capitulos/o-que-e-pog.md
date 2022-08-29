@@ -11,6 +11,8 @@ image:
 date: 2020-04-16 00:01
 name: o-que-e-pog
 parent:
+isParent: false
+status: review
 ---
 
 **Gambiarra**.
@@ -50,7 +52,7 @@ Dentre estes sinônimos, temos:
 * ATND - Artifício Técnico Não Documentado
 * CPMF - Conserto Provisório Mas Funciona
 * DAT - Dispositivo Alternativo Temporário
-* ERR - Engenharia de Reparos Rápidos  
+* ERR - Engenharia de Reparos Rápidos
 * MASC - Medida Adaptativa à Situações Críticas
 * MTEDM - Manutenção Técnica com Elementos Disponíveis no Momento
 * MUTRETA - Método Único de  Tratamento e Resolução de Erros Totalmente Adaptável

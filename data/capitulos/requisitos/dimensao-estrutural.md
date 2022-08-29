@@ -7,6 +7,8 @@ order_number: 4300
 date: 2021-12-21 00:00
 name: dimensao-estrutural
 parent: requisitos
+isParent: false
+status: review
 ---
 
 Temos uma equipe de anjos imaculados criados pelo próprio Linus Torvalds, adeptos da melhores práticas e munidos das mais belas tecnologias.

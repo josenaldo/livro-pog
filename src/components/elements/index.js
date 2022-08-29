@@ -1,4 +1,5 @@
 export { Code } from './Code'
+export { ChapterProgress } from './ChapterProgress'
 export { Link } from './Link'
 export { Logo } from './Logo'
 export { MDXContent } from './MDXContent'

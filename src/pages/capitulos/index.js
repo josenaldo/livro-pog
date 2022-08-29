@@ -1,20 +1,27 @@
-import matter from 'gray-matter'
+import Link from 'next/link'
+
 import {
     Avatar,
     Box,
+    IconButton,
     Card,
     Container,
     Divider,
     List,
     ListItem,
+    ListItemSecondaryAction,
     Typography,
     ListItemText,
     ListItemAvatar,
 } from '@mui/material'
 
+import SubdirectoryArrowRightIcon from '@mui/icons-material/SubdirectoryArrowRight'
 import TopicIcon from '@mui/icons-material/Topic'
 import ArticleIcon from '@mui/icons-material/Article'
 
+import matter from 'gray-matter'
+
+import { ChapterProgress } from '@pog/components/elements'
 import { getChapters } from '@pog/data'
 import { getDataFileAbsolutePath } from '@pog/utils'
 import fs from 'fs'
@@ -28,15 +35,14 @@ const getStaticProps = async () => {
         const filePath = getDataFileAbsolutePath(`capitulos/${fileName}`)
         const readFile = fs.readFileSync(filePath, 'utf8')
         const { data: frontmatter } = matter(readFile)
-        console.log(frontmatter)
         return {
             slug,
-            frontmatter,
+            ...frontmatter,
         }
     })
 
     const sortedChapters = chapters.sort((a, b) => {
-        return a.frontmatter.order_number - b.frontmatter.order_number
+        return a.order_number - b.order_number
     })
 
     return {
@@ -47,6 +53,18 @@ const getStaticProps = async () => {
 }
 
 const PaginaCapitulos = ({ chapters }) => {
+    const getChapterTypeIcon = (chapter) => {
+        if (chapter.isParent) {
+            return <TopicIcon />
+        }
+
+        if (!chapter.isParent && chapter.parent) {
+            return <SubdirectoryArrowRightIcon />
+        }
+
+        return <ArticleIcon />
+    }
+
     return (
         <Container>
             <Card
@@ -60,19 +78,34 @@ const PaginaCapitulos = ({ chapters }) => {
                     Capítulos
                 </Typography>
                 <List sx={{ my: 5 }}>
-                    {chapters.map(({ slug, frontmatter }) => (
+                    {chapters.map((chapter) => (
                         <>
-                            <ListItem key={slug} alignItems="flex-start">
-                                <ListItemAvatar>
-                                    <Avatar>
-                                        <ArticleIcon />
-                                    </Avatar>
-                                </ListItemAvatar>
-                                <ListItemText
-                                    primary={frontmatter.title}
-                                    secondary={frontmatter.description}
-                                />
-                            </ListItem>
+                            <Link href={`capitulos/${chapter.slug}`}>
+                                <ListItem
+                                    component="a"
+                                    key={chapter.slug}
+                                    alignItems="flex-start"
+                                    sx={{
+                                        pl: chapter.parent ? 5 : 0,
+                                    }}
+                                >
+                                    <ListItemAvatar>
+                                        <Avatar>
+                                            {getChapterTypeIcon(chapter)}
+                                        </Avatar>
+                                    </ListItemAvatar>
+                                    <ListItemText
+                                        primary={chapter.title}
+                                        secondary={chapter.description}
+                                        sx={{
+                                            pr: 1,
+                                        }}
+                                    />
+                                    <ListItemSecondaryAction>
+                                        <ChapterProgress chapter={chapter} />
+                                    </ListItemSecondaryAction>
+                                </ListItem>
+                            </Link>
                             <Divider variant="inset" component="li" />
                         </>
                     ))}

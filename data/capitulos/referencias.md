@@ -8,6 +8,8 @@ order_number: 32000
 date: 2020-04-16 00:31
 name: referencias
 parent:
+isParent: false
+status: backlog
 ---
 
 {% bibliography %}

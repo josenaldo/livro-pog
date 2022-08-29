@@ -1,13 +1,15 @@
 ---
 title: Reinvented Square Wheel Helper
-description: 
-image: 
+description:
+image:
 sentence: Hmmm.. que estranho... Não era para acontecer isso...
 sentence-author: Programador fazendo uma demonstração do software
 order_number: 19000
 date: 2020-04-16 00:18
 name: gdp-reinvented-square-wheel-helper
-parent:
+parent: gambi-design-patterns
+isParent: false
+status: backlog
 ---
 Se não lembra de como usar um recurso da linguagem, faça você mesmo!
 

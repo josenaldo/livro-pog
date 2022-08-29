@@ -7,6 +7,8 @@ order_number: 4500
 date: 2021-12-21 00:00
 name: dimensao-temporal
 parent: requisitos
+isParent: false
+status: backlog
 ---
 
 ### O próprio tempo
@@ -21,7 +23,7 @@ parent: requisitos
 
 #### Fim de semana
 
-<!-- 
+<!--
 Regra do escoteiro:  “sempre deixar o código um pouco melhor do que ele estava quando começou a mexer”.
 
 Regra do escoteiro maldito?  “sempre deixar o código um pouco pior do que ele estava quando começou a mexer”. -->

@@ -11,6 +11,8 @@ image:
     height: "628"
 name: introducao
 parent:
+isParent: false
+status: review
 ---
 
 **Saudações, ruma de POGramador!**

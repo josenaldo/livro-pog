@@ -7,6 +7,8 @@ order_number: 4400
 date: 2021-12-21 00:00
 name: dimensao-processual
 parent: requisitos
+isParent: false
+status: progress
 ---
 
 A Dimensão Processual engloba os requisitos que são satisfeitos e documentados através dos processos escolhidos pela empresa por puro sadismo.

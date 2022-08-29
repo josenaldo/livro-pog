@@ -7,6 +7,8 @@ order_number: 4200
 date: 2021-12-21 00:00
 name: dimensao-tecnologica
 parent: requisitos
+isParent: false
+status: review
 ---
 
 Uma outra dimensão que afeta constantemente nossos projetos, adubando o jardim da desgracença para que a POG possa germinar com todo vigor, é a Dimensão Tecnológica.

@@ -1,13 +1,15 @@
 ---
 title: Commented Code Implementation Comments Forever
-description: 
-image: 
+description:
+image:
 sentence: Bom, deixa estourar a bomba lá, aí quando vierem me pentelhar aqui eu vejo o que faço...
 sentence-author: POGgramador, para outro POGgramador, só esperando o problema voltar
 order_number: 18000
 date: 2020-04-16 00:17
 name: gdp-commented-code-implementation
-parent:
+parent: gambi-design-patterns
+isParent: false
+status: backlog
 ---
 O programa está dando problema?
 Comenta que resolve! Aplique o Insistimento Determinante!
