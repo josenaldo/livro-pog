@@ -16,21 +16,14 @@ import TextDecreaseIcon from '@mui/icons-material/TextDecrease'
 import TextIncreaseIcon from '@mui/icons-material/TextIncrease'
 import DarkModeIcon from '@mui/icons-material/DarkMode'
 import LightModeIcon from '@mui/icons-material/LightMode'
-import { useTheme } from '@mui/material/styles'
 
-import { darkPalette, lightPalette } from '@pog/styles'
 import { useColorMode } from '@pog/contexts'
 
 const SettingsDialog = ({ open, setOpen }) => {
-    const theme = useTheme()
     const { colorMode, toggleColorMode, COLOR_MODES } = useColorMode()
 
     const handleClose = () => {
         setOpen(false)
-    }
-
-    const handleChangeTheme = (palette) => {
-        toggleColorMode()
     }
 
     return (
@@ -89,7 +82,7 @@ const SettingsDialog = ({ open, setOpen }) => {
                             <Button
                                 disabled={colorMode === COLOR_MODES.dark}
                                 onClick={() => {
-                                    handleChangeTheme(darkPalette)
+                                    toggleColorMode()
                                 }}
                             >
                                 <DarkModeIcon />
@@ -97,7 +90,7 @@ const SettingsDialog = ({ open, setOpen }) => {
                             <Button
                                 disabled={colorMode === COLOR_MODES.light}
                                 onClick={() => {
-                                    handleChangeTheme(lightPalette)
+                                    toggleColorMode()
                                 }}
                             >
                                 <LightModeIcon />
