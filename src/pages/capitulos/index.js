@@ -8,7 +8,7 @@ import {
     Container,
     Divider,
     List,
-    ListItem,
+    ListItemButton,
     ListItemSecondaryAction,
     Typography,
     ListItemText,
@@ -81,7 +81,7 @@ const PaginaCapitulos = ({ chapters }) => {
                     {chapters.map((chapter) => (
                         <>
                             <Link href={`capitulos/${chapter.slug}`}>
-                                <ListItem
+                                <ListItemButton
                                     component="a"
                                     key={chapter.slug}
                                     alignItems="flex-start"
@@ -104,7 +104,7 @@ const PaginaCapitulos = ({ chapters }) => {
                                     <ListItemSecondaryAction>
                                         <ChapterProgress chapter={chapter} />
                                     </ListItemSecondaryAction>
-                                </ListItem>
+                                </ListItemButton>
                             </Link>
                             <Divider variant="inset" component="li" />
                         </>
