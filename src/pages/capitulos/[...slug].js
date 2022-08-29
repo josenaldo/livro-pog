@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import fs from 'fs'
-import matter from 'gray-matter'
+
 import {
     Avatar,
     Box,
@@ -20,8 +19,8 @@ import {
     CardContent,
 } from '@mui/material'
 
-import { getChapters } from '@pog/data'
-import { getDataFileAbsolutePath } from '@pog/utils'
+import { MDXContent } from '@pog/components/elements'
+import { getChapters, getSortedChapters } from '@pog/data'
 
 const getStaticPaths = async () => {
     const files = await getChapters()
@@ -42,13 +41,10 @@ const getStaticProps = async ({ params }) => {
     const slugParts = params.slug
     const slug = slugParts.join('/')
 
-    const filePath = getDataFileAbsolutePath(`capitulos/${slug}.md`)
-    const readFile = fs.readFileSync(filePath, 'utf8')
-    const { data: frontmatter } = matter(readFile)
-    const chapter = {
-        slug,
-        ...frontmatter,
-    }
+    const files = await getChapters()
+    const sortedChapters = getSortedChapters(files)
+
+    const chapter = sortedChapters.find((c) => c.slug === slug)
 
     return {
         props: {
@@ -66,12 +62,14 @@ const PaginaCapitulo = ({ chapter }) => {
                 }}
             >
                 <CardMedia>
-                    <Image
-                        src={chapter.image.path}
-                        alt={chapter.title}
-                        width={chapter.image.width}
-                        height={chapter.image.height}
-                    />
+                    {chapter.image && (
+                        <Image
+                            src={chapter.image.path}
+                            alt={chapter.title}
+                            width={chapter.image.width}
+                            height={chapter.image.height}
+                        />
+                    )}
                 </CardMedia>
 
                 <CardContent
@@ -95,6 +93,9 @@ const PaginaCapitulo = ({ chapter }) => {
                         </Typography>
                     </Stack>
                     <Divider />
+                    <Box>
+                        <MDXContent content={chapter.content} />
+                    </Box>
                 </CardContent>
             </Card>
         </Container>

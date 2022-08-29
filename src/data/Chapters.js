@@ -1,7 +1,8 @@
-import { getDataPath } from '@pog/utils'
 import glob from 'glob'
-import path from 'path'
 import fs from 'fs'
+import matter from 'gray-matter'
+
+import { getDataFileAbsolutePath } from '@pog/utils'
 
 const getChapters = async () => {
     const chaptersPath = 'data/capitulos'
@@ -13,4 +14,57 @@ const getChapters = async () => {
     return files
 }
 
-export { getChapters }
+const getChapterData = (fileName) => {
+    const slug = fileName.replace('.md', '')
+
+    const filePath = getDataFileAbsolutePath(`capitulos/${fileName}`)
+    const readFile = fs.readFileSync(filePath, 'utf8')
+    const { data: frontmatter, content } = matter(readFile)
+    return {
+        slug,
+        content,
+        ...frontmatter,
+    }
+}
+
+const getSortedChapters = (files) => {
+    const chapters = files.map((fileName) => {
+        const chapter = getChapterData(fileName)
+        return chapter
+    })
+
+    const sortedChapters = chapters.sort((a, b) => {
+        return a.order_number - b.order_number
+    })
+
+    const linkedSortChapters = sortedChapters.map((chapter, index) => {
+        const isFirst = index === 0
+        const isLast = index === sortedChapters.length - 1
+        const previousChapter = !isFirst ? sortedChapters[index - 1] : null
+        const nextChapter = !isLast ? sortedChapters[index + 1] : null
+
+        if (previousChapter) {
+            chapter.previous = {
+                slug: previousChapter.slug,
+                title: previousChapter.title,
+            }
+        } else {
+            chapter.previous = null
+        }
+
+        if (nextChapter) {
+            chapter.next = {
+                slug: nextChapter.slug,
+                title: nextChapter.title,
+            }
+        } else {
+            chapter.next = null
+        }
+
+        return chapter
+    })
+
+    return linkedSortChapters
+}
+
+export { getChapters, getChapterData, getSortedChapters }

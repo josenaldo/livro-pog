@@ -1,21 +1,17 @@
-import fs from 'fs'
-import matter from 'gray-matter'
 import Link from 'next/link'
 
 import {
     Avatar,
-    Box,
-    IconButton,
     Card,
     CardContent,
     Container,
     Divider,
     List,
+    ListItemAvatar,
     ListItemButton,
     ListItemSecondaryAction,
-    Typography,
     ListItemText,
-    ListItemAvatar,
+    Typography,
 } from '@mui/material'
 
 import SubdirectoryArrowRightIcon from '@mui/icons-material/SubdirectoryArrowRight'
@@ -23,27 +19,12 @@ import TopicIcon from '@mui/icons-material/Topic'
 import ArticleIcon from '@mui/icons-material/Article'
 
 import { ChapterProgress } from '@pog/components/elements'
-import { getChapters } from '@pog/data'
-import { getDataFileAbsolutePath } from '@pog/utils'
+import { getChapters, getSortedChapters } from '@pog/data'
 
 const getStaticProps = async () => {
     const files = await getChapters()
 
-    const chapters = files.map((fileName) => {
-        const slug = fileName.replace('.md', '')
-
-        const filePath = getDataFileAbsolutePath(`capitulos/${fileName}`)
-        const readFile = fs.readFileSync(filePath, 'utf8')
-        const { data: frontmatter } = matter(readFile)
-        return {
-            slug,
-            ...frontmatter,
-        }
-    })
-
-    const sortedChapters = chapters.sort((a, b) => {
-        return a.order_number - b.order_number
-    })
+    const sortedChapters = getSortedChapters(files)
 
     return {
         props: {
