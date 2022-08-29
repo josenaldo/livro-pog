@@ -1,12 +1,17 @@
 import Head from 'next/head'
-import { Container } from '@mui/material'
+import fs from 'fs'
+import matter from 'gray-matter'
+import { Container, Box } from '@mui/material'
+
+import { getChapters } from '@pog/data'
+import { getDataFileAbsolutePath } from '@pog/utils'
 
 const getStaticPaths = async () => {
-    const files = fs.readdirSync('../../../data/capitulos')
+    const files = await getChapters()
 
     const paths = files.map((fileName) => ({
         params: {
-            slug: fileName.replace('.md', ''),
+            slug: fileName.replace('.md', '').split('/'),
         },
     }))
 
@@ -15,26 +20,36 @@ const getStaticPaths = async () => {
         fallback: false,
     }
 }
-export async function getStaticProps({ params }) {
-    const api = new ArticlesApi()
 
-    const article = await api.getData(params.slug, params.category)
+const getStaticProps = async ({ params }) => {
+    const slugParts = params.slug
+    const slug = slugParts.join('/')
+
+    const filePath = getDataFileAbsolutePath(`capitulos/${slug}.md`)
+    const readFile = fs.readFileSync(filePath, 'utf8')
+    const { data: frontmatter } = matter(readFile)
+    const chapter = {
+        slug,
+        ...frontmatter,
+    }
+
     return {
         props: {
-            article,
+            chapter,
         },
     }
 }
-
-export default function Post({ article }) {
+const PaginaCapitulo = ({ chapter }) => {
     return (
         <Container sx={{ my: '40px' }}>
-            <Head>
-                <title>
-                    {article.titulo} - {AppConfig.name}
-                </title>
-            </Head>
-            <ArticlePage article={article}></ArticlePage>
+            <Box sx={{ my: '20px' }}>
+                <h1>{chapter.title}</h1>
+                <p>{chapter.description}</p>
+                <p>{chapter.slug}</p>
+            </Box>
         </Container>
     )
 }
+
+export { getStaticPaths, getStaticProps }
+export default PaginaCapitulo

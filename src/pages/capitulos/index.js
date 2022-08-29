@@ -1,3 +1,5 @@
+import fs from 'fs'
+import matter from 'gray-matter'
 import Link from 'next/link'
 
 import {
@@ -19,12 +21,9 @@ import SubdirectoryArrowRightIcon from '@mui/icons-material/SubdirectoryArrowRig
 import TopicIcon from '@mui/icons-material/Topic'
 import ArticleIcon from '@mui/icons-material/Article'
 
-import matter from 'gray-matter'
-
 import { ChapterProgress } from '@pog/components/elements'
 import { getChapters } from '@pog/data'
 import { getDataFileAbsolutePath } from '@pog/utils'
-import fs from 'fs'
 
 const getStaticProps = async () => {
     const files = await getChapters()
