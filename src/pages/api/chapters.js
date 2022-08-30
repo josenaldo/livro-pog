@@ -44,23 +44,17 @@ const getChapterData = (fileName, loadContent = true) => {
 
 const getSortedChapters = async (loadContent = true) => {
     const files = await getChapters()
-    console.log('>>> FILES <<<', files)
 
     const chapters = files.map((fileName) => {
         const chapter = getChapterData(fileName, loadContent)
         return chapter
     })
-    console.log('>>> CHAPTERS <<<', files)
 
     const sortedChapters = chapters.sort((a, b) => {
         return a.order_number - b.order_number
     })
 
-    console.log('>>> SORTED <<<', files)
-
     const linkedSortChapters = getLinkedChapters(sortedChapters)
-
-    console.log('>>> LINKED <<<', files)
 
     return linkedSortChapters
 }

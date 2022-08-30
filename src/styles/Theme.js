@@ -1,27 +1,40 @@
-import { createTheme } from '@mui/material/styles'
 import { Palettes } from '@pog/styles'
 import { grey } from '@mui/material/colors'
 
+const scroll = {
+    '&::-webkit-scrollbar': {
+        width: '15px',
+    },
+    '&::-webkit-scrollbar-track': {
+        backgroundColor: `${grey[800]}`,
+    },
+    '&::-webkit-scrollbar-thumb': {
+        backgroundColor: `${grey[700]}`,
+        borderRadius: '10px',
+    },
+    '&::-webkit-scrollbar-thumb:hover': {
+        backgroundColor: `${grey[500]}`,
+    },
+}
+
 const BaseTheme = {
     palette: Palettes['dark'],
-
-    scroll: {
-        '&::-webkit-scrollbar': {
-            width: '8px',
+    scroll: scroll,
+    components: {
+        MuiBox: {
+            styleOverrides: {
+                root: {
+                    ...scroll,
+                },
+            },
         },
-
-        '&::-webkit-scrollbar-track': {
-            bgcolor: `${grey[800]}`,
-            borderRadius: '10px',
-        },
-
-        '&::-webkit-scrollbar-thumb': {
-            bgcolor: `${grey[700]}`,
-            borderRadius: '10px',
-        },
-
-        '&::-webkit-scrollbar-thumb:hover': {
-            bgcolor: `${grey[500]}`,
+        MuiDrawer: {
+            styleOverrides: {
+                paper: {
+                    overflow: 'auto',
+                    ...scroll,
+                },
+            },
         },
     },
 }

@@ -6,9 +6,7 @@ import { SeoConfig } from '@pog/config'
 import { ColorModeProvider } from '@pog/contexts'
 import { Layout } from '@pog/components/template'
 
-const PogApp = ({ Component, pageProps, chapters }) => {
-    console.log('_APP', chapters)
-
+const PogApp = ({ Component, pageProps }) => {
     return (
         <>
             <Head>
@@ -23,7 +21,7 @@ const PogApp = ({ Component, pageProps, chapters }) => {
             <ColorModeProvider>
                 {/* <ThemeProvider theme={Theme}> */}
                 {/* <CssBaseline /> */}
-                <Layout chapters={chapters}>
+                <Layout>
                     <Component {...pageProps} />
                 </Layout>
                 {/* </ThemeProvider> */}

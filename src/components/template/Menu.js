@@ -24,6 +24,8 @@ import SubdirectoryArrowRightIcon from '@mui/icons-material/SubdirectoryArrowRig
 import TopicIcon from '@mui/icons-material/Topic'
 import ArticleIcon from '@mui/icons-material/Article'
 
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
+
 import { Logo, LoadingProgress } from '@pog/components/elements'
 import { SettingsDialog } from '@pog/components/template'
 
@@ -49,7 +51,6 @@ const Menu = () => {
     useEffect(() => {
         const getChapters = async () => {
             const { data: chapters } = await axios.get('/api/chapters')
-            console.log('capitulos', chapters)
             setChapters(chapters)
             setLoading(false)
         }
@@ -74,9 +75,29 @@ const Menu = () => {
                     setOpen(false)
                 }}
             >
-                <Stack padding={1}>
-                    <Box sx={{ mb: 2, mt: 2 }}>
+                <Stack
+                    padding={1}
+                    sx={{
+                        maxWidth: '300px',
+                    }}
+                >
+                    <Box
+                        sx={{
+                            mb: 2,
+                            mt: 2,
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'space-between',
+                        }}
+                    >
                         <Logo />
+                        <IconButton
+                            onClick={() => {
+                                setOpen(false)
+                            }}
+                        >
+                            <ChevronLeftIcon />
+                        </IconButton>
                     </Box>
                     <Divider />
                     <List sx={{ padding: 0 }}>
@@ -111,7 +132,6 @@ const Menu = () => {
                                     icon={getChapterTypeIcon(chapter)}
                                 />
                             ))}
-
                         <Divider />
                         <ListItemButton
                             icon={<SettingsIcon />}

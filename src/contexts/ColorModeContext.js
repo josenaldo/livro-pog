@@ -1,5 +1,6 @@
 import React from 'react'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
+import { GlobalStyles } from '@mui/material'
 import CssBaseline from '@mui/material/CssBaseline'
 
 import { BaseTheme, extendTheme, Palettes } from '@pog/styles'
@@ -38,9 +39,16 @@ const ColorModeProvider = ({ children }) => {
 
     return (
         <ColorModeContext.Provider
-            value={{ colorMode, toggleColorMode, COLOR_MODES }}
+            value={{ colorMode, toggleColorMode, COLOR_MODES, theme }}
         >
             <CssBaseline />
+            <GlobalStyles
+                styles={{
+                    body: {
+                        ...theme.scroll,
+                    },
+                }}
+            />
 
             <ThemeProvider theme={theme}>{children}</ThemeProvider>
         </ColorModeContext.Provider>
