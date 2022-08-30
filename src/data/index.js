@@ -1,1 +1,6 @@
-export { getChapters, getChapterData, getSortedChapters } from './Chapters'
+export {
+    getChapters,
+    getChapterData,
+    getLinkedChapters,
+    getSortedChapters,
+} from './Chapters'

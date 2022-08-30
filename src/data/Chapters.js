@@ -11,8 +11,6 @@ const getChapters = async () => {
         return file.replace(`${chaptersPath}/`, '')
     })
 
-    console.log('FILES', files)
-
     return files
 }
 
@@ -36,18 +34,7 @@ const getChapterData = (fileName, loadContent = true) => {
     return chapter
 }
 
-const getSortedChapters = async (loadContent = true) => {
-    const files = await getChapters()
-
-    const chapters = files.map((fileName) => {
-        const chapter = getChapterData(fileName, loadContent)
-        return chapter
-    })
-
-    const sortedChapters = chapters.sort((a, b) => {
-        return a.order_number - b.order_number
-    })
-
+const getLinkedChapters = (sortedChapters) => {
     const linkedSortChapters = sortedChapters.map((chapter, index) => {
         const isFirst = index === 0
         const isLast = index === sortedChapters.length - 1
@@ -78,4 +65,21 @@ const getSortedChapters = async (loadContent = true) => {
     return linkedSortChapters
 }
 
-export { getChapters, getChapterData, getSortedChapters }
+const getSortedChapters = async (loadContent = true) => {
+    const files = await getChapters()
+
+    const chapters = files.map((fileName) => {
+        const chapter = getChapterData(fileName, loadContent)
+        return chapter
+    })
+
+    const sortedChapters = chapters.sort((a, b) => {
+        return a.order_number - b.order_number
+    })
+
+    const linkedSortChapters = getLinkedChapters(sortedChapters)
+
+    return linkedSortChapters
+}
+
+export { getChapters, getChapterData, getLinkedChapters, getSortedChapters }
