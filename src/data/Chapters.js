@@ -5,7 +5,7 @@ import matter from 'gray-matter'
 import { getDataFileAbsolutePath } from '@pog/utils'
 
 const getChapters = async () => {
-    const chaptersPath = 'data/capitulos'
+    const chaptersPath = 'public/data/capitulos'
 
     const files = glob.sync(`${chaptersPath}/**/*.md`).map((file) => {
         return file.replace(`${chaptersPath}/`, '')
