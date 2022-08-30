@@ -41,8 +41,7 @@ const getStaticProps = async ({ params }) => {
     const slugParts = params.slug
     const slug = slugParts.join('/')
 
-    const files = await getChapters()
-    const sortedChapters = getSortedChapters(files)
+    const sortedChapters = await getSortedChapters()
 
     const chapter = sortedChapters.find((c) => c.slug === slug)
 

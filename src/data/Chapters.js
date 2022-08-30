@@ -14,22 +14,30 @@ const getChapters = async () => {
     return files
 }
 
-const getChapterData = (fileName) => {
+const getChapterData = (fileName, loadContent = true) => {
     const slug = fileName.replace('.md', '')
 
     const filePath = getDataFileAbsolutePath(`capitulos/${fileName}`)
     const readFile = fs.readFileSync(filePath, 'utf8')
     const { data: frontmatter, content } = matter(readFile)
-    return {
+
+    const chapter = {
         slug,
-        content,
         ...frontmatter,
     }
+
+    if (loadContent) {
+        chapter.content = content
+    }
+
+    return chapter
 }
 
-const getSortedChapters = (files) => {
+const getSortedChapters = async (loadContent = true) => {
+    const files = await getChapters()
+
     const chapters = files.map((fileName) => {
-        const chapter = getChapterData(fileName)
+        const chapter = getChapterData(fileName, loadContent)
         return chapter
     })
 

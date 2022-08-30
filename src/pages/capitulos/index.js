@@ -19,12 +19,10 @@ import TopicIcon from '@mui/icons-material/Topic'
 import ArticleIcon from '@mui/icons-material/Article'
 
 import { ChapterProgress } from '@pog/components/elements'
-import { getChapters, getSortedChapters } from '@pog/data'
+import { getSortedChapters } from '@pog/data'
 
 const getStaticProps = async () => {
-    const files = await getChapters()
-
-    const sortedChapters = getSortedChapters(files)
+    const sortedChapters = await getSortedChapters(false)
 
     return {
         props: {

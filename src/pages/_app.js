@@ -1,16 +1,14 @@
 import Head from 'next/head'
-import CssBaseline from '@mui/material/CssBaseline'
-import { ThemeProvider } from '@mui/material/styles'
 import { DefaultSeo } from 'next-seo'
 
 import { SeoConfig } from '@pog/config'
 
-// import { Theme } from '@pog/styles'
-import { ColorModeProvider, useColorMode } from '@pog/contexts'
+import { ColorModeProvider } from '@pog/contexts'
 import { Layout } from '@pog/components/template'
 
-export default function MyApp({ Component, pageProps }) {
-    const { theme } = useColorMode()
+const PogApp = ({ Component, pageProps, chapters }) => {
+    console.log('_APP', chapters)
+
     return (
         <>
             <Head>
@@ -25,7 +23,7 @@ export default function MyApp({ Component, pageProps }) {
             <ColorModeProvider>
                 {/* <ThemeProvider theme={Theme}> */}
                 {/* <CssBaseline /> */}
-                <Layout>
+                <Layout chapters={chapters}>
                     <Component {...pageProps} />
                 </Layout>
                 {/* </ThemeProvider> */}
@@ -33,3 +31,5 @@ export default function MyApp({ Component, pageProps }) {
         </>
     )
 }
+
+export default PogApp

@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import axios from 'axios'
 import Link from 'next/link'
 import {
     Box,
@@ -15,13 +16,46 @@ import {
 
 import MenuIcon from '@mui/icons-material/Menu'
 import SettingsIcon from '@mui/icons-material/Settings'
+import HomeIcon from '@mui/icons-material/Home'
+import SosIcon from '@mui/icons-material/Sos'
+import AnnouncementIcon from '@mui/icons-material/Announcement'
 
-import { Logo } from '@pog/components/elements'
+import SubdirectoryArrowRightIcon from '@mui/icons-material/SubdirectoryArrowRight'
+import TopicIcon from '@mui/icons-material/Topic'
+import ArticleIcon from '@mui/icons-material/Article'
+
+import { Logo, LoadingProgress } from '@pog/components/elements'
 import { SettingsDialog } from '@pog/components/template'
 
 const Menu = () => {
+    const [chapters, setChapters] = useState([])
+    const [loading, setLoading] = useState(true)
+
     const [open, setOpen] = useState(false)
     const [openSettings, setOpenSettings] = useState(false)
+
+    const getChapterTypeIcon = (chapter) => {
+        if (chapter.isParent) {
+            return <TopicIcon />
+        }
+
+        if (!chapter.isParent && chapter.parent) {
+            return <SubdirectoryArrowRightIcon />
+        }
+
+        return <ArticleIcon />
+    }
+
+    useEffect(() => {
+        const getChapters = async () => {
+            const { data: chapters } = await axios.get('/api/chapters')
+            console.log('capitulos', chapters)
+            setChapters(chapters)
+            setLoading(false)
+        }
+
+        getChapters()
+    }, [])
 
     return (
         <Box>
@@ -45,8 +79,40 @@ const Menu = () => {
                         <Logo />
                     </Box>
                     <Divider />
-                    <Divider />
                     <List sx={{ padding: 0 }}>
+                        <ListItemLink
+                            href="/"
+                            text="Home"
+                            icon={<HomeIcon />}
+                        />
+                        <ListItemLink
+                            href="/capitulos"
+                            text="Capítulos"
+                            icon={<ArticleIcon />}
+                        />
+                        <ListItemLink
+                            href="/ajude"
+                            text="Ajude este projeto"
+                            icon={<SosIcon />}
+                        />
+                        <ListItemLink
+                            href="/novidades"
+                            text="Novidades"
+                            icon={<AnnouncementIcon />}
+                        />
+                        <Divider />
+                        <LoadingProgress loading={loading} />
+                        {chapters &&
+                            chapters.map((chapter) => (
+                                <ListItemLink
+                                    key={chapter.slug}
+                                    href={`/capitulos/${chapter.slug}`}
+                                    text={chapter.title}
+                                    icon={getChapterTypeIcon(chapter)}
+                                />
+                            ))}
+
+                        <Divider />
                         <ListItemButton
                             icon={<SettingsIcon />}
                             text="Configurações"
@@ -62,18 +128,20 @@ const Menu = () => {
     )
 }
 
-const ListItemLink = ({ icon, text, href }) => {
+const ListItemLink = ({ text, href, icon }) => {
     return (
-        <ListItem component={Link} disablePadding href={href}>
-            <MuiListItemButton>
-                <ListItemIcon>{icon}</ListItemIcon>
-                <ListItemText primary={text} />
-            </MuiListItemButton>
-        </ListItem>
+        <Link href={href}>
+            <ListItem disablePadding>
+                <MuiListItemButton>
+                    <ListItemIcon>{icon}</ListItemIcon>
+                    <ListItemText primary={text} />
+                </MuiListItemButton>
+            </ListItem>
+        </Link>
     )
 }
 
-const ListItemButton = ({ icon, text, onClick }) => {
+const ListItemButton = ({ text, onClick, icon }) => {
     return (
         <ListItem disablePadding>
             <MuiListItemButton onClick={onClick}>
