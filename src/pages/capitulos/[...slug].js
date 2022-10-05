@@ -61,7 +61,6 @@ const getStaticProps = async ({ params }) => {
 }
 
 const PaginaCapitulo = ({ chapter }) => {
-    console.log(chapter)
     return (
         <Container>
             <ChapterView chapter={chapter} />

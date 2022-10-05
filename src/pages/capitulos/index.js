@@ -82,7 +82,7 @@ const PaginaCapitulos = ({ chapters }) => {
                                             primary={chapter.title}
                                             secondary={chapter.description}
                                             sx={{
-                                                pr: 1,
+                                                pr: 3,
                                             }}
                                         />
                                         <ListItemSecondaryAction>

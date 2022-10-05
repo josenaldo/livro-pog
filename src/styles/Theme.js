@@ -57,18 +57,19 @@ const extendTheme = (theme) => {
     }
 
     theme.typography.h2 = {
-        fontSize: '1.75rem',
+        fontSize: '1.6rem',
+
         [theme.breakpoints.up('sm')]: {
-            fontSize: '2.00rem',
+            fontSize: '1.7rem',
         },
         [theme.breakpoints.up('md')]: {
-            fontSize: '2.25rem',
+            fontSize: '1.8rem',
         },
         [theme.breakpoints.up('lg')]: {
-            fontSize: '2.50rem',
+            fontSize: '1.9rem',
         },
         [theme.breakpoints.up('xl')]: {
-            fontSize: '2.75rem',
+            fontSize: '2.00rem',
         },
     }
 

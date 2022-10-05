@@ -1,29 +1,20 @@
 import React from 'react'
-import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 
 import {
-    Avatar,
     Box,
-    IconButton,
     Card,
-    Container,
     Divider,
-    List,
-    ListItemButton,
-    ListItemSecondaryAction,
     Typography,
-    ListItemText,
-    ListItemAvatar,
     Stack,
     CardMedia,
-    CardContent,
     Button,
-    Grid,
     Backdrop,
     CircularProgress,
 } from '@mui/material'
+
+import Grid from '@mui/material/Unstable_Grid2'
 
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
@@ -41,17 +32,15 @@ const ChapterView = ({ chapter }) => {
     const handlers = useSwipeable({
         onSwipedLeft: (eventData) => {
             if (chapter.next) {
+                setLoading(true)
                 router.push(chapter.next.url)
             }
         },
         onSwipedRight: (eventData) => {
             if (chapter.previous) {
+                setLoading(true)
                 router.push(chapter.previous.url)
             }
-        },
-
-        onSwipeStart: (eventData) => {
-            setLoading(true)
         },
     })
 

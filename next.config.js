@@ -13,7 +13,7 @@ const nextConfig = {
     },
 
     env: {
-        NEXT_PUBLIC_EMBED_DOMAIN: process.env.NEXT_PUBLIC_EMBED_DOMAIN,
+        NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL,
     },
 }
 

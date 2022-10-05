@@ -106,6 +106,7 @@ const Menu = () => {
                             text="Home"
                             icon={<HomeIcon />}
                         />
+
                         <ListItemLink
                             href="/capitulos"
                             text="Capítulos"
