@@ -8,7 +8,7 @@ date: 2020-04-16 00:00
 image:
     path: "/images/capitulos/introducao.jpg"
     width: "1200"
-    height: "628"
+    height: "630"
 name: introducao
 parent:
 isParent: false

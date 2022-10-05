@@ -1,9 +1,10 @@
-const title = 'Ciro TV'
-const description = 'A segunda tela do Cirão.'
-const url = 'https://cirotv.com.br/'
+const title = 'Programação Orientada a Gambiarra'
+const description =
+    'Como transformar o seu trabalho em uma amostra grátis do inferno!.'
+const url = 'https://livropog.com.br/'
 
 const SeoConfig = {
-    titleTemplate: '%s | Ciro TV',
+    titleTemplate: '%s | Programação Orientada a Gambiarra',
     title: title,
     description: description,
     canonical: url,
@@ -22,15 +23,6 @@ const SeoConfig = {
                 alt: 'Og Image Alt',
                 type: 'image/jpeg',
             },
-            {
-                url: 'https://www.example.ie/og-image-02.jpg',
-                width: 900,
-                height: 800,
-                alt: 'Og Image Alt Second',
-                type: 'image/jpeg',
-            },
-            { url: 'https://www.example.ie/og-image-03.jpg' },
-            { url: 'https://www.example.ie/og-image-04.jpg' },
         ],
     },
     twitter: {
