@@ -46,8 +46,11 @@ const getLinkedChapters = (sortedChapters) => {
                 slug: previousChapter.slug,
                 title: previousChapter.title,
             }
+            chapter.previous.url = `/capitulos/${previousChapter.slug}`
         } else {
-            chapter.previous = null
+            chapter.previous = {
+                url: '/capitulos',
+            }
         }
 
         if (nextChapter) {
@@ -55,8 +58,11 @@ const getLinkedChapters = (sortedChapters) => {
                 slug: nextChapter.slug,
                 title: nextChapter.title,
             }
+            chapter.next.url = `/capitulos/${nextChapter.slug}`
         } else {
-            chapter.next = null
+            chapter.next = {
+                url: '/capitulos',
+            }
         }
 
         return chapter

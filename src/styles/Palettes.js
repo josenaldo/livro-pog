@@ -13,6 +13,22 @@ import {
 
 const primaryColor = deepPurple
 const secondaryColor = blueGrey
+const neutralColor = {
+    50: '#616161',
+    100: '#595959',
+    200: '#525252',
+    300: '#4b4b4b',
+    400: '#434343',
+    500: '#3c3c3c',
+    600: '#353535',
+    700: '#2e2e2e',
+    800: '#282828',
+    900: '#212121',
+    A100: '#595959',
+    A200: '#525252',
+    A400: '#4b4b4b',
+    A700: '#2e2e2e',
+}
 
 const successColor = green
 const infoColor = blue
@@ -47,6 +63,23 @@ const darkPalette = {
         main: secondaryColor[200],
         dark: secondaryColor[300],
         darker: secondaryColor[400],
+
+        // contrastText: darkTextColor,
+        contrastTextColor: {
+            lighter: darkTextColor,
+            light: darkTextColor,
+            main: darkTextColor,
+            dark: lightTextColor,
+            darker: lightTextColor,
+        },
+    },
+
+    neutral: {
+        lighter: neutralColor[500],
+        light: neutralColor[600],
+        main: neutralColor[700],
+        dark: neutralColor[800],
+        darker: neutralColor[900],
 
         // contrastText: darkTextColor,
         contrastTextColor: {
@@ -157,6 +190,23 @@ const lightPalette = {
         main: secondaryColor[500],
         dark: secondaryColor[700],
         darker: secondaryColor[900],
+
+        // contrastText: darkTextColor,
+        contrastTextColor: {
+            lighter: darkTextColor,
+            light: darkTextColor,
+            main: darkTextColor,
+            dark: lightTextColor,
+            darker: lightTextColor,
+        },
+    },
+
+    neutral: {
+        lighter: neutralColor[100],
+        light: neutralColor[300],
+        main: neutralColor[500],
+        dark: neutralColor[700],
+        darker: neutralColor[900],
 
         // contrastText: darkTextColor,
         contrastTextColor: {
