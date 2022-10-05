@@ -38,10 +38,6 @@ const ChapterView = ({ chapter }) => {
 
     const [loading, setLoading] = React.useState(false)
 
-    React.useEffect(() => {
-        setLoading(false)
-    }, [router.query.slug])
-
     const handlers = useSwipeable({
         onSwipedLeft: (eventData) => {
             if (chapter.next) {
@@ -58,6 +54,34 @@ const ChapterView = ({ chapter }) => {
             setLoading(true)
         },
     })
+
+    React.useEffect(() => {
+        setLoading(false)
+    }, [router.query.slug])
+
+    React.useEffect(() => {
+        function handleKeyDown(e) {
+            if (e.keyCode === 39) {
+                setLoading(true)
+                if (chapter.next) {
+                    router.push(chapter.next.url)
+                }
+            }
+            if (e.keyCode === 37) {
+                setLoading(true)
+                if (chapter.previous) {
+                    router.push(chapter.previous.url)
+                }
+            }
+        }
+
+        document.addEventListener('keydown', handleKeyDown)
+
+        // Don't forget to clean up
+        return function cleanup() {
+            document.removeEventListener('keydown', handleKeyDown)
+        }
+    }, [])
 
     return (
         <Card
