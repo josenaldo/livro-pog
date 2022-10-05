@@ -9,7 +9,7 @@ const Hero = () => {
             sx={{
                 backgroundColor: 'background.cover',
                 backgroundImage:
-                    'linear-gradient(rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.95)), url("/images/cover/hero-hd.jpg")',
+                    'linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.8)), url("/images/cover/hero-hd.jpg")',
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
                 backgroundPosition: 'top',
@@ -52,7 +52,19 @@ const Hero = () => {
                         seu emprego enquanto garante que o inferno seja uma
                         amostra grátis do seu trabalho!
                     </Typography>
-                    <Stack spacing={2} direction="row" width="50%">
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            flexDirection: {
+                                xs: 'column',
+                                sm: 'column',
+                                md: 'row',
+                                lg: 'row',
+                                xl: 'row',
+                            },
+                            gap: 2,
+                        }}
+                    >
                         <Link href="/capitulos">
                             <Button
                                 variant="contained"
@@ -71,7 +83,7 @@ const Hero = () => {
                                 Ajude esse projeto
                             </Button>
                         </Link>
-                    </Stack>
+                    </Box>
                 </Box>
             </Container>
         </Box>
