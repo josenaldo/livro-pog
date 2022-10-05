@@ -27,7 +27,7 @@ const Logo = () => {
                     color="text.primary"
                     fontWeight="bold"
                     sx={{
-                        display: { xs: 'none', sm: 'flex' },
+                        mx: 1,
                     }}
                 >
                     POG
