@@ -85,6 +85,9 @@ const ChapterView = ({ chapter }) => {
                     <ChapterButton
                         url={chapter.previous.url}
                         icon={<ArrowBackIosNewIcon />}
+                        onClick={() => {
+                            setLoading(true)
+                        }}
                     />
                 </Grid>
                 <Grid xs={10} padding={2}>
@@ -96,6 +99,9 @@ const ChapterView = ({ chapter }) => {
                     <ChapterButton
                         url={chapter.next.url}
                         icon={<ArrowForwardIosIcon />}
+                        onClick={() => {
+                            setLoading(true)
+                        }}
                     />
                 </Grid>
             </Grid>
@@ -168,7 +174,7 @@ const ChapterContent = ({ chapter }) => {
     )
 }
 
-const ChapterButton = ({ url, icon }) => {
+const ChapterButton = ({ url, icon, onClick = () => {} }) => {
     return (
         <Link href={url}>
             <Button
@@ -187,6 +193,7 @@ const ChapterButton = ({ url, icon }) => {
                     alignItems: 'center',
                     justifyContent: 'center',
                 }}
+                onClick={onClick}
             >
                 {icon}
             </Button>
