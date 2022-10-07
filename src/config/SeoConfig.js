@@ -30,6 +30,21 @@ const SeoConfig = {
         site: '@josenaldomatos',
         cardType: 'summary_large_image',
     },
+    additionalLinkTags: [
+        {
+            rel: 'icon',
+            href: `${process.env.NEXT_PUBLIC_SITE_URL}/icons/favicon.ico`,
+        },
+        {
+            rel: 'apple-touch-icon',
+            href: `${process.env.NEXT_PUBLIC_SITE_URL}/icons/76x76-icon.png`,
+            sizes: '76x76',
+        },
+        {
+            rel: 'manifest',
+            href: `${process.env.NEXT_PUBLIC_SITE_URL}/manifest.json`,
+        },
+    ],
 }
 
 export { SeoConfig }

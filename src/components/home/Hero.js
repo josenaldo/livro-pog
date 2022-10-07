@@ -1,7 +1,5 @@
 import Link from 'next/link'
-import Image from 'next/image'
-import { Container, Box, Typography, Button, Stack } from '@mui/material'
-import { useColorMode } from '@pog/contexts'
+import { Container, Box, Typography, Button } from '@mui/material'
 
 const Hero = () => {
     return (
