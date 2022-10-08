@@ -1,11 +1,12 @@
-import { Box, Container, Button, Typography } from '@mui/material'
+import { Box } from '@mui/material'
 
-import { Hero } from '@pog/components/home'
+import { Hero, Features } from '@pog/components/home'
 
 const Home = () => {
     return (
         <Box>
             <Hero />
+            <Features />
         </Box>
     )
 }

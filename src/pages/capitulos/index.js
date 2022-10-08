@@ -20,6 +20,7 @@ import ArticleIcon from '@mui/icons-material/Article'
 
 import { ChapterProgress } from '@pog/components/elements'
 import { getSortedChapters } from '@pog/data'
+import { NextSeo } from 'next-seo'
 
 const getStaticProps = async () => {
     const sortedChapters = await getSortedChapters(false)
@@ -42,6 +43,22 @@ const PaginaCapitulos = ({ chapters }) => {
         }
 
         return <ArticleIcon />
+    }
+
+    const title = 'Capítulos'
+    const description = 'Essa é a lista de capítulos do livro POG.'
+
+    const og = {
+        title: title,
+        description: description,
+        images: [
+            {
+                url: `${process.env.NEXT_PUBLIC_SITE_URL}/images/capitulos.jpg`,
+                width: '1200px',
+                height: '630px',
+                alt: title,
+            },
+        ],
     }
 
     return (
