@@ -6,6 +6,8 @@ import rehypePrism from 'rehype-prism-plus'
 import ReactMarkdown from 'react-markdown'
 import rehypeRaw from 'rehype-raw'
 
+import remarkGfm from 'remark-gfm'
+
 import { Link, ResponsiveImage, Code } from '@pog/components/elements'
 
 const MDXContent = ({ content }) => {
@@ -17,6 +19,7 @@ const MDXContent = ({ content }) => {
                 rel: ['nofollow', 'noopener', 'noreferrer'],
             },
         ],
+        [remarkGfm],
         [rehypePrism],
     ]
 
@@ -34,6 +37,10 @@ const MDXContent = ({ content }) => {
                 components={components}
                 remarkPlugins={remarkPlugins}
                 rehypePlugins={rehypePlugins}
+                remarkRehypeOptions={{
+                    footnoteLabel: 'Notas de rodapé',
+                    footnoteBackLabel: 'Voltar ao conteúdo',
+                }}
             >
                 {content}
             </ReactMarkdown>

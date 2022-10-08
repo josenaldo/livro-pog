@@ -25,10 +25,10 @@ Qualquer afirmação suficientemente convicta é indistinguível da verdade.
 
 Uma dessas lendas diz que a primeira POG foi criada pelo Papa Gregório XIII[^fn-romanos].
 
-* Dias no calendário Gregoriano: 365 dias
-* Translação da Terra: 365,25
-* Problema: 6 Horas a mais por ano!
-* Resolução: um dia a mais a cada 4 anos
+- Dias no calendário Gregoriano: 365 dias
+- Translação da Terra: 365,25
+- Problema: 6 Horas a mais por ano!
+- Resolução: um dia a mais a cada 4 anos
 
 Assim, afirmam que o Papa Gregório XIII foi o criador do Ano Bissexto. Mas isso é um erro!
 
@@ -43,4 +43,5 @@ Portanto, se considerarmos o Ano Bissexto com a primeira POG, seria Júlio Césa
 Devido a essa confusão, que atribui os mérito da criação do Ano Bissexto ao Papa Gregório XIII, é que ele é considerado o Padroeiro dos POGramadores e, no dia 29 de Fevereiro, é comemorado o Dia Internacional da POG.
 
 ---
+
 [^fn-romanos]: Em minha opinião, o próprio sistema de numeração romano é uma grande POG. "Julius, precisamos de símbolos para os números", disse César. "Que nada, César. Usa letra mesmo, que vai dar menos trabalho. Lá na frente, alguém troca".
