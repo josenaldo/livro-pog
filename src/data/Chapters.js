@@ -18,7 +18,6 @@ const getChapterData = (fileName, loadContent = true) => {
     const slug = fileName.replace('.md', '')
 
     const filePath = getDataFileAbsolutePath(`capitulos/${fileName}`)
-    console.log('filePath', filePath)
     const readFile = fs.readFileSync(filePath, 'utf8')
     const { data: frontmatter, content } = matter(readFile)
 

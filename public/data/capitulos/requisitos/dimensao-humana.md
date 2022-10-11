@@ -13,7 +13,7 @@ status: review
 
 Criar software é transformar o âmago do ser humano em impulsos digitais. E, como tal, o resultado não poderia ser outro a não ser uma sucessão de erros e desastres que trabalham pra realizar uma tarefa. Um bom POGrama é um amontoado de coisas escritas que tem a capacidade de fingir resolver um problema enquanto cria vários outros. O fator humano é, portanto, o principal influenciador da POG, o ingrediente com sabor mais forte nessa sopa de desgraça que leva à manifestação digital de uma pog.
 
-Os Requisitos da POG classificados na Dimensão Humana são aqueles produzidos diretamente pela participação humana nesse processo. Não é apenas nossa presença danosa que permite que a POG floresça. É necessário que essa presença ocorra encarnada em algum dos seguintes estereótipos:
+Os Requisitos da POG classificados na Dimensão Humana são aqueles produzidos diretamente pela participação humana nesse processo. Não é apenas nossa presença danosa que permite que a POG floresça. É necessário que essa presença ocorra encarnada em algum dos seguintes estereótipos.
 
 ## Equipe Apática
 
@@ -57,7 +57,8 @@ Em nossa supracitada sopa de desgraça, tão necessária para nutrir nossas POGs
 
 ## Cliente Corrosivo
 
-Se o Gerente sem Noção é a pimenta, o Cliente Corrosivo  é o "tompero" {% cite Jacquin2019%}.
+Se o Gerente sem Noção é a pimenta, o Cliente Corrosivo  é o "tompero"
+[@Jacquin2019].
 
 O Cliente Corrosivo é a entidade que paga por duas coisas: pelo projeto e pelo direito de estragar o projeto. Ele não apenas se coloca como financiador dessa empreitada, mas como um dos principais obstáculos que devem ser superados.
 
