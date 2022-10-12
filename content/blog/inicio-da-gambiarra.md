@@ -3,12 +3,11 @@ title: O Início da gambiarra
 description:
     "Toda grande caminhada começa com um pequeno passo. E toda grande gambiarra começa com um pequeno erro."
 date: 2020-04-17 02:52:00 -0300
-category: novidades
 author: Josenaldo Matos
 image:
-    url: "/images/posts/2020-04-17-inicio-da-gambiarra.jpg"
+    url: "/images/posts/inicio-da-gambiarra.jpg"
     width: "1200"
-    height: "628"
+    height: "630"
 ---
 **Saudações, ruma de POGramadores!**
 

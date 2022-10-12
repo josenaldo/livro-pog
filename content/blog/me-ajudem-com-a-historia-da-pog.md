@@ -2,12 +2,11 @@
 title: A História da POG precisa de sua ajuda
 description: O Livro POG necessida te sua colaboração!
 date: 2020-05-02 07:23:00 -0300
-category: novidades
-author: Vudu Reverso
+author: Josenaldo Matos
 image:
-    url: "/images/posts/2020-05-02-me-ajudem-com-a-historia-da-pog.jpg"
+    url: "/images/posts/me-ajudem-com-a-historia-da-pog.jpg"
     width: "1200"
-    height: "628"
+    height: "630"
 ---
 
 **Saudações, ruma de Faz Deploy por FTP!**

@@ -35,7 +35,7 @@ const PostView = ({ post }) => {
                         display: 'flex',
                         flexDirection: 'column',
                         gap: 2,
-                        pb: 5,
+                        py: 5,
                     }}
                 >
                     <ContentTitle
