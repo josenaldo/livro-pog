@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 
 const runtimeCaching = require('next-pwa/cache')
+const { withContentlayer } = require('next-contentlayer')
+
 const withPWA = require('next-pwa')({
     dest: 'public',
     runtimeCaching,
@@ -8,33 +10,15 @@ const withPWA = require('next-pwa')({
     mode: 'production',
 })
 
-module.exports = withPWA({
+const nextConfig = {
     env: {
         NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL,
     },
-})
+    images: {
+        domains: ['localhost', 'livropog.com.br'],
+    },
+}
 
-// const withPWA = require('next-pwa')
-// const runtimeCaching = require('next-pwa/cache')
+const contentLayerConfig = withContentlayer(nextConfig)
 
-// const nextConfig = {
-//     pwa: {
-//         dest: 'public',
-//         runtimeCaching,
-//         disable: process.env.NODE_ENV === 'development',
-//         dest: 'public',
-//         mode: 'production',
-//     },
-
-//     env: {
-//         NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL,
-//     },
-// }
-
-// module.exports = () => {
-//     const plugins = [withPWA]
-//     const config = plugins.reduce((acc, next) => next(acc), {
-//         ...nextConfig,
-//     })
-//     return config
-// }
+module.exports = withPWA(contentLayerConfig)

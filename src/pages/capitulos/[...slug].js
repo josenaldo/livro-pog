@@ -2,7 +2,7 @@ import { Container } from '@mui/material'
 
 import { getChapters, getSortedChapters } from '@pog/data'
 
-import { ChapterView } from '@pog/components/chapters'
+import { ChapterView } from '@pog/components/content'
 
 import { NextSeo } from 'next-seo'
 

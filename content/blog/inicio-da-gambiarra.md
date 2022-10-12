@@ -1,19 +1,18 @@
 ---
-layout: post
 title: O Início da gambiarra
+description:
+    "Toda grande caminhada começa com um pequeno passo. E toda grande gambiarra começa com um pequeno erro."
 date: 2020-04-17 02:52:00 -0300
 category: novidades
-author: Vudu Reverso
+author: Josenaldo Matos
 image:
-    path: "/images/posts/2020-04-17-inicio-da-gambiarra.jpg"
+    url: "/images/posts/2020-04-17-inicio-da-gambiarra.jpg"
     width: "1200"
     height: "628"
 ---
 **Saudações, ruma de POGramadores!**
 
 Esse post marca o início desse que será o grande projeto de minha vida, meu grande legado, a herança que envergonhará meus descendentes e causará desconforto na família: um livro sobre Programação Orientada a Gambiarras.
-
-<!-- more -->
 
 Mas por que um livro desses?
 

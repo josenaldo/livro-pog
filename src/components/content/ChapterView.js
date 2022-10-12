@@ -19,10 +19,14 @@ import Grid from '@mui/material/Unstable_Grid2'
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
 
-import { MDXContent } from '@pog/components/elements'
-
 import { useSwipeable } from 'react-swipeable'
 import { useRouter } from 'next/router'
+import {
+    ContentMainImage,
+    ContentQuote,
+    ContentTitle,
+    MDXContent,
+} from '@pog/components/content'
 
 const ChapterView = ({ chapter }) => {
     const router = useRouter()
@@ -80,7 +84,7 @@ const ChapterView = ({ chapter }) => {
             }}
             {...handlers}
         >
-            <ChapterImage chapter={chapter} />
+            <ContentMainImage image={chapter.image} alt={chapter.title} />
 
             <Grid
                 container
@@ -103,10 +107,27 @@ const ChapterView = ({ chapter }) => {
                         }}
                     />
                 </Grid>
-                <Grid xs={10} padding={2}>
-                    <ChapterHeader chapter={chapter} />
+                <Grid
+                    xs={10}
+                    padding={2}
+                    sx={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        gap: 2,
+                        pb: 5,
+                    }}
+                >
+                    <ContentTitle
+                        title={chapter.title}
+                        subtitle={chapter.description}
+                    />
+                    <ContentQuote
+                        quote={chapter.sentence}
+                        author={chapter.sentence_author}
+                    />
                     <Divider />
-                    <ChapterContent chapter={chapter} />
+
+                    <MDXContent content={chapter.content} />
                 </Grid>
                 <Grid xs={1}>
                     <ChapterButton
@@ -129,61 +150,6 @@ const ChapterView = ({ chapter }) => {
                 <CircularProgress color="inherit" />
             </Backdrop>
         </Card>
-    )
-}
-
-const ChapterImage = ({ chapter }) => {
-    return (
-        <CardMedia
-            sx={{
-                padding: 0,
-                margin: 0,
-            }}
-        >
-            {chapter.image && (
-                <Box
-                    sx={{
-                        aspectRatio: '16/9',
-                        position: 'relative',
-                    }}
-                >
-                    <Image
-                        src={chapter.image.path}
-                        alt={chapter.title}
-                        width={chapter.image.width}
-                        height={chapter.image.height}
-                        layout="fill"
-                        objectFit="cover"
-                    />
-                </Box>
-            )}
-        </CardMedia>
-    )
-}
-const ChapterHeader = ({ chapter }) => {
-    return (
-        <Stack alignItems="center" gap={0} marginBottom={2}>
-            <Typography variant="h1" textAlign="center">
-                {chapter.title}
-            </Typography>
-            <Typography variant="sentence" textAlign="center">
-                {chapter.sentence}
-            </Typography>
-            <Typography variant="sentenceAuthor" textAlign="center">
-                {chapter.sentence_author}
-            </Typography>
-            <Typography variant="subtitle" textAlign="center">
-                {chapter.description}
-            </Typography>
-        </Stack>
-    )
-}
-
-const ChapterContent = ({ chapter }) => {
-    return (
-        <Box>
-            <MDXContent content={chapter.content} />
-        </Box>
     )
 }
 

@@ -41,3 +41,6 @@ public/workbox-eac1af49.js.map
 
 # VSCode
 .vscode
+
+# ContentLayer
+.contentlayer

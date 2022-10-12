@@ -118,8 +118,8 @@ const Menu = () => {
                             icon={<SosIcon />}
                         />
                         <ListItemLink
-                            href="/novidades"
-                            text="Novidades"
+                            href="/blog"
+                            text="Blog"
                             icon={<AnnouncementIcon />}
                         />
                         <Divider />

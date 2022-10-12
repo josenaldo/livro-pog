@@ -5,7 +5,7 @@ sentence: A culpa é do Hardware!
 sentence_author: POGramador explicando porque o sistema POG não funciona
 order_number: 2000
 image:
-    path: "/images/capitulos/o-que-e-pog.jpg"
+    url: "/images/capitulos/o-que-e-pog.jpg"
     width: "1200"
     height: "628"
 date: 2020-04-16 00:01
@@ -34,7 +34,7 @@ E dessa forma, é que você, jovem POGramador, deve ver a Gambiarra: como a luz 
 
 **Ou seja, a Gambiarra é a solução técnica planejadamente improvisada e resultante de uma inspiração momentânea, com o intuito de resolver um problema complexo, onde o uso de técnicas tradicionais incorrem em alto custo energético para o resolvedor.**
 
-A duração da gambiarra é limitada, devendo essa ser substituída, assim que possível, por uma solução técnica convencional. Portanto, uma boa gambiarra tem, como tempo de permanência, o valor mínimo $$Tg$$ (Tempo da Gambiarra), sendo que $$Tg$$ tende ao infinito.
+A duração da gambiarra é limitada, devendo essa ser substituída, assim que possível, por uma solução técnica convencional. Portanto, uma boa gambiarra tem, como tempo de permanência, o valor mínimo *Tg* (Tempo da Gambiarra), sendo que *Tg* tende ao infinito.
 
 Por ter baixo custo presente, seu custo futuro tende a ser ignorado pelo gambiarrizador, já que esse custo certamente será assumido por terceiros. Portanto, a gambiarra se mostra extremamente vantajosa, o que justifica a sua utilização.
 

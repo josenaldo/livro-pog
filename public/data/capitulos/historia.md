@@ -6,7 +6,7 @@ sentence_author: Engenheiros do Hawaii sobre POG
 order_number: 3000
 date: 2020-04-16 00:02
 image:
-    path: "/images/capitulos/historia.jpg"
+    url: "/images/capitulos/historia.jpg"
     width: "1200"
     height: "630"
 name: historia

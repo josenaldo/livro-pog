@@ -6,7 +6,7 @@ sentence_author: Estagiário-chefe apoiando justificativa do estagiário ao gere
 order_number: 1000
 date: 2020-04-16 00:00
 image:
-    path: "/images/capitulos/agradecimentos.jpg"
+    url: "/images/capitulos/agradecimentos.jpg"
     width: "1200"
     height: "628"
 name: agradecimentos

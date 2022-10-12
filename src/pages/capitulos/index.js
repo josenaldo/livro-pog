@@ -63,6 +63,7 @@ const PaginaCapitulos = ({ chapters }) => {
 
     return (
         <Container>
+            <NextSeo title={title} description={description} openGraph={og} />
             <Card
                 sx={{
                     my: 5,

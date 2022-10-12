@@ -1,11 +1,11 @@
 ---
-layout: post
 title: A História da POG precisa de sua ajuda
+description: O Livro POG necessida te sua colaboração!
 date: 2020-05-02 07:23:00 -0300
 category: novidades
 author: Vudu Reverso
 image:
-    path: "/images/posts/2020-05-02-me-ajudem-com-a-historia-da-pog.jpg"
+    url: "/images/posts/2020-05-02-me-ajudem-com-a-historia-da-pog.jpg"
     width: "1200"
     height: "628"
 ---
@@ -15,8 +15,6 @@ image:
 Acabou de surgir uma moda: o dev de palco.
 
 Aqui não tem lugar pra esse tipo de degeneração cognitiva e moral! Aqui nós temos é DEV DE POG!
-
-<!-- more -->
 
 Enquanto essa gente criada a leite com pera temperado está criando palestras e participando de eventos, você está fazendo o trabalho de verdade que move a economia desse país: criando problemas geradores de postos de trabalho!
 

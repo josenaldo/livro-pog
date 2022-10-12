@@ -1,13 +1,13 @@
 ---
-layout: post
 title: Primeiros capítulos
+description: Teste
 date: 2020-04-24 20:21:00 -0300
 category: novidades
 author: Vudu Reverso
 image:
-    path: "/images/posts/2020-04-24-primeiros-capitulos.jpg"
+    url: "/images/posts/2020-04-24-primeiros-capitulos.jpg"
     width: "1200"
-    height: "628"
+    height: "630"
 ---
 **Saudações, ruma de POGramadores!**
 
@@ -23,7 +23,7 @@ Se estiver estudando programação, PARE AGORA! Estudar é coisa de programador.
 
 E, enquanto você espera seu mod de mineração automático executar uma tarefa que você deferia estar fazendo (parabéns, POGramador!), que tal uma leitura cabriocárica?
 
-Escrevinhei os dois primeiros capítulos: [Introdução]({{'/capitulos/introducao' | relative_path}}) e [O que é POG]({{'/capitulos/o-que-e-pog' | relative_path}}).
+Escrevinhei os dois primeiros capítulos: [Introdução](/capitulos/introducao) e [O que é POG]('/capitulos/o-que-e-pog').
 
 Obviamente que irei mudar esses capítulos no futuro, então aproveitem pra observar minhas fuleiragens agora[^fn1].
 
