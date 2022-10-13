@@ -127,7 +127,7 @@ const ChapterView = ({ chapter }) => {
                     />
                     <Divider />
 
-                    <MDXContent content={chapter.content} />
+                    <MDXContent content={chapter.body.raw} />
                 </Grid>
                 <Grid xs={1}>
                     <ChapterButton

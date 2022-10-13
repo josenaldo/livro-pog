@@ -56,7 +56,77 @@ const Post = defineDocumentType(() => ({
     },
 }))
 
+const Chapter = defineDocumentType(() => ({
+    name: 'Chapter',
+    filePathPattern: `capitulos/**/*.md`,
+    fields: {
+        title: {
+            type: 'string',
+            description: 'The title of the chapter',
+            required: true,
+        },
+        description: {
+            type: 'string',
+            description: 'The description of the chapter',
+            required: true,
+        },
+        date: {
+            type: 'date',
+            description: 'The date of the chapter',
+            required: true,
+        },
+        sentence: {
+            type: 'string',
+            description: 'A small sentence',
+            required: true,
+        },
+        order_number: {
+            type: 'number',
+            description: 'The order number of the chapter',
+            required: true,
+        },
+        sentence_author: {
+            type: 'string',
+            description: 'The author of the sentence',
+            required: true,
+        },
+        name: {
+            type: 'string',
+            description: 'The chapter internal name',
+            required: true,
+        },
+        parent: {
+            type: 'string',
+            description: 'The chapter parent',
+            required: false,
+            default: null,
+        },
+        isParent: {
+            type: 'boolean',
+            description: 'If the chapter is a parent',
+            required: false,
+            default: false,
+        },
+        status: {
+            type: 'enum',
+            options: ['backlog', 'progress', 'review', 'done'],
+            description: 'Status of the chapter',
+            required: true,
+        },
+        image: {
+            type: 'nested',
+            of: Image,
+        },
+    },
+    computedFields: {
+        url: {
+            type: 'string',
+            resolve: (doc) => `/${doc._raw.flattenedPath}`,
+        },
+    },
+}))
+
 export default makeSource({
     contentDirPath: 'content',
-    documentTypes: [Post],
+    documentTypes: [Post, Chapter],
 })

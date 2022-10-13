@@ -27,7 +27,6 @@ const getStaticProps = async ({ params }) => {
 }
 
 const PostPage = ({ post }) => {
-    console.log('=====POST: ', post)
     const og = {
         title: post.title,
         description: post.description,

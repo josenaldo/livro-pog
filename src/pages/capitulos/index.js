@@ -19,17 +19,15 @@ import TopicIcon from '@mui/icons-material/Topic'
 import ArticleIcon from '@mui/icons-material/Article'
 
 import { ChapterProgress } from '@pog/components/elements'
-import { getSortedChapters } from '@pog/data'
 import { NextSeo } from 'next-seo'
+import { allChapters } from 'contentlayer/generated'
 
 const getStaticProps = async () => {
-    const sortedChapters = await getSortedChapters(false)
+    const chapters = allChapters.sort((a, b) => {
+        return a.order_number - b.order_number
+    })
 
-    return {
-        props: {
-            chapters: sortedChapters,
-        },
-    }
+    return { props: { chapters } }
 }
 
 const PaginaCapitulos = ({ chapters }) => {
@@ -82,10 +80,10 @@ const PaginaCapitulos = ({ chapters }) => {
                     <List sx={{ my: 5 }}>
                         {chapters.map((chapter) => (
                             <>
-                                <Link href={`capitulos/${chapter.slug}`}>
+                                <Link href={chapter.url}>
                                     <ListItemButton
                                         component="a"
-                                        key={chapter.slug}
+                                        key={chapter.url}
                                         alignItems="flex-start"
                                         sx={{
                                             pl: chapter.parent ? 5 : 0,
