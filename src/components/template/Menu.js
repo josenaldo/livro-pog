@@ -1,5 +1,4 @@
-import { useState, useEffect } from 'react'
-import axios from 'axios'
+import React from 'react'
 import Link from 'next/link'
 import {
     Box,
@@ -26,15 +25,16 @@ import ArticleIcon from '@mui/icons-material/Article'
 
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
 
-import { Logo, LoadingProgress } from '@pog/components/elements'
+import { Logo } from '@pog/components/elements'
 import { SettingsDialog } from '@pog/components/template'
 
-const Menu = () => {
-    const [chapters, setChapters] = useState([])
-    const [loading, setLoading] = useState(true)
+import { getSortedChapters } from '@pog/data'
 
-    const [open, setOpen] = useState(false)
-    const [openSettings, setOpenSettings] = useState(false)
+const Menu = () => {
+    const chapters = getSortedChapters()
+
+    const [open, setOpen] = React.useState(false)
+    const [openSettings, setOpenSettings] = React.useState(false)
 
     const getChapterTypeIcon = (chapter) => {
         if (chapter.isParent) {
@@ -47,16 +47,6 @@ const Menu = () => {
 
         return <ArticleIcon />
     }
-
-    useEffect(() => {
-        const getChapters = async () => {
-            const { data: chapters } = await axios.get('/api/chapters')
-            setChapters(chapters)
-            setLoading(false)
-        }
-
-        getChapters()
-    }, [])
 
     return (
         <Box>
@@ -122,8 +112,18 @@ const Menu = () => {
                             text="Blog"
                             icon={<AnnouncementIcon />}
                         />
+
                         <Divider />
-                        <LoadingProgress loading={loading} />
+                        <ListItemButton
+                            icon={<SettingsIcon />}
+                            text="Configurações"
+                            onClick={() => {
+                                setOpenSettings(true)
+                            }}
+                        />
+
+                        <Divider />
+                        {/* <LoadingProgress loading={loading} /> */}
                         {chapters &&
                             chapters.map((chapter) => (
                                 <ListItemLink
@@ -133,14 +133,6 @@ const Menu = () => {
                                     icon={getChapterTypeIcon(chapter)}
                                 />
                             ))}
-                        <Divider />
-                        <ListItemButton
-                            icon={<SettingsIcon />}
-                            text="Configurações"
-                            onClick={() => {
-                                setOpenSettings(true)
-                            }}
-                        />
                     </List>
                 </Stack>
             </Drawer>

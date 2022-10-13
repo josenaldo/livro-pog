@@ -1,6 +1,6 @@
 export {
-    getChapters,
+    getAllChapters,
     getChapterData,
-    getLinkedChapters,
     getSortedChapters,
+    getAllChaptersPaths,
 } from './Chapters'

@@ -20,12 +20,10 @@ import ArticleIcon from '@mui/icons-material/Article'
 
 import { ChapterProgress } from '@pog/components/elements'
 import { NextSeo } from 'next-seo'
-import { allChapters } from 'contentlayer/generated'
+import { getSortedChapters } from '@pog/data'
 
 const getStaticProps = async () => {
-    const chapters = allChapters.sort((a, b) => {
-        return a.order_number - b.order_number
-    })
+    const chapters = getSortedChapters()
 
     return { props: { chapters } }
 }
