@@ -27,11 +27,9 @@ Durante a leitura deste tomo sagrado, sua mente passará pela POGramação Neuro
 
 O livro é dividido em 3 partes.
 
-{: .browser-default }
-
-* Conceitos
-* Técnicas
-* Gambi Design Patterns
+- Conceitos
+- Técnicas
+- Gambi Design Patterns
 
 Na primeira parte desse livro, **"Conceitos"** iremos viajar pelos conceitos ligados à Gambiarra.
 

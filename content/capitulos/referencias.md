@@ -15,4 +15,4 @@ image:
     height: "630"
 ---
 
-{% bibliography %}
+[Referencias]
