@@ -8,14 +8,10 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import FacebookIcon from '@mui/icons-material/Facebook'
 import InstagramIcon from '@mui/icons-material/Instagram'
 
-import { useColorMode } from '@pog/contexts'
-
 const iconColor = 'text.primary'
 const textColor = 'text.primary'
 
 const Footer = () => {
-    const { colorMode, COLOR_MODES } = useColorMode()
-
     return (
         <Box
             component="footer"

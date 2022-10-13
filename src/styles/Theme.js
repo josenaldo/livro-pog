@@ -36,6 +36,13 @@ const BaseTheme = {
                 },
             },
         },
+        MuiCssBaseline: {
+            styleOverrides: `
+                html {
+                    font-size: 16px;
+                }
+            `,
+        },
     },
 }
 

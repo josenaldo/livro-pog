@@ -127,8 +127,8 @@ const Menu = () => {
                         {chapters &&
                             chapters.map((chapter) => (
                                 <ListItemLink
-                                    key={chapter.slug}
-                                    href={`/capitulos/${chapter.slug}`}
+                                    key={chapter.url}
+                                    href={chapter.url}
                                     text={chapter.title}
                                     icon={getChapterTypeIcon(chapter)}
                                 />

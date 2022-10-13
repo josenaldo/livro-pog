@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Box, Divider } from '@mui/material'
+import { Box, Divider, Typography } from '@mui/material'
 
 import { MDXProvider } from '@mdx-js/react'
 import ReactMarkdown from 'react-markdown'
@@ -24,7 +24,11 @@ const bibFile = `${libDir}/library.bib`
 const styleFile = `${libDir}/abnt.csl`
 const localeFile = `${libDir}/locales-pt-PT.xml`
 
+import { useConfig } from '@pog/contexts'
+
 const MDXContent = ({ content }) => {
+    const { fontSize } = useConfig()
+
     const remarkPlugins = [
         // remarkGfm,
         [
@@ -58,7 +62,15 @@ const MDXContent = ({ content }) => {
     }
 
     return (
-        <Box>
+        <Box
+            sx={{
+                fontSize: `${fontSize}rem`,
+
+                '& p': {
+                    fontSize: `${fontSize}rem`,
+                },
+            }}
+        >
             <MDXProvider>
                 <Remark
                     remarkPlugins={remarkPlugins}

@@ -1,10 +1,10 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Box, Typography } from '@mui/material'
-import { useColorMode } from '@pog/contexts'
+import { useConfig } from '@pog/contexts'
 
 const Logo = () => {
-    const { colorMode, COLOR_MODES } = useColorMode()
+    const { colorMode } = useConfig()
     return (
         <Link href="/" passHref>
             <Box

@@ -4,7 +4,6 @@ import { ChapterView } from '@pog/components/content'
 
 import { NextSeo } from 'next-seo'
 
-import { allChapters } from 'contentlayer/generated'
 import { getAllChaptersPaths, getChapterData } from '@pog/data'
 
 const getStaticPaths = async () => {

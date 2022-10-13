@@ -1,1 +1,1 @@
-export { ColorModeProvider, useColorMode } from './ColorModeContext'
+export { ConfigProvider, useConfig } from './ConfigContext'

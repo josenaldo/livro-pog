@@ -2,10 +2,10 @@ import { AppBar, Box, Toolbar } from '@mui/material'
 
 import { Logo } from '@pog/components/elements'
 import { Menu, SearchBar } from '@pog/components/template'
-import { useColorMode } from '@pog/contexts'
+import { useConfig } from '@pog/contexts'
 
 const Header = () => {
-    const { colorMode, COLOR_MODES } = useColorMode()
+    const { colorMode, COLOR_MODES } = useConfig()
     return (
         <AppBar
             position="sticky"

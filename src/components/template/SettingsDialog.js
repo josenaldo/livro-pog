@@ -1,26 +1,30 @@
 import {
-    Box,
     ButtonGroup,
     Button,
-    IconButton,
-    Drawer,
     Dialog,
     DialogTitle,
     DialogContent,
-    DialogContentText,
     Stack,
     Typography,
 } from '@mui/material'
-import TextFormatIcon from '@mui/icons-material/TextFormat'
 import TextDecreaseIcon from '@mui/icons-material/TextDecrease'
 import TextIncreaseIcon from '@mui/icons-material/TextIncrease'
+import TextFormatIcon from '@mui/icons-material/TextFormat'
+
 import DarkModeIcon from '@mui/icons-material/DarkMode'
 import LightModeIcon from '@mui/icons-material/LightMode'
 
-import { useColorMode } from '@pog/contexts'
+import { useConfig } from '@pog/contexts'
 
 const SettingsDialog = ({ open, setOpen }) => {
-    const { colorMode, toggleColorMode, COLOR_MODES } = useColorMode()
+    const {
+        colorMode,
+        toggleColorMode,
+        increaseFontSize,
+        decreaseFontSize,
+        resetFontSize,
+        COLOR_MODES,
+    } = useConfig()
 
     const handleClose = () => {
         setOpen(false)
@@ -44,10 +48,25 @@ const SettingsDialog = ({ open, setOpen }) => {
                             aria-label="outlined primary button group"
                             fullWidth
                         >
-                            <Button>
+                            <Button
+                                onClick={() => {
+                                    decreaseFontSize()
+                                }}
+                            >
                                 <TextDecreaseIcon />
                             </Button>
-                            <Button>
+                            <Button
+                                onClick={() => {
+                                    resetFontSize()
+                                }}
+                            >
+                                <TextFormatIcon />
+                            </Button>
+                            <Button
+                                onClick={() => {
+                                    increaseFontSize()
+                                }}
+                            >
                                 <TextIncreaseIcon />
                             </Button>
                         </ButtonGroup>

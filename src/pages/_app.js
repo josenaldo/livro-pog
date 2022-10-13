@@ -3,7 +3,7 @@ import { DefaultSeo } from 'next-seo'
 
 import { SeoConfig } from '@pog/config'
 
-import { ColorModeProvider } from '@pog/contexts'
+import { ConfigProvider } from '@pog/contexts'
 import { Layout } from '@pog/components/template'
 
 const PogApp = ({ Component, pageProps }) => {
@@ -18,14 +18,11 @@ const PogApp = ({ Component, pageProps }) => {
                 />
             </Head>
             <DefaultSeo {...SeoConfig} />
-            <ColorModeProvider>
-                {/* <ThemeProvider theme={Theme}> */}
-                {/* <CssBaseline /> */}
+            <ConfigProvider>
                 <Layout>
                     <Component {...pageProps} />
                 </Layout>
-                {/* </ThemeProvider> */}
-            </ColorModeProvider>
+            </ConfigProvider>
         </>
     )
 }
