@@ -49,7 +49,7 @@ const PaginaCapitulos = ({ chapters }) => {
         description: description,
         images: [
             {
-                url: `${process.env.NEXT_PUBLIC_SITE_URL}/images/capitulos.jpg`,
+                url: `${process.env.NEXT_PUBLIC_SITE_URL}/images/pages/capitulos.jpg`,
                 width: '1200px',
                 height: '630px',
                 alt: title,

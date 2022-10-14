@@ -7,7 +7,7 @@ const DEFAULT_IMAGE = {
     height: '630px',
 }
 
-const ContentMainImage = ({ image, alt }) => {
+const ContentMainImage = ({ image, alt, aspectRatio = '16/9' }) => {
     const contentImage = image || DEFAULT_IMAGE
     return (
         <CardMedia
@@ -19,7 +19,7 @@ const ContentMainImage = ({ image, alt }) => {
             {contentImage && (
                 <Box
                     sx={{
-                        aspectRatio: '16/9',
+                        aspectRatio: aspectRatio,
                         position: 'relative',
                     }}
                 >

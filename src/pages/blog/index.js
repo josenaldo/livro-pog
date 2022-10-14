@@ -33,7 +33,7 @@ const BlogPage = ({ posts }) => {
         description: description,
         images: [
             {
-                url: `${process.env.NEXT_PUBLIC_SITE_URL}/images/default.jpg`,
+                url: `${process.env.NEXT_PUBLIC_SITE_URL}/images/pages/blog.jpg`,
                 width: '1200px',
                 height: '630px',
                 alt: title,
@@ -44,22 +44,28 @@ const BlogPage = ({ posts }) => {
     return (
         <Container>
             <NextSeo title={title} description={description} openGraph={og} />
-            <ContentTitle title={title} subtitle={description} />
             <Box
                 sx={{
-                    display: 'grid',
-                    gridTemplateColumns: {
-                        xs: '1fr',
-                        sm: '1fr 1fr',
-                        md: '1fr 1fr 1fr',
-                    },
-                    gap: 3,
                     my: 5,
                 }}
             >
-                {posts.map((post) => (
-                    <PostCard post={post} key={post.url} />
-                ))}
+                <ContentTitle title={title} subtitle={description} />
+                <Box
+                    sx={{
+                        display: 'grid',
+                        gridTemplateColumns: {
+                            xs: '1fr',
+                            sm: '1fr 1fr',
+                            md: '1fr 1fr 1fr',
+                        },
+                        gap: 3,
+                        my: 5,
+                    }}
+                >
+                    {posts.map((post) => (
+                        <PostCard post={post} key={post.url} />
+                    ))}
+                </Box>
             </Box>
         </Container>
     )

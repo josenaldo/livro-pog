@@ -18,13 +18,13 @@ const AjudePage = () => {
     const title = 'Ajude o Livro POG'
     const description =
         'Quer colaborar com a realização do livro POG? Veja aqui como ajudar!'
-
+    const image = `${process.env.NEXT_PUBLIC_SITE_URL}/images/pages/ajude.jpg`
     const og = {
         title: title,
         description: description,
         images: [
             {
-                url: `${process.env.NEXT_PUBLIC_SITE_URL}/images/ajude.jpg`,
+                url: image,
                 width: '1200px',
                 height: '630px',
                 alt: title,
@@ -54,7 +54,7 @@ const AjudePage = () => {
                         }}
                     >
                         <Image
-                            src="/images/ajude.png"
+                            src={image}
                             layout="fill"
                             objectFit="cover"
                             alt={title}
