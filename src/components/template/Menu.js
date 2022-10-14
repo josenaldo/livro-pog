@@ -11,6 +11,7 @@ import {
     ListItemButton as MuiListItemButton,
     ListItemText,
     Stack,
+    Switch,
 } from '@mui/material'
 
 import MenuIcon from '@mui/icons-material/Menu'
@@ -18,6 +19,7 @@ import SettingsIcon from '@mui/icons-material/Settings'
 import HomeIcon from '@mui/icons-material/Home'
 import SosIcon from '@mui/icons-material/Sos'
 import AnnouncementIcon from '@mui/icons-material/Announcement'
+import DarkModeIcon from '@mui/icons-material/DarkMode'
 
 import SubdirectoryArrowRightIcon from '@mui/icons-material/SubdirectoryArrowRight'
 import TopicIcon from '@mui/icons-material/Topic'
@@ -26,15 +28,16 @@ import ArticleIcon from '@mui/icons-material/Article'
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
 
 import { Logo } from '@pog/components/elements'
-import { SettingsDialog } from '@pog/components/template'
 
 import { getSortedChapters } from '@pog/data'
+import { useConfig } from '@pog/contexts'
 
 const Menu = () => {
     const chapters = getSortedChapters()
 
+    const { colorMode, toggleColorMode, COLOR_MODES } = useConfig()
+
     const [open, setOpen] = React.useState(false)
-    const [openSettings, setOpenSettings] = React.useState(false)
 
     const getChapterTypeIcon = (chapter) => {
         if (chapter.isParent) {
@@ -89,6 +92,7 @@ const Menu = () => {
                             <ChevronLeftIcon />
                         </IconButton>
                     </Box>
+
                     <Divider />
                     <List sx={{ padding: 0 }}>
                         <ListItemLink
@@ -114,13 +118,25 @@ const Menu = () => {
                         />
 
                         <Divider />
-                        <ListItemButton
-                            icon={<SettingsIcon />}
-                            text="Configurações"
-                            onClick={() => {
-                                setOpenSettings(true)
-                            }}
-                        />
+
+                        <ListItem>
+                            <ListItemIcon>
+                                <DarkModeIcon />
+                            </ListItemIcon>
+                            <ListItemText
+                                primary="Tema escuro?"
+                                id="switch-list-label-dark-mode"
+                            />
+                            <Switch
+                                edge="end"
+                                onChange={toggleColorMode}
+                                checked={colorMode === COLOR_MODES.dark}
+                                inputProps={{
+                                    'aria-labelledby':
+                                        'switch-list-label-dark-mode',
+                                }}
+                            />
+                        </ListItem>
 
                         <Divider />
                         {/* <LoadingProgress loading={loading} /> */}
@@ -136,7 +152,6 @@ const Menu = () => {
                     </List>
                 </Stack>
             </Drawer>
-            <SettingsDialog open={openSettings} setOpen={setOpenSettings} />
         </Box>
     )
 }
