@@ -1,21 +1,52 @@
 import React from 'react'
 import Head from 'next/head'
-import { DefaultSeo } from 'next-seo'
+import Script from 'next/script'
+import { useRouter } from 'next/router'
 
+import { DefaultSeo } from 'next-seo'
 import { SeoConfig } from '@pog/config'
 
 import { ConfigProvider } from '@pog/contexts'
 import { Layout } from '@pog/components/template'
-import TagManager from 'react-gtm-module'
-import { AppConfig } from '@pog/config'
+
+import { GA_TRACKING_ID, gaPageView } from '@pog/lib'
 
 const PogApp = ({ Component, pageProps }) => {
+    const router = useRouter()
     React.useEffect(() => {
-        TagManager.initialize({ gtmId: AppConfig.gtmId })
-    }, [])
+        const handleRouteChange = (url) => {
+            gaPageView(url)
+        }
+        router.events.on('routeChangeComplete', handleRouteChange)
+        return () => {
+            router.events.off('routeChangeComplete', handleRouteChange)
+        }
+    }, [router.events])
 
     return (
         <>
+            {/* Global Site Tag (gtag.js) - Google Analytics */}
+            <Script
+                strategy="afterInteractive"
+                src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+            />
+            <Script
+                strategy="afterInteractive"
+                dangerouslySetInnerHTML={{
+                    __html: `
+                        window.dataLayer = window.dataLayer || [];
+
+                        function gtag(){dataLayer.push(arguments);}
+
+                        gtag('js', new Date());
+
+                        gtag('config', '${GA_TRACKING_ID}', {
+                            page_path: window.location.pathname,
+                        });
+                    `,
+                }}
+            />
+
             <Head>
                 <meta charSet="utf-8" />
                 <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
