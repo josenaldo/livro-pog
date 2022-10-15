@@ -1,7 +1,7 @@
 const name = 'POG'
 const title = 'Programação Orientada a Gambiarra'
 const description =
-    'Como transformar o seu trabalho em uma amostra grátis do inferno!.'
+    'Como transformar o seu trabalho em uma amostra grátis do inferno!'
 const url = 'https://livropog.com.br/'
 
 const SeoConfig = {

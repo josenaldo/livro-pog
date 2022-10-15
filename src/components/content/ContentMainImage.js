@@ -26,8 +26,8 @@ const ContentMainImage = ({ image, alt, aspectRatio = '16/9' }) => {
                     <Image
                         src={contentImage.url}
                         alt={alt}
-                        width={contentImage.width}
-                        height={contentImage.height}
+                        // width={contentImage.width}
+                        // height={contentImage.height}
                         layout="fill"
                         objectFit="cover"
                     />

@@ -1,3 +1,4 @@
+import React from 'react'
 import Head from 'next/head'
 import { DefaultSeo } from 'next-seo'
 
@@ -5,8 +6,14 @@ import { SeoConfig } from '@pog/config'
 
 import { ConfigProvider } from '@pog/contexts'
 import { Layout } from '@pog/components/template'
+import TagManager from 'react-gtm-module'
+import { AppConfig } from '@pog/config'
 
 const PogApp = ({ Component, pageProps }) => {
+    React.useEffect(() => {
+        TagManager.initialize({ gtmId: AppConfig.gtmId })
+    }, [])
+
     return (
         <>
             <Head>
