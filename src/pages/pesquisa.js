@@ -1,11 +1,12 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import axios from 'axios'
-
+import Link from 'next/link'
 import {
     Box,
     Card,
     CardContent,
+    CardActionArea,
     Container,
     TextField,
     InputAdornment,
@@ -14,6 +15,7 @@ import {
     Typography,
 } from '@mui/material'
 import SearchIcon from '@mui/icons-material/Search'
+
 import { NextSeo } from 'next-seo'
 
 import { ContentTitle, ContentMainImage } from '@pog/components/content'
@@ -40,6 +42,7 @@ const SearchPage = () => {
         ],
     }
     const search = React.useCallback(async (query) => {
+        router.push('/pesquisa?q=' + query, undefined, { shallow: true })
         const { data: res } = await axios.get(`/api/search?q=${query}`)
         setResults(res)
 
@@ -51,6 +54,25 @@ const SearchPage = () => {
         setLoading(true)
         search(query)
     }
+
+    React.useEffect(() => {
+        if (!router.isReady) return
+
+        const { q } = router.query
+
+        if (!q) return
+        setLoading(true)
+
+        const firstSearch = async (q) => {
+            const { data: res } = await axios.get(`/api/search?q=${q}`)
+            setResults(res)
+
+            setLoading(false)
+        }
+
+        setQuery(q)
+        firstSearch(q)
+    }, [router.isReady, router.query, setQuery])
 
     return (
         <Container>
@@ -80,31 +102,49 @@ const SearchPage = () => {
                 >
                     {results &&
                         results.map((result) => (
-                            <Card
-                                key={result.url}
-                                sx={{
-                                    display: 'grid',
-                                    gridTemplateColumns: {
-                                        xs: '1fr 2fr',
-                                        sm: '1fr 2fr',
-                                        md: '1fr 3fr',
-                                    },
-                                    gap: 2,
-                                }}
-                            >
-                                <ContentMainImage
-                                    image={result.image}
-                                    alt={result.title}
-                                    aspectRatio="1/1"
-                                />
-                                <CardContent>
-                                    <Typography variant="h5" component="h2">
-                                        {result.title}
-                                    </Typography>
-                                    <Typography variant="body2" component="p">
-                                        {result.description}
-                                    </Typography>
-                                </CardContent>
+                            <Card key={result.url}>
+                                <Link href={result.url}>
+                                    <CardActionArea
+                                        sx={{
+                                            display: 'grid',
+                                            gridTemplateColumns: {
+                                                xs: '1fr 2fr',
+                                                sm: '1fr 4fr',
+                                                md: '1fr 6fr',
+                                                lg: '1fr 8fr',
+                                                xl: '1fr 8fr',
+                                            },
+                                            alignItems: 'flex-start',
+                                        }}
+                                    >
+                                        <ContentMainImage
+                                            image={result.image}
+                                            alt={result.title}
+                                            aspectRatio="1/1"
+                                        />
+                                        <CardContent
+                                            sx={{
+                                                display: 'flex',
+                                                flexDirection: 'column',
+                                                padding: 2,
+                                                gap: 2,
+                                            }}
+                                        >
+                                            <Typography
+                                                variant="h6"
+                                                component="h2"
+                                            >
+                                                {result.title}
+                                            </Typography>
+                                            <Typography
+                                                variant="caption"
+                                                component="p"
+                                            >
+                                                {result.description}
+                                            </Typography>
+                                        </CardContent>
+                                    </CardActionArea>
+                                </Link>
                             </Card>
                         ))}
                 </Box>

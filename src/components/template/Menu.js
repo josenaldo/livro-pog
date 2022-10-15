@@ -15,10 +15,10 @@ import {
 } from '@mui/material'
 
 import MenuIcon from '@mui/icons-material/Menu'
-import SettingsIcon from '@mui/icons-material/Settings'
 import HomeIcon from '@mui/icons-material/Home'
 import SosIcon from '@mui/icons-material/Sos'
 import AnnouncementIcon from '@mui/icons-material/Announcement'
+import SearchIcon from '@mui/icons-material/Search'
 import DarkModeIcon from '@mui/icons-material/DarkMode'
 
 import SubdirectoryArrowRightIcon from '@mui/icons-material/SubdirectoryArrowRight'
@@ -115,6 +115,11 @@ const Menu = () => {
                             href="/blog"
                             text="Blog"
                             icon={<AnnouncementIcon />}
+                        />
+                        <ListItemLink
+                            href="/pesquisa"
+                            text="Pesquisa"
+                            icon={<SearchIcon />}
                         />
 
                         <Divider />

@@ -10,7 +10,7 @@ name: gambi-design-patterns
 isParent: true
 status: backlog
 image:
-    url: "/images/capitulos/default.jpg"
+    url: "/images/capitulos/gambi-design-patterns.jpg"
     width: "1200"
     height: "630"
 ---

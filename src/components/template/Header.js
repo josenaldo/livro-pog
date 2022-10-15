@@ -3,6 +3,7 @@ import { AppBar, Box, Toolbar } from '@mui/material'
 import { Logo } from '@pog/components/elements'
 import { Menu, SearchBar } from '@pog/components/template'
 import { useConfig } from '@pog/contexts'
+import { SearchInput } from '@pog/components/elements'
 
 const Header = () => {
     const { colorMode, COLOR_MODES } = useConfig()
@@ -43,7 +44,7 @@ const Header = () => {
                         flexGrow: 1,
                     }}
                 >
-                    <SearchBar />
+                    <SearchInput />
                 </Box>
             </Toolbar>
         </AppBar>

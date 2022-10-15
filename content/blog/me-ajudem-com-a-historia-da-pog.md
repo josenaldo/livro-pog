@@ -4,7 +4,7 @@ description: O Livro POG necessida te sua colaboração!
 date: 2020-05-02 07:23:00 -0300
 author: Josenaldo Matos
 image:
-    url: "/images/posts/me-ajudem-com-a-historia-da-pog.jpg"
+    url: "/images/blog/me-ajudem-com-a-historia-da-pog.jpg"
     width: "1200"
     height: "630"
 ---

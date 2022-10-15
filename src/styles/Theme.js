@@ -41,7 +41,7 @@ const BaseTheme = {
 
 const extendTheme = (theme) => {
     theme.typography.h1 = {
-        fontSize: '2.0rem',
+        fontSize: '2.00rem',
         [theme.breakpoints.up('sm')]: {
             fontSize: '2.25rem',
         },
@@ -49,27 +49,95 @@ const extendTheme = (theme) => {
             fontSize: '2.50rem',
         },
         [theme.breakpoints.up('lg')]: {
-            fontSize: '3.0rem',
+            fontSize: '3.00rem',
         },
         [theme.breakpoints.up('xl')]: {
-            fontSize: '3.0rem',
+            fontSize: '3.00rem',
         },
     }
 
     theme.typography.h2 = {
-        fontSize: '1.6rem',
+        fontSize: '1.80rem',
 
         [theme.breakpoints.up('sm')]: {
-            fontSize: '1.7rem',
+            fontSize: '1.85rem',
         },
         [theme.breakpoints.up('md')]: {
-            fontSize: '1.8rem',
+            fontSize: '1.90rem',
         },
         [theme.breakpoints.up('lg')]: {
-            fontSize: '1.9rem',
+            fontSize: '1.95rem',
         },
         [theme.breakpoints.up('xl')]: {
             fontSize: '2.00rem',
+        },
+    }
+
+    theme.typography.h3 = {
+        fontSize: '1.60rem',
+
+        [theme.breakpoints.up('sm')]: {
+            fontSize: '1.65rem',
+        },
+        [theme.breakpoints.up('md')]: {
+            fontSize: '1.70rem',
+        },
+        [theme.breakpoints.up('lg')]: {
+            fontSize: '1.75rem',
+        },
+        [theme.breakpoints.up('xl')]: {
+            fontSize: '1.80rem',
+        },
+    }
+
+    theme.typography.h4 = {
+        fontSize: '1.40rem',
+
+        [theme.breakpoints.up('sm')]: {
+            fontSize: '1.45rem',
+        },
+        [theme.breakpoints.up('md')]: {
+            fontSize: '1.50rem',
+        },
+        [theme.breakpoints.up('lg')]: {
+            fontSize: '1.55rem',
+        },
+        [theme.breakpoints.up('xl')]: {
+            fontSize: '1.60rem',
+        },
+    }
+
+    theme.typography.h5 = {
+        fontSize: '1.20rem',
+
+        [theme.breakpoints.up('sm')]: {
+            fontSize: '1.25rem',
+        },
+        [theme.breakpoints.up('md')]: {
+            fontSize: '1.30rem',
+        },
+        [theme.breakpoints.up('lg')]: {
+            fontSize: '1.35rem',
+        },
+        [theme.breakpoints.up('xl')]: {
+            fontSize: '1.40rem',
+        },
+    }
+
+    theme.typography.h6 = {
+        fontSize: '1.00rem',
+
+        [theme.breakpoints.up('sm')]: {
+            fontSize: '1.05rem',
+        },
+        [theme.breakpoints.up('md')]: {
+            fontSize: '1.10rem',
+        },
+        [theme.breakpoints.up('lg')]: {
+            fontSize: '1.15rem',
+        },
+        [theme.breakpoints.up('xl')]: {
+            fontSize: '1.20rem',
         },
     }
 

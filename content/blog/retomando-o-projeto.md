@@ -4,7 +4,7 @@ description: Nois trupica, mas num cai!
 date: 2022-10-12 20:10:00 -0300
 author: Josenaldo Matos
 image:
-    url: "/images/posts/retomando-o-projeto.jpg"
+    url: "/images/blog/retomando-o-projeto.jpg"
     width: "1200"
     height: "630"
 ---

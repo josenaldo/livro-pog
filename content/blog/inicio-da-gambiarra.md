@@ -5,7 +5,7 @@ description:
 date: 2020-04-17 02:52:00 -0300
 author: Josenaldo Matos
 image:
-    url: "/images/posts/inicio-da-gambiarra.jpg"
+    url: "/images/blog/inicio-da-gambiarra.jpg"
     width: "1200"
     height: "630"
 ---

@@ -10,7 +10,7 @@ parent: requisitos
 isParent: false
 status: progress
 image:
-    url: "/images/capitulos/default.jpg"
+    url: "/images/capitulos/requisitos/dimensao-processual.jpg"
     width: "1200"
     height: "630"
 ---

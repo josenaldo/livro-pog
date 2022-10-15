@@ -10,7 +10,7 @@ name: tecnicas
 isParent: true
 status: backlog
 image:
-    url: "/images/capitulos/default.jpg"
+    url: "/images/capitulos/tecnicas.jpg"
     width: "1200"
     height: "630"
 ---

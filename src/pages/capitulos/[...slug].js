@@ -36,9 +36,9 @@ const PaginaCapitulo = ({ chapter }) => {
     if (chapter.image) {
         og.images = [
             {
-                url: `${process.env.NEXT_PUBLIC_SITE_URL}${chapter.image.path}`,
-                width: '1200px',
-                height: '630px',
+                url: `${process.env.NEXT_PUBLIC_SITE_URL}${chapter.image.url}`,
+                width: chapter.image.width,
+                height: chapter.image.height,
                 alt: chapter.title,
             },
         ]

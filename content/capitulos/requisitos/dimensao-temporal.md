@@ -10,7 +10,7 @@ parent: requisitos
 isParent: false
 status: backlog
 image:
-    url: "/images/capitulos/default.jpg"
+    url: "/images/capitulos/requisitos/dimensao-temporal.jpg"
     width: "1200"
     height: "630"
 ---

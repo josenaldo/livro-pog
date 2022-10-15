@@ -4,7 +4,7 @@ description: O não, eu já tenho. Agora eu quero a humilhação!
 date: 2020-04-24 20:21:00 -0300
 author: Josenaldo Matos
 image:
-    url: "/images/posts/primeiros-capitulos.jpg"
+    url: "/images/blog/primeiros-capitulos.jpg"
     width: "1200"
     height: "630"
 ---
