@@ -34,6 +34,7 @@ const Hero = () => {
                     <Typography
                         color="white"
                         sx={{
+                            textAlign: 'center',
                             fontWeight: 'bold',
                             fontSize: {
                                 xs: '1.2rem',

@@ -27,7 +27,11 @@ const Testimonial = () => {
                         gap: 2,
                     }}
                 >
-                    <Typography variant="h5" fontStyle="italic">
+                    <Typography
+                        variant="h5"
+                        fontStyle="italic"
+                        textAlign="center"
+                    >
                         "Esse livro elevará o nível de suas habilidades
                         gambiarrizadoras e de sua capacidade de criar mais
                         problemas que soluções! Prepare-se pra descobrir que em
