@@ -1,12 +1,17 @@
 import { Stack, Typography } from '@mui/material'
 
-const ContentTitle = ({ title, subtitle = '' }) => {
+const ContentTitle = ({
+    title,
+    subtitle = '',
+    titleVariant = 'h1',
+    subtitleVariant = 'subtitle',
+}) => {
     return (
         <Stack alignItems="center">
-            <Typography variant="h1" textAlign="center">
+            <Typography variant={titleVariant} textAlign="center">
                 {title}
             </Typography>
-            <Typography variant="subtitle" textAlign="center">
+            <Typography variant={subtitleVariant} textAlign="center">
                 {subtitle}
             </Typography>
         </Stack>

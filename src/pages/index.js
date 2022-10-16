@@ -1,6 +1,6 @@
 import { Box } from '@mui/material'
 
-import { Hero, Features, Testimonial } from '@pog/components/home'
+import { Hero, Features, Testimonial, LastNews } from '@pog/components/home'
 
 const Home = () => {
     return (
@@ -8,6 +8,7 @@ const Home = () => {
             <Hero />
             <Features />
             <Testimonial />
+            <LastNews />
         </Box>
     )
 }

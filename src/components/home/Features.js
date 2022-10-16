@@ -10,15 +10,8 @@ import {
     CardActionArea,
 } from '@mui/material'
 
-import { ContentMainImage } from '@pog/components/content'
+import { SimpleCard, ContentTitle } from '@pog/components/content'
 import { Link } from '@pog/components/elements'
-
-import DefinitionIcon from '@mui/icons-material/Book'
-import HistoryIcon from '@mui/icons-material/HourglassEmpty'
-import RequirementsIcon from '@mui/icons-material/Rule'
-import PrinciplesIcon from '@mui/icons-material/ReceiptLong'
-import TechniqueIcon from '@mui/icons-material/TipsAndUpdates'
-import PatternsIcon from '@mui/icons-material/AccountTree'
 
 const Features = () => {
     return (
@@ -31,9 +24,10 @@ const Features = () => {
                 gap: 5,
             }}
         >
-            <Typography component="h2" variant="h2">
-                Uma viagem pelo mundo da POGramação
-            </Typography>
+            <ContentTitle
+                title="Uma viagem pelo mundo da POGramação"
+                titleVariant="h2"
+            />
             <Box
                 sx={{
                     display: 'grid',
@@ -46,37 +40,37 @@ const Features = () => {
                     gap: 3,
                 }}
             >
-                <FeatureCard
+                <SimpleCard
                     title="O Que é POG?"
                     description="Sabe o que é uma gambiarra? E uma marreta? Descubra o que isso tem a ver com a Programação Orientada a Gambiarra."
                     image="/images/capitulos/o-que-e-pog.jpg"
                     url="/capitulos/o-que-e-pog"
                 />
-                <FeatureCard
+                <SimpleCard
                     title="História"
                     description="Sabia que a primeira POG é atribuída a um Papa? E que isso é mentira? Não caia em fake news! Conheça a primeira POG da história!"
                     image="/images/capitulos/historia.jpg"
                     url="/capitulos/historia"
                 />
-                <FeatureCard
+                <SimpleCard
                     title="Requisitos"
                     description="Conheça os fatores que aumentam as chances do surgimento espontâneo da POG no ambiente de trabalho."
                     image="/images/capitulos/requisitos.jpg"
                     url="/capitulos/requisitos"
                 />
-                <FeatureCard
+                <SimpleCard
                     title="Princípios"
                     description="Entenda os príncipios universais que regem a Programação Orientada a Gambiarra e aprenda como tornar suas POGs mais resilientes!"
                     image="/images/capitulos/principios.jpg"
                     url="/capitulos/principios"
                 />
-                <FeatureCard
+                <SimpleCard
                     title="Técnicas"
                     description="Torne-se um ninja na criação de novas POGs! Domine as técnicas dos mestres da Programação Orientada a Gambiarra!"
                     image="/images/capitulos/tecnicas.jpg"
                     url="/capitulos/tecnicas"
                 />
-                <FeatureCard
+                <SimpleCard
                     title="Gambi Design Patterns"
                     description="Descubra como 'otimiazar' seu trabalho através do reuso da experiência dos mestres da criação de problemas corriqueiros!"
                     image="/images/capitulos/gambi-design-patterns.jpg"
@@ -84,71 +78,6 @@ const Features = () => {
                 />
             </Box>
         </Container>
-    )
-}
-
-const FeatureCard = ({ title, description, url, image }) => {
-    const contentImage = {
-        url: image,
-    }
-
-    return (
-        <Card
-            sx={{
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-between',
-            }}
-        >
-            <NextLink href={url}>
-                <CardActionArea
-                    sx={{
-                        display: 'flex',
-                        flexDirection: 'column',
-                        alignItems: 'stretch',
-                        justifyContent: 'stretch',
-
-                        height: '100%',
-                    }}
-                >
-                    <ContentMainImage image={contentImage} alt={title} />
-                    <CardContent
-                        sx={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                            alignItems: 'center',
-                            gap: 2,
-                            flexGrow: 1,
-                        }}
-                    >
-                        <Typography
-                            component="h3"
-                            variant="h5"
-                            textAlign="center"
-                        >
-                            {title}
-                        </Typography>
-                        <Typography component="p" variant="body1">
-                            {description}
-                        </Typography>
-                    </CardContent>
-                    <CardActions
-                        sx={{
-                            display: 'flex',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            width: '100%',
-                            alignSelf: 'flex-end',
-                            pb: 2,
-                        }}
-                    >
-                        <Link href={url} passHref>
-                            <Typography component="a">Saiba mais...</Typography>
-                        </Link>
-                    </CardActions>
-                </CardActionArea>
-            </NextLink>
-        </Card>
     )
 }
 

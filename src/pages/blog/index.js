@@ -1,17 +1,10 @@
 import Link from 'next/link'
 
-import {
-    Box,
-    Card,
-    CardContent,
-    Container,
-    Divider,
-    Typography,
-} from '@mui/material'
+import { Box, Container } from '@mui/material'
 
 import { NextSeo } from 'next-seo'
 
-import { compareDesc, format, parseISO } from 'date-fns'
+import { compareDesc } from 'date-fns'
 import { allPosts } from 'contentlayer/generated'
 
 import { PostCard, ContentTitle } from '@pog/components/content'
