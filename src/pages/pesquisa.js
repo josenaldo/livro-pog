@@ -235,7 +235,7 @@ const ContentResult = ({ result }) => {
                     title={result.title}
                     description={result.description}
                     url={`${process.env.NEXT_PUBLIC_SITE_URL}${result.url}`}
-                    image={`${process.env.NEXT_PUBLIC_SITE_URL}${result.image.url}`}
+                    image={`${process.env.NEXT_PUBLIC_SITE_URL}${result.image}`}
                 />
             </Box>
         </Card>

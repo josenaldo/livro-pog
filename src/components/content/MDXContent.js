@@ -1,11 +1,10 @@
 import React from 'react'
 
-import { Box, Divider, Typography } from '@mui/material'
+import { Box, Divider } from '@mui/material'
 
 import { MDXProvider } from '@mdx-js/react'
 import ReactMarkdown from 'react-markdown'
 import { Remark } from 'react-remark'
-import { useRemark } from 'react-remark'
 
 import remarkGfm from 'remark-gfm'
 import footnotes from 'remark-footnotes'

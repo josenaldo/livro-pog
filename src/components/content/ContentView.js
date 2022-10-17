@@ -62,7 +62,6 @@ const ContentView = ({ content, contentExtraInfo = null }) => {
 
         document.addEventListener('keydown', handleKeyDown)
 
-        // Don't forget to clean up
         return function cleanup() {
             document.removeEventListener('keydown', handleKeyDown)
         }
@@ -124,7 +123,7 @@ const ContentView = ({ content, contentExtraInfo = null }) => {
                             title={content.title}
                             description={content.description}
                             url={content.url}
-                            image={`${process.env.NEXT_PUBLIC_SITE_URL}${content.image.url}`}
+                            image={`${process.env.NEXT_PUBLIC_SITE_URL}${content.image}`}
                         />
                     </Box>
                     {contentExtraInfo}

@@ -47,7 +47,7 @@ const BlogPage = ({ posts }) => {
                                 title={post.title}
                                 text={post.description}
                                 url={post.url}
-                                image={post.image.url}
+                                image={post.image}
                                 key={post.url}
                             />
                         ))}

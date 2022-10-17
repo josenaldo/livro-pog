@@ -5,6 +5,7 @@ import { Box, Container } from '@mui/material'
 import { ContentTitle, ContentCard } from '@pog/components/content'
 
 import { getSortedPosts } from '@pog/data'
+
 const LastNews = () => {
     const posts = getSortedPosts().slice(0, 3)
     return (
@@ -45,7 +46,7 @@ const LastNews = () => {
                             text={post.description}
                             author={post.author}
                             date={post.date}
-                            image={post.image.url}
+                            image={post.image}
                             url={post.url}
                         />
                     ))}

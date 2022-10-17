@@ -33,7 +33,23 @@ const scroll = {
 
 const BaseTheme = {
     palette: Palettes['dark'],
-
+    scroll: ({ ownerState, theme }) => ({
+        ...{
+            '&::-webkit-scrollbar': {
+                width: '15px',
+            },
+            '&::-webkit-scrollbar-track': {
+                backgroundColor: theme.palette.scroll.track,
+            },
+            '&::-webkit-scrollbar-thumb': {
+                backgroundColor: theme.palette.scroll.thumb,
+                borderRadius: '10px',
+            },
+            '&::-webkit-scrollbar-thumb:hover': {
+                backgroundColor: theme.palette.scroll.hover,
+            },
+        },
+    }),
     components: {
         MuiBox: {
             styleOverrides: {
