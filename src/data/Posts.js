@@ -24,10 +24,10 @@ const getPostData = (slug) => {
 
     const post = posts.find((post, index, posts) => {
         if (post.url === url) {
-            const isFirst = index === 0
-            const isLast = index === posts.length - 1
-            const previousPost = !isFirst ? posts[index - 1] : null
-            const nextPost = !isLast ? posts[index + 1] : null
+            const isFirst = index === posts.length - 1
+            const isLast = index === 0
+            const previousPost = !isFirst ? posts[index + 1] : null
+            const nextPost = !isLast ? posts[index - 1] : null
 
             if (previousPost) {
                 post.previous = {

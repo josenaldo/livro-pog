@@ -1,6 +1,7 @@
 import Link from 'next/link'
 
 import {
+    Box,
     Avatar,
     Card,
     CardContent,
@@ -19,8 +20,9 @@ import TopicIcon from '@mui/icons-material/Topic'
 import ArticleIcon from '@mui/icons-material/Article'
 
 import { Layout } from '@pog/components/template'
-
 import { ChapterProgress } from '@pog/components/elements'
+import { ContentTitle } from '@pog/components/content'
+import { ShareLink } from '@pog/components/share'
 import { getSortedChapters } from '@pog/data'
 
 const getStaticProps = async () => {
@@ -42,13 +44,13 @@ const PaginaCapitulos = ({ chapters }) => {
         return <ArticleIcon />
     }
 
+    const title = 'Capítulos'
+    const description = 'Essa é a lista de capítulos do livro POG.'
+    const image = '/images/pages/capitulos.jpg'
+    const url = '/capitulos'
+
     return (
-        <Layout
-            title="Capítulos"
-            description="Essa é a lista de capítulos do livro POG."
-            image="/images/pages/capitulos.jpg"
-            url="/capitulos"
-        >
+        <Layout title={title} description={description} image={image} url={url}>
             <Container>
                 <Card
                     sx={{
@@ -62,9 +64,22 @@ const PaginaCapitulos = ({ chapters }) => {
                             px: { xs: 2, sm: 2, md: 5, lg: 12 },
                         }}
                     >
-                        <Typography variant="h1" textAlign="center">
-                            Capítulos
-                        </Typography>
+                        <Box
+                            sx={{
+                                display: 'grid',
+                                gridTemplateColumns: '30px 1fr 30px',
+                                px: 2,
+                            }}
+                        >
+                            <Box sx={{}} />
+                            <ContentTitle title={title} />
+                            <ShareLink
+                                title={title}
+                                description={description}
+                                url={`${process.env.NEXT_PUBLIC_SITE_URL}/ajude`}
+                                image={`${process.env.NEXT_PUBLIC_SITE_URL}${image}`}
+                            />
+                        </Box>
                         <List sx={{ my: 5 }}>
                             {chapters.map((chapter) => (
                                 <>
@@ -88,7 +103,7 @@ const PaginaCapitulos = ({ chapters }) => {
                                                 primary={chapter.title}
                                                 secondary={chapter.description}
                                                 sx={{
-                                                    pr: 3,
+                                                    pr: 4,
                                                 }}
                                             />
                                             <ListItemSecondaryAction>
