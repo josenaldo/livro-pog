@@ -32,6 +32,9 @@ import { Logo } from '@pog/components/elements'
 import { getSortedChapters } from '@pog/data'
 import { useConfig } from '@pog/contexts'
 
+import { ShareLink } from '@pog/components/share'
+import { APP_TITLE, APP_DESCRIPTION, APP_URL } from '@pog/config'
+
 const Menu = () => {
     const chapters = getSortedChapters()
 
@@ -91,6 +94,12 @@ const Menu = () => {
                         }}
                     >
                         <Logo />
+                        <ShareLink
+                            title={APP_TITLE}
+                            description={APP_DESCRIPTION}
+                            url={APP_URL}
+                            image={`${APP_URL}/images/pages/default.jpg`}
+                        />
                         <IconButton
                             onClick={() => {
                                 setOpen(false)

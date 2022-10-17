@@ -1,27 +1,27 @@
-const name = 'POG'
-const title = 'Programação Orientada a Gambiarra'
-const description =
+const APP_NAME = 'POG'
+const APP_TITLE = 'Programação Orientada a Gambiarra'
+const APP_DESCRIPTION =
     'Como transformar o seu trabalho em uma amostra grátis do inferno!'
-const url = 'https://livropog.com.br/'
+const APP_URL = process.env.NEXT_PUBLIC_SITE_URL
 
 const SeoConfig = {
     titleTemplate: '%s | Programação Orientada a Gambiarra',
-    title: title,
-    description: description,
-    canonical: url,
+    title: APP_TITLE,
+    description: APP_DESCRIPTION,
+    canonical: APP_URL,
     openGraph: {
-        url: url,
-        title: title,
-        description: description,
+        url: APP_URL,
+        title: APP_TITLE,
+        description: APP_DESCRIPTION,
         type: 'website',
         locale: 'pt_BR',
-        site_name: title,
+        site_name: APP_TITLE,
         images: [
             {
-                url: `${process.env.NEXT_PUBLIC_SITE_URL}/images/default.jpg`,
+                url: `${process.env.NEXT_PUBLIC_SITE_URL}/images/pages/default.jpg`,
                 width: 1200,
                 height: 630,
-                alt: title,
+                alt: APP_TITLE,
                 type: 'image/png',
             },
         ],
@@ -32,11 +32,11 @@ const SeoConfig = {
         cardType: 'summary_large_image',
     },
     additionalMetaTags: [
-        { name: 'application-name', content: name },
+        { name: 'application-name', content: APP_NAME },
         { name: 'apple-mobile-web-app-capable', content: 'yes' },
         { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
-        { name: 'apple-mobile-web-app-title', content: name },
-        { name: 'description', content: description },
+        { name: 'apple-mobile-web-app-title', content: APP_NAME },
+        { name: 'description', content: APP_DESCRIPTION },
         { name: 'format-detection', content: 'telephone=no' },
         { name: 'mobile-web-app-capable', content: 'yes' },
         { name: 'msapplication-config', content: '/icons/browserconfig.xml' },
@@ -96,4 +96,4 @@ const SeoConfig = {
     ],
 }
 
-export { SeoConfig }
+export { SeoConfig, APP_NAME, APP_TITLE, APP_DESCRIPTION, APP_URL }

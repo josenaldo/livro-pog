@@ -234,7 +234,7 @@ const ContentResult = ({ result }) => {
                 <ShareLink
                     title={result.title}
                     description={result.description}
-                    url={result.url}
+                    url={`${process.env.NEXT_PUBLIC_SITE_URL}${result.url}`}
                     image={`${process.env.NEXT_PUBLIC_SITE_URL}${result.image.url}`}
                 />
             </Box>
