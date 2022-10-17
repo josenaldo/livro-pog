@@ -48,7 +48,7 @@ const Footer = () => {
 
                     <FooterIcon
                         targetBlank
-                        href="https://github.com/josenaldo/livro-pog/"
+                        href="https://github.com/josenaldo/livro-pog-1/"
                         icon={<GitHubIcon />}
                     />
                 </Box>
@@ -95,7 +95,7 @@ const Footer = () => {
 
                         <FooterIcon
                             targetBlank
-                            href="https://twitter.com/vudureverso"
+                            href="https://twitter.com/josenaldomatos"
                             icon={<TwitterIcon />}
                         />
                         <FooterIcon
