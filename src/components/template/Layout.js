@@ -4,7 +4,9 @@ import { Box } from '@mui/material'
 
 import { NextSeo } from 'next-seo'
 
-import { Header, Footer } from '@pog/components/template'
+import { Header, Footer, Breadcrumbs } from '@pog/components/template'
+
+import { getBreadcrumbs } from '@pog/data'
 
 const Layout = ({ title, description, image, url, children }) => {
     const og = React.useMemo(() => {
@@ -23,6 +25,10 @@ const Layout = ({ title, description, image, url, children }) => {
         return openGraph
     }, [title, description, image])
 
+    const breadcrumbsItems = React.useMemo(() => {
+        return getBreadcrumbs(url)
+    }, [url])
+
     return (
         <Box
             sx={{
@@ -32,6 +38,8 @@ const Layout = ({ title, description, image, url, children }) => {
         >
             <NextSeo title={title} description={description} openGraph={og} />
             <Header />
+            <Breadcrumbs items={breadcrumbsItems} />
+
             <main>{children}</main>
             <Footer />
         </Box>

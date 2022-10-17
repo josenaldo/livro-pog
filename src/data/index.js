@@ -11,3 +11,5 @@ export {
     getAllPostsPaths,
     getPostData,
 } from './Posts'
+
+export { getBreadcrumbs } from './Breadcrumbs'

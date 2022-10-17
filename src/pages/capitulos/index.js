@@ -47,6 +47,7 @@ const PaginaCapitulos = ({ chapters }) => {
             title="Capítulos"
             description="Essa é a lista de capítulos do livro POG."
             image="/images/pages/capitulos.jpg"
+            url="/capitulos"
         >
             <Container>
                 <Card

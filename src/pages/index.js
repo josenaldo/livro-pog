@@ -4,7 +4,12 @@ import { Hero, Features, Testimonial, LastNews } from '@pog/components/home'
 
 const Home = () => {
     return (
-        <Layout>
+        <Layout
+            title="Programação Orientada a Gambiarra"
+            description="Como transformar o seu trabalho em uma amostra grátis do inferno!"
+            image="/images/pages/default.jpg"
+            url="/"
+        >
             <Hero />
             <Features />
             <Testimonial />

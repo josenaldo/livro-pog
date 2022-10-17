@@ -23,7 +23,12 @@ const BlogPage = ({ posts }) => {
     const image = '/images/pages/blog.jpg'
 
     return (
-        <Layout title={title} description={description} image={image}>
+        <Layout
+            title={title}
+            description={description}
+            image={image}
+            url="/blog"
+        >
             <Container>
                 <Box
                     sx={{

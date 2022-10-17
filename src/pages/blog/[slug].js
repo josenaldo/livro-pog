@@ -40,6 +40,7 @@ const PostPage = ({ post }) => {
             title={post.title}
             description={post.description}
             image={post?.image?.url || null}
+            url={post.url}
         >
             <Container>
                 <PostView post={post} />

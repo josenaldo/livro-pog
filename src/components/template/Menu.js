@@ -58,6 +58,7 @@ const Menu = () => {
                 onClick={() => {
                     setOpen(true)
                 }}
+                edge="start"
             >
                 <MenuIcon />
             </IconButton>

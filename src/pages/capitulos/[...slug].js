@@ -33,6 +33,7 @@ const PaginaCapitulo = ({ chapter }) => {
             title={chapter.title}
             description={chapter.description}
             image={chapter?.image?.url || null}
+            url={chapter.url}
         >
             <Container>
                 <ChapterView chapter={chapter} />

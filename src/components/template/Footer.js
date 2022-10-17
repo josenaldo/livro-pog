@@ -1,4 +1,4 @@
-import { Container, Box, Typography, IconButton, Stack } from '@mui/material'
+import { Container, Box, Typography, IconButton } from '@mui/material'
 
 import HandshakeIcon from '@mui/icons-material/Handshake'
 import GitHubIcon from '@mui/icons-material/GitHub'

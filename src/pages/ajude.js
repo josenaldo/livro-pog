@@ -22,7 +22,12 @@ const AjudePage = () => {
     const image = '/images/pages/ajude.jpg'
 
     return (
-        <Layout title={title} description={description} image={image}>
+        <Layout
+            title={title}
+            description={description}
+            image={image}
+            url="/ajude"
+        >
             <Container>
                 <Card
                     sx={{

@@ -65,6 +65,7 @@ const SearchPage = () => {
             title="Pesquisa"
             description="Pesquise por termos no livro Programação Orientada a Gambiarra."
             image="/images/pages/pesquisa.jpg"
+            url="/pesquisa"
         >
             <Container>
                 <Box

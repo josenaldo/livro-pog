@@ -1,11 +1,8 @@
 import NextLink from 'next/link'
 import {
-    Box,
-    Button,
     Card,
     CardContent,
     CardActions,
-    Container,
     Typography,
     CardActionArea,
 } from '@mui/material'
@@ -74,11 +71,7 @@ const SimpleCard = ({
                             pb: 2,
                         }}
                     >
-                        <Link href={url} passHref>
-                            <Typography component="a">
-                                {moreLinkText}
-                            </Typography>
-                        </Link>
+                        <Link href={url}>{moreLinkText}</Link>
                     </CardActions>
                 </CardActionArea>
             </NextLink>
