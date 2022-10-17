@@ -3,11 +3,10 @@ import React from 'react'
 import { Box, Divider } from '@mui/material'
 
 import { MDXProvider } from '@mdx-js/react'
-import ReactMarkdown from 'react-markdown'
 import { Remark } from 'react-remark'
 
 import remarkGfm from 'remark-gfm'
-import footnotes from 'remark-footnotes'
+import remarkParse from 'remark-parse'
 
 import externalLinks from 'rehype-external-links'
 import rehypePrism from 'rehype-prism-plus'
@@ -25,7 +24,8 @@ const localeFile = `${libDir}/locales-pt-PT.xml`
 
 const MDXContent = ({ content }) => {
     const remarkPlugins = [
-        // remarkGfm,
+        remarkParse,
+        remarkGfm,
         [
             externalLinks,
             {
@@ -33,10 +33,10 @@ const MDXContent = ({ content }) => {
                 rel: ['nofollow', 'noopener', 'noreferrer'],
             },
         ],
-        footnotes,
     ]
 
     const rehypePlugins = [
+        rehypeRaw,
         [
             rehypeCitation,
             {
@@ -46,7 +46,6 @@ const MDXContent = ({ content }) => {
             },
         ],
         rehypePrism,
-        rehypeRaw,
     ]
 
     const components = {

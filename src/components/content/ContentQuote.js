@@ -10,7 +10,7 @@ const ContentQuote = ({ quote, author }) => {
                 backgroundColor: 'background.quote',
                 color: 'text.secondary',
                 borderRadius: 5,
-                padding: 2,
+                padding: 1,
             }}
         >
             <Box
@@ -20,7 +20,7 @@ const ContentQuote = ({ quote, author }) => {
                     justifyContent: 'flex-start',
                 }}
             >
-                <FormatQuoteIcon />
+                <FormatQuoteIcon fontSize="small" color="neutral" />
             </Box>
             <Box
                 sx={{
@@ -47,7 +47,7 @@ const ContentQuote = ({ quote, author }) => {
                     justifyContent: 'flex-end',
                 }}
             >
-                <FormatQuoteIcon />
+                <FormatQuoteIcon fontSize="small" color="neutral" />
             </Box>
         </Box>
     )
