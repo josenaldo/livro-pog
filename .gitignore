@@ -44,3 +44,8 @@ public/workbox-eac1af49.js.map
 
 # ContentLayer
 .contentlayer
+
+# Sitemap
+public/sitemap.xml
+public/sitemap-*.xml
+public/robots.txt
