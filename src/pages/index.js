@@ -1,5 +1,3 @@
-import { Box } from '@mui/material'
-
 import { Layout } from '@pog/components/template'
 
 import { Hero, Features, Testimonial, LastNews } from '@pog/components/home'

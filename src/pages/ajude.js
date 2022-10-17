@@ -12,7 +12,6 @@ import {
 
 import Grid from '@mui/material/Unstable_Grid2'
 import Image from 'next/image'
-import { NextSeo } from 'next-seo'
 
 import { Layout } from '@pog/components/template'
 
@@ -20,28 +19,11 @@ const AjudePage = () => {
     const title = 'Ajude o Livro POG'
     const description =
         'Quer colaborar com a realização do livro POG? Veja aqui como ajudar!'
-    const image = `${process.env.NEXT_PUBLIC_SITE_URL}/images/pages/ajude.jpg`
-    const og = {
-        title: title,
-        description: description,
-        images: [
-            {
-                url: image,
-                width: '1200px',
-                height: '630px',
-                alt: title,
-            },
-        ],
-    }
+    const image = '/images/pages/ajude.jpg'
 
     return (
-        <Layout>
+        <Layout title={title} description={description} image={image}>
             <Container>
-                <NextSeo
-                    title={title}
-                    description={description}
-                    openGraph={og}
-                />
                 <Card
                     sx={{
                         my: 5,

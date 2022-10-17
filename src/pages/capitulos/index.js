@@ -21,7 +21,6 @@ import ArticleIcon from '@mui/icons-material/Article'
 import { Layout } from '@pog/components/template'
 
 import { ChapterProgress } from '@pog/components/elements'
-import { NextSeo } from 'next-seo'
 import { getSortedChapters } from '@pog/data'
 
 const getStaticProps = async () => {
@@ -43,30 +42,13 @@ const PaginaCapitulos = ({ chapters }) => {
         return <ArticleIcon />
     }
 
-    const title = 'Capítulos'
-    const description = 'Essa é a lista de capítulos do livro POG.'
-
-    const og = {
-        title: title,
-        description: description,
-        images: [
-            {
-                url: `${process.env.NEXT_PUBLIC_SITE_URL}/images/pages/capitulos.jpg`,
-                width: '1200px',
-                height: '630px',
-                alt: title,
-            },
-        ],
-    }
-
     return (
-        <Layout>
+        <Layout
+            title="Capítulos"
+            description="Essa é a lista de capítulos do livro POG."
+            image="/images/pages/capitulos.jpg"
+        >
             <Container>
-                <NextSeo
-                    title={title}
-                    description={description}
-                    openGraph={og}
-                />
                 <Card
                     sx={{
                         my: 5,

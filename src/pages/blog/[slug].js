@@ -1,7 +1,5 @@
 import { Container } from '@mui/material'
 
-import { NextSeo } from 'next-seo'
-
 import { allPosts } from 'contentlayer/generated'
 
 import { Layout } from '@pog/components/template'
@@ -38,13 +36,12 @@ const PostPage = ({ post }) => {
     }
 
     return (
-        <Layout>
+        <Layout
+            title={post.title}
+            description={post.description}
+            image={post?.image?.url || null}
+        >
             <Container>
-                <NextSeo
-                    title={post.title}
-                    description={post.description}
-                    openGraph={og}
-                />
                 <PostView post={post} />
             </Container>
         </Layout>

@@ -2,8 +2,6 @@ import Link from 'next/link'
 
 import { Box, Container } from '@mui/material'
 
-import { NextSeo } from 'next-seo'
-
 import { compareDesc } from 'date-fns'
 
 import { Layout } from '@pog/components/template'
@@ -22,28 +20,11 @@ const getStaticProps = async () => {
 const BlogPage = ({ posts }) => {
     const title = 'B.L.O.G.'
     const description = 'Baboseira Línguística Orientada a Gambiarra'
-
-    const og = {
-        title: title,
-        description: description,
-        images: [
-            {
-                url: `${process.env.NEXT_PUBLIC_SITE_URL}/images/pages/blog.jpg`,
-                width: '1200px',
-                height: '630px',
-                alt: title,
-            },
-        ],
-    }
+    const image = '/images/pages/blog.jpg'
 
     return (
-        <Layout>
+        <Layout title={title} description={description} image={image}>
             <Container>
-                <NextSeo
-                    title={title}
-                    description={description}
-                    openGraph={og}
-                />
                 <Box
                     sx={{
                         my: 5,

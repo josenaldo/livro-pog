@@ -16,8 +16,6 @@ import {
 } from '@mui/material'
 import SearchIcon from '@mui/icons-material/Search'
 
-import { NextSeo } from 'next-seo'
-
 import { Layout } from '@pog/components/template'
 
 import { ContentTitle, ContentMainImage } from '@pog/components/content'
@@ -29,20 +27,6 @@ const SearchPage = () => {
     const router = useRouter()
     const { q } = router.query
 
-    const title = 'Pesquisa'
-    const og = {
-        title: title,
-        description:
-            'Pesquise por termos no livro Programação Orientada a Gambiarra.',
-        images: [
-            {
-                url: `${process.env.NEXT_PUBLIC_SITE_URL}/images/pages/pesquisa.jpg`,
-                width: '1200px',
-                height: '630px',
-                alt: title,
-            },
-        ],
-    }
     const search = React.useCallback(async (query) => {
         router.push('/pesquisa?q=' + query, undefined, { shallow: true })
         const { data: res } = await axios.get(`/api/search?q=${query}`)
@@ -77,19 +61,18 @@ const SearchPage = () => {
     }, [router.isReady, router.query, setQuery])
 
     return (
-        <Layout>
+        <Layout
+            title="Pesquisa"
+            description="Pesquise por termos no livro Programação Orientada a Gambiarra."
+            image="/images/pages/pesquisa.jpg"
+        >
             <Container>
-                <NextSeo
-                    title={og.title}
-                    description={og.description}
-                    openGraph={og}
-                />
                 <Box
                     sx={{
                         my: 5,
                     }}
                 >
-                    <ContentTitle title={title} />
+                    <ContentTitle title="Pesquisa" />
                     <SearchForm
                         query={query}
                         setQuery={setQuery}
