@@ -1,6 +1,5 @@
 import lunr from 'lunr'
-import { getSortedChapters } from '@pog/data'
-import { allChapters } from 'contentlayer/generated'
+import { getSortedChapters, getSortedPosts } from '@pog/data'
 
 const handler = async (req, res) => {
     const { query, method } = req
@@ -17,6 +16,7 @@ const handler = async (req, res) => {
 
     try {
         const chapters = getSortedChapters()
+        const posts = getSortedPosts()
         const documentList = chapters.map((chapter) => {
             return {
                 url: chapter.url,
@@ -24,7 +24,19 @@ const handler = async (req, res) => {
                 description: chapter.description,
                 content: chapter.body.raw,
                 image: chapter.image,
+                type: 'Capítulo',
             }
+        })
+
+        posts.forEach((post) => {
+            documentList.push({
+                url: post.url,
+                title: post.title,
+                description: post.description,
+                content: post.body.raw,
+                image: post.image,
+                type: 'Post',
+            })
         })
 
         const documents = documentList.reduce(function (memo, doc) {
@@ -33,6 +45,7 @@ const handler = async (req, res) => {
                 title: doc.title,
                 description: doc.description,
                 image: doc.image,
+                type: doc.type,
             }
             return memo
         }, {})

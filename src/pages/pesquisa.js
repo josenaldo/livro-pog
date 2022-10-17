@@ -4,6 +4,7 @@ import axios from 'axios'
 import Link from 'next/link'
 import {
     Box,
+    Chip,
     Card,
     CardContent,
     CardActionArea,
@@ -202,9 +203,27 @@ const ContentResult = ({ result }) => {
                             pr: 1,
                         }}
                     >
-                        <Typography variant="h6" component="h2" color="primary">
-                            {result.title}
-                        </Typography>
+                        <Box
+                            sx={{
+                                display: 'flex',
+                                flexDirection: 'row',
+                                gap: 1,
+                                alignItems: 'center',
+                            }}
+                        >
+                            <Typography
+                                variant="h6"
+                                component="h2"
+                                color="primary"
+                            >
+                                {result.title}
+                            </Typography>
+                            <Chip
+                                label={result.type}
+                                color="secondary"
+                                size="small"
+                            />
+                        </Box>
                         <Typography variant="caption" component="p">
                             {result.description}
                         </Typography>
