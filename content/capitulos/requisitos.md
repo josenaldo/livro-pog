@@ -9,10 +9,8 @@ name: requisitos
 # parent:
 isParent: true
 status: review
-image:
-    url: "/images/capitulos/requisitos.jpg"
-    width: "1200"
-    height: "630"
+image: "/images/capitulos/requisitos.jpg"
+
 ---
 
 Além do emprego do termo POG como acrônimo da definição deste maravilhoso paradigma, temos também o uso corriqueiro do termo "pog", como sinônimo de "uma gambiarra", uma simples unidade de gambiarra implementada por um POGramador. Assim, é comum que um POGramador diga "eu fiz uma pog" quando descreve o resultado do seu trabalho de criação de um artefardo[^fn-artefardo] digital que encarna toda a beleza da POG.

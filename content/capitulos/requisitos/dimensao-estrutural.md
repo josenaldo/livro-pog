@@ -9,10 +9,8 @@ name: dimensao-estrutural
 parent: requisitos
 isParent: false
 status: review
-image:
-    url: "/images/capitulos/requisitos/dimensao-estrutural.jpg"
-    width: "1200"
-    height: "630"
+image: "/images/capitulos/requisitos/dimensao-estrutural.jpg"
+
 ---
 
 Temos uma equipe de anjos imaculados criados pelo próprio Linus Torvalds, adeptos da melhores práticas e munidos das mais belas tecnologias.

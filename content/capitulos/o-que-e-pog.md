@@ -9,10 +9,8 @@ name: o-que-e-pog
 # parent:
 isParent: false
 status: review
-image:
-    url: "/images/capitulos/o-que-e-pog.jpg"
-    width: "1200"
-    height: "630"
+image: "/images/capitulos/o-que-e-pog.jpg"
+
 ---
 
 **Gambiarra**.

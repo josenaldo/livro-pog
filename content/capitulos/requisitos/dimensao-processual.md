@@ -9,10 +9,8 @@ name: dimensao-processual
 parent: requisitos
 isParent: false
 status: progress
-image:
-    url: "/images/capitulos/requisitos/dimensao-processual.jpg"
-    width: "1200"
-    height: "630"
+image: "/images/capitulos/requisitos/dimensao-processual.jpg"
+
 ---
 
 A Dimensão Processual engloba os requisitos que são satisfeitos e documentados através dos processos escolhidos pela empresa por puro sadismo.

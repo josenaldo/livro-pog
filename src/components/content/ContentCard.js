@@ -12,6 +12,7 @@ import {
 
 import { ContentCardImage } from '@pog/components/content'
 import { ShareLink } from '@pog/components/share'
+import { APP_URL } from '@pog/config'
 
 const ContentCard = ({
     title,
@@ -80,7 +81,7 @@ const ContentCard = ({
                     title={title}
                     description={text}
                     url={url}
-                    image={`${process.env.NEXT_PUBLIC_SITE_URL}${image}`}
+                    image={`${APP_URL}${image}`}
                 />
             </CardActions>
         </Card>

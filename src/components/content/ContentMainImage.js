@@ -1,14 +1,9 @@
 import Image from 'next/image'
 import { Box, CardMedia } from '@mui/material'
-
-const DEFAULT_IMAGE = {
-    url: `${process.env.NEXT_PUBLIC_SITE_URL}/images/default.jpg`,
-    width: '1200px',
-    height: '630px',
-}
+import { APP_IMAGE } from '@pog/config'
 
 const ContentMainImage = ({ image, alt, aspectRatio = '16/9' }) => {
-    const contentImage = image || DEFAULT_IMAGE
+    const contentImage = image || APP_IMAGE
     return (
         <CardMedia
             sx={{
@@ -24,7 +19,7 @@ const ContentMainImage = ({ image, alt, aspectRatio = '16/9' }) => {
                     }}
                 >
                     <Image
-                        src={contentImage.url}
+                        src={contentImage}
                         alt={alt}
                         layout="fill"
                         objectFit="cover"

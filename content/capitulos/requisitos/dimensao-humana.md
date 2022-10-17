@@ -9,10 +9,8 @@ name: dimensao-humana
 parent: requisitos
 isParent: false
 status: review
-image:
-    url: "/images/capitulos/requisitos/dimensao-humana.jpg"
-    width: "1200"
-    height: "630"
+image: "/images/capitulos/requisitos/dimensao-humana.jpg"
+
 ---
 
 Criar software é transformar o âmago do ser humano em impulsos digitais. E, como tal, o resultado não poderia ser outro a não ser uma sucessão de erros e desastres que trabalham pra realizar uma tarefa. Um bom POGrama é um amontoado de coisas escritas que tem a capacidade de fingir resolver um problema enquanto cria vários outros. O fator humano é, portanto, o principal influenciador da POG, o ingrediente com sabor mais forte nessa sopa de desgraça que leva à manifestação digital de uma pog.

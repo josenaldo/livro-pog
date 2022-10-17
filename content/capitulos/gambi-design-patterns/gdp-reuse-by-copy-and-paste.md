@@ -9,10 +9,8 @@ name: gdp-reuse-by-copy-and-paste
 parent: gambi-design-patterns
 isParent: false
 status: backlog
-image:
-    url: "/images/capitulos/default.jpg"
-    width: "1200"
-    height: "630"
+image: "/images/capitulos/default.jpg"
+
 ---
 
 Copie o máximo de código que puder: Princípio da Reflexão Reprodutória

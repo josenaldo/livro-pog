@@ -9,10 +9,8 @@ name: introducao
 # parent:
 isParent: false
 status: review
-image:
-    url: "/images/capitulos/introducao.jpg"
-    width: "1200"
-    height: "630"
+image: "/images/capitulos/introducao.jpg"
+
 ---
 
 **Saudações, ruma de POGramador!**

@@ -9,10 +9,8 @@ name: tecnicas
 # parent:
 isParent: true
 status: backlog
-image:
-    url: "/images/capitulos/tecnicas.jpg"
-    width: "1200"
-    height: "630"
+image: "/images/capitulos/tecnicas.jpg"
+
 ---
 
 ### Hoi teste

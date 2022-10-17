@@ -39,7 +39,7 @@ const AjudePage = () => {
                         padding: 0,
                     }}
                 >
-                    <ContentMainImage image={{ url: image }} alt={title} />
+                    <ContentMainImage image={image} alt={title} />
 
                     <CardContent>
                         <Grid

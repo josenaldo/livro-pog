@@ -9,10 +9,8 @@ name: agradecimentos
 # parent: null
 isParent: false
 status: review
-image:
-    url: "/images/capitulos/agradecimentos.jpg"
-    width: "1200"
-    height: "630"
+image: "/images/capitulos/agradecimentos.jpg"
+
 ---
 
 Há muitas pessoas a quem eu devo agradecer. Se eu fosse nomear todas aqui, isso seria uma listagem maior que uma nota fiscal de quem comprou uma bala no supermercado. Então, vou agradecer apenas algumas pessoas muito queridas.

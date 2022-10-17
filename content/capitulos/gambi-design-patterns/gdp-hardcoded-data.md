@@ -9,10 +9,8 @@ name: gdp-hardcoded-data
 parent: gambi-design-patterns
 isParent: false
 status: backlog
-image:
-    url: "/images/capitulos/default.jpg"
-    width: "1200"
-    height: "630"
+image: "/images/capitulos/default.jpg"
+
 ---
 Um dos padrões mais usados na indústria
 Não coloque dados em arquivos e bancos de dados

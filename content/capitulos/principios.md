@@ -9,10 +9,8 @@ name: principios
 # parent:
 isParent: true
 status: backlog
-image:
-    url: "/images/capitulos/principios.jpg"
-    width: "1200"
-    height: "630"
+image: "/images/capitulos/principios.jpg"
+
 ---
 
 * Enjambração Criativística

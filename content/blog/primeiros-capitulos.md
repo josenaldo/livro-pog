@@ -3,10 +3,7 @@ title: Primeiros capítulos
 description: O não, eu já tenho. Agora eu quero a humilhação!
 date: 2020-04-24 20:21:00 -0300
 author: Josenaldo Matos
-image:
-    url: "/images/blog/primeiros-capitulos.jpg"
-    width: "1200"
-    height: "630"
+image: "/images/blog/primeiros-capitulos.jpg"
 ---
 **Saudações, ruma de POGramadores!**
 

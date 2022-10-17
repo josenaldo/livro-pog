@@ -1,10 +1,9 @@
 import Image from 'next/image'
 import { Box } from '@mui/material'
-
-const DEFAULT_IMAGE = `${process.env.NEXT_PUBLIC_SITE_URL}/images/default.jpg`
+import { APP_IMAGE } from '@pog/config'
 
 const ContentCardImage = ({ image, alt, aspectRatio = '16/9' }) => {
-    const contentImage = image || DEFAULT_IMAGE
+    const contentImage = image || APP_IMAGE
     return (
         <>
             {contentImage && (

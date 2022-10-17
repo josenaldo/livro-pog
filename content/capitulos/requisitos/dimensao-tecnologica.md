@@ -9,10 +9,8 @@ name: dimensao-tecnologica
 parent: requisitos
 isParent: false
 status: review
-image:
-    url: "/images/capitulos/requisitos/dimensao-tecnologica.jpg"
-    width: "1200"
-    height: "630"
+image: "/images/capitulos/requisitos/dimensao-tecnologica.jpg"
+
 ---
 
 Uma outra dimensão que afeta constantemente nossos projetos, adubando o jardim da desgracença para que a POG possa germinar com todo vigor, é a Dimensão Tecnológica.

@@ -9,10 +9,8 @@ name: dimensao-temporal
 parent: requisitos
 isParent: false
 status: backlog
-image:
-    url: "/images/capitulos/requisitos/dimensao-temporal.jpg"
-    width: "1200"
-    height: "630"
+image: "/images/capitulos/requisitos/dimensao-temporal.jpg"
+
 ---
 
 ### O próprio tempo

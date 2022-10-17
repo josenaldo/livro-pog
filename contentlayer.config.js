@@ -4,21 +4,6 @@ import {
     defineNestedType,
 } from 'contentlayer/source-files'
 
-const Image = defineNestedType(() => ({
-    name: 'Image',
-    fields: {
-        url: {
-            type: 'string',
-        },
-        width: {
-            type: 'string',
-        },
-        height: {
-            type: 'string',
-        },
-    },
-}))
-
 const Post = defineDocumentType(() => ({
     name: 'Post',
     filePathPattern: `blog/**/*.md`,
@@ -44,8 +29,9 @@ const Post = defineDocumentType(() => ({
             required: true,
         },
         image: {
-            type: 'nested',
-            of: Image,
+            type: 'string',
+            description: 'The image of the post',
+            required: true,
         },
     },
     computedFields: {
@@ -114,8 +100,9 @@ const Chapter = defineDocumentType(() => ({
             required: true,
         },
         image: {
-            type: 'nested',
-            of: Image,
+            type: 'string',
+            description: 'The image of the post',
+            required: true,
         },
     },
     computedFields: {

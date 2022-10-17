@@ -9,10 +9,8 @@ name: historia
 # parent:
 isParent: false
 status: review
-image:
-    url: "/images/capitulos/historia.jpg"
-    width: "1200"
-    height: "630"
+image: "/images/capitulos/historia.jpg"
+
 ---
 
 Quando procuramos definir a primeira POG da história, a maior dificuldade está no fato de que o bom POGramador não deixa rastros de seus méritos, pois POGramador não usa comentários(a não ser que sejam inúteis).

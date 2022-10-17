@@ -3,6 +3,12 @@ const APP_TITLE = 'Programação Orientada a Gambiarra'
 const APP_DESCRIPTION =
     'Como transformar o seu trabalho em uma amostra grátis do inferno!'
 const APP_URL = process.env.NEXT_PUBLIC_SITE_URL
+const APP_IMAGE = `${APP_URL}/images/default.jpg`
+const APP_IMAGE_OBJECT = {
+    url: APP_IMAGE,
+    width: '1200px',
+    height: '630px',
+}
 
 const SeoConfig = {
     titleTemplate: '%s | Programação Orientada a Gambiarra',
@@ -18,7 +24,7 @@ const SeoConfig = {
         site_name: APP_TITLE,
         images: [
             {
-                url: `${process.env.NEXT_PUBLIC_SITE_URL}/images/pages/default.jpg`,
+                url: `${APP_URL}/images/pages/default.jpg`,
                 width: 1200,
                 height: 630,
                 alt: APP_TITLE,
@@ -47,53 +53,61 @@ const SeoConfig = {
     additionalLinkTags: [
         {
             rel: 'icon',
-            href: `${process.env.NEXT_PUBLIC_SITE_URL}/icons/favicon.ico`,
+            href: `${APP_URL}/icons/favicon.ico`,
         },
         {
             rel: 'icon shortcut',
-            href: `${process.env.NEXT_PUBLIC_SITE_URL}/icons/favicon.ico`,
+            href: `${APP_URL}/icons/favicon.ico`,
         },
         {
             rel: 'icon',
             type: 'image/png',
             sizes: '32x32',
-            href: `${process.env.NEXT_PUBLIC_SITE_URL}/icons/favicon-32x32.png`,
+            href: `${APP_URL}/icons/favicon-32x32.png`,
         },
         {
             rel: 'icon',
             type: 'image/png',
             sizes: '16x16',
-            href: `${process.env.NEXT_PUBLIC_SITE_URL}/icons/favicon-16x16.png`,
+            href: `${APP_URL}/icons/favicon-16x16.png`,
         },
         {
             rel: 'mask-icon',
-            href: `${process.env.NEXT_PUBLIC_SITE_URL}/icons/icon.svg`,
+            href: `${APP_URL}/icons/icon.svg`,
         },
         {
             rel: 'apple-touch-icon',
-            href: `${process.env.NEXT_PUBLIC_SITE_URL}/icons/76x76-icon.png`,
+            href: `${APP_URL}/icons/76x76-icon.png`,
             sizes: '76x76',
         },
         {
             rel: 'apple-touch-icon',
-            href: `${process.env.NEXT_PUBLIC_SITE_URL}/icons/152x152-icon.png`,
+            href: `${APP_URL}/icons/152x152-icon.png`,
             sizes: '152x152',
         },
         {
             rel: 'apple-touch-icon',
-            href: `${process.env.NEXT_PUBLIC_SITE_URL}/icons/180x180-icon.png`,
+            href: `${APP_URL}/icons/180x180-icon.png`,
             sizes: '180x180',
         },
         {
             rel: 'apple-touch-icon',
-            href: `${process.env.NEXT_PUBLIC_SITE_URL}/icons/167x167-icon.png`,
+            href: `${APP_URL}/icons/167x167-icon.png`,
             sizes: '167x167',
         },
         {
             rel: 'manifest',
-            href: `${process.env.NEXT_PUBLIC_SITE_URL}/manifest.json`,
+            href: `${APP_URL}/manifest.json`,
         },
     ],
 }
 
-export { SeoConfig, APP_NAME, APP_TITLE, APP_DESCRIPTION, APP_URL }
+export {
+    SeoConfig,
+    APP_NAME,
+    APP_TITLE,
+    APP_DESCRIPTION,
+    APP_URL,
+    APP_IMAGE,
+    APP_IMAGE_OBJECT,
+}
