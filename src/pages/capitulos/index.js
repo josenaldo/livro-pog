@@ -18,6 +18,8 @@ import SubdirectoryArrowRightIcon from '@mui/icons-material/SubdirectoryArrowRig
 import TopicIcon from '@mui/icons-material/Topic'
 import ArticleIcon from '@mui/icons-material/Article'
 
+import { Layout } from '@pog/components/template'
+
 import { ChapterProgress } from '@pog/components/elements'
 import { NextSeo } from 'next-seo'
 import { getSortedChapters } from '@pog/data'
@@ -58,61 +60,69 @@ const PaginaCapitulos = ({ chapters }) => {
     }
 
     return (
-        <Container>
-            <NextSeo title={title} description={description} openGraph={og} />
-            <Card
-                sx={{
-                    my: 5,
-                }}
-            >
-                <CardContent
+        <Layout>
+            <Container>
+                <NextSeo
+                    title={title}
+                    description={description}
+                    openGraph={og}
+                />
+                <Card
                     sx={{
                         my: 5,
-                        py: 5,
-                        px: { xs: 2, sm: 2, md: 5, lg: 12 },
                     }}
                 >
-                    <Typography variant="h1" textAlign="center">
-                        Capítulos
-                    </Typography>
-                    <List sx={{ my: 5 }}>
-                        {chapters.map((chapter) => (
-                            <>
-                                <Link href={chapter.url}>
-                                    <ListItemButton
-                                        component="a"
-                                        key={chapter.url}
-                                        alignItems="flex-start"
-                                        sx={{
-                                            pl: chapter.parent ? 5 : 0,
-                                        }}
-                                    >
-                                        <ListItemAvatar>
-                                            <Avatar>
-                                                {getChapterTypeIcon(chapter)}
-                                            </Avatar>
-                                        </ListItemAvatar>
-                                        <ListItemText
-                                            primary={chapter.title}
-                                            secondary={chapter.description}
+                    <CardContent
+                        sx={{
+                            my: 5,
+                            py: 5,
+                            px: { xs: 2, sm: 2, md: 5, lg: 12 },
+                        }}
+                    >
+                        <Typography variant="h1" textAlign="center">
+                            Capítulos
+                        </Typography>
+                        <List sx={{ my: 5 }}>
+                            {chapters.map((chapter) => (
+                                <>
+                                    <Link href={chapter.url}>
+                                        <ListItemButton
+                                            component="a"
+                                            key={chapter.url}
+                                            alignItems="flex-start"
                                             sx={{
-                                                pr: 3,
+                                                pl: chapter.parent ? 5 : 0,
                                             }}
-                                        />
-                                        <ListItemSecondaryAction>
-                                            <ChapterProgress
-                                                chapter={chapter}
+                                        >
+                                            <ListItemAvatar>
+                                                <Avatar>
+                                                    {getChapterTypeIcon(
+                                                        chapter
+                                                    )}
+                                                </Avatar>
+                                            </ListItemAvatar>
+                                            <ListItemText
+                                                primary={chapter.title}
+                                                secondary={chapter.description}
+                                                sx={{
+                                                    pr: 3,
+                                                }}
                                             />
-                                        </ListItemSecondaryAction>
-                                    </ListItemButton>
-                                </Link>
-                                <Divider variant="inset" component="li" />
-                            </>
-                        ))}
-                    </List>
-                </CardContent>
-            </Card>
-        </Container>
+                                            <ListItemSecondaryAction>
+                                                <ChapterProgress
+                                                    chapter={chapter}
+                                                />
+                                            </ListItemSecondaryAction>
+                                        </ListItemButton>
+                                    </Link>
+                                    <Divider variant="inset" component="li" />
+                                </>
+                            ))}
+                        </List>
+                    </CardContent>
+                </Card>
+            </Container>
+        </Layout>
     )
 }
 

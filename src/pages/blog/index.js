@@ -5,6 +5,8 @@ import { Box, Container } from '@mui/material'
 import { NextSeo } from 'next-seo'
 
 import { compareDesc } from 'date-fns'
+
+import { Layout } from '@pog/components/template'
 import { allPosts } from 'contentlayer/generated'
 
 import { PostCard, ContentTitle } from '@pog/components/content'
@@ -35,32 +37,38 @@ const BlogPage = ({ posts }) => {
     }
 
     return (
-        <Container>
-            <NextSeo title={title} description={description} openGraph={og} />
-            <Box
-                sx={{
-                    my: 5,
-                }}
-            >
-                <ContentTitle title={title} subtitle={description} />
+        <Layout>
+            <Container>
+                <NextSeo
+                    title={title}
+                    description={description}
+                    openGraph={og}
+                />
                 <Box
                     sx={{
-                        display: 'grid',
-                        gridTemplateColumns: {
-                            xs: '1fr',
-                            sm: '1fr 1fr',
-                            md: '1fr 1fr 1fr',
-                        },
-                        gap: 3,
                         my: 5,
                     }}
                 >
-                    {posts.map((post) => (
-                        <PostCard post={post} key={post.url} />
-                    ))}
+                    <ContentTitle title={title} subtitle={description} />
+                    <Box
+                        sx={{
+                            display: 'grid',
+                            gridTemplateColumns: {
+                                xs: '1fr',
+                                sm: '1fr 1fr',
+                                md: '1fr 1fr 1fr',
+                            },
+                            gap: 3,
+                            my: 5,
+                        }}
+                    >
+                        {posts.map((post) => (
+                            <PostCard post={post} key={post.url} />
+                        ))}
+                    </Box>
                 </Box>
-            </Box>
-        </Container>
+            </Container>
+        </Layout>
     )
 }
 

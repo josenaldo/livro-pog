@@ -4,6 +4,8 @@ import { ChapterView } from '@pog/components/content'
 
 import { NextSeo } from 'next-seo'
 
+import { Layout } from '@pog/components/template'
+
 import { getAllChaptersPaths, getChapterData } from '@pog/data'
 
 const getStaticPaths = async () => {
@@ -45,14 +47,16 @@ const PaginaCapitulo = ({ chapter }) => {
     }
 
     return (
-        <Container>
-            <NextSeo
-                title={chapter.title}
-                description={chapter.description}
-                openGraph={og}
-            />
-            <ChapterView chapter={chapter} />
-        </Container>
+        <Layout>
+            <Container>
+                <NextSeo
+                    title={chapter.title}
+                    description={chapter.description}
+                    openGraph={og}
+                />
+                <ChapterView chapter={chapter} />
+            </Container>
+        </Layout>
     )
 }
 

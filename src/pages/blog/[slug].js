@@ -1,10 +1,11 @@
 import { Container } from '@mui/material'
 
-import { PostView } from '@pog/components/content'
-
 import { NextSeo } from 'next-seo'
 
 import { allPosts } from 'contentlayer/generated'
+
+import { Layout } from '@pog/components/template'
+import { PostView } from '@pog/components/content'
 
 const getStaticPaths = async () => {
     const paths = allPosts.map((post) => post.url)
@@ -37,14 +38,16 @@ const PostPage = ({ post }) => {
     }
 
     return (
-        <Container>
-            <NextSeo
-                title={post.title}
-                description={post.description}
-                openGraph={og}
-            />
-            <PostView post={post} />
-        </Container>
+        <Layout>
+            <Container>
+                <NextSeo
+                    title={post.title}
+                    description={post.description}
+                    openGraph={og}
+                />
+                <PostView post={post} />
+            </Container>
+        </Layout>
     )
 }
 

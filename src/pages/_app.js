@@ -57,9 +57,7 @@ const PogApp = ({ Component, pageProps }) => {
             </Head>
             <DefaultSeo {...SeoConfig} />
             <ConfigProvider>
-                <Layout>
-                    <Component {...pageProps} />
-                </Layout>
+                <Component {...pageProps} />
             </ConfigProvider>
         </>
     )

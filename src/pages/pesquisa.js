@@ -18,6 +18,8 @@ import SearchIcon from '@mui/icons-material/Search'
 
 import { NextSeo } from 'next-seo'
 
+import { Layout } from '@pog/components/template'
+
 import { ContentTitle, ContentMainImage } from '@pog/components/content'
 
 const SearchPage = () => {
@@ -75,81 +77,83 @@ const SearchPage = () => {
     }, [router.isReady, router.query, setQuery])
 
     return (
-        <Container>
-            <NextSeo
-                title={og.title}
-                description={og.description}
-                openGraph={og}
-            />
-            <Box
-                sx={{
-                    my: 5,
-                }}
-            >
-                <ContentTitle title={title} />
-                <SearchForm
-                    query={query}
-                    setQuery={setQuery}
-                    handleSearch={handleSearch}
-                    loading={loading}
+        <Layout>
+            <Container>
+                <NextSeo
+                    title={og.title}
+                    description={og.description}
+                    openGraph={og}
                 />
                 <Box
                     sx={{
-                        display: 'flex',
-                        flexDirection: 'column',
-                        gap: 2,
+                        my: 5,
                     }}
                 >
-                    {results &&
-                        results.map((result) => (
-                            <Card key={result.url}>
-                                <Link href={result.url}>
-                                    <CardActionArea
-                                        sx={{
-                                            display: 'grid',
-                                            gridTemplateColumns: {
-                                                xs: '1fr 2fr',
-                                                sm: '1fr 4fr',
-                                                md: '1fr 6fr',
-                                                lg: '1fr 8fr',
-                                                xl: '1fr 8fr',
-                                            },
-                                            alignItems: 'flex-start',
-                                        }}
-                                    >
-                                        <ContentMainImage
-                                            image={result.image}
-                                            alt={result.title}
-                                            aspectRatio="1/1"
-                                        />
-                                        <CardContent
+                    <ContentTitle title={title} />
+                    <SearchForm
+                        query={query}
+                        setQuery={setQuery}
+                        handleSearch={handleSearch}
+                        loading={loading}
+                    />
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            gap: 2,
+                        }}
+                    >
+                        {results &&
+                            results.map((result) => (
+                                <Card key={result.url}>
+                                    <Link href={result.url}>
+                                        <CardActionArea
                                             sx={{
-                                                display: 'flex',
-                                                flexDirection: 'column',
-                                                padding: 2,
-                                                gap: 2,
+                                                display: 'grid',
+                                                gridTemplateColumns: {
+                                                    xs: '1fr 2fr',
+                                                    sm: '1fr 4fr',
+                                                    md: '1fr 6fr',
+                                                    lg: '1fr 8fr',
+                                                    xl: '1fr 8fr',
+                                                },
+                                                alignItems: 'flex-start',
                                             }}
                                         >
-                                            <Typography
-                                                variant="h6"
-                                                component="h2"
+                                            <ContentMainImage
+                                                image={result.image}
+                                                alt={result.title}
+                                                aspectRatio="1/1"
+                                            />
+                                            <CardContent
+                                                sx={{
+                                                    display: 'flex',
+                                                    flexDirection: 'column',
+                                                    padding: 2,
+                                                    gap: 2,
+                                                }}
                                             >
-                                                {result.title}
-                                            </Typography>
-                                            <Typography
-                                                variant="caption"
-                                                component="p"
-                                            >
-                                                {result.description}
-                                            </Typography>
-                                        </CardContent>
-                                    </CardActionArea>
-                                </Link>
-                            </Card>
-                        ))}
+                                                <Typography
+                                                    variant="h6"
+                                                    component="h2"
+                                                >
+                                                    {result.title}
+                                                </Typography>
+                                                <Typography
+                                                    variant="caption"
+                                                    component="p"
+                                                >
+                                                    {result.description}
+                                                </Typography>
+                                            </CardContent>
+                                        </CardActionArea>
+                                    </Link>
+                                </Card>
+                            ))}
+                    </Box>
                 </Box>
-            </Box>
-        </Container>
+            </Container>
+        </Layout>
     )
 }
 
