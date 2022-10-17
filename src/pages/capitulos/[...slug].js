@@ -1,8 +1,8 @@
 import { Container } from '@mui/material'
 
-import { ChapterView } from '@pog/components/content'
-
 import { Layout } from '@pog/components/template'
+
+import { ChapterView, ContentView, ContentQuote } from '@pog/components/content'
 
 import { getAllChaptersPaths, getChapterData } from '@pog/data'
 
@@ -36,7 +36,15 @@ const PaginaCapitulo = ({ chapter }) => {
             url={chapter.url}
         >
             <Container>
-                <ChapterView chapter={chapter} />
+                <ContentView
+                    content={chapter}
+                    contentExtraInfo={
+                        <ContentQuote
+                            quote={chapter.sentence}
+                            author={chapter.sentence_author}
+                        />
+                    }
+                />
             </Container>
         </Layout>
     )

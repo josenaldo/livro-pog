@@ -167,12 +167,13 @@ const SearchForm = ({ handleSearch, query, setQuery, loading }) => {
                     placeholder="Pesquisa"
                     id="input-search-page"
                     value={query}
+                    color="secondary"
                     onChange={(e) => setQuery(e.target.value)}
                     InputProps={{
                         endAdornment: (
                             <InputAdornment position="end">
                                 <IconButton
-                                    color="primary"
+                                    color="secondary"
                                     disabled={!query}
                                     onClick={handleSearch}
                                 >
@@ -180,9 +181,6 @@ const SearchForm = ({ handleSearch, query, setQuery, loading }) => {
                                 </IconButton>
                             </InputAdornment>
                         ),
-                        sx: {
-                            borderRadius: '50px',
-                        },
                     }}
                     sx={{
                         width: { xs: '100%', md: '50%' },

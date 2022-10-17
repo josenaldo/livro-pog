@@ -59,6 +59,7 @@ const Menu = () => {
                     setOpen(true)
                 }}
                 edge="start"
+                color="inherit"
             >
                 <MenuIcon />
             </IconButton>
@@ -68,11 +69,16 @@ const Menu = () => {
                 onClose={() => {
                     setOpen(false)
                 }}
+                color="inherit"
             >
                 <Stack
-                    padding={1}
                     sx={{
                         maxWidth: '300px',
+                        padding: 1,
+                        backgroundColor: (theme) =>
+                            theme.palette.mode === 'dark'
+                                ? theme.palette.background.paper
+                                : theme.palette.background.paper,
                     }}
                 >
                     <Box
@@ -145,7 +151,6 @@ const Menu = () => {
                         </ListItem>
 
                         <Divider />
-                        {/* <LoadingProgress loading={loading} /> */}
                         {chapters &&
                             chapters.map((chapter) => (
                                 <ListItemLink

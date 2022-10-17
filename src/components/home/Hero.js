@@ -5,7 +5,6 @@ const Hero = () => {
     return (
         <Box
             sx={{
-                backgroundColor: 'background.cover',
                 backgroundImage:
                     'linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.8)), url("/images/cover/hero-hd.jpg")',
                 backgroundRepeat: 'no-repeat',

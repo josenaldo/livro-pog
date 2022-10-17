@@ -1,21 +1,12 @@
 import Image from 'next/image'
-import { Box, CardMedia } from '@mui/material'
+import { Box } from '@mui/material'
 
-const DEFAULT_IMAGE = {
-    url: `${process.env.NEXT_PUBLIC_SITE_URL}/images/default.jpg`,
-    width: '1200px',
-    height: '630px',
-}
+const DEFAULT_IMAGE = `${process.env.NEXT_PUBLIC_SITE_URL}/images/default.jpg`
 
-const ContentMainImage = ({ image, alt, aspectRatio = '16/9' }) => {
+const ContentCardImage = ({ image, alt, aspectRatio = '16/9' }) => {
     const contentImage = image || DEFAULT_IMAGE
     return (
-        <CardMedia
-            sx={{
-                padding: 0,
-                margin: 0,
-            }}
-        >
+        <>
             {contentImage && (
                 <Box
                     sx={{
@@ -24,15 +15,15 @@ const ContentMainImage = ({ image, alt, aspectRatio = '16/9' }) => {
                     }}
                 >
                     <Image
-                        src={contentImage.url}
+                        src={contentImage}
                         alt={alt}
                         layout="fill"
                         objectFit="cover"
                     />
                 </Box>
             )}
-        </CardMedia>
+        </>
     )
 }
 
-export { ContentMainImage }
+export { ContentCardImage }

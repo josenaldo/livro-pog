@@ -8,10 +8,18 @@ const ContentTitle = ({
 }) => {
     return (
         <Stack alignItems="center">
-            <Typography variant={titleVariant} textAlign="center">
+            <Typography
+                variant={titleVariant}
+                textAlign="center"
+                color="primary"
+            >
                 {title}
             </Typography>
-            <Typography variant={subtitleVariant} textAlign="center">
+            <Typography
+                variant={subtitleVariant}
+                textAlign="center"
+                color="secondary"
+            >
                 {subtitle}
             </Typography>
         </Stack>

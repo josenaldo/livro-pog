@@ -8,8 +8,8 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import FacebookIcon from '@mui/icons-material/Facebook'
 import InstagramIcon from '@mui/icons-material/Instagram'
 
-const iconColor = 'text.primary'
-const textColor = 'text.primary'
+const iconColor = 'text.secondary'
+const textColor = 'text.secondary'
 
 const Footer = () => {
     return (
@@ -21,7 +21,7 @@ const Footer = () => {
                 flexDirection: 'column',
                 alignItems: 'center',
                 pt: 2,
-                backgroundColor: 'background.cover',
+                backgroundColor: 'background.paper',
             }}
         >
             <Container
@@ -42,7 +42,7 @@ const Footer = () => {
                         justifyContent: 'center',
                     }}
                 >
-                    <Typography variant="footerH2">
+                    <Typography variant="footerH2" color={textColor}>
                         Encontre esse projeto no Github
                     </Typography>
 
@@ -60,7 +60,7 @@ const Footer = () => {
                         justifyContent: 'center',
                     }}
                 >
-                    <Typography variant="footerH2">
+                    <Typography variant="footerH2" color={textColor}>
                         Ajude esse projeto
                     </Typography>
                     <FooterIcon href="/ajude" icon={<HandshakeIcon />} />
@@ -73,7 +73,7 @@ const Footer = () => {
                         justifyContent: 'center',
                     }}
                 >
-                    <Typography variant="footerH2">
+                    <Typography variant="footerH2" color={textColor}>
                         Quer falar comigo?
                     </Typography>
                     <Box

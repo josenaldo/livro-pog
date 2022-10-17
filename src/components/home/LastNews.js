@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Box, Container } from '@mui/material'
 
-import { ContentTitle, SimpleCard } from '@pog/components/content'
+import { ContentTitle, ContentCard } from '@pog/components/content'
 
 import { getSortedPosts } from '@pog/data'
 const LastNews = () => {
@@ -10,7 +10,7 @@ const LastNews = () => {
     return (
         <Box
             sx={{
-                backgroundColor: 'neutral.dark',
+                backgroundColor: 'background.default',
                 width: '100%',
             }}
         >
@@ -35,12 +35,16 @@ const LastNews = () => {
                             lg: '1fr 1fr 1fr',
                         },
                         gap: 3,
+                        width: '100%',
                     }}
                 >
                     {posts.map((post) => (
-                        <SimpleCard
+                        <ContentCard
+                            key={post.url}
                             title={post.title}
-                            description={post.description}
+                            text={post.description}
+                            author={post.author}
+                            date={post.date}
                             image={post.image.url}
                             url={post.url}
                         />

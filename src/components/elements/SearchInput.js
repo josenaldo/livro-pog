@@ -19,13 +19,16 @@ const SearchInput = ({ id = 'search-input' }) => {
                 placeholder="Pesquisa"
                 id={id}
                 fullWidth
+                color="secondary"
                 value={query}
+                variant="outlined"
+                size="small"
                 onChange={(e) => setQuery(e.target.value)}
                 InputProps={{
                     endAdornment: (
                         <InputAdornment position="end">
                             <IconButton
-                                color="primary"
+                                color="secondary"
                                 disabled={!query}
                                 onClick={handleSearch}
                             >
@@ -33,9 +36,6 @@ const SearchInput = ({ id = 'search-input' }) => {
                             </IconButton>
                         </InputAdornment>
                     ),
-                    sx: {
-                        borderRadius: '50px',
-                    },
                 }}
             />
         </Box>

@@ -1,18 +1,6 @@
 import React from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
 
-import {
-    Box,
-    Card,
-    Divider,
-    Typography,
-    Stack,
-    CardMedia,
-    Button,
-    Backdrop,
-    CircularProgress,
-} from '@mui/material'
+import { Card, Divider, Backdrop, CircularProgress } from '@mui/material'
 
 import Grid from '@mui/material/Unstable_Grid2'
 
@@ -25,25 +13,26 @@ import {
     ContentMainImage,
     ContentQuote,
     ContentTitle,
+    ContentNavButton,
     MDXContent,
 } from '@pog/components/content'
 
-const ChapterView = ({ chapter }) => {
+const ContentView = ({ content, contentExtraInfo = null }) => {
     const router = useRouter()
 
     const [loading, setLoading] = React.useState(false)
 
     const handlers = useSwipeable({
         onSwipedLeft: (eventData) => {
-            if (chapter.next) {
+            if (content.next) {
                 setLoading(true)
-                router.push(chapter.next.url)
+                router.push(content.next.url)
             }
         },
         onSwipedRight: (eventData) => {
-            if (chapter.previous) {
+            if (content.previous) {
                 setLoading(true)
-                router.push(chapter.previous.url)
+                router.push(content.previous.url)
             }
         },
     })
@@ -56,14 +45,14 @@ const ChapterView = ({ chapter }) => {
         function handleKeyDown(e) {
             if (e.keyCode === 39) {
                 setLoading(true)
-                if (chapter.next) {
-                    router.push(chapter.next.url)
+                if (content.next) {
+                    router.push(content.next.url)
                 }
             }
             if (e.keyCode === 37) {
                 setLoading(true)
-                if (chapter.previous) {
-                    router.push(chapter.previous.url)
+                if (content.previous) {
+                    router.push(content.previous.url)
                 }
             }
         }
@@ -84,7 +73,7 @@ const ChapterView = ({ chapter }) => {
             }}
             {...handlers}
         >
-            <ContentMainImage image={chapter.image} alt={chapter.title} />
+            <ContentMainImage image={content.image} alt={content.title} />
 
             <Grid
                 container
@@ -99,8 +88,8 @@ const ChapterView = ({ chapter }) => {
                         display: 'block',
                     }}
                 >
-                    <ChapterButton
-                        url={chapter.previous.url}
+                    <ContentNavButton
+                        url={content.previous.url}
                         icon={<ArrowBackIosNewIcon />}
                         onClick={() => {
                             setLoading(true)
@@ -118,20 +107,17 @@ const ChapterView = ({ chapter }) => {
                     }}
                 >
                     <ContentTitle
-                        title={chapter.title}
-                        subtitle={chapter.description}
+                        title={content.title}
+                        subtitle={content.description}
                     />
-                    <ContentQuote
-                        quote={chapter.sentence}
-                        author={chapter.sentence_author}
-                    />
+                    {contentExtraInfo}
                     <Divider />
 
-                    <MDXContent content={chapter.body.raw} />
+                    <MDXContent content={content.body.raw} />
                 </Grid>
                 <Grid xs={1}>
-                    <ChapterButton
-                        url={chapter.next.url}
+                    <ContentNavButton
+                        url={content.next.url}
                         icon={<ArrowForwardIosIcon />}
                         onClick={() => {
                             setLoading(true)
@@ -153,31 +139,4 @@ const ChapterView = ({ chapter }) => {
     )
 }
 
-const ChapterButton = ({ url, icon, onClick = () => {} }) => {
-    return (
-        <Link href={url}>
-            <Button
-                component="a"
-                variant="contained"
-                color="neutral"
-                sx={{
-                    minWidth: '0',
-                    width: '100%',
-                    height: '100%',
-                    borderRadius: '0',
-                    padding: '0 !important',
-                    px: '0px !important',
-                    py: '0 !important',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                }}
-                onClick={onClick}
-            >
-                {icon}
-            </Button>
-        </Link>
-    )
-}
-
-export { ChapterView }
+export { ContentView }

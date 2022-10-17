@@ -12,7 +12,7 @@ const Breadcrumbs = ({ items }) => {
     return (
         <Box
             sx={{
-                backgroundColor: 'neutral.main',
+                backgroundColor: 'background.paper',
                 py: 1,
             }}
         >
@@ -46,7 +46,7 @@ const BreadcrumbItem = ({ title, url, index, length }) => {
                 <Link
                     key={index}
                     underline="hover"
-                    color="inherit"
+                    color="secondary"
                     href={url}
                     variant="caption"
                 >

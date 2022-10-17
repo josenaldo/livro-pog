@@ -2,6 +2,7 @@ import {
     pink,
     blueGrey,
     green,
+    lightGreen,
     blue,
     orange,
     red,
@@ -9,26 +10,12 @@ import {
     deepOrange,
     deepPurple,
     cyan,
+    purple,
 } from '@mui/material/colors'
 
-const primaryColor = deepPurple
-const secondaryColor = blueGrey
-const neutralColor = {
-    50: '#616161',
-    100: '#595959',
-    200: '#525252',
-    300: '#4b4b4b',
-    400: '#434343',
-    500: '#3c3c3c',
-    600: '#353535',
-    700: '#2e2e2e',
-    800: '#282828',
-    900: '#212121',
-    A100: '#595959',
-    A200: '#525252',
-    A400: '#4b4b4b',
-    A700: '#2e2e2e',
-}
+const primaryColor = purple
+const secondaryColor = lightGreen
+const neutralColor = grey
 
 const successColor = green
 const infoColor = blue
@@ -40,6 +27,7 @@ const lightTextColor = '#fff'
 
 const darkPalette = {
     mode: 'dark',
+
     primary: {
         lighter: primaryColor[50],
         light: primaryColor[100],
@@ -47,14 +35,7 @@ const darkPalette = {
         dark: primaryColor[300],
         darker: primaryColor[400],
 
-        // contrastText: darkTextColor,
-        contrastTextColor: {
-            lighter: darkTextColor,
-            light: darkTextColor,
-            main: darkTextColor,
-            dark: lightTextColor,
-            darker: lightTextColor,
-        },
+        contrastText: darkTextColor,
     },
 
     secondary: {
@@ -64,14 +45,7 @@ const darkPalette = {
         dark: secondaryColor[300],
         darker: secondaryColor[400],
 
-        // contrastText: darkTextColor,
-        contrastTextColor: {
-            lighter: darkTextColor,
-            light: darkTextColor,
-            main: darkTextColor,
-            dark: lightTextColor,
-            darker: lightTextColor,
-        },
+        contrastText: darkTextColor,
     },
 
     neutral: {
@@ -81,14 +55,7 @@ const darkPalette = {
         dark: neutralColor[800],
         darker: neutralColor[900],
 
-        // contrastText: darkTextColor,
-        contrastTextColor: {
-            lighter: darkTextColor,
-            light: darkTextColor,
-            main: darkTextColor,
-            dark: lightTextColor,
-            darker: lightTextColor,
-        },
+        contrastText: darkTextColor,
     },
 
     error: {
@@ -98,14 +65,7 @@ const darkPalette = {
         dark: errorColor[300],
         darker: errorColor[400],
 
-        // contrastText: darkTextColor,
-        contrastTextColor: {
-            lighter: darkTextColor,
-            light: darkTextColor,
-            main: darkTextColor,
-            dark: lightTextColor,
-            darker: lightTextColor,
-        },
+        contrastText: darkTextColor,
     },
 
     warning: {
@@ -115,14 +75,7 @@ const darkPalette = {
         dark: warningColor[300],
         darker: warningColor[400],
 
-        // contrastText: darkTextColor,
-        contrastTextColor: {
-            lighter: darkTextColor,
-            light: darkTextColor,
-            main: darkTextColor,
-            dark: darkTextColor,
-            darker: darkTextColor,
-        },
+        contrastText: darkTextColor,
     },
 
     info: {
@@ -132,14 +85,7 @@ const darkPalette = {
         dark: infoColor[300],
         darker: infoColor[400],
 
-        // contrastText: darkTextColor,
-        contrastTextColor: {
-            lighter: darkTextColor,
-            light: darkTextColor,
-            main: darkTextColor,
-            dark: lightTextColor,
-            darker: lightTextColor,
-        },
+        contrastText: darkTextColor,
     },
 
     success: {
@@ -149,19 +95,28 @@ const darkPalette = {
         dark: successColor[300],
         darker: successColor[400],
 
-        // contrastText: darkTextColor,
-        contrastTextColor: {
-            lighter: darkTextColor,
-            light: darkTextColor,
-            main: darkTextColor,
-            dark: darkTextColor,
-            darker: lightTextColor,
-        },
+        contrastText: darkTextColor,
     },
+
+    navButton: {
+        main: neutralColor[900],
+        dark: neutralColor[800],
+    },
+
     background: {
         default: '#121212',
-        paper: '#121212',
-        cover: '#212121',
+        paper: neutralColor[900],
+        appbar: neutralColor[900],
+        cover: neutralColor[900],
+        breadcrumbs: neutralColor[800],
+        testimonial: neutralColor[900],
+        quote: neutralColor[800],
+    },
+
+    text: {
+        primary: lightTextColor,
+        secondary: lightTextColor,
+        disabled: lightTextColor,
     },
 }
 
@@ -174,14 +129,7 @@ const lightPalette = {
         dark: primaryColor[700],
         darker: primaryColor[900],
 
-        // contrastText: lightTextColor,
-        contrastTextColor: {
-            lighter: darkTextColor,
-            light: darkTextColor,
-            main: darkTextColor,
-            dark: lightTextColor,
-            darker: lightTextColor,
-        },
+        contrastText: lightTextColor,
     },
 
     secondary: {
@@ -191,14 +139,7 @@ const lightPalette = {
         dark: secondaryColor[700],
         darker: secondaryColor[900],
 
-        // contrastText: darkTextColor,
-        contrastTextColor: {
-            lighter: darkTextColor,
-            light: darkTextColor,
-            main: darkTextColor,
-            dark: lightTextColor,
-            darker: lightTextColor,
-        },
+        contrastText: darkTextColor,
     },
 
     neutral: {
@@ -208,14 +149,7 @@ const lightPalette = {
         dark: neutralColor[700],
         darker: neutralColor[900],
 
-        // contrastText: darkTextColor,
-        contrastTextColor: {
-            lighter: darkTextColor,
-            light: darkTextColor,
-            main: darkTextColor,
-            dark: lightTextColor,
-            darker: lightTextColor,
-        },
+        contrastText: darkTextColor,
     },
 
     error: {
@@ -225,14 +159,7 @@ const lightPalette = {
         dark: errorColor[700],
         darker: errorColor[900],
 
-        // contrastText: darkTextColor,
-        contrastTextColor: {
-            lighter: darkTextColor,
-            light: darkTextColor,
-            main: darkTextColor,
-            dark: lightTextColor,
-            darker: lightTextColor,
-        },
+        contrastText: darkTextColor,
     },
 
     warning: {
@@ -242,14 +169,7 @@ const lightPalette = {
         dark: warningColor[700],
         darker: warningColor[900],
 
-        // contrastText: darkTextColor,
-        contrastTextColor: {
-            lighter: darkTextColor,
-            light: darkTextColor,
-            main: darkTextColor,
-            dark: darkTextColor,
-            darker: darkTextColor,
-        },
+        contrastText: darkTextColor,
     },
 
     info: {
@@ -259,14 +179,7 @@ const lightPalette = {
         dark: infoColor[700],
         darker: infoColor[900],
 
-        // contrastText: darkTextColor,
-        contrastTextColor: {
-            lighter: darkTextColor,
-            light: darkTextColor,
-            main: darkTextColor,
-            dark: lightTextColor,
-            darker: lightTextColor,
-        },
+        contrastText: darkTextColor,
     },
 
     success: {
@@ -276,19 +189,28 @@ const lightPalette = {
         dark: successColor[700],
         darker: successColor[900],
 
-        // contrastText: darkTextColor,
-        contrastTextColor: {
-            lighter: darkTextColor,
-            light: darkTextColor,
-            main: darkTextColor,
-            dark: darkTextColor,
-            darker: lightTextColor,
-        },
+        contrastText: darkTextColor,
     },
+
+    navButton: {
+        main: neutralColor[50],
+        dark: neutralColor[100],
+    },
+
     background: {
-        default: '#fff',
-        paper: '#fff',
-        cover: '#90a4ae',
+        default: '#fafafa',
+        paper: '#ffffff',
+        appbar: blueGrey[50],
+        cover: blueGrey[200],
+        breadcrumbs: blueGrey[100],
+        testimonial: blueGrey[50],
+        quote: neutralColor[100],
+    },
+
+    text: {
+        primary: 'rgba(0, 0, 0, 0.87)',
+        secondary: 'rgba(0, 0, 0, 0.54)',
+        disabled: 'rgba(0, 0, 0, 0.38)',
     },
 }
 

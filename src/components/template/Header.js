@@ -1,22 +1,12 @@
 import { AppBar, Box, Toolbar } from '@mui/material'
 
 import { Logo } from '@pog/components/elements'
-import { Menu, SearchBar } from '@pog/components/template'
-import { useConfig } from '@pog/contexts'
+import { Menu } from '@pog/components/template'
 import { SearchInput } from '@pog/components/elements'
 
 const Header = () => {
-    const { colorMode, COLOR_MODES } = useConfig()
     return (
-        <AppBar
-            position="sticky"
-            sx={{
-                bgcolor:
-                    colorMode === COLOR_MODES.dark
-                        ? 'background.paper'
-                        : 'secondary.light',
-            }}
-        >
+        <AppBar position="sticky">
             <Toolbar
                 sx={{
                     padding: '0.5rem',
@@ -32,7 +22,7 @@ const Header = () => {
                     }}
                 >
                     <Menu />
-                    <Logo />
+                    <Logo textColor="inherit" logoColor="dark" />
                 </Box>
 
                 <Box

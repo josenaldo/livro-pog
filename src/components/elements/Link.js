@@ -10,6 +10,7 @@ const Link = ({ href, children, color, sx, ...restProps }) => {
         '&:focus': {
             color: `${color}.light`,
         },
+        textDecoration: 'none',
     }
 
     return (

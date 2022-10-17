@@ -2,7 +2,7 @@ import { Box, Container } from '@mui/material'
 
 import { Layout } from '@pog/components/template'
 
-import { PostCard, ContentTitle } from '@pog/components/content'
+import { ContentTitle, ContentCard } from '@pog/components/content'
 
 import { getSortedPosts } from '@pog/data'
 
@@ -43,7 +43,13 @@ const BlogPage = ({ posts }) => {
                         }}
                     >
                         {posts.map((post) => (
-                            <PostCard post={post} key={post.url} />
+                            <ContentCard
+                                title={post.title}
+                                text={post.description}
+                                url={post.url}
+                                image={post.image.url}
+                                key={post.url}
+                            />
                         ))}
                     </Box>
                 </Box>

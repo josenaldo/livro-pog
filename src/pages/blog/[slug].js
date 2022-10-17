@@ -1,9 +1,9 @@
-import { Container } from '@mui/material'
+import { Box, Container } from '@mui/material'
 
 import { getAllPostsPaths, getPostData } from '@pog/data'
 
 import { Layout } from '@pog/components/template'
-import { PostView } from '@pog/components/content'
+import { ContentView, ContentMeta } from '@pog/components/content'
 
 const getStaticPaths = async () => {
     const paths = getAllPostsPaths()
@@ -42,7 +42,22 @@ const PostPage = ({ post }) => {
             url={post.url}
         >
             <Container>
-                <PostView post={post} />
+                <ContentView
+                    content={post}
+                    contentExtraInfo={
+                        <Box
+                            sx={{
+                                display: 'flex',
+                                justifyContent: 'center',
+                            }}
+                        >
+                            <ContentMeta
+                                date={post.date}
+                                author={post.author}
+                            />
+                        </Box>
+                    }
+                />
             </Container>
         </Layout>
     )

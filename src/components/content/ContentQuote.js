@@ -7,7 +7,8 @@ const ContentQuote = ({ quote, author }) => {
             sx={{
                 display: 'flex',
                 flexDirection: 'column',
-                backgroundColor: 'neutral.light',
+                backgroundColor: 'background.quote',
+                color: 'text.secondary',
                 borderRadius: 5,
                 padding: 2,
             }}

@@ -5,7 +5,7 @@ const Testimonial = () => {
     return (
         <Box
             sx={{
-                backgroundColor: 'neutral.main',
+                backgroundColor: 'background.testimonial',
             }}
         >
             <Container

@@ -32,7 +32,7 @@ const Layout = ({ title, description, image, url, children }) => {
     return (
         <Box
             sx={{
-                backgroundColor: 'background.paper',
+                backgroundColor: 'background.default',
                 color: 'text.primary',
             }}
         >
