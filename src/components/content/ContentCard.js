@@ -1,7 +1,6 @@
 import Link from 'next/link'
 
 import {
-    Box,
     Card,
     CardContent,
     CardMedia,
@@ -19,8 +18,6 @@ const ContentCard = ({
     text,
     url,
     image,
-    author = '',
-    date = '',
     moreLinkText = 'Leia mais',
 }) => {
     return (

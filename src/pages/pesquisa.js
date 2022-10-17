@@ -89,50 +89,10 @@ const SearchPage = () => {
                     >
                         {results &&
                             results.map((result) => (
-                                <Card key={result.url}>
-                                    <Link href={result.url}>
-                                        <CardActionArea
-                                            sx={{
-                                                display: 'grid',
-                                                gridTemplateColumns: {
-                                                    xs: '1fr 2fr',
-                                                    sm: '1fr 4fr',
-                                                    md: '1fr 6fr',
-                                                    lg: '1fr 8fr',
-                                                    xl: '1fr 8fr',
-                                                },
-                                                alignItems: 'flex-start',
-                                            }}
-                                        >
-                                            <ContentMainImage
-                                                image={result.image}
-                                                alt={result.title}
-                                                aspectRatio="1/1"
-                                            />
-                                            <CardContent
-                                                sx={{
-                                                    display: 'flex',
-                                                    flexDirection: 'column',
-                                                    padding: 2,
-                                                    gap: 2,
-                                                }}
-                                            >
-                                                <Typography
-                                                    variant="h6"
-                                                    component="h2"
-                                                >
-                                                    {result.title}
-                                                </Typography>
-                                                <Typography
-                                                    variant="caption"
-                                                    component="p"
-                                                >
-                                                    {result.description}
-                                                </Typography>
-                                            </CardContent>
-                                        </CardActionArea>
-                                    </Link>
-                                </Card>
+                                <ContentResult
+                                    result={result}
+                                    key={result.url}
+                                />
                             ))}
                     </Box>
                 </Box>
@@ -197,6 +157,49 @@ const SearchForm = ({ handleSearch, query, setQuery, loading }) => {
                 {loading && <LinearProgress />}
             </Box>
         </Box>
+    )
+}
+
+const ContentResult = ({ result }) => {
+    return (
+        <Card>
+            <Link href={result.url}>
+                <CardActionArea
+                    sx={{
+                        display: 'grid',
+                        gridTemplateColumns: {
+                            xs: '1fr 2fr',
+                            sm: '1fr 4fr',
+                            md: '1fr 6fr',
+                            lg: '1fr 8fr',
+                            xl: '1fr 8fr',
+                        },
+                        alignItems: 'flex-start',
+                    }}
+                >
+                    <ContentMainImage
+                        image={result.image}
+                        alt={result.title}
+                        aspectRatio="1/1"
+                    />
+                    <CardContent
+                        sx={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            padding: 2,
+                            gap: 2,
+                        }}
+                    >
+                        <Typography variant="h6" component="h2" color="primary">
+                            {result.title}
+                        </Typography>
+                        <Typography variant="caption" component="p">
+                            {result.description}
+                        </Typography>
+                    </CardContent>
+                </CardActionArea>
+            </Link>
+        </Card>
     )
 }
 

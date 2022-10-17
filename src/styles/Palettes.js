@@ -103,6 +103,12 @@ const darkPalette = {
         dark: neutralColor[800],
     },
 
+    scroll: {
+        track: neutralColor[800],
+        thumb: neutralColor[700],
+        hover: neutralColor[500],
+    },
+
     background: {
         default: '#121212',
         paper: neutralColor[900],
@@ -195,6 +201,12 @@ const lightPalette = {
     navButton: {
         main: neutralColor[50],
         dark: neutralColor[100],
+    },
+
+    scroll: {
+        track: neutralColor[100],
+        thumb: neutralColor[300],
+        hover: neutralColor[400],
     },
 
     background: {

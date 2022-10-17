@@ -15,6 +15,8 @@ import Image from 'next/image'
 
 import { Layout } from '@pog/components/template'
 
+import { ContentMainImage, ContentTitle } from '@pog/components/content'
+
 const AjudePage = () => {
     const title = 'Ajude o Livro POG'
     const description =
@@ -35,26 +37,8 @@ const AjudePage = () => {
                         padding: 0,
                     }}
                 >
-                    <CardMedia
-                        sx={{
-                            padding: 0,
-                            margin: 0,
-                        }}
-                    >
-                        <Box
-                            sx={{
-                                aspectRatio: '16/9',
-                                position: 'relative',
-                            }}
-                        >
-                            <Image
-                                src={image}
-                                layout="fill"
-                                objectFit="cover"
-                                alt={title}
-                            />
-                        </Box>
-                    </CardMedia>
+                    <ContentMainImage image={{ url: image }} alt={title} />
+
                     <CardContent>
                         <Grid
                             container
@@ -75,19 +59,19 @@ const AjudePage = () => {
                                     gap={0}
                                     marginBottom={3}
                                 >
-                                    <Typography variant="h1" textAlign="center">
-                                        {title}
-                                    </Typography>
-                                    <Typography
-                                        variant="subtitle"
-                                        textAlign="center"
-                                    >
-                                        {description}
-                                    </Typography>
+                                    <ContentTitle
+                                        title={title}
+                                        subtitle={description}
+                                    />
                                 </Stack>
+
                                 <Divider />
+
                                 <Stack gap={3} marginY={3}>
-                                    <Typography variant="h2">
+                                    <Typography
+                                        variant="h2"
+                                        color="primary.dark"
+                                    >
                                         Tá, o que é isso aqui??
                                     </Typography>
                                     <Typography variant="body1">
@@ -100,7 +84,10 @@ const AjudePage = () => {
                                         do conhecimento, o desenvolvimento de
                                         Software.
                                     </Typography>
-                                    <Typography variant="h2">
+                                    <Typography
+                                        variant="h2"
+                                        color="primary.dark"
+                                    >
                                         Como eu posso ajudar?
                                     </Typography>
                                     <Typography variant="body1">
@@ -202,14 +189,20 @@ const AjudePage = () => {
                                             </CardContent>
                                         </Card>
                                     </Box>
-                                    <Typography variant="h2">
+                                    <Typography
+                                        variant="h2"
+                                        color="primary.dark"
+                                    >
                                         Quando ele fica pronto?
                                     </Typography>
                                     <Typography variant="body1">
                                         Não sei. Eu costumo trabalhar nesse
                                         livro no meu tempo livre.
                                     </Typography>
-                                    <Typography variant="h2">
+                                    <Typography
+                                        variant="h2"
+                                        color="primary.dark"
+                                    >
                                         Mas voce é aposentado!
                                     </Typography>
                                     <Typography variant="body1">
@@ -219,7 +212,10 @@ const AjudePage = () => {
                                         na cama, contar quantos pontos de
                                         sujeira tem no teto?
                                     </Typography>
-                                    <Typography variant="h2">
+                                    <Typography
+                                        variant="h2"
+                                        color="primary.dark"
+                                    >
                                         Que garantias eu tenho de que ele será
                                         terminado?
                                     </Typography>
@@ -237,7 +233,10 @@ const AjudePage = () => {
                                     <Typography variant="body1">
                                         Brincadeira.
                                     </Typography>
-                                    <Typography variant="h2">
+                                    <Typography
+                                        variant="h2"
+                                        color="primary.dark"
+                                    >
                                         A escrita desse livro está condicionada
                                         a essa ajuda?
                                     </Typography>
@@ -245,7 +244,10 @@ const AjudePage = () => {
                                         Não. E é bem provável que, ao ler esse
                                         livro, ele já tenha sido escrito.
                                     </Typography>
-                                    <Typography variant="h2">
+                                    <Typography
+                                        variant="h2"
+                                        color="primary.dark"
+                                    >
                                         Porque eu deveria doar dinheiro para um
                                         trabalho que será (ou já foi) feito?
                                     </Typography>
@@ -256,13 +258,19 @@ const AjudePage = () => {
                                         estimulado a outros projetos eu estarei.
                                         :D
                                     </Typography>
-                                    <Typography variant="h2">
+                                    <Typography
+                                        variant="h2"
+                                        color="primary.dark"
+                                    >
                                         Você vai lançar uma versão impressa?
                                     </Typography>
                                     <Typography variant="body1">
                                         Gostaria muito. Quem sabe?
                                     </Typography>
-                                    <Typography variant="h2">
+                                    <Typography
+                                        variant="h2"
+                                        color="primary.dark"
+                                    >
                                         Você vai fechar esse livro?
                                     </Typography>
                                     <Typography variant="body1">
@@ -272,7 +280,10 @@ const AjudePage = () => {
                                         ebook, mais cômodo pra ler no kindle ou
                                         no celular.
                                     </Typography>
-                                    <Typography variant="h2">
+                                    <Typography
+                                        variant="h2"
+                                        color="primary.dark"
+                                    >
                                         Vai lançar em formato PDF?
                                     </Typography>
                                     <Typography variant="body1">

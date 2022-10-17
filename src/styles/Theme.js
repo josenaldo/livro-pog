@@ -6,34 +6,75 @@ const scroll = {
         width: '15px',
     },
     '&::-webkit-scrollbar-track': {
-        backgroundColor: `${grey[800]}`,
+        backgroundColor: `scroll.track`,
     },
     '&::-webkit-scrollbar-thumb': {
-        backgroundColor: `${grey[700]}`,
+        backgroundColor: `primary.main`,
         borderRadius: '10px',
     },
     '&::-webkit-scrollbar-thumb:hover': {
-        backgroundColor: `${grey[500]}`,
+        backgroundColor: `scroll.hover`,
     },
 }
 
+// ...({'&::-webkit-scrollbar': {
+//     width: '15px',
+// },
+// '&::-webkit-scrollbar-track': {
+//     backgroundColor: theme.palette.scroll.track,
+// },
+// '&::-webkit-scrollbar-thumb': {
+//     backgroundColor: theme.palette.scroll.thumb,
+//     borderRadius: '10px',
+// },
+// '&::-webkit-scrollbar-thumb:hover': {
+//     backgroundColor: theme.palette.scroll.hover,
+// }})
+
 const BaseTheme = {
     palette: Palettes['dark'],
-    scroll: scroll,
+
     components: {
         MuiBox: {
             styleOverrides: {
-                root: {
-                    ...scroll,
-                },
+                root: ({ ownerState, theme }) => ({
+                    ...{
+                        '&::-webkit-scrollbar': {
+                            width: '15px',
+                        },
+                        '&::-webkit-scrollbar-track': {
+                            backgroundColor: theme.palette.scroll.track,
+                        },
+                        '&::-webkit-scrollbar-thumb': {
+                            backgroundColor: theme.palette.scroll.thumb,
+                            borderRadius: '10px',
+                        },
+                        '&::-webkit-scrollbar-thumb:hover': {
+                            backgroundColor: theme.palette.scroll.hover,
+                        },
+                    },
+                }),
             },
         },
         MuiDrawer: {
             styleOverrides: {
-                paper: {
-                    overflow: 'auto',
-                    ...scroll,
-                },
+                paper: ({ ownerState, theme }) => ({
+                    ...{
+                        '&::-webkit-scrollbar': {
+                            width: '15px',
+                        },
+                        '&::-webkit-scrollbar-track': {
+                            backgroundColor: theme.palette.scroll.track,
+                        },
+                        '&::-webkit-scrollbar-thumb': {
+                            backgroundColor: theme.palette.scroll.thumb,
+                            borderRadius: '10px',
+                        },
+                        '&::-webkit-scrollbar-thumb:hover': {
+                            backgroundColor: theme.palette.scroll.hover,
+                        },
+                    },
+                }),
             },
         },
     },

@@ -1,6 +1,8 @@
 import React from 'react'
 
-import { Card, Divider, Backdrop, CircularProgress } from '@mui/material'
+import { useRouter } from 'next/router'
+
+import { Box, Card, Divider, Backdrop, CircularProgress } from '@mui/material'
 
 import Grid from '@mui/material/Unstable_Grid2'
 
@@ -8,14 +10,15 @@ import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
 
 import { useSwipeable } from 'react-swipeable'
-import { useRouter } from 'next/router'
+
 import {
     ContentMainImage,
-    ContentQuote,
     ContentTitle,
     ContentNavButton,
     MDXContent,
 } from '@pog/components/content'
+
+import { ShareLink } from '@pog/components/share'
 
 const ContentView = ({ content, contentExtraInfo = null }) => {
     const router = useRouter()
@@ -106,11 +109,28 @@ const ContentView = ({ content, contentExtraInfo = null }) => {
                         pb: 5,
                     }}
                 >
-                    <ContentTitle
-                        title={content.title}
-                        subtitle={content.description}
-                    />
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            flexDirection: 'row',
+                            justifyContent: 'space-between',
+                            alignItems: 'flex-start',
+                        }}
+                    >
+                        <Box />
+                        <ContentTitle
+                            title={content.title}
+                            subtitle={content.description}
+                        />
+                        <ShareLink
+                            title={content.title}
+                            description={content.description}
+                            url={content.url}
+                            image={`${process.env.NEXT_PUBLIC_SITE_URL}${content.image.url}`}
+                        />
+                    </Box>
                     {contentExtraInfo}
+
                     <Divider />
 
                     <MDXContent content={content.body.raw} />
