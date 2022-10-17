@@ -1,17 +1,18 @@
-import { allChapters } from 'contentlayer/generated'
-import { allPosts } from 'contentlayer/generated'
+import { getAllChapters, getAllPosts } from '@pog/data'
 
 const getBreadcrumbs = (url) => {
+    const chapters = getAllChapters()
+    const posts = getAllPosts()
     const pages = {}
 
-    allChapters.forEach((chapter) => {
+    chapters.forEach((chapter) => {
         pages[chapter.url] = {
             title: chapter.title,
             url: chapter.url,
         }
     })
 
-    allPosts.forEach((post) => {
+    posts.forEach((post) => {
         pages[post.url] = {
             title: post.title,
             url: post.url,

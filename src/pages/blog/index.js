@@ -1,19 +1,13 @@
-import Link from 'next/link'
-
 import { Box, Container } from '@mui/material'
 
-import { compareDesc } from 'date-fns'
-
 import { Layout } from '@pog/components/template'
-import { allPosts } from 'contentlayer/generated'
 
 import { PostCard, ContentTitle } from '@pog/components/content'
 
-const getStaticProps = async () => {
-    const posts = allPosts.sort((a, b) => {
-        return compareDesc(new Date(a.date), new Date(b.date))
-    })
+import { getSortedPosts } from '@pog/data'
 
+const getStaticProps = async () => {
+    const posts = getSortedPosts()
     return { props: { posts } }
 }
 

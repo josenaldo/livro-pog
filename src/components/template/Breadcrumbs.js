@@ -7,7 +7,6 @@ import {
 import { Link } from '@pog/components/elements'
 
 const Breadcrumbs = ({ items }) => {
-    console.log('ITEMS', items)
     if (!items || items.length <= 1) return null
 
     return (

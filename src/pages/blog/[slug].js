@@ -1,12 +1,12 @@
 import { Container } from '@mui/material'
 
-import { allPosts } from 'contentlayer/generated'
+import { getAllPostsPaths, getPostData } from '@pog/data'
 
 import { Layout } from '@pog/components/template'
 import { PostView } from '@pog/components/content'
 
 const getStaticPaths = async () => {
-    const paths = allPosts.map((post) => post.url)
+    const paths = getAllPostsPaths()
     return {
         paths,
         fallback: false,
@@ -15,8 +15,7 @@ const getStaticPaths = async () => {
 
 const getStaticProps = async ({ params }) => {
     const { slug } = params
-    const url = `/blog/${slug}`
-    const post = allPosts.find((post) => post.url === url)
+    const post = getPostData(slug)
 
     return {
         props: {
