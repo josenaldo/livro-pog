@@ -20,6 +20,8 @@ import { Layout } from '@pog/components/template'
 
 import { ContentTitle, ContentMainImage } from '@pog/components/content'
 
+import { ShareLink } from '@pog/components/share'
+
 const SearchPage = () => {
     const [query, setQuery] = React.useState('')
     const [loading, setLoading] = React.useState(false)
@@ -162,7 +164,12 @@ const SearchForm = ({ handleSearch, query, setQuery, loading }) => {
 
 const ContentResult = ({ result }) => {
     return (
-        <Card>
+        <Card
+            sx={{
+                display: 'flex',
+                flexDirection: 'row',
+            }}
+        >
             <Link href={result.url}>
                 <CardActionArea
                     sx={{
@@ -186,8 +193,13 @@ const ContentResult = ({ result }) => {
                         sx={{
                             display: 'flex',
                             flexDirection: 'column',
-                            padding: 2,
+                            alignItems: 'flex-start',
+                            justifyContent: 'space-between',
                             gap: 2,
+                            pt: 2,
+                            pl: 2,
+                            pb: 2,
+                            pr: 1,
                         }}
                     >
                         <Typography variant="h6" component="h2" color="primary">
@@ -199,6 +211,14 @@ const ContentResult = ({ result }) => {
                     </CardContent>
                 </CardActionArea>
             </Link>
+            <Box sx={{ pt: 2, pr: 2, pl: 0 }}>
+                <ShareLink
+                    title={result.title}
+                    description={result.description}
+                    url={result.url}
+                    image={`${process.env.NEXT_PUBLIC_SITE_URL}${result.image.url}`}
+                />
+            </Box>
         </Card>
     )
 }
