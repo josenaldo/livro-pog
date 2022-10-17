@@ -54,6 +54,13 @@ const PogApp = ({ Component, pageProps }) => {
                     name="viewport"
                     content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover"
                 />
+                <link
+                    rel="stylesheet"
+                    href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-darcula.css"
+                    integrity="sha512-GDAZ4WVai07by1+4lddBjO4anWI2wZFXT8gsfvahTctwsA/Qoe1GXkBpltYHCMvaLWA6L6eVdiF8Ky70Ssj3Fg=="
+                    crossOrigin="anonymous"
+                    referrerPolicy="no-referrer"
+                />
             </Head>
             <DefaultSeo {...SeoConfig} />
             <ConfigProvider>

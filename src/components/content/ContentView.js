@@ -26,6 +26,7 @@ const ContentView = ({ content, contentExtraInfo = null }) => {
     const [loading, setLoading] = React.useState(false)
 
     const handlers = useSwipeable({
+        swipeDuration: 500,
         onSwipedLeft: (eventData) => {
             if (content.next) {
                 setLoading(true)

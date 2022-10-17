@@ -23,11 +23,7 @@ const bibFile = `${libDir}/library.bib`
 const styleFile = `${libDir}/abnt.csl`
 const localeFile = `${libDir}/locales-pt-PT.xml`
 
-import { useConfig } from '@pog/contexts'
-
 const MDXContent = ({ content }) => {
-    const { fontSize } = useConfig()
-
     const remarkPlugins = [
         // remarkGfm,
         [
@@ -61,15 +57,7 @@ const MDXContent = ({ content }) => {
     }
 
     return (
-        <Box
-            sx={{
-                fontSize: `${fontSize}rem`,
-
-                '& p': {
-                    fontSize: `${fontSize}rem`,
-                },
-            }}
-        >
+        <Box>
             <MDXProvider>
                 <Remark
                     remarkPlugins={remarkPlugins}
