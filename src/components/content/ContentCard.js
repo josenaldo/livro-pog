@@ -13,6 +13,7 @@ import {
 import { ContentCardImage } from '@pog/components/content'
 import { ShareLink } from '@pog/components/share'
 import { APP_URL } from '@pog/config'
+import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt'
 
 const ContentCard = ({
     title,
@@ -75,7 +76,9 @@ const ContentCard = ({
                 }}
             >
                 <Link href={url}>
-                    <Button component="a">{moreLinkText}</Button>
+                    <Button component="a" endIcon={<ArrowRightAltIcon />}>
+                        {moreLinkText}
+                    </Button>
                 </Link>
                 <ShareLink
                     title={title}
