@@ -111,10 +111,8 @@ const ContentView = ({ content, contentExtraInfo = null }) => {
                 >
                     <Box
                         sx={{
-                            display: 'flex',
-                            flexDirection: 'row',
-                            justifyContent: 'space-between',
-                            alignItems: 'flex-start',
+                            display: 'grid',
+                            gridTemplateColumns: '30px 1fr 30px',
                         }}
                     >
                         <Box />

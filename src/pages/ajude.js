@@ -17,6 +17,8 @@ import { Layout } from '@pog/components/template'
 
 import { ContentMainImage, ContentTitle } from '@pog/components/content'
 
+import { ShareLink } from '@pog/components/share'
+
 const AjudePage = () => {
     const title = 'Ajude o Livro POG'
     const description =
@@ -54,16 +56,24 @@ const AjudePage = () => {
                                 }}
                             ></Grid>
                             <Grid xs={10} padding={2}>
-                                <Stack
-                                    alignItems="center"
-                                    gap={0}
-                                    marginBottom={3}
+                                <Box
+                                    sx={{
+                                        display: 'grid',
+                                        gridTemplateColumns: '30px 1fr 30px',
+                                    }}
                                 >
+                                    <Box sx={{}} />
                                     <ContentTitle
                                         title={title}
                                         subtitle={description}
                                     />
-                                </Stack>
+                                    <ShareLink
+                                        title={title}
+                                        description={description}
+                                        url={`${process.env.NEXT_PUBLIC_SITE_URL}/ajude`}
+                                        image={`${process.env.NEXT_PUBLIC_SITE_URL}${image}`}
+                                    />
+                                </Box>
 
                                 <Divider />
 

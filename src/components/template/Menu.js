@@ -120,7 +120,7 @@ const Menu = () => {
                         />
                         <ListItemLink
                             href="/blog"
-                            text="Blog"
+                            text="BLOG"
                             icon={<AnnouncementIcon />}
                         />
                         <ListItemLink
