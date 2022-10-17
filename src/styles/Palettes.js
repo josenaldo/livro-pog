@@ -123,6 +123,7 @@ const darkPalette = {
         primary: lightTextColor,
         secondary: lightTextColor,
         disabled: lightTextColor,
+        quote: neutralColor[400],
     },
 }
 
@@ -223,6 +224,7 @@ const lightPalette = {
         primary: 'rgba(0, 0, 0, 0.87)',
         secondary: 'rgba(0, 0, 0, 0.54)',
         disabled: 'rgba(0, 0, 0, 0.38)',
+        quote: neutralColor[600],
     },
 }
 

@@ -12,6 +12,7 @@ const ResponsiveImage = (props) => {
     const hasCaption = props.alt?.toLowerCase().includes('{caption:')
     const caption = props.alt?.match(/{caption: (.*?)}/)?.pop()
 
+    console.log('IMAGES:', props)
     return (
         <Box
             sx={{

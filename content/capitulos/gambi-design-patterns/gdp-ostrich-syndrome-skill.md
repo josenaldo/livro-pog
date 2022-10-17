@@ -17,4 +17,4 @@ IGNORE qualquer Warning do compilador e da IDE
 Isso é frescura deles
 De preferência, use o @SuppressWarnings("all")
 
-![Avisos](/images/capitulos/warnings.png)
+![Avisos](/images/capitulos/introducao/divisao-do-livro.png)

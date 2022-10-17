@@ -20,12 +20,16 @@ const ContentQuote = ({ quote, author }) => {
                     justifyContent: 'flex-start',
                 }}
             >
-                <FormatQuoteIcon fontSize="small" color="neutral" />
+                <FormatQuoteIcon
+                    fontSize="small"
+                    sx={{ color: 'text.quote' }}
+                />
             </Box>
             <Box
                 sx={{
                     display: 'flex',
                     flexDirection: 'column',
+                    color: 'text.quote',
                 }}
             >
                 <Typography variant="body1" textAlign="center">
@@ -47,7 +51,10 @@ const ContentQuote = ({ quote, author }) => {
                     justifyContent: 'flex-end',
                 }}
             >
-                <FormatQuoteIcon fontSize="small" color="neutral" />
+                <FormatQuoteIcon
+                    fontSize="small"
+                    sx={{ color: 'text.quote' }}
+                />
             </Box>
         </Box>
     )
