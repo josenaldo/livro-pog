@@ -1,6 +1,6 @@
 ---
 title: O que é POG?
-description: Porque é importante compreendermos o conceito de Programação Orientada a Gambiarra
+description: O que é a Programação Orientada a Gambiarra e qual a importância desses conceitos para o desenvolvimento de software?
 sentence: A culpa é do Hardware!
 sentence_author: POGramador explicando porque o sistema POG não funciona
 order_number: 2000
@@ -28,46 +28,48 @@ Uma acepção menos pejorativa e mais objetiva é o uso desta palavra pra design
 
 E dessa forma, é que você, jovem POGramador, deve ver a Gambiarra: como a luz que ilumina o espetáculo que é o seu código!
 
-"Por definição, a Gambiarra é aquilo que é de difícil concepção, de inesperada execução para tornar fácil o uso de algo que sequer deveria existir." [@Desciclopedia2016]
+> "Por definição, a Gambiarra é aquilo que é de difícil concepção, de
+> inesperada execução para tornar fácil o uso de algo que sequer deveria
+> existir." [@Desciclopedia2016]
 
 **Ou seja, a Gambiarra é a solução técnica planejadamente improvisada e resultante de uma inspiração momentânea, com o intuito de resolver um problema complexo, onde o uso de técnicas tradicionais incorrem em alto custo energético para o resolvedor.**
 
 A duração da gambiarra é limitada, devendo essa ser substituída, assim que possível, por uma solução técnica convencional. Portanto, uma boa gambiarra tem, como tempo de permanência, o valor mínimo *Tg* (Tempo da Gambiarra), sendo que *Tg* tende ao infinito.
 
-Por ter baixo custo presente, seu custo futuro tende a ser ignorado pelo gambiarrizador, já que esse custo certamente será assumido por terceiros. Portanto, a gambiarra se mostra extremamente vantajosa, o que justifica a sua utilização.
+Por ter baixo custo presente, seu custo futuro tende a ser ignorado pelo gambiarrizador, já que esse custo certamente será assumido por terceiros. Portanto, a Gambiarra se mostra extremamente vantajosa, o que justifica a sua utilização.
 
 ## Sinônimos de Gambiarra
 
-O termo Gambiarra possui diversos sinônimos, usados nas mais diversas áreas. Em sua maioria, os sinônimos são eufemismos, utilizados como forma de esconder dos civis que uma Gambiarra está sendo usada, já que a mente primitiva do ser humano comum é incapaz de perceber o brilhantismo dessa solução.
+O termo Gambiarra possui vários sinônimos, que são usados nas mais diversas áreas. Em sua maioria, os sinônimos são eufemismos, utilizados como forma de esconder, dos civis, que uma Gambiarra está sendo usada, já que a mente primitiva do ser humano comum é incapaz de perceber o brilhantismo dessa solução.
 
 Dentre estes sinônimos, temos:
 
-- ATI - Aparato Técnico Improvisado
-- ATND - Artifício Técnico Não Documentado
-- CPMF - Conserto Provisório Mas Funciona
-- DAT - Dispositivo Alternativo Temporário
-- ERR - Engenharia de Reparos Rápidos
-- MASC - Medida Adaptativa à Situações Críticas
-- MTEDM - Manutenção Técnica com Elementos Disponíveis no Momento
-- MUTRETA - Método Único de  Tratamento e Resolução de Erros Totalmente Adaptável
-- REZA - Reestruturação Emergencial Zuada Auxiliar
-- RTA - Recurso Técnico Avançado
-- RTA - Recurso Tecnológico Alternativo
-- RTDM - Recurso Técnico Disponível no Momento
-- RTE - Recurso Técnico de Emergência
-- RTI - Recurso Técnico Inteligente
-- STCT - Solução Técnica de Cunho Temporário
+- **ATI** - Aparato Técnico Improvisado
+- **ATND** - Artifício Técnico Não Documentado
+- **CPMF** - Conserto Provisório Mas Funciona
+- **DAT** - Dispositivo Alternativo Temporário
+- **ERR** - Engenharia de Reparos Rápidos
+- **MASC** - Medida Adaptativa à Situações Críticas
+- **MTEDM** - Manutenção Técnica com Elementos Disponíveis no Momento
+- **MUTRETA** - Método Único de  Tratamento e Resolução de Erros Totalmente Adaptável
+- **REZA** - Reestruturação Emergencial Zuada Auxiliar
+- **RTA** - Recurso Técnico Avançado
+- **RTA** - Recurso Tecnológico Alternativo
+- **RTDM** - Recurso Técnico Disponível no Momento
+- **RTE** - Recurso Técnico de Emergência
+- **RTI** - Recurso Técnico Inteligente
+- **STCT** - Solução Técnica de Cunho Temporário
 
 No contexto da POGramação, temos também os seguintes sinônimos:
 
-- ADP - Adaptação De Programador
-- CACA - Código Avançado Completo e Adaptável
-- CAGADA - Código Alternativo Gerador de  Algoritmos Duramente Aplicáveis
-- DADA - Deixa Assim, Depois Arrumo
-- IST - Improvisation Solution Tabajara
-- ITAC - Implementação Técnica Abstratamente Controversa
-- RAP - Recurso Avançado de Programação
-- TAPA - Técnica Alternativa de Programação Avançada
+- **ADP** - Adaptação De Programador
+- **CACA** - Código Avançado Completo e Adaptável
+- **CAGADA** - Código Alternativo Gerador de  Algoritmos Duramente Aplicáveis
+- **DADA** - Deixa Assim, Depois Arrumo
+- **IST** - Improvisation Solution Tabajara
+- **ITAC** - Implementação Técnica Abstratamente Controversa
+- **RAP** - Recurso Avançado de Programação
+- **TAPA** - Técnica Alternativa de Programação Avançada
 
 Podemos notar como o uso de siglas é comum na denominação da Gambiarra. Portanto, a lógica é clara: se algo, na computação, é nomeado com uma sigla, provavelmente é uma Gambiarra.
 
@@ -107,13 +109,18 @@ E por falar em POGramação...
 
 Dentre todas as formas de encarnação que a Gambiarra possui, este livro tratará de sua forma digital mais profícua[^fn-proficua]: **A POG (Programação Orientada a Gambiarras)**.
 
-A Programação Orientada a Gambiarras (POG ou WOP – Workaround-oriented programming) é um paradigma de programação de sistemas de software que ente a qualquer grande Paradigma de Programação atual. [@Desciclopedia2016]
+> A Programação Orientada a Gambiarras (POG ou WOP – Workaround-oriented
+> programming) é um paradigma de programação de sistemas de software que
+> integra-se perfeitamente a qualquer grande Paradigma de Programação atual.
+> [@Desciclopedia2016]
 
-Este paradigma permite que utilizemos de Gambiarras para resolver problemas is, não computacionais, espirituais, econômicos e até mesmo sexuais, de forma a garantir o sucesso do projeto.
+Este paradigma permite que utilizemos de Gambiarras para resolver problemas computacionais, não computacionais, espirituais, econômicos e até mesmo sexuais, de forma a garantir o sucesso do projeto.
 
 A aplicação da POG tende a criar mais problemas do que resolve, criando, dessa forma, um círculo virtuoso que garante empregos a milhões de POGramadores pelo mundo. Cada problema criado significa mais trabalho e, portanto, mais empregos!
 
 Para compreender a POG, é necessário compreender quais os requisitos para a formação da POG, quais os princípios que guiam o POGramador e quais as técnicas que esse POGramador usará. Veremos esses tópicos nos próximos capítulos.
+
+## Notas
 
 [^fn-marreta]: O motivo pelo qual o termo "marreta" é tão importante é bastante óbvio, mesmo para o leitor mais desatento: é porquê eu gosto e eu quero. Se você não percebeu isso, sugiro que procure um profissional especialista(astrólogo, vidente, adivinho ou áreas correlatas). A propósito: Porque as pessoas dizem "profissional especialista"? Existe algum especialista que não seja profissional? Um especialista nato? "Conheça Enzo Rodrigo, especialista em computação quântica aos 4 anos de idade, entre uma colherada de mingau e outra, resolveu o problema da conjunção telepática de gatos robóticos."
 

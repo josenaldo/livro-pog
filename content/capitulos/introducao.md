@@ -1,6 +1,6 @@
 ---
 title: Introdução
-description: Introdução ao mundo das Gambiarras
+description: Como está estruturado o livro Programação Orientada a Gambiearra e o que você vai aprender com ele.
 sentence: Esta é a solução ótima, não temos tempo para isso. Faça a solução boa! O ótimo é inimigo do bom.
 sentence_author: Líder de Projeto, sobre uma solução não pog
 order_number: 1001

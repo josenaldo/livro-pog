@@ -13,7 +13,7 @@ import rehypePrism from 'rehype-prism-plus'
 import rehypeRaw from 'rehype-raw'
 import { Cite, rehypeCitationGenerator } from 'rehype-citation'
 
-import { Link, ResponsiveImage, Code } from '@pog/components/elements'
+import { Link, ResponsiveImage, Code, Bloquote } from '@pog/components/elements'
 
 const rehypeCitation = rehypeCitationGenerator(Cite)
 
@@ -53,6 +53,7 @@ const MDXContent = ({ content }) => {
         a: Link,
         pre: Code,
         hr: Divider,
+        blockquote: Bloquote,
     }
 
     return (
