@@ -116,7 +116,7 @@ const darkPalette = {
         cover: neutralColor[900],
         breadcrumbs: neutralColor[800],
         testimonial: neutralColor[900],
-        quote: neutralColor[800],
+        quote: neutralColor[900],
     },
 
     text: {

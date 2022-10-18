@@ -5,8 +5,8 @@ const Bloquote = ({ children }) => {
         <Box
             sx={{
                 display: 'flex',
-                bgcolor: 'neutral.lighter',
-                color: 'neutral.dark',
+                bgcolor: 'background.quote',
+                color: 'text.quote',
                 py: 1,
                 px: 3,
                 borderRadius: 2,
