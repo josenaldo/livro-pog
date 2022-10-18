@@ -1,6 +1,6 @@
 import { Box, Typography } from '@mui/material'
 
-const Bloquote = ({ children }) => {
+const Blockquote = ({ children }) => {
     return (
         <Box
             sx={{
@@ -21,4 +21,4 @@ const Bloquote = ({ children }) => {
     )
 }
 
-export { Bloquote }
+export { Blockquote }
