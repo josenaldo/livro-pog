@@ -17,20 +17,6 @@ const scroll = {
     },
 }
 
-// ...({'&::-webkit-scrollbar': {
-//     width: '15px',
-// },
-// '&::-webkit-scrollbar-track': {
-//     backgroundColor: theme.palette.scroll.track,
-// },
-// '&::-webkit-scrollbar-thumb': {
-//     backgroundColor: theme.palette.scroll.thumb,
-//     borderRadius: '10px',
-// },
-// '&::-webkit-scrollbar-thumb:hover': {
-//     backgroundColor: theme.palette.scroll.hover,
-// }})
-
 const BaseTheme = {
     palette: Palettes['dark'],
     scroll: ({ ownerState, theme }) => ({
@@ -98,183 +84,61 @@ const BaseTheme = {
 
 const extendTheme = (theme) => {
     theme.typography.h1 = {
-        fontSize: '2.00rem',
-        [theme.breakpoints.up('sm')]: {
-            fontSize: '2.25rem',
-        },
-        [theme.breakpoints.up('md')]: {
-            fontSize: '2.50rem',
-        },
-        [theme.breakpoints.up('lg')]: {
-            fontSize: '3.00rem',
-        },
-        [theme.breakpoints.up('xl')]: {
-            fontSize: '3.00rem',
-        },
+        fontSize: 'clamp(2.00rem, 10vw, 2.40rem)',
+        fontWeight: 700,
     }
 
     theme.typography.h2 = {
-        fontSize: '1.80rem',
-
-        [theme.breakpoints.up('sm')]: {
-            fontSize: '1.85rem',
-        },
-        [theme.breakpoints.up('md')]: {
-            fontSize: '1.90rem',
-        },
-        [theme.breakpoints.up('lg')]: {
-            fontSize: '1.95rem',
-        },
-        [theme.breakpoints.up('xl')]: {
-            fontSize: '2.00rem',
-        },
+        fontSize: 'clamp(1.60rem, 9vw, 2.00rem)',
+        fontWeight: 700,
     }
 
     theme.typography.h3 = {
-        fontSize: '1.60rem',
-
-        [theme.breakpoints.up('sm')]: {
-            fontSize: '1.65rem',
-        },
-        [theme.breakpoints.up('md')]: {
-            fontSize: '1.70rem',
-        },
-        [theme.breakpoints.up('lg')]: {
-            fontSize: '1.75rem',
-        },
-        [theme.breakpoints.up('xl')]: {
-            fontSize: '1.80rem',
-        },
+        fontSize: 'clamp(1.40rem, 8vw, 1.80rem)',
+        fontWeight: 700,
     }
 
     theme.typography.h4 = {
-        fontSize: '1.40rem',
-
-        [theme.breakpoints.up('sm')]: {
-            fontSize: '1.45rem',
-        },
-        [theme.breakpoints.up('md')]: {
-            fontSize: '1.50rem',
-        },
-        [theme.breakpoints.up('lg')]: {
-            fontSize: '1.55rem',
-        },
-        [theme.breakpoints.up('xl')]: {
-            fontSize: '1.60rem',
-        },
+        fontSize: 'clamp(1.20rem, 7vw, 1.60rem)',
+        fontWeight: 700,
     }
 
     theme.typography.h5 = {
-        fontSize: '1.20rem',
-
-        [theme.breakpoints.up('sm')]: {
-            fontSize: '1.25rem',
-        },
-        [theme.breakpoints.up('md')]: {
-            fontSize: '1.30rem',
-        },
-        [theme.breakpoints.up('lg')]: {
-            fontSize: '1.35rem',
-        },
-        [theme.breakpoints.up('xl')]: {
-            fontSize: '1.40rem',
-        },
+        fontSize: 'clamp(1.00rem, 6vw, 1.40rem)',
+        fontWeight: 700,
     }
 
     theme.typography.h6 = {
-        fontSize: '1.00rem',
-
-        [theme.breakpoints.up('sm')]: {
-            fontSize: '1.05rem',
-        },
-        [theme.breakpoints.up('md')]: {
-            fontSize: '1.10rem',
-        },
-        [theme.breakpoints.up('lg')]: {
-            fontSize: '1.15rem',
-        },
-        [theme.breakpoints.up('xl')]: {
-            fontSize: '1.20rem',
-        },
+        fontSize: 'clamp(1.00rem, 5vw, 1.20rem)',
+        fontWeight: 500,
     }
 
     theme.typography.footerH2 = {
-        fontSize: '1rem',
+        fontSize: 'clamp(1.00rem, 5vw, 1.25rem)',
         fontWeight: 'bold',
         textAlign: 'center',
-        // color: theme.palette.secondary.contrastTextColor.darker,
-        [theme.breakpoints.up('sm')]: {
-            fontSize: '1.10rem',
-        },
-        [theme.breakpoints.up('md')]: {
-            fontSize: '1.15rem',
-        },
-        [theme.breakpoints.up('lg')]: {
-            fontSize: '1.20rem',
-        },
-        [theme.breakpoints.up('xl')]: {
-            fontSize: '1.25rem',
-        },
     }
 
     theme.typography.subtitle = {
+        fontSize: 'clamp(1.20rem, 6vw, 1.60rem)',
         fontWeight: 'bold',
         textAlign: 'center',
-        fontSize: '1.2rem',
         marginTop: '1rem',
         marginBotton: '1rem',
-        [theme.breakpoints.up('sm')]: {
-            fontSize: '1.3rem',
-        },
-        [theme.breakpoints.up('md')]: {
-            fontSize: '1.4rem',
-        },
-        [theme.breakpoints.up('lg')]: {
-            fontSize: '1.5rem',
-        },
-        [theme.breakpoints.up('xl')]: {
-            fontSize: '1.6rem',
-        },
     }
 
     theme.typography.sentence = {
+        fontSize: 'clamp(0.90rem, 4vw, 0.98rem)',
         fontWeight: 'bold',
         textAlign: 'center',
-
-        fontSize: '0.90rem',
         color: theme.palette.grey[500],
-        [theme.breakpoints.up('sm')]: {
-            fontSize: '0.92rem',
-        },
-        [theme.breakpoints.up('md')]: {
-            fontSize: '0.94rem',
-        },
-        [theme.breakpoints.up('lg')]: {
-            fontSize: '0.96rem',
-        },
-        [theme.breakpoints.up('xl')]: {
-            fontSize: '0.98rem',
-        },
     }
 
     theme.typography.sentenceAuthor = {
+        fontSize: 'clamp(0.70rem, 3vw, 0.78rem)',
         fontStyle: 'italic',
         textAlign: 'center',
         color: theme.palette.grey[500],
-
-        fontSize: '0.70rem',
-        [theme.breakpoints.up('sm')]: {
-            fontSize: '0.72rem',
-        },
-        [theme.breakpoints.up('md')]: {
-            fontSize: '0.74rem',
-        },
-        [theme.breakpoints.up('lg')]: {
-            fontSize: '0.76rem',
-        },
-        [theme.breakpoints.up('xl')]: {
-            fontSize: '0.78rem',
-        },
     }
 }
 
