@@ -25,6 +25,8 @@ O Livro POG é um projeto de documentação da técnica de desenvolvimento de so
 
 O intuito desse livro é documentar a história da POG, fazer uma breve introdução ao assunto, demonstrar quais são os requisitos necessários para o nascimento da POG, explicar as técnicas utilizadas no sumonamento da POG e os principais padrões de projeto de gambiarra, os Gambi Design Patterns (GDPs).
 
+<p align='right'><a href='#programação-orientada-a-gambiarra---o-livro'>Topo</a></p>
+
 ## :link: Acesso ao Livro
 
 O livro pode ser acessado gratuitamente em <https://livropog.com.br>. Em breve, versões do livro em EPUB, MOBI, PDF e outros formatos estarão disponíveis nas principais lojas.
