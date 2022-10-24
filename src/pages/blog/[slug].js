@@ -25,20 +25,11 @@ const getStaticProps = async ({ params }) => {
 }
 
 const PostPage = ({ post }) => {
-    const og = {
-        title: post.title,
-        description: post.description,
-    }
-
-    if (post.image) {
-        og.images = [post.image]
-    }
-
     return (
         <Layout
             title={post.title}
             description={post.description}
-            image={post?.image?.url || null}
+            image={post?.image || null}
             url={post.url}
         >
             <Container>
