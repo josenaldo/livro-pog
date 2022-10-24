@@ -31,9 +31,13 @@ O intuito desse livro é documentar a história da POG, fazer uma breve introdu�
 
 O livro pode ser acessado gratuitamente em <https://livropog.com.br>. Em breve, versões do livro em EPUB, MOBI, PDF e outros formatos estarão disponíveis nas principais lojas.
 
+<p align='right'><a href='#programação-orientada-a-gambiarra---o-livro'>Topo</a></p>
+
 ## :construction: Status do Livro
 
 O livro está em desenvolvimento e o status de cada capítulo pode ser verificado em <https://livropog.com.br/capítulos>
+
+<p align='right'><a href='#programação-orientada-a-gambiarra---o-livro'>Topo</a></p>
 
 ## :wrench: Tecnologias utilizadas
 
@@ -46,6 +50,8 @@ A busca é implementada com o [Lunr](https://lunrjs.com/), e exposta em uma API 
 O SEO do site é configurado e gerado usando o [Next SEO](https://github.com/garmeeh/next-seo). Para configurar o site com um PWA, usamos o [Next PWA](https://github.com/shadowwalker/next-pwa).
 
 O livro está hospedado na [Vercel](https://vercel.com/).
+
+<p align='right'><a href='#programação-orientada-a-gambiarra---o-livro'>Topo</a></p>
 
 ## :boy: Autor
 
@@ -71,12 +77,18 @@ Quer me achar?
 - Github: [@josenaldo](https://github.com/josenaldo)
 - LinkedIn: [@josenaldo](https://linkedin.com/in/josenaldo)
 
+<p align='right'><a href='#programação-orientada-a-gambiarra---o-livro'>Topo</a></p>
+
 ## :money_with_wings: Colabore
 
 Esse é um projeto pessoal de mim mesmo feito somente por minha pessoa. Porém, se algum desenhista quiser utilizar esse projeto para promover, GRATUITAMENTE, a sua arte, ilustrando o monte de porcaria que eu escrevinhei, eu ficaria muito feliz. Óbviamente que, se isso render dinheiro um dia, nós podemos conversar sobre uma divisão justa de acordo com as regras do mercado editorial.
 
 Se você quiser colaborar com o projeto, você pode acessar a página [Ajude este Projeto](https://livropog.com.br/ajude) e ver como você pode fazer para colaborar financeiramente, sem nenhum compromisso (principalmente de minha parte).
 
+<p align='right'><a href='#programação-orientada-a-gambiarra---o-livro'>Topo</a></p>
+
 ## :page_facing_up: Licença
 
 Copyright © 2021 Josenaldo de Oliveira Matos Filho
+
+<p align='right'><a href='#programação-orientada-a-gambiarra---o-livro'>Topo</a></p>
