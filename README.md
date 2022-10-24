@@ -5,7 +5,7 @@
 
 Como garantir que o inferno seja uma amostra grátis do seu trabalho!
 
-![Discord](https://img.shields.io/discord/1034139077294960691?label=Chat%20POG) ![estrelinhas](https://img.shields.io/github/stars/josenaldo/livro-pog?label=Estrelinhas%20no%20Github) ![Twitter](https://img.shields.io/twitter/follow/josenaldomatos?style=flat&label=Siga%20no%20Twitter) ![Progresso](https://img.shields.io/badge/Status-em%20andamento-orange)
+[![Discord](https://img.shields.io/discord/1034139077294960691?label=Chat%20POG)](https://discord.gg/DeUKq9xw88) [![estrelinhas](https://img.shields.io/github/stars/josenaldo/livro-pog?label=Estrelinhas%20no%20Github)](https://github.com/josenaldo/livro-pog) [![Twitter](https://img.shields.io/twitter/follow/josenaldomatos?style=flat&label=Siga%20no%20Twitter)](https://twitter.com/josenaldomatos) [![Progresso](https://img.shields.io/badge/Status-em%20andamento-orange)](https://livropog.com.br/capitulos)
 
 ## :scroll: Índice
 
@@ -59,7 +59,7 @@ O livro está hospedado na [Vercel](https://vercel.com/).
 
 Olá. Meu nome é **Josenaldo de Oliveira Matos Filho**. Sou POGramador desde 1999. Durante a maior parte de minha vida profissional (2003-2016), escrevi gambiarras em Java, principalmente Spring e Java EE. Também já me meti a besta com PHP, Ruby, VBA, Flex... E coisas das quais eu me envergonho profundamenrte, como WebSphere e Vignette.
 
-Nasci em Ubatã, uma cidade perdida nmo interior da Bahia. Moro desde 2008 em Uberlândia, pra onde fugi, depois que abandonei a faculdade pra ganhar dinheiros. Nesse mesmo ano, eu perdi meus dois rins (só não me lembro onde) e passei a fazer hemodiálise.
+Nasci em Ubatã, uma cidade perdida no interior da Bahia. Moro, desde 2008, em Uberlândia-MG, pra onde fugi depois que abandonei a faculdade pra ganhar dinheiros. Nesse mesmo ano, eu perdi meus dois rins (só não me lembro onde) e passei a fazer hemodiálise.
 
 Agora que estou aposentado, escrevo pogs em Python e Javascript. Almejo brincar com ciência de dados e transformar essas brincadeiras em apps com React (no frontend) e Django (no backend). Se me doarem dinheiros na cueca, eu posso pensar em brincar com Java.
 
@@ -81,7 +81,7 @@ Quer me achar?
 
 ## :money_with_wings: Colabore
 
-Esse é um projeto pessoal de mim mesmo feito somente por minha pessoa. Porém, se algum desenhista quiser utilizar esse projeto para promover, GRATUITAMENTE, a sua arte, ilustrando o monte de porcaria que eu escrevinhei, eu ficaria muito feliz. Óbviamente que, se isso render dinheiro um dia, nós podemos conversar sobre uma divisão justa de acordo com as regras do mercado editorial.
+Esse é um projeto pessoal de mim mesmo feito somente por minha pessoa. Porém, se algum desenhista quiser utilizar esse projeto para promover, GRATUITAMENTE, a sua arte, ilustrando o monte de porcaria que eu escrevinhei, eu ficaria muito feliz.
 
 Se você quiser colaborar com o projeto, você pode acessar a página [Ajude este Projeto](https://livropog.com.br/ajude) e ver como você pode fazer para colaborar financeiramente, sem nenhum compromisso (principalmente de minha parte).
 
