@@ -23,6 +23,7 @@ const ContentMainImage = ({ image, alt, aspectRatio = '16/9' }) => {
                         alt={alt}
                         layout="fill"
                         objectFit="cover"
+                        priority
                     />
                 </Box>
             )}

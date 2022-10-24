@@ -90,9 +90,9 @@ Assim, o ser humano se fixou e passou a viver no mesmo local, onde ele poderia p
 
 ## Precisamos contar o tempo
 
-O homem agora domina a terra e o gado. Ele é senhor do ambiente. E, como todo ser humano, ele quer mais. Ele quer mais terra, mais gado, mais comida, mais bebida, mais mulheres, mais filhos, mais poder.
+O homem agora domina a terra e o gado. Ele é senhor do ambiente. E, como todo ser imundiçado que é, ele nunca fica satisfeito e quer mais. Ele quer mais terra, mais gado, mais comida, mais bebida, mais mulheres, mais filhos, mais poder.
 
-Acontece que a natureza não é um buffet de animais e plantas grátis, que basta você chegar e pegar. A natureza parece mais com uma liquidação de loja de departamento, daquelas onde até o anticristo chora e pede perdão, onde você perde sua Air Friyer pra uma família, de 18 pessoas, que te tomou o produto na base da porrada.
+Acontece que a natureza não é um buffet de recursos grátis, que basta você chegar e pegar. A natureza parece mais com uma liquidação de loja de departamento, daquelas onde até o anticristo chora e pede perdão, onde você perde sua Air Friyer pra uma família, de 18 pessoas enquanto é espancado com galinhas gritadeiras de borracha.
 
 Na dureza da vida, o macaco pelado percebeu que nem sempre ele precisa plantar e criar. Às vezes, ele pode simplesmente tomar o que é do outro. Pra que plantar e colher, se eu posso deixar outro ter esse trabalho e, depois, tomar dele?
 
@@ -106,74 +106,110 @@ Mas não adianta o macaco pelado contar o tempo em ciclos lunares, se ele não s
 
 Então, junto com essa nossa necessidade patológica de contar e estruturar as coisas, nós começamos também a registrar as coisas. E assim nasceu a escrita.
 
-E foi assim Tia Selena ensinou um monte de macacos pelados a reconhecer padrões, a se comunicar, a plantar, a criar animais, a cozinhar, a se embebedar, a guerrar, a contar e a escrever.
+E foi assim Tia Selena ensinou um monte de macacos pelados a reconhecer padrões, a se comunicar, a plantar, a criar animais, a cozinhar, a se embebedar, a guerrar, a levar chifre, a contar e a escrever.
 
 ## O calendário romano
 
-A ideia parece simples: um imundiçado mede onde o sol está hoje. Daí, ele acorda todo dia, antes do sol nascer, e passa o dia inteiro medindo onde o caminho do sol, até o sol voltar ao mesmo lugar.
+A ideia parece simples: você pega um imundiçado sem Netflix e põe ele pra observar onde o caminho que o sol fez no céu, desde o momento em que nasceu até o momento em que se pôs. E manda ele registrar isso. Essa parte é muito importante!
 
-E, quando o sol volta ao mesmo lugar, ele conta quantos dias se passaram desde que ele começou a contar. E, se ele repetir esse processo algumas vezes, ele consegue dizer quanto tempo dura UM ANO.
+Daí, ele acorda todo dia, antes do sol nascer, e passa o dia inteiro medindo o caminho do sol. Então, ele vai perceber (se não for uma anta) que o Sol nasce e se põe, a cada dia, num lugar diferente do dia anterior.
 
-Sim, fizeram isso. E mais de uma vez, na história da humanidade. E, dado o número de vezes em que os calendários mudaram, o processo parece ser mais difícil do que parece.
+Isso ocorre até que, num dia, o sol nasce e se põe no mesmo lugar do primeiro dia. Pronto. Temos um ciclo. Agora, basta ele contar quantos dias se passaram. E, se ele repetir esse processo algumas vezes, ele consegue dizer quanto tempo dura UM ANO.
 
-Porque fizemos isso?
+Sim, fizeram isso. E mais de uma vez, na história da humanidade. E, dado o número de vezes em que os calendários mudaram, ou o processo é mais difícil do que parece, ou as pessoas encarregadas dse mentir se entediavam facilmente, largavam o projeto no meio e inventavam números.
 
-Porque precisávamos saber quando era o inverno, quando era o verão, quando era o outono e quando era o inverno. Precisávamos saber quando plantar, quando colher, quando fugir do rio e quando ir para a guerra. Lembra da história de reconhecer padrões?
+Muitos povos tentaram esse processo. E um que se destacou bastante nisso foram os romanos.
 
-Muitos povos tentaram. E um que se destacou bastante nisso foram os romanos.
+O primeiro calendário romano era um calendário Lunar, de 10 meses. Segundo a lenda, foi implantado na criação de Roma, em 753 a.C.
 
+Esse calendário tinha meses com 30 ou 31 dias, com um total de 304 dias. Os 61 dias restantes eram o inverno, e ninguém ligava pra contar o tempo no inverno.
 
+Aqui nós já vemos um caso fantástico de POG, em que os 61 dias eram simplesmente COMENTADOS, num claro uso de [Commented Code Implementation](/capitulos/gambi-design-patterns/gdp-commented-code-implementation)!
 
+> Maledicite scribarum! Nemo curat id quod fit in hieme! Istam lineam
+> commentarium pone. Nemo vocabit si sexaginta unus dies interiit.
+>
+> -- Rômulo, fundador de Roma (753 a.C.)
 
+Em 713 a.C. Numa Pompílio fez a primeira reforma no calendário romano, diminuindo o número de dias de alguns meses e aumentando o número de meses para 12.
 
+Dessa forma, o ano agora tinha 355 dias. Como resolver os dias faltantes?
 
+Com gambiarra, claro!
 
+A cada 2 anos, um mês extra, de 22 ou 23 dias, era adicionado ao final de "Fevereiro". E a decisão de inserir esse mês cabia ao Pontífice Máximo[^pontifice-maximo]. Como era um ser humano a decidir, é óbvio que nem sempre isso acontecia. E, quando acontecia, nem sempre era feito da mesma forma. O resultado era que, às vezes, o ano não era tão previsível assim.
 
+Parece familiar?
 
+## O calendário Juliano
 
-Os romanos criaram seu calendário em 153 a.C. e, desde então, ele foi modificado algumas vezes. Mas, em 46 a.C., o imperador Júlio César criou o calendário juliano, que foi adotado por todo o Império Romano.
+Em 46 a.C. Julio César, resolveu botar ordem nesse quengaral. Com a ajuda do sábio Sosígenes de Alexandria, Júlio Cézar, na época ocupando o cargo de Pontífice Máximo, organizou um novo calendário.
 
-Esse calendário era baseado no ciclo solar, que é o ciclo de 365 dias e 6 horas que o sol leva para completar uma volta completa em torno da Terra. E, para que o calendário fosse preciso, ele tinha que ser ajustado a cada 128 anos, para compensar o desvio do ciclo solar em relação ao ciclo lunar.
+Esse novo calendário entrou em vigor no dia 1 de janeiro de 45 a.C. Dentre suas principais características, temos:
 
-O problema é que, para fazer esse ajuste, era necessário adicionar um dia extra a cada quatro anos. E, como o ano tem 365 dias, isso significava que, a cada quatro anos, o calendário teria que ter 366 dias. E, como o ano tem 12 meses, isso significava que, a cada quatro anos, um mês teria que ter 31 dias.
+- Ano de 365 dias
+- 12 meses (sem meses intercalares)
+- Acréscimo de 1 dias, de 4 em 4 anos, para compensar a diferença de 4 horas, já que o ano trópico tem 365 dias e 4 horas
+- O primeiro dia do ano passa a ser 1 de janeiro
 
-Eles estabeleceram um calenrário que era baseado em 12 meses, cada um com 30 dias. E, para completar o ano, eles tinham 5 dias extras, chamados de “intercalares”. E, para completar o ciclo, eles tinham 7 anos extras, chamados de “sextilíquios”.
+Esse calendário durou bastante tempo. Dada sua longevidade, pode-se dizerque era um calendário bastante estável. Contudo, ele tinha alguns "pequenos" problemas:
 
+- Não representava o tempo real que a terra leva pra girar em torno do Sol
+- Como os anos bissextos ocorriam a cada 4 anos, a contagem do tempo ia, aos poucos, se desencontrando dos fenômenos naturais, como a mudança das estações, que ocorriam em datas fixas.
+- Com o passar do tempo e o acúmulo dos erros, a data da páscoa ia se afastando gradualmente do Equinócio da Primavera.
 
-O problema do  calendário juliano
+Após alguns séculos, a diferença nessas datas já era de dias. E, como a páscoa era um feriado religioso, isso começou a causar problemas.
 
-O calendário foi criado pelo médido e astrônomo Luigi Giglio
+Como Júlio César foi um bom POGRamador, ele deixou esse pepino pra outro resolver lá na frente. Coube ao Papa Gregório XIII, em 1582, resolver esse problema.
 
-O pádre Cristovão Clávio fez as mzodificações finais
+## O calendário Gregoriano
 
-O papa gregório XIII decretou, pela bula papal inter gravíssima de 24 de fevereiro de 1582, que o dia seguinte à quinta feira, 4 de outubro de 1582, não seria sexta feira, 5 de outubro, mas sexta feira, 15 de outubro (o papa comeu 10 dias)
+Após vários séculos, a diferença entre o calendário Juliano e o ano Solar foi se acumulando. Em 1582, o equinócio de primavera já ocorria 10 dias antes da Páscoa! E essa diferença tendia a se acumular ainda mais.,
 
-O calendário juliano era usado desde 45 aC
+Por consequência, teríamos na época, duas festividades, a comemoração do Equinócio de Primavera e a comemoração da Páscoa com 10 dias de diferença (nessa hora, os patrões já estão se coçando de alergia). E, no futuro, com a diferença almentando, logo teríamos a Páscoa sendo comemorada em pleno verão do hemisfério norte, com coelhas de bikini e padres ensandecidos explicando que a busca pelo ovos deveria ser um símbolo de vida e renacismento e não uma festa em homenagem a Sodoma e Gomorra!
 
+Obviamente que essa situação era insustentável para a religião cristã e uma atitude precisava ser tomada.
 
+Gregório XIII, então, resolveu fazer uma reforma no calendário. Ele convocou um time de especialistas, incluindo:
 
+- Christopher Clavius, jesuíta alemão, sábio e matemático
+- Ignazio Danti, dominicano, matemático, astrônomo e cartógrafo italiano
+- Luigi Giglio  médico, filósofo, astrónomo e cronologista italiano.
 
-No século XVI, o mundo cristão seguia o calendário Juliano. Este calendário tinha um problema sério: o ano não tinha 365 dias, mas 365,25 (365 dias e 6 horas). Isso fazia com que o ano não se ajustasse perfeitamente ao calendário solar. Portanto, ao longo dos séculos, a data do equinócio vernal (ou seja, o equinócio de primavera no hemisfério norte) foi caindo lentamente para 10 de março, enquanto a data da páscoa seguia em 21 de março.
+Esse time de estrelas trabalhou nesse problema por 5 anos, após os quais o Papa, em 24 de Fevereiro de 1582, publicou a bula papal *Inter Gravissimas*, com as mudanças no calendário.
 
-Esse descompasso entre o calendário e o ciclo das estações tendia a causar problemas para a agricultura e no cálculo das datas religiosas.
+A principal mudança é que o dia seguinte à quinta feira, 4 de outubro de 1582, não seria sexta feira, 5 de outubro, mas sim sexta feira, 15 de outubro. O papa simplesmente COMENTOU 10 dias!
 
+Além disso, o algoritmo de definição do ano bissexto passou por uma pequena mudança. Agora, os anos bissextos seriam definidos da seguinte forma:
 
-O Papa Gregório XIII, então, decidiu que o ano teria 365 dias e 6 horas, e que a cada 400 anos, o ano teria 366 dias e 6 horas. Essa decisão foi tomada em 1582, e o calendário Gregoriano foi adotado em 1583.
+- Anos múltiplos de 4, exceto os múltiplos de 100, mas incluindo os múltiplos de 400
 
-- Dias no calendário Gregoriano: 365 dias
-- Translação da Terra: 365,25
-- Problema: 6 Horas a mais por ano!
-- Resolução: um dia a mais a cada 4 anos
+```python
+Inicio
+    Declare ano Inteiro;
+    Declare bissexto Booleano;
+    Leia(ano);
+    Se ( ano módulo 400 é 0 ) então
+        bissexto=Verdade;
+    Senão
+         Se (ano módulo 4 é 0 E ano módulo 100 é diferente de 0) então
+             bissexto=Verdade;
+         Senão
+             bissexto=Falso;
+Fim
+```
 
-Assim, afirmam que o Papa Gregório XIII foi o criador do Ano Bissexto. Mas isso é um erro!
+Com essas mudanças, o calendário Gregoriano tornou-se, com o pasar do tempo, o calendário mais usado no mundo. Entretanto, ele não é perfeito e, em 4909, o calendário estará adiantado em UM dia em relação ao calendário solar. Mas isso é problema pra outro POGRamador resolver lá na frente.
+
+## Chama o Ratinho
+
+Muitos afirmam que o Papa Gregório XIII foi o criador do Ano Bissexto. Mas, como vimos, isso é um erro!
 
 É óbvio que um POGramador experiente é capitalista com os méritos, socialista com os erros e autoritário com a culpa. Mas o Gregório nem sequer tentou assumir a autoria desse projeto!
 
-O ano bissexto foi introduzido no Calendário Juliano, criado pelo imperador romano Júlio César, em 46 a.C., e deveria ocorrer de 4 em 4 anos.
+A ideia de dias a mais para compensar o descompasso entre o calendário e o ano solar é usada em diversos calendários ao longo da história. Hoje, parece simples contar quanto tempo tem um ano, mas isso já foi um grande desafio!
 
-Somente em 24 de Fevereiro de 1582 é que Gregório XIII criou o Calendário Gregoriano, se sobrepondo ao Calendário Juliano.
-
-Portanto, se considerarmos o Ano Bissexto com a primeira POG, seria Júlio César o primeiro POGramador.
+O ano bissexto, especificamente, foi introduzido no Calendário Juliano. Portanto, se considerarmos o Ano Bissexto com a primeira POG, seria Júlio César o primeiro POGramador.
 
 Devido a essa confusão, que atribui os mérito da criação do Ano Bissexto ao Papa Gregório XIII, é que ele é considerado o Padroeiro dos POGramadores e, no dia 29 de Fevereiro, é comemorado o Dia Internacional da POG.
 
@@ -186,3 +222,5 @@ Devido a essa confusão, que atribui os mérito da criação do Ano Bissexto ao 
 [^fn-historia]: Será que a ficcção é a gambiarra do historiador? Fica o questionamento.
 
 [^fn-romanos]: Em minha opinião, o próprio sistema de numeração romano é uma grande POG. "Julius, precisamos de símbolos para os números", disse César. "Que nada, César. Usa letra mesmo, que vai dar menos trabalho. Lá na frente, alguém troca".
+
+[^pontifice-maximo]: Maximus Pontifex: Na Roma antiga, o Pontífice máximoera o sacerdote supremo do colégio dos sacerdotes, a mais alta dignidade na religião romana.

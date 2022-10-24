@@ -3,7 +3,6 @@ import { Box } from '@mui/material'
 const Code = ({ children }) => {
     return (
         <Box
-            className="remark-highlight"
             sx={{
                 display: 'block',
                 overflowX: 'auto',
@@ -12,7 +11,15 @@ const Code = ({ children }) => {
                 padding: '10px',
             }}
         >
-            <pre>{children}</pre>
+            <Box
+                component="pre"
+                sx={{
+                    padding: '10px',
+                    margin: '0',
+                }}
+            >
+                {children}
+            </Box>
         </Box>
     )
 }

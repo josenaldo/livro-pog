@@ -29,7 +29,7 @@ O livro é dividido em 3 partes.
 - Técnicas
 - Gambi Design Patterns
 
-![Diagrama de estrutura do livro {800x600} {caption: DIagrama sofisticado demonstranto a estrutura do livro}](/images/capitulos/introducao/divisao-do-livro.png)
+![Diagrama de estrutura do livro {803x403} {caption: DIagrama sofisticado demonstranto a estrutura do livro}](/images/capitulos/introducao/divisao-do-livro.png)
 
 Na primeira parte desse livro, **"Conceitos"** navegaremos pelos principais conceitos ligados à arte de criar Gambiarras.
 
