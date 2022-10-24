@@ -9,12 +9,12 @@ Como garantir que o inferno seja uma amostra grátis do seu trabalho!
 
 ## :scroll: Índice
 
-- [Descrição do Livro](/#descrição-do-projeto)
-- [Acesso ao Livro](/#acesso-ao-livro)
-- [Status do Livro](/#status-do-livro)
-- [Tecnologias utilizadas](/#tecnologias-utilizadas)
-- [Author](/#autor)
-- [Licença](/#licença)
+- [Descrição do Livro](https://github.com/josenaldo/livro-pog#descrição-do-projeto)
+- [Acesso ao Livro](https://github.com/josenaldo/livro-pog#acesso-ao-livro)
+- [Status do Livro](https://github.com/josenaldo/livro-pog#status-do-livro)
+- [Tecnologias utilizadas](https://github.com/josenaldo/livro-pog#tecnologias-utilizadas)
+- [Author](https://github.com/josenaldo/livro-pog#autor)
+- [Licença](https://github.com/josenaldo/livro-pog#licença)
 
 ## :bookmark: Descrição do Livro
 
