@@ -120,6 +120,12 @@ A aplicação da POG tende a criar mais problemas do que resolve, criando, dessa
 
 Para compreender a POG, é necessário compreender quais os requisitos para a formação da POG, quais os princípios que guiam o POGramador e quais as técnicas que esse POGramador usará. Veremos esses tópicos nos próximos capítulos.
 
+## Referências
+
+---
+
+[^ref]
+
 ## Notas
 
 [^fn-marreta]: O motivo pelo qual o termo "marreta" é tão importante é bastante óbvio, mesmo para o leitor mais desatento: é porquê eu gosto e eu quero. Se você não percebeu isso, sugiro que procure um profissional especialista(astrólogo, vidente, adivinho ou áreas correlatas). A propósito: Porque as pessoas dizem "profissional especialista"? Existe algum especialista que não seja profissional? Um especialista nato? "Conheça Enzo Rodrigo, especialista em computação quântica aos 4 anos de idade, entre uma colherada de mingau e outra, resolveu o problema da conjunção telepática de gatos robóticos."

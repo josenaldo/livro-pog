@@ -8,7 +8,7 @@ date: 2020-04-16 00:00
 name: agradecimentos
 # parent: null
 isParent: false
-status: review
+status: done
 image: "/images/capitulos/agradecimentos.jpg"
 
 ---

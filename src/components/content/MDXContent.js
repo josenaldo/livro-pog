@@ -63,7 +63,15 @@ const MDXContent = ({ content }) => {
     }
 
     return (
-        <Box>
+        <Box
+            sx={{
+                '& #refs': {
+                    marginBlockStart: '1em',
+                    marginBlockEnd: '1em',
+                    paddingInlineStart: '40px',
+                },
+            }}
+        >
             <MDXProvider>
                 <Remark
                     remarkPlugins={remarkPlugins}

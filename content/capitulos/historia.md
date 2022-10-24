@@ -215,6 +215,8 @@ Devido a essa confusão, que atribui os mérito da criação do Ano Bissexto ao 
 
 ## Referências
 
+---
+
 [^ref]
 
 ## Notas
