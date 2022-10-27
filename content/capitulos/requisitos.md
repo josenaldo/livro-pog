@@ -1,6 +1,6 @@
 ---
 title: Requisitos da POG
-description: Pré-condições para o despertar do Capiroto
+description: Pré-condições para o despertar do Capiroto POGramador
 sentence: java.lang.NullPointerException
 sentence_author: Java sobre POG
 order_number: 4000
@@ -12,7 +12,7 @@ status: review
 image: "/images/capitulos/requisitos.jpg"
 ---
 
-Além do emprego do termo POG como acrônimo da definição deste maravilhoso paradigma, temos também o uso corriqueiro do termo "pog", como sinônimo de "uma gambiarra", uma simples unidade de gambiarra implementada por um POGramador. Assim, é comum que um POGramador diga "eu fiz uma pog" quando descreve o resultado do seu trabalho de criação de um artefardo[^fn-artefardo] digital que encarna toda a beleza da POG.
+Além de empregar POG como acrônimo para Programação Orientada a Gambiarra, temos também o termo "pog", usado corriqueiramente como sinônimo de "uma gambiarra", ou seja, uma simples unidade de gambiarra implementada por um POGramador. Assim, é comum que um POGramador diga "eu fiz uma pog" quando descreve o **artefardo**[^fn-artefardo] resultante de seu trabalho.
 
 No mundo do desenvolvimento de software, existe a noção de que uma pog é resultado do esforço laboral de um POGramador. Tal noção, apesar de parecer bastante lógica, é um engano tão ardiloso que é capaz de enganar até mesmo as mentes mais sagazes.
 

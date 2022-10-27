@@ -2,36 +2,36 @@
 
 ## root
 
-- [x] Vou realizar os testes na produção.
-  - POGramador com auto-estima
-  - Local: [conclusoes.md](/capitulos/conclusoes.md)
-- [x] Eu fiz somente o que foi especificado!
-  - Analista, especialista no processo Go Horse
-  - Local: [gambi-design-patterns.md](/capitulos/gambi-design-patterns.md)
-- [x] O Papa é POG
-  - Engenheiros do Hawaii sobre POG
-  - Local: [historia.md](/capitulos/historia.md)
-- [x] Esta é a solução ótima, não temos tempo para isso. Faça a solução boa! O ótimo é inimigo do bom.
-  - Líder de Projeto, sobre uma solução não pog
-  - Local: [introducao.md](/capitulos/introducao.md)
-- [x] A culpa é do Hardware!
-  - POGramador explicando porque o sistema POG não funciona
-  - Local: [o-que-e-pog.md](/capitulos/o-que-e-pog.md)
-- [x] Se compilou, é porque funciona!!
-  - Você, ao fazer POG
-  - Local: [principios.md](/capitulos/principios.md)
-- [x] Reza e cruza os dedos que vai funcionar!
-  - POG Pai de Santo falando para um POGramador menos experimente...
-  - Local: [referencias.md](/capitulos/referencias.md)
-- [x] java.lang.NullPointerException
-  - Java sobre POG
-  - Local: [requisitos.md](/capitulos/requisitos.md)
-- [x] É facil, não vejo dificuldade em fazer isso!!
-  - Gerente sem-noção definindo prazo junto com o programador
-  - Local: [tecnicas.md](/capitulos/tecnicas.md)
 - [x] Claro que não! É essa lib/SO/compilador que está toda bugada!!
   - Estagiário-chefe apoiando justificativa do estagiário ao gerente
-  - Local: [agradecimentos.md](/capitulos/agradecimentos.md)
+  - Local: </capitulos/agradecimentos.md>
+- [x] Esta é a solução ótima, não temos tempo para isso. Faça a solução boa! O ótimo é inimigo do bom.
+  - Líder de Projeto, sobre uma solução não pog
+  - Local: <capitulos/introducao.md>
+- [x] A culpa é do Hardware!
+  - POGramador explicando porque o sistema POG não funciona
+  - Local: </capitulos/o-que-e-pog.md>
+- [x] O Papa é POG
+  - Engenheiros do Hawaii sobre POG
+  - Local: </capitulos/historia.md>
+- [x] java.lang.NullPointerException
+  - Java sobre POG
+  - Local: </capitulos/requisitos.md>
+- [x] Se compilou, é porque funciona!!
+  - Você, ao fazer POG
+  - Local: </capitulos/principios.md>
+- [x] É facil, não vejo dificuldade em fazer isso!!
+  - Gerente sem-noção definindo prazo junto com o programador
+  - Local: </capitulos/tecnicas.md>
+- [x] Eu fiz somente o que foi especificado!
+  - Analista, especialista no processo Go Horse
+  - Local: </capitulos/gambi-design-patterns.md>
+- [x] Vou realizar os testes na produção.
+  - POGramador com auto-estima
+  - Local: </capitulos/conclusoes.md>
+- [x] Reza e cruza os dedos que vai funcionar!
+  - POG Pai de Santo falando para um POGramador menos experimente...
+  - Local: </capitulos/referencias.md>
 
 ## gambi-design-patterns
 
