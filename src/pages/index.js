@@ -5,7 +5,7 @@ import { Hero, Features, Testimonial, LastNews } from '@pog/components/home'
 const Home = () => {
     return (
         <Layout
-            title="Programação Orientada a Gambiarra"
+            title="Descubra os segredos dos maiores experts da indústria da programação!"
             description="Como transformar o seu trabalho em uma amostra grátis do inferno!"
             image="/images/pages/default.jpg"
             url="/"
