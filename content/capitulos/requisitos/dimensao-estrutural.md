@@ -8,7 +8,7 @@ date: 2021-12-21 00:00
 name: dimensao-estrutural
 parent: requisitos
 isParent: false
-status: review
+status: done
 image: "/images/capitulos/requisitos/dimensao-estrutural.jpg"
 
 ---
@@ -87,7 +87,7 @@ Para atingir tão nobre objetivo, podemos usar de diversos artifícios, alguns p
 
 Podemos fazer desde reuniões ruidosas, perto do ambiente de trabalho, até colocar um som ambiente com trilha sonora qualidade duvidosa em um volume agressivamente alto.
 
-Podemos implantar um funcionário, com o tom vocal de um feirante de novela da Globo, próximo à equipe. E podemos atingir um combo se esse funcionário for dotado de um telefone que toca mais que celular vazado no BatePapo do UOL.
+Podemos implantar um funcionário, com o tom vocal de um feirante de novela da Globo, próximo à equipe. E podemos atingir um combo se esse funcionário for dotado de um telefone que toca mais que celular vazado em rede social.
 
 Telefones, aliás, pode ser uma arma extremamente eficiente para esse fim. Dê vários telefones para a equipe. Se possível, um pra cada POGramador. Agora, dê esses números para os clientes. Veja a POG fluir de seu projeto como a água flui nas cataratas do Iguaçu.
 
@@ -95,19 +95,19 @@ Telefones, aliás, pode ser uma arma extremamente eficiente para esse fim. Dê v
 
 Apesar do que muitos empresários acreditam, os membros de uma equipe produtora de POGramas pertencem à espécie humana. O número de erros que eles cometem é a maior prova disso. Nem precisamos olhar o DNA.
 
-Como seres humanos, seus corpos possuem necessidades que devem ser adequadamente satisfeitas para que continuem funcionando adequadamente. Tá, não precisa ser tão adequado assim. Se garantirmos o mínimo de alimentação, hidratação, excreção, sono, ingestão de cafeína e alimentação de ego com infantilidade no ambiente de trabalho, o POGramador será plenamente capaz de exercer as suas funções geradoras de lucro.
+Como seres humanos, seus corpos possuem necessidades que devem ser adequadamente satisfeitas para que continuem funcionando. Tá, não precisa ser tão adequado assim. Se garantirmos o mínimo de alimentação, hidratação, excreção, sono, ingestão de cafeína e alimentação de ego com infantilidade no ambiente de trabalho, o POGramador será plenamente capaz de exercer as suas funções geradoras de lucro.
 
 Dessas necessidades, devemos destacar a influência de uma sobre a produção individual de pogs: a necessidade de defecar.
 
 Desde a revolução industrial que o capitalismo tenta, a todo custo, controlar a necessidade que indivíduo tem de colocar pra fora o resto de sua alimentação. Tempo é dinheiro e funcionário no banheiro está ganhando pra defecar. Isso não é desejável.
 
-Contudo, um funcionário impedido de usar o banheiro pode se tornar um problema pra empresa. Uma pessoa forçadamente entupida é incapaz de produzir qualquer coisa que seja, até mesmo a mais sinistra POG. Além disso, uma empresa que venha a aderir a tais práticas pode ser mal vista pelo público, seja por uma denúncia às autoridades competentes, seja por um episódio se surto simiano em um programador de meia idade, que, tomado pelo ódio, passa a cagar na mão e a atirar merda nos clientes, funcionários e patrões. Isso não seria legal. Viralizaria, mas não seria legal.
+Contudo, um funcionário impedido de usar o banheiro pode se tornar um problema pra empresa. Uma pessoa forçadamente entupida é incapaz de produzir qualquer coisa que seja, até mesmo a mais sinistra POG. Além disso, uma empresa que venha a aderir a tais práticas pode ser mal vista pelo público, seja por uma denúncia às autoridades competentes, seja por um episódio se surto simiano em um programador de meia idade, que, tomado pelo ódio, passa a cagar na mão e a atirar merda nos clientes, funcionários e patrões. Isso não seria legal. Viralizaria em site de vídeo? Sim. Mas não seria legal.
 
 Como conciliar o atendimento a uma necessidade tão básica do ser humano com as necessidades de geração de POG da equipe?
 
-Use estrategicamente a lcoalização do sanitário!
+Use estrategicamente a localização do sanitário!
 
-Ou o banheiro fica próximo a onde as pessoas trabalham, que é para elas se inspirarem no cheiro de merda, ou fica londe de onde trabalham, para que a preguiça as faça demorar mais pra ir ao banheiro, oque gera uma enorme pressão fecal que as estimule a fazer mais merdas no código.
+Ou o banheiro fica próximo a onde as pessoas trabalham, que é para elas se inspirarem no cheiro de merda, ou fica londe de onde trabalham, para que a preguiça as faça demorar mais pra ir ao banheiro, o que gera uma enorme pressão fecal que as estimule a fazer mais merdas no código.
 
 Seja inspiração interna ou externa, a posição do banheiro pode potencializar o nível de produção de sua equipe!
 
