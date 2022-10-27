@@ -8,12 +8,14 @@ date: 2021-12-21 00:00
 name: dimensao-humana
 parent: requisitos
 isParent: false
-status: review
+status: done
 image: "/images/capitulos/requisitos/dimensao-humana.jpg"
 
 ---
 
-Criar software é transformar o âmago do ser humano em impulsos digitais. E, como tal, o resultado não poderia ser outro a não ser uma sucessão de erros e desastres que trabalham pra realizar uma tarefa. Um bom POGrama é um amontoado de coisas escritas que tem a capacidade de fingir resolver um problema enquanto cria vários outros. O fator humano é, portanto, o principal influenciador da POG, o ingrediente com sabor mais forte nessa sopa de desgraça que leva à manifestação digital de uma pog.
+Criar software é transformar o âmago do ser humano em impulsos digitais. E, como tal, o resultado não poderia ser outro: uma sucessão de erros e desastres que trabalham pra realizar uma tarefa.
+
+Um bom POGrama é um amontoado de coisas escritas que tem a capacidade de fingir resolver um problema enquanto cria vários outros. O fator humano é, portanto, o principal influenciador da POG, o ingrediente com sabor mais forte nessa sopa de desgraça que leva à manifestação digital de uma pog.
 
 Os Requisitos da POG classificados na Dimensão Humana são aqueles produzidos diretamente pela participação humana nesse processo. Não é apenas nossa presença danosa que permite que a POG floresça. É necessário que essa presença ocorra encarnada em algum dos seguintes estereótipos.
 

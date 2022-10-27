@@ -30,7 +30,11 @@ const getStaticProps = async ({ params }) => {
 const PaginaCapitulo = ({ chapter }) => {
     return (
         <Layout
-            title={chapter.title}
+            title={
+                chapter.parent
+                    ? `${chapter.parentTitle} | ${chapter.title}`
+                    : chapter.title
+            }
             description={chapter.description}
             image={chapter?.image?.url || null}
             url={chapter.url}

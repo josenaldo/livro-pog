@@ -8,7 +8,7 @@ date: 2020-04-16 00:03
 name: requisitos
 # parent:
 isParent: true
-status: review
+status: done
 image: "/images/capitulos/requisitos.jpg"
 ---
 

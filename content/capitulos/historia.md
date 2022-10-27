@@ -8,7 +8,7 @@ date: 2020-04-16 00:02
 name: historia
 # parent:
 isParent: false
-status: review
+status: done
 image: "/images/capitulos/historia.jpg"
 
 ---

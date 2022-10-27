@@ -49,9 +49,23 @@ const getChapterData = (slug) => {
                     url: '/capitulos',
                 }
             }
+
             return chapter
         }
     })
+
+    const hasParent = chapter.parent || false
+    if (hasParent) {
+        const parentChapter = chapters.find((chap) => {
+            if (chap.name === chapter.parent) {
+                return chapter
+            }
+        })
+
+        chapter.parentTitle = parentChapter.title
+    } else {
+        chapter.parentTitle = ''
+    }
 
     return chapter
 }
