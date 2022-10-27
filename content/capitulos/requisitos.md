@@ -30,7 +30,8 @@ Podemos, portanto, utilizar o conceito de dimensões como uma forma de classific
 
 Vejamos, portanto, quais são os Requisitos da POG, de acordo com cada uma das dimensões.
 
----
+## Notas
+
 [^fn-artefardo]: Um artefardo é um artefato que cria, para a equipe, um fardo extra. Dessa forma, um artefardo é um ativo valioso para o POGramador, pois exige desse mais trabalho, o que ajuda a manter seu emprego.
 
 [^fn-virgem]: Até mesmo porque os valores mudaram e a falta de experiência sexual já não é um atributo tão valorizado. Que tipo de divindade tapada e ajamantada deseja o sacrifício de um estagiário sexual? Porque não exigir o sacrifício de um ser humano dotado de experiência? Porque não solicitar o sacrifício de um sênior da putaria, de um arquiteto da lascívia ou uma diretora da luxúria?

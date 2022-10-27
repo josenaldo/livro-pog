@@ -120,7 +120,8 @@ Ninguém sabe. Mas agora o gerente exige a contratação de mais 18 POGramadores
 
 Quem será o próximo a ser possuído?[^fn-next-problem-bender]
 
----
+## Notas
+
 [^fn-nomes-capeta]: Moonwalker de Curupira é um dos nomes do Virose Bacteriana, do Discurso Epistemológico, do Farofa Doce, do Azuado, do Pai da Mentira, do Filho do Presidente, do Fede a 17... Para mais nomes, visite [Invocador de Nomes do Capeta](https://invocapiroto.com.br)
 
 [^fn-next-problem-bender]: Certeza que é o gerente. É sempre o gerente.

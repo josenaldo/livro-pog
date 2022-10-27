@@ -8,14 +8,14 @@ date: 2021-12-21 00:00
 name: dimensao-tecnologica
 parent: requisitos
 isParent: false
-status: review
+status: done
 image: "/images/capitulos/requisitos/dimensao-tecnologica.jpg"
 
 ---
 
 Uma outra dimensão que afeta constantemente nossos projetos, adubando o jardim da desgracença para que a POG possa germinar com todo vigor, é a Dimensão Tecnológica.
 
-Ainda que todos os seres humanos envolvidos tenham seus espíritos imaculados imbuídos das melhores intenções, existem os Requisitos da POG ligados à fatores tecnológicos. Esses Requisitos, quando satisfeitos, levam a tecnologia, antes usada para solucionar problemas, a se tornar uma fonte saudável de novos problemas mantenedores de emprego.
+Ainda que todos os seres humanos envolvidos tenham seus espíritos imaculados e imbuídos das melhores intenções, existem os Requisitos da POG ligados à fatores tecnológicos. Esses Requisitos, quando satisfeitos, levam a tecnologia, antes usada para solucionar problemas, a se tornar uma fonte saudável de novos problemas mantenedores de emprego.
 
 Temos, portanto, as seguintes aparições que, quando presentes, trazem à equipe o terror necessário para que a pog possa ser devidamente conjurada:
 
@@ -25,7 +25,9 @@ Ah, a beleza da tecnologia. Milhares de anos de esforço científico, milhões d
 
 Isso mesmo. Um martelo. Um maldito martelo!
 
-Para quem só sabe usar martelo, todo problema é prego.
+> Para quem só sabe usar martelo, todo problema é prego.
+>
+> -- Jesus, ensinando POGramação ao Thor
 
 A escolha de tecnologias inadequadas é um prato cheio pra quem quer se fartar no jantar da POG. Com a tecnologia errada em mãos, a equipe é obrigada a invocar todo tipo de pog pra resolver os problemas para os quais foram contratados. E, logo em seguida, eles precisam usar mais pogs para resolver os novos problemas que as pogs usadas criarão, num maravilhoso círculo vicioso que logo se torna o furacão do esmerdalhamento!
 
@@ -61,7 +63,7 @@ Flexibilidade. Nunca um conceito foi tão deturpado pela academia e pelos ditos 
 
 Olhe para o colega ao seu lado. Se ele faz uso desse tipo de técnica, ele é um traidor. Não há outra palavra para designar esse filho do Agonia de Domingo[^fn-nomes-capeta], esse rebento do Equação de Segundo Grau[^fn-nomes-capeta], esse capacho do Corote Azul[^fn-nomes-capeta].
 
-Flexibilidade real é a capacidade que seu software tem de ser usado para outras situações, mas com SUA intervenção. Num ambiente de flexibilidade saudável, você pode pegar seu sistema de controle de vídeo locadora[^fn-grupo-de-risco] e, com SUAS adaptações (obviamente em formato de pogs), transformar essa pequena pérola da engenharia humana em um sistema de controle hospitalar! Assim, você transforma em oportunidade o produto da Obsolescência Adquirida e ainda se utiliza do princípio da Enjambração para economizar tempo e lucrar!
+Flexibilidade real é a capacidade que seu software tem de ser usado para outras situações, mas com SUA intervenção. Num ambiente de flexibilidade saudável, você pode pegar seu sistema de controle de vídeo locadora[^fn-grupo-de-risco] e, com SUAS adaptações (obviamente em formato de pogs), transformar essa pequena pérola da engenharia humana em um sistema de controle hospitalar! Assim, você transforma em oportunidade o produto da Obsolescência Adquirida e ainda se utiliza do princípio da [Enjambração](/capitulos/principios) para economizar tempo e lucrar!
 
 Portanto, ao criar seus sistemas, torne a arquitetura dele o mais rígida que conseguir, para impedir outros de roubarem seu trabalho, mas flexível o suficiente para que você possa adaptar esse sistema a uma situação completamente adversa da original, com mais gambiarras! Lembre-se: quanto mais gambiarra, mais emprego!
 
@@ -73,11 +75,14 @@ Esse era o momento em que o regimento da empresa deveria deixar claro que permit
 
 Esse arquiteto traíra está criando uma armadilha com o único intuito de alavancar a própria carreira e mudar de empresa. E, enquanto ele sai pra se esbaldar com sua nova proposta salarial indecente, larga essa Equipe Apática com um projeto super bem estruturado... que ninguém sabe mexer.
 
+O resultado é que os membros da equipe vão mutilando o projeto e enxertando pogs como se não houvesse amanhã. Isso vai criando um Frankenstein de código que, tal qual o citado monstro, se volta contra a sua equipe, aumentando exponencialmente a quantidade de gambiarras necessárias para manter o sistema funcionando.
+
 Um Projeto Malamanhado tem o seu valor. Ele é democrático. Todo mundo consegue pogar nele, desde o Programador Supervalorizado frequentador de reuniões sexuais de segurança duvidosa até aquele estagiário que tem tanta concentração alcoólica no sangue que poderia entrar em combustão espontânea!
 
-Pra que padrões de projetos? Para que usar guia de estilo? Pra que criar uma arquitetura? Deixem que seu código simplesmente surja das mentes de cada membro da equipe, e vão integrando tudo à medida que é necessário (e possível). Um bom projeto POG vê seu código se espalhar e crescer, não como um arranha-céu, mas como os tentáculos de Cthulhu invadindo nossa dimensão para roubar nossas almas!
+O problema é que sem um guia adequado, o projeto que parecia um pedaço de mal caminho se transforma logo em uma auto estrada da perdição!
 
----
+## Notas
+
 [^fn-nomes-capeta]: Moonwalker de Curupira é um dos nomes do Virose Bacteriana, do Discurso Epistemológico, do Farofa Doce, do Azuado, do Pai da Mentira, do Filho do Presidente, do Fede a 17... Para mais nomes, visite [Invocador de Nomes do Capeta](https://invocapiroto.com.br)
 
 [^fn-grupo-de-risco]: Se você sabe o que esse termo significa, você é grupo de risco do Coronavírus. Fique me casa e laves as mãos.
