@@ -4,6 +4,7 @@ import { APP_IMAGE } from '@pog/config'
 
 const ContentCardImage = ({ image, alt, aspectRatio = '16/9' }) => {
     const contentImage = image || APP_IMAGE
+    const isOgImage = contentImage?.startsWith('/api/og')
     return (
         <>
             {contentImage && (
@@ -17,6 +18,7 @@ const ContentCardImage = ({ image, alt, aspectRatio = '16/9' }) => {
                         src={contentImage}
                         alt={alt}
                         fill
+                        unoptimized={isOgImage}
                         style={{ objectFit: 'cover' }}
                     />
                 </Box>
