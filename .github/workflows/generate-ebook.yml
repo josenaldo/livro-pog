@@ -26,10 +26,16 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
       
-      - name: Install Pandoc
+      - name: Install Pandoc and LaTeX
         run: |
           sudo apt-get update
-          sudo apt-get install -y pandoc texlive-xetex texlive-fonts-recommended texlive-plain-generic
+          sudo apt-get install -y \
+            pandoc \
+            texlive-xetex \
+            texlive-fonts-recommended \
+            texlive-fonts-extra \
+            texlive-plain-generic \
+            texlive-lang-portuguese
       
       - name: Generate combined Markdown
         run: node scripts/generate-ebook.js
@@ -44,6 +50,9 @@ jobs:
             -V geometry:margin=1in \
             -V documentclass=book \
             -V lang=pt-BR \
+            -V mainfont="DejaVu Serif" \
+            -V sansfont="DejaVu Sans" \
+            -V monofont="DejaVu Sans Mono" \
             --metadata title="Programação Orientada a Gambiarra" \
             --metadata author="Josenaldo Matos Filho"
       
@@ -53,7 +62,6 @@ jobs:
             -o public/downloads/livro-pog.epub \
             --toc \
             --toc-depth=2 \
-            --epub-cover-image=public/images/capitulos/introducao.jpg \
             --metadata title="Programação Orientada a Gambiarra" \
             --metadata author="Josenaldo Matos Filho" \
             --metadata lang=pt-BR

@@ -24,6 +24,7 @@ if [ "$FORMAT" == "pdf" ] || [ "$FORMAT" == "all" ]; then
     echo "Generating PDF..."
     docker run --rm \
         -v "$(pwd)/public:/workspace" \
+        -e LANG=pt_BR.UTF-8 \
         $IMAGE_NAME \
         pandoc /workspace/downloads/livro-pog-combined.md \
         -o /workspace/downloads/livro-pog.pdf \
@@ -33,6 +34,9 @@ if [ "$FORMAT" == "pdf" ] || [ "$FORMAT" == "all" ]; then
         -V geometry:margin=1in \
         -V documentclass=book \
         -V lang=pt-BR \
+        -V mainfont="DejaVu Serif" \
+        -V sansfont="DejaVu Sans" \
+        -V monofont="DejaVu Sans Mono" \
         --metadata title="Programação Orientada a Gambiarra" \
         --metadata author="Josenaldo Matos Filho"
     echo "✓ PDF generated: public/downloads/livro-pog.pdf"
@@ -43,6 +47,7 @@ if [ "$FORMAT" == "epub" ] || [ "$FORMAT" == "all" ]; then
     echo "Generating EPUB..."
     docker run --rm \
         -v "$(pwd)/public:/workspace" \
+        -e LANG=pt_BR.UTF-8 \
         $IMAGE_NAME \
         pandoc /workspace/downloads/livro-pog-combined.md \
         -o /workspace/downloads/livro-pog.epub \

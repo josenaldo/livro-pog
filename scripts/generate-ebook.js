@@ -11,28 +11,39 @@ if (!fs.existsSync(OUTPUT_DIR)) {
   fs.mkdirSync(OUTPUT_DIR, { recursive: true });
 }
 
-// Read all markdown files from capitulos
-function getChapters() {
-  const files = fs.readdirSync(CAPITULOS_DIR);
+// Recursively read all markdown files from capitulos
+function getChapters(dir = CAPITULOS_DIR) {
   const chapters = [];
 
-  files.forEach(file => {
-    if (file.endsWith('.md')) {
-      const filePath = path.join(CAPITULOS_DIR, file);
-      const fileContent = fs.readFileSync(filePath, 'utf-8');
-      const { data, content } = matter(fileContent);
+  function readDirectory(currentPath) {
+    const items = fs.readdirSync(currentPath);
 
-      // Only include chapters with status 'done'
-      if (data.status === 'done') {
-        chapters.push({
-          order: data.order_number || 9999,
-          title: data.title || 'Sem título',
-          content: content.trim(),
-          filename: file
-        });
+    items.forEach(item => {
+      const fullPath = path.join(currentPath, item);
+      const stat = fs.statSync(fullPath);
+
+      if (stat.isDirectory()) {
+        // Recursively read subdirectories
+        readDirectory(fullPath);
+      } else if (item.endsWith('.md')) {
+        const fileContent = fs.readFileSync(fullPath, 'utf-8');
+        const { data, content } = matter(fileContent);
+
+        // Only include chapters with status 'done'
+        if (data.status === 'done') {
+          chapters.push({
+            order: data.order_number || 9999,
+            title: data.title || 'Sem título',
+            content: content.trim(),
+            filename: item,
+            path: fullPath.replace(CAPITULOS_DIR, '').substring(1)
+          });
+        }
       }
-    }
-  });
+    });
+  }
+
+  readDirectory(dir);
 
   // Sort by order_number
   chapters.sort((a, b) => a.order - b.order);
@@ -60,7 +71,7 @@ function generateCombinedMarkdown() {
 
   // Add each chapter
   chapters.forEach((chapter, index) => {
-    console.log(`Adding chapter ${index + 1}/${chapters.length}: ${chapter.title} (${chapter.filename})`);
+    console.log(`Adding chapter ${index + 1}/${chapters.length}: ${chapter.title} (${chapter.path})`);
     
     combinedContent += `# ${chapter.title}\n\n`;
     combinedContent += fixImagePaths(chapter.content);
