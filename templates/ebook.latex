@@ -1,0 +1,190 @@
+% Template LaTeX Profissional para Livro POG
+\documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$babel-lang$,$endif$$if(papersize)$$papersize$paper,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{$documentclass$}
+
+% Encoding e Fontes
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+
+% Fontes profissionais
+$if(mainfont)$
+\setmainfont{$mainfont$}
+$endif$
+$if(sansfont)$
+\setsansfont{$sansfont$}
+$endif$
+$if(monofont)$
+\setmonofont[Scale=0.9]{$monofont$}
+$endif$
+
+% Idioma
+\usepackage{polyglossia}
+\setdefaultlanguage{brazil}
+
+% Geometria da página
+\usepackage{geometry}
+$if(geometry)$
+\geometry{$for(geometry)$$geometry$$sep$,$endfor$}
+$endif$
+
+% Espaçamento
+$if(linestretch)$
+\usepackage{setspace}
+\setstretch{$linestretch$}
+$endif$
+
+% Headers e Footers profissionais
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % Limpar headers/footers
+\fancyhead[LE,RO]{\thepage} % Número de página nas extremidades
+\fancyhead[RE]{\textit{$title$}} % Título do livro nas páginas pares
+\fancyhead[LO]{\textit{\leftmark}} % Nome do capítulo nas páginas ímpares
+\renewcommand{\headrulewidth}{0.4pt} % Linha no header
+\renewcommand{\footrulewidth}{0pt} % Sem linha no footer
+
+% Estilo de capítulos
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{-20pt}{40pt}
+
+% Cores para links
+\usepackage{xcolor}
+\definecolor{linkcolor}{RGB}{0,0,139}
+
+% Hyperlinks
+\usepackage{hyperref}
+\hypersetup{
+  pdftitle={$title$},
+  pdfauthor={$author-meta$},
+  pdfsubject={$subject$},
+  pdfkeywords={$keywords$},
+  colorlinks=true,
+  linkcolor=linkcolor,
+  urlcolor=linkcolor,
+  citecolor=linkcolor,
+  breaklinks=true
+}
+
+% Listas e enumerações
+\usepackage{enumitem}
+\setlist{nosep}
+
+% Código fonte com syntax highlighting
+\usepackage{listings}
+\usepackage{fancyvrb}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{
+  commandchars=\\\{\},
+  frame=single,
+  framesep=3mm,
+  rulecolor=\color{gray!30},
+  fillcolor=\color{gray!5},
+  fontsize=\small
+}
+
+% Imagens
+\usepackage{graphicx}
+\usepackage{grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+
+% Legendas de imagens
+\usepackage[labelfont=bf,textfont=it,justification=centering]{caption}
+
+% Tabelas
+\usepackage{longtable,booktabs}
+
+% Citações e blocos
+\usepackage{csquotes}
+
+% TOC formatting
+\usepackage{tocloft}
+\renewcommand{\cfttoctitlefont}{\huge\bfseries}
+$if(toc-title)$
+\renewcommand{\contentsname}{$toc-title$}
+$endif$
+
+% Metadata
+$if(title)$
+\title{$title$$if(thanks)$\thanks{$thanks$}$endif$}
+$endif$
+$if(subtitle)$
+\providecommand{\subtitle}[1]{}
+\subtitle{$subtitle$}
+$endif$
+$if(author)$
+\author{$for(author)$$author$$sep$ \and $endfor$}
+$endif$
+$if(date)$
+\date{$date$}
+$else$
+\date{}
+$endif$
+
+% Início do documento
+\begin{document}
+
+% Página de título customizada
+$if(title)$
+\begin{titlepage}
+\centering
+\vspace*{2cm}
+
+{\Huge\bfseries $title$ \par}
+\vspace{1cm}
+$if(subtitle)$
+{\Large $subtitle$ \par}
+\vspace{1.5cm}
+$endif$
+
+$if(author)$
+{\Large\itshape $for(author)$$author$$sep$, $endfor$ \par}
+$endif$
+
+\vfill
+
+% Informações de publicação
+{\large $if(date)$$date$$else$\today$endif$ \par}
+
+\vspace{1cm}
+
+$if(publisher)$
+{\normalsize $publisher$ \par}
+$endif$
+
+\end{titlepage}
+$endif$
+
+% Página de copyright
+\thispagestyle{empty}
+\null\vfill
+\noindent
+$if(title)$\textbf{$title$}$if(subtitle)$: $subtitle$$endif$\\$endif$
+$if(author)$Copyright \textcopyright\ \the\year\ $for(author)$$author$$sep$, $endfor$\\$endif$
+$if(rights)$$rights$\\$endif$
+
+\bigskip
+\noindent
+Este livro foi gerado automaticamente a partir de conteúdo em Markdown.\\
+Tipografia: \LaTeX\ com XeTeX.\\
+
+\vspace{1cm}
+\clearpage
+
+% Sumário
+$if(toc)$
+{
+\setcounter{tocdepth}{$toc-depth$}
+\tableofcontents
+\clearpage
+}
+$endif$
+
+% Corpo do documento
+$body$
+
+\end{document}

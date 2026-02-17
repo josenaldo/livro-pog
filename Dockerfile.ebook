@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y locales && \
     locale-gen pt_BR.UTF-8 && \
     update-locale LANG=pt_BR.UTF-8
 
-# Install Pandoc and LaTeX
+# Install Pandoc and LaTeX with additional packages
 RUN apt-get update && apt-get install -y \
     pandoc \
     texlive-xetex \
@@ -19,6 +19,9 @@ RUN apt-get update && apt-get install -y \
     texlive-fonts-extra \
     texlive-plain-generic \
     texlive-lang-portuguese \
+    texlive-latex-extra \
+    fonts-ebgaramond \
+    fonts-liberation2 \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /workspace
