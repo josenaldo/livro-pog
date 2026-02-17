@@ -20,9 +20,9 @@ Workflow and guardrails for building and deploying this repo (Vercel-style Next.
 
 ## Exemplos de prompt
 
-- “Corrija o workflow para publicar o `out/` corretamente.”
-- “O site no GitHub Pages está sem CSS/imagens; revise `basePath/assetPrefix`.”
-- “Padronize o build local e no CI (Contentlayer + Next).”
+- “O `npm run build` quebrou depois do upgrade; encontre a causa e corrija.”
+- “O sitemap/robots não estão sendo gerados; revise `next-sitemap` e o `postbuild`.”
+- “Padronize build local e no CI (Contentlayer + Next + next-sitemap).”
 
 ## Inputs (o que pedir ao usuário)
 
@@ -40,7 +40,7 @@ Workflow and guardrails for building and deploying this repo (Vercel-style Next.
 ### Padrões recomendados
 
 - Sempre validar com `npm run lint` e `npm run build` antes de mexer no workflow.
-- Evitar mudanças de `basePath` quando o deploy é “user page” (`username.github.io`).
+- Evitar mudanças de `basePath`/`assetPrefix` sem uma necessidade clara (quebra links facilmente).
 
 ## Decision Tree
 

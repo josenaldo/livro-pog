@@ -23,7 +23,7 @@ Pesquisa aplicada para escrever melhor: transformar um tema em tese, evidências
 ## Exemplos de prompt
 
 - "Pesquise e solidifique os argumentos do meu artigo sobre interfaces vs abstrações especulativas. Gere um Research Brief e um checklist de pontos frágeis."
-- "Quero escrever um post sobre migração para Next export estático. Faça a pesquisa e traga um mapa de riscos + recomendações."
+- "Quero escrever um post sobre modernização do projeto (Next.js 12 → versão atual). Faça a pesquisa e traga um mapa de riscos + recomendações."
 
 ## Inputs (o que pedir ao usuário)
 
