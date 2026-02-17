@@ -8,7 +8,7 @@ date: 2021-12-21 00:00
 name: dimensao-processual
 parent: requisitos
 isParent: false
-status: progress
+status: done
 image: "/images/capitulos/requisitos/dimensao-processual.jpg"
 
 ---
