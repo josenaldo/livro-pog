@@ -8,7 +8,7 @@ date: 2020-04-16 00:10
 name: gambi-design-patterns
 # parent:
 isParent: true
-status: backlog
+status: done
 image: "/images/capitulos/gambi-design-patterns.jpg"
 
 ---

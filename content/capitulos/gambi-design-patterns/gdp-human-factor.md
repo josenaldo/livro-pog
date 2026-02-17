@@ -8,7 +8,7 @@ date: 2020-04-16 00:23
 name: gdp-human-factor
 parent: gambi-design-patterns
 isParent: false
-status: backlog
+status: done
 image: "/images/capitulos/default.jpg"
 
 ---

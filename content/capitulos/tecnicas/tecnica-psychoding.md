@@ -8,7 +8,7 @@ date: 2020-04-16 00:09
 name: tecnica-psychoding
 parent: tecnicas
 isParent: false
-status: backlog
+status: done
 image: "/images/capitulos/default.jpg"
 
 ---

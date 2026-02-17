@@ -8,7 +8,7 @@ date: 2020-04-16 00:21
 name: gdp-exception-success
 parent: gambi-design-patterns
 isParent: false
-status: backlog
+status: done
 image: "/images/capitulos/default.jpg"
 
 ---

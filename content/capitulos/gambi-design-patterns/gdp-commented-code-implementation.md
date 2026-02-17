@@ -8,7 +8,7 @@ date: 2020-04-16 00:17
 name: gdp-commented-code-implementation
 parent: gambi-design-patterns
 isParent: false
-status: backlog
+status: done
 image: "/images/capitulos/default.jpg"
 
 ---

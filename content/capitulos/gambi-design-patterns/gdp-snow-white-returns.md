@@ -8,7 +8,7 @@ date: 2021-08-24 00:23
 name: gdp-snow-white-returns
 parent: gambi-design-patterns
 isParent: false
-status: backlog
+status: done
 image: "/images/capitulos/default.jpg"
 
 ---

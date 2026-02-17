@@ -8,7 +8,7 @@ date: 2020-04-16 00:06
 name: tecnica-zipomatic-versioning
 parent: tecnicas
 isParent: false
-status: backlog
+status: done
 image: "/images/capitulos/default.jpg"
 
 ---

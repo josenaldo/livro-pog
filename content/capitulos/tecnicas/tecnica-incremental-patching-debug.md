@@ -8,7 +8,7 @@ date: 2020-04-16 00:07
 name: tecnica-incremental-patching-debug
 parent: tecnicas
 isParent: false
-status: backlog
+status: done
 image: "/images/capitulos/default.jpg"
 
 ---

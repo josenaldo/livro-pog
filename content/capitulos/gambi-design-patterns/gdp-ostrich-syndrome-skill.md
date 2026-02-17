@@ -8,7 +8,7 @@ date: 2020-04-16 00:15
 name: gdp-ostrich-syndrome-skill
 parent: gambi-design-patterns
 isParent: false
-status: backlog
+status: done
 image: "/images/capitulos/default.jpg"
 
 ---

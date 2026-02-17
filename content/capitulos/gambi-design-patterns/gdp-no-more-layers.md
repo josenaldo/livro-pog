@@ -8,7 +8,7 @@ date: 2020-04-16 00:28
 name: gdp-no-more-layers
 parent: gambi-design-patterns
 isParent: false
-status: backlog
+status: done
 image: "/images/capitulos/default.jpg"
 
 ---

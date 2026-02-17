@@ -8,7 +8,7 @@ date: 2020-04-16 00:26
 name: gdp-thunder-mega-zord
 parent: gambi-design-patterns
 isParent: false
-status: backlog
+status: done
 image: "/images/capitulos/default.jpg"
 
 ---

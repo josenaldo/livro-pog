@@ -8,7 +8,7 @@ date: 2020-04-16 00:14
 name: gdp-forceps
 parent: gambi-design-patterns
 isParent: false
-status: backlog
+status: done
 image: "/images/capitulos/default.jpg"
 
 ---

@@ -8,7 +8,7 @@ date: 2020-04-16 00:27
 name: gdp-controller-confusion
 parent: gambi-design-patterns
 isParent: false
-status: backlog
+status: done
 image: "/images/capitulos/default.jpg"
 
 ---

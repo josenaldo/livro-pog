@@ -8,7 +8,7 @@ date: 2020-04-16 00:08
 name: tecnica-my-precious
 parent: tecnicas
 isParent: false
-status: backlog
+status: done
 image: "/images/capitulos/default.jpg"
 
 ---

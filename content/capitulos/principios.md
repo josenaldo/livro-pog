@@ -8,7 +8,7 @@ date: 2020-04-16 00:04
 name: principios
 # parent:
 isParent: true
-status: backlog
+status: done
 image: "/images/capitulos/principios.jpg"
 
 ---
