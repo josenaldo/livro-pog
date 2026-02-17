@@ -47,7 +47,7 @@ const LastNews = () => {
                             text={post.description}
                             author={post.author}
                             date={post.date}
-                            image={getOgImageUrl(post.icon, post.title)}
+                            image={getOgImageUrl(post.icon)}
                             url={post.url}
                         />
                     ))}

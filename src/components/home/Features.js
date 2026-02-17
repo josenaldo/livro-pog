@@ -54,7 +54,7 @@ const Features = () => {
                             title={chapter.title}
                             text={chapter.description}
                             url={chapter.url}
-                            image={getOgImageUrl(chapter.icon, chapter.title)}
+                            image={getOgImageUrl(chapter.icon)}
                         />
                     ))}
                 </Box>
