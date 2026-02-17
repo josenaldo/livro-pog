@@ -47,7 +47,7 @@ Esse profissional ostenta capacidades excepcionais de produção de sistemas em 
 
 O que muita gente não sabe é que o Arquiteto MacGyver é um mestre no uso de geradores de POGramas, frameworks e todas as artimanhas necessárias pra criar um calhamaço de POG que pareça resolver o problema proposto. E o projeto gerado por este profissional, apesar de impressionar à primeira vista, costuma apodrecer mais rápido que que fruta em mochila de POGramador.
 
-O Arquiteto MacGyver costuma ter um relacionamento dúbio com a equipe, ora atuando com fonte de inspiração para ideias pseudodisruptivas, ora atuando como fonte  de inspiração para impropérios capazes de fazer o próprio Moonwalker de Curupira[^fn-nomes-capeta] corar de vergonha.
+O Arquiteto MacGyver costuma ter um relacionamento dúbio com a equipe, ora atuando com fonte de inspiração para ideias pseudodisruptivas, ora atuando como fonte  de inspiração para impropérios capazes de fazer o próprio Moonwalker de Curupira[^fn-nomes-capeta-1] corar de vergonha.
 
 ## Gerente Sem Noção
 
@@ -94,15 +94,15 @@ Obviamente que isso vira um círculo vicioso, onde mais pogs são necessárias p
 
 ## Intrometido Inepto
 
-Pra completar a corte enviada pelo Estraga Suruba[^fn-nomes-capeta], temos o Intrometido Inepto. Essa figura aparece em diversas fases do projeto com uma única missão: se intrometer onde não é chamado para fornecer uma opinião não solicitada sobre um assunto que não domina.
+Pra completar a corte enviada pelo Estraga Suruba[^fn-nomes-capeta-2], temos o Intrometido Inepto. Essa figura aparece em diversas fases do projeto com uma única missão: se intrometer onde não é chamado para fornecer uma opinião não solicitada sobre um assunto que não domina.
 
 O Intrometido Inepto costuma colaborar na criação de pogs ao colocar ideias perniciosas nas mentes de tomadores de decisões despreparados para lidar com essa influência danosa.
 
-É esse filho do Chinelo Emborcado[^fn-nomes-capeta] que planta, na mente fértil do Gerente Sem Noção, a ideia de que seria muito útil se o sistema financeiro tivesse uma funcionalidade de geração aleatória de nomes do capeta no campo de nomes dos fornecedores.
+É esse filho do Chinelo Emborcado[^fn-nomes-capeta-3] que planta, na mente fértil do Gerente Sem Noção, a ideia de que seria muito útil se o sistema financeiro tivesse uma funcionalidade de geração aleatória de nomes do capeta no campo de nomes dos fornecedores.
 
-É esse Torresmo de Prepúcio[^fn-nomes-capeta] que, num ato de covardia e prazer pelo sofrimento alheio, convence o cliente de que o sistema precisa ter a capacidade de enviar emails através de pombos-correio, caso a internet caia.
+É esse Torresmo de Prepúcio[^fn-nomes-capeta-4] que, num ato de covardia e prazer pelo sofrimento alheio, convence o cliente de que o sistema precisa ter a capacidade de enviar emails através de pombos-correio, caso a internet caia.
 
-É esse Tempero de Miojo[^fn-nomes-capeta] que diz para o Gerente Sem Noção que a equipe vai render muito mais se for marcada uma palestra motivacional com coach quântico numa sexta feira, às 18h30. E sem lanche, pois a fome é uma motivadora muito fote.
+É esse Tempero de Miojo[^fn-nomes-capeta-5] que diz para o Gerente Sem Noção que a equipe vai render muito mais se for marcada uma palestra motivacional com coach quântico numa sexta feira, às 18h30. E sem lanche, pois a fome é uma motivadora muito fote.
 
 Se você identificar um Intrometido Inepto junto aos tomadores de decisão associados ao seu projeto, a atitude mais correta e humana é capturar e entregar para o Ibama. Se isso não for possível, reze. Se for ateu, essa é uma boa hora pra adotar uma religião.
 
@@ -110,7 +110,7 @@ Se você identificar um Intrometido Inepto junto aos tomadores de decisão assoc
 
 Ao tratarmos da dimensão humana, não poderíamos deixar de mencionar um papel que pode ser assumido por qualquer um dos membros dessa pequena seita de invocação de calamidades digitais: o Dobrador de Problemas.
 
-Não se sabe qual fenômeno causa essa transfiguração na criatura humana. O que se sabe é que, em qualquer momento de um projeto, o espírito do Dobrador de Problemas pode encarnar em seu avatar (que poder ser qualquer um, mas quase sempre é o gerente) e esse passa controlar os problemas da equipe com toda destreza e graciosidade do Nariz Fora da Máscara[^fn-nomes-capeta] tentando causar um pequeno apocalipse.
+Não se sabe qual fenômeno causa essa transfiguração na criatura humana. O que se sabe é que, em qualquer momento de um projeto, o espírito do Dobrador de Problemas pode encarnar em seu avatar (que poder ser qualquer um, mas quase sempre é o gerente) e esse passa controlar os problemas da equipe com toda destreza e graciosidade do Nariz Fora da Máscara[^fn-nomes-capeta-6] tentando causar um pequeno apocalipse.
 
 Tal qual um Jesus da Desgracença, o Dobrador de Problemas pega um pequeno empecilho pra resolver e, a partir desse minúsculo pedacinho de caos, ele gera um tufão de esmerdalhamento que multiplica e joga problemas pra todos os lados, fazendo o efeito Asa de Urubu parecer um folheto de igreja que mostra uma criança loira montando um leão vegano.
 
@@ -122,7 +122,17 @@ Quem será o próximo a ser possuído?[^fn-next-problem-bender]
 
 ## Notas
 
-[^fn-nomes-capeta]: Moonwalker de Curupira é um dos nomes do Virose Bacteriana, do Discurso Epistemológico, do Farofa Doce, do Azuado, do Pai da Mentira, do Filho do Presidente, do Fede a 17... Para mais nomes, visite [Invocador de Nomes do Capeta](https://invocapiroto.com.br)
+[^fn-nomes-capeta-1]: Moonwalker de Curupira é um dos nomes do Virose Bacteriana, do Discurso Epistemológico, do Farofa Doce, do Azuado, do Pai da Mentira, do Filho do Presidente, do Fede a 17... Para mais nomes, visite [Invocador de Nomes do Capeta](https://invocapiroto.com.br)
+
+[^fn-nomes-capeta-2]: Estraga Suruba é outro nome do capeta. Ver nota 1.
+
+[^fn-nomes-capeta-3]: Chinelo Emborcado é outro nome do capeta. Ver nota 1.
+
+[^fn-nomes-capeta-4]: Torresmo de Prepúcio é outro nome do capeta. Ver nota 1.
+
+[^fn-nomes-capeta-5]: Tempero de Miojo é outro nome do capeta. Ver nota 1.
+
+[^fn-nomes-capeta-6]: Nariz Fora da Máscara é outro nome do capeta. Ver nota 1.
 
 [^fn-next-problem-bender]: Certeza que é o gerente. É sempre o gerente.
 

@@ -1,0 +1,156 @@
+/* EPUB Custom Stylesheet for Programação Orientada a Gambiarra */
+
+/* Body and Typography */
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.6;
+  margin: 1em;
+  text-align: justify;
+}
+
+/* Headings */
+h1 {
+  font-size: 2em;
+  margin-top: 1.5em;
+  margin-bottom: 0.8em;
+  page-break-before: always;
+  text-align: center;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-top: 1.2em;
+  margin-bottom: 0.6em;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.2em;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+
+/* Paragraphs */
+p {
+  margin: 0.8em 0;
+  text-indent: 1.5em;
+}
+
+/* First paragraph after heading - no indent */
+h1 + p,
+h2 + p,
+h3 + p {
+  text-indent: 0;
+}
+
+/* Lists */
+ul, ol {
+  margin: 1em 0;
+  padding-left: 2em;
+}
+
+li {
+  margin: 0.5em 0;
+}
+
+/* Blockquotes */
+blockquote {
+  margin: 1em 2em;
+  padding: 0.5em 1em;
+  border-left: 3px solid #666;
+  font-style: italic;
+  background-color: #f5f5f5;
+}
+
+/* Code */
+code {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #f5f5f5;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+}
+
+pre {
+  background-color: #f5f5f5;
+  padding: 1em;
+  overflow-x: auto;
+  border-radius: 5px;
+  margin: 1em 0;
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+/* Links */
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1em auto;
+}
+
+/* Footnotes */
+.footnote {
+  font-size: 0.9em;
+  vertical-align: super;
+}
+
+.footnotes {
+  margin-top: 2em;
+  padding-top: 1em;
+  border-top: 1px solid #ccc;
+  font-size: 0.9em;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 0.5em;
+  text-align: left;
+}
+
+th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+
+/* Page breaks */
+.page-break {
+  page-break-after: always;
+}
+
+/* Strong and emphasis */
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+/* Horizontal rules */
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 2em 0;
+}

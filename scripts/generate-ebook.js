@@ -57,24 +57,55 @@ function fixImagePaths(content) {
   return content.replace(/!\[([^\]]*)\]\(\/images\//g, '![$1](./images/');
 }
 
+// Extract references from content (without removing)
+function extractReferences(content) {
+  // Match from "## Referências" to the next "##" (not "###") or "[^" or end
+  const referencesMatch = content.match(/## Referências\s*\n([\s\S]*?)(?=\n## [^#]|\n\[^[^\]]|$)/);
+  if (referencesMatch && referencesMatch[1].trim()) {
+    // Clean up the references section
+    return referencesMatch[1].trim().replace(/^---+\s*$/gm, ''); // Remove horizontal rules
+  }
+  return null;
+}
+
 // Generate combined markdown
 function generateCombinedMarkdown() {
   const chapters = getChapters();
   let combinedContent = '';
+  const allReferences = [];
 
-  // Add title page
+  // Add title page with metadata
   combinedContent += '---\n';
   combinedContent += 'title: Programação Orientada a Gambiarra\n';
+  combinedContent += 'subtitle: Um Guia Definitivo sobre a Arte da Gambiarra no Desenvolvimento de Software\n';
   combinedContent += 'author: Josenaldo Matos Filho\n';
+  combinedContent += 'date: 2024\n';
   combinedContent += 'lang: pt-BR\n';
+  combinedContent += 'rights: © 2024 Josenaldo Matos Filho. Licenciado sob CC BY-NC-SA 4.0\n';
+  combinedContent += 'description: |\n';
+  combinedContent += '  Um livro satírico sobre as gambiarras no desenvolvimento de software,\n';
+  combinedContent += '  explorando técnicas, princípios e padrões da POGramação.\n';
+  combinedContent += 'keywords: [programação, gambiarra, humor técnico, padrões de projeto, desenvolvimento de software]\n';
+  combinedContent += 'publisher: Auto-publicado\n';
   combinedContent += '---\n\n';
 
   // Add each chapter
   chapters.forEach((chapter, index) => {
     console.log(`Adding chapter ${index + 1}/${chapters.length}: ${chapter.title} (${chapter.path})`);
     
+    let chapterContent = chapter.content;
+    
+    // Extract and collect references (keep them in chapter)
+    const references = extractReferences(chapterContent);
+    if (references) {
+      allReferences.push({
+        chapter: chapter.title,
+        references: references
+      });
+    }
+    
     combinedContent += `# ${chapter.title}\n\n`;
-    combinedContent += fixImagePaths(chapter.content);
+    combinedContent += fixImagePaths(chapterContent);
     combinedContent += '\n\n';
     
     // Add page break for PDF
@@ -83,10 +114,24 @@ function generateCombinedMarkdown() {
     }
   });
 
+  // Add consolidated references at the end if any exist
+  if (allReferences.length > 0) {
+    combinedContent += '\\newpage\n\n';
+    combinedContent += '# Bibliografia Consolidada\n\n';
+    combinedContent += 'Esta seção consolida todas as referências citadas ao longo do livro, organizadas por capítulo.\n\n';
+    
+    allReferences.forEach(ref => {
+      combinedContent += `## ${ref.chapter}\n\n`;
+      combinedContent += ref.references;
+      combinedContent += '\n\n';
+    });
+  }
+
   // Write combined file
   fs.writeFileSync(OUTPUT_FILE, combinedContent, 'utf-8');
   console.log(`\nGenerated combined markdown: ${OUTPUT_FILE}`);
   console.log(`Total chapters: ${chapters.length}`);
+  console.log(`References consolidated: ${allReferences.length} chapters`);
 }
 
 // Run

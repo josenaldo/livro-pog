@@ -31,7 +31,9 @@ if [ "$FORMAT" == "pdf" ] || [ "$FORMAT" == "all" ]; then
         --pdf-engine=xelatex \
         --toc \
         --toc-depth=2 \
-        -V geometry:margin=1in \
+        --number-sections \
+        -V geometry:top=2.5cm,bottom=2.5cm,left=3cm,right=2.5cm \
+        -V linestretch=1.3 \
         -V documentclass=book \
         -V lang=pt-BR \
         -V mainfont="DejaVu Serif" \
@@ -53,6 +55,10 @@ if [ "$FORMAT" == "epub" ] || [ "$FORMAT" == "all" ]; then
         -o /workspace/downloads/livro-pog.epub \
         --toc \
         --toc-depth=2 \
+        --number-sections \
+        --epub-cover-image=/workspace/images/cover/capa.jpg \
+        --epub-embed-font=/workspace/styles/ebook.css \
+        --css=/workspace/styles/ebook.css \
         --metadata title="Programação Orientada a Gambiarra" \
         --metadata author="Josenaldo Matos Filho" \
         --metadata lang=pt-BR
