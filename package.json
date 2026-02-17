@@ -5,7 +5,15 @@
         "build:content": "contentlayer2 build",
         "build": "next build",
         "postbuild": "next-sitemap",
-        "start": "next start -p 6500"
+        "start": "next start -p 6500",
+        "ebook:markdown": "node scripts/generate-ebook.js",
+        "ebook:pdf": "yarn ebook:markdown && pandoc public/downloads/livro-pog-combined.md -o public/downloads/livro-pog.pdf --pdf-engine=xelatex --toc --toc-depth=2 -V geometry:margin=1in -V documentclass=book -V lang=pt-BR --metadata title='Programação Orientada a Gambiarra' --metadata author='Josenaldo Matos Filho'",
+        "ebook:epub": "yarn ebook:markdown && pandoc public/downloads/livro-pog-combined.md -o public/downloads/livro-pog.epub --toc --toc-depth=2 --metadata title='Programação Orientada a Gambiarra' --metadata author='Josenaldo Matos Filho' --metadata lang=pt-BR",
+        "ebook:all": "yarn ebook:markdown && yarn ebook:pdf && yarn ebook:epub",
+        "ebook:docker:build": "bash scripts/docker-build.sh",
+        "ebook:docker:pdf": "bash scripts/docker-generate.sh pdf",
+        "ebook:docker:epub": "bash scripts/docker-generate.sh epub",
+        "ebook:docker:all": "bash scripts/docker-generate.sh all"
     },
     "dependencies": {
         "@emotion/react": "^11.10.0",

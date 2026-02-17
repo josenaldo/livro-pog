@@ -1,4 +1,5 @@
 export { Hero } from './Hero'
 export { Features } from './Features'
 export { Testimonial } from './Testimonial'
+export { DownloadSection } from './DownloadSection'
 export { LastNews } from './LastNews'

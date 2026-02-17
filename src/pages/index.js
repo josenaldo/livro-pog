@@ -1,6 +1,12 @@
 import { Layout } from '@pog/components/template'
 
-import { Hero, Features, Testimonial, LastNews } from '@pog/components/home'
+import {
+    Hero,
+    Features,
+    Testimonial,
+    DownloadSection,
+    LastNews,
+} from '@pog/components/home'
 
 const Home = () => {
     return (
@@ -13,6 +19,7 @@ const Home = () => {
             <Hero />
             <Features />
             <Testimonial />
+            <DownloadSection />
             <LastNews />
         </Layout>
     )
