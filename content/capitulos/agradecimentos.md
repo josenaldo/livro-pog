@@ -21,7 +21,7 @@ Primeiro, vou agradecer à minha família. Vocês fizeram um grande trabalho. Ex
 
 Eu posso não acreditar em Deus, mas acredito em anjas, pq eu já conheci três: Luciana Ribeiro Matos, minha irmã de faculdade; Elma dos Passos Rabello, minha primeira sogra e mãe de rim; e Maria Teresa Lima (em memória), minha segunda sogra e saudosa companheira de papos malucos. Obrigado por me dedicarem tanto amor, apesar de minhas falhas e imperfeições. Vocês me mostraram que esse mundo ainda vale a pena. Levarei vocês pra sempre no meu coração. No rim não, porque o rim eu perco.
 
-Um agradecimento especial à minha companheira, Cassiana, que trouxe a luz do amor de volta à minha vida. E outro agradecimento aos nossos filhos Joseana, Cassinaldo, Jossinalna, Cijomar e Prosongolôndia, que não nasceram ainda, por não tentarem me matar devido aos nomes que vou por neles. Eu acho.
+Um agradecimento especial à minha digníssima esposa, Cassiana, que trouxe a luz do amor de volta à minha vida. E outro agradecimento aos nossos filhos Joseana, Cassinaldo, Jossinalna, Cijomar e Prosongolôndia, que não nasceram ainda, por não tentarem me matar devido aos nomes que vou por neles. Eu acho.
 
 Nenhum obrigado aos bolsonaristas e antivacinas. A esses, eu não tenho nada o que agradecer. A esses, eu só desejo que peguem fungo de pneu de caminhão no símbolo químico do cobre.
 
