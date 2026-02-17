@@ -7,7 +7,6 @@ import {
     Stack,
     Typography,
     Divider,
-    Link,
 } from '@mui/material'
 
 import Grid from '@mui/material/Unstable_Grid2'
@@ -115,7 +114,7 @@ const AjudePage = () => {
                                         sua vontade!
                                     </Typography>
                                     <Typography variant="body1">
-                                        Manda um PIX ou um Picpay!
+                                        Manda um PIX!
                                     </Typography>
                                     <Box
                                         sx={{
@@ -161,40 +160,6 @@ const AjudePage = () => {
                                                 </Typography>
                                                 <Typography variant="caption">
                                                     Gostou? Manda um PIX!
-                                                </Typography>
-                                            </CardContent>
-                                        </Card>
-                                        <Card elevation={2}>
-                                            <CardMedia>
-                                                <Image
-                                                    src="/images/ajude/picpay.png"
-                                                    alt="QR Code do PicPay"
-                                                    width={300}
-                                                    height={300}
-                                                />
-                                            </CardMedia>
-                                            <CardContent
-                                                sx={{
-                                                    display: 'flex',
-                                                    flexDirection: 'column',
-                                                    justifyContent: 'center',
-                                                    alignItems: 'flex-start',
-                                                    gap: 2,
-                                                }}
-                                            >
-                                                <Typography variant="h5">
-                                                    Picpay
-                                                </Typography>
-                                                <Link
-                                                    href="https://picpay.me/josenaldo"
-                                                    color="primary"
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                >
-                                                    @josenaldo
-                                                </Link>
-                                                <Typography variant="caption">
-                                                    Gostou? Faz um Picpay!
                                                 </Typography>
                                             </CardContent>
                                         </Card>
@@ -309,18 +274,6 @@ const AjudePage = () => {
                 </Card>
             </Container>
         </Layout>
-    )
-}
-
-const LinkItem = ({ href, children }) => {
-    return (
-        <Box component="li">
-            <Typography variant="body1">
-                <Link href={href} target="_blank" rel="noopener noreferrer">
-                    {children}
-                </Link>
-            </Typography>
-        </Box>
     )
 }
 

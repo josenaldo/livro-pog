@@ -60,7 +60,6 @@ const DownloadSection = () => {
                         download
                         sx={{
                             minWidth: '200px',
-                            fontWeight: 'bold',
                         }}
                     >
                         Baixar PDF
@@ -75,7 +74,6 @@ const DownloadSection = () => {
                         download
                         sx={{
                             minWidth: '200px',
-                            fontWeight: 'bold',
                         }}
                     >
                         Baixar EPUB
