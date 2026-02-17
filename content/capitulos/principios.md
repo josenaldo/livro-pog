@@ -9,7 +9,7 @@ name: principios
 # parent:
 isParent: true
 status: done
-image: "/images/capitulos/principios.jpg"
+icon: "tabler/IconFileText"
 
 ---
 Depois de entender o que e POG e quais condicoes ambientais favorecem a manifestacao de uma pog, surge a pergunta inevitavel:

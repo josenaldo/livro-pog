@@ -9,7 +9,7 @@ name: gdp-bulletproof
 parent: gambi-design-patterns
 isParent: false
 status: done
-image: "/images/capitulos/default.jpg"
+icon: "tabler/IconShield"
 
 ---
 O **Bulletproof** é o padrão em que toda operação, independentemente do que aconteça, termina com mensagem de sucesso. Deu certo? Sucesso. Deu errado? Sucesso também. Explodiu? Sucesso com fé.

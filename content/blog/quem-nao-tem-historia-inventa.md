@@ -3,7 +3,7 @@ title: Quem não tem história, inventa
 description: O mergulho na história da POG pode acabar sendo mais profundo do que eu imaginava
 date: 2022-10-24 12:40:00 -0300
 author: Josenaldo Matos
-image: "/images/blog/quem-nao-tem-historia-inventa.jpg"
+icon: "tabler/IconUsers"
 ---
 **Colé, Bandicão!!! Bão?**
 

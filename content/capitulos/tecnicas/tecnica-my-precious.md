@@ -9,7 +9,7 @@ name: tecnica-my-precious
 parent: tecnicas
 isParent: false
 status: done
-image: "/images/capitulos/default.jpg"
+icon: "tabler/IconDiamond"
 
 ---
 A tecnica **My Precious** estabelece propriedade emocional de codigo: "esse modulo e meu, so eu mexo". O objetivo oculto e manter controle absoluto sobre um trecho critico e, por tabela, sobre o fluxo de trabalho da equipe.

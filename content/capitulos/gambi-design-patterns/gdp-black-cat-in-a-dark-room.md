@@ -9,7 +9,7 @@ name: gdp-black-cat-in-a-dark-room
 parent: gambi-design-patterns
 isParent: false
 status: done
-image: "/images/capitulos/default.jpg"
+icon: "tabler/IconMoon"
 ---
 O **Black Cat In A Dark Room** é o padrão em que um método recebe um `Map` genérico (ou estrutura equivalente) com tudo dentro: parâmetros de entrada, flags de comportamento, contexto técnico e, às vezes, traumas da sprint passada.
 

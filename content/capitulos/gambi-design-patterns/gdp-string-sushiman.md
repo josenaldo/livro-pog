@@ -9,7 +9,7 @@ name: gdp-string-sushiman
 parent: gambi-design-patterns
 isParent: false
 status: done
-image: "/images/capitulos/default.jpg"
+icon: "tabler/IconChefHat"
 
 ---
 No **String Sushiman**, parametros estruturados sao compactados em uma string "linguicao" com delimitadores magicos. Depois, o codigo faz `split` em camadas e torce para cada posicao vir no formato correto.

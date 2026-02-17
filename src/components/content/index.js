@@ -1,5 +1,6 @@
 export { ContentCard } from './ContentCard'
 export { ContentCardImage } from './ContentCardImage'
+export { ContentCover } from './ContentCover'
 export { ContentMainImage } from './ContentMainImage'
 export { ContentMeta } from './ContentMeta'
 export { ContentNavButton } from './ContentNavButton'

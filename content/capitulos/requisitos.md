@@ -9,7 +9,7 @@ name: requisitos
 # parent:
 isParent: true
 status: done
-image: "/images/capitulos/requisitos.jpg"
+icon: "tabler/IconClipboardCheck"
 ---
 
 Além de empregar POG como acrônimo para Programação Orientada a Gambiarra, temos também o termo "pog", usado corriqueiramente como sinônimo de "uma gambiarra", ou seja, uma simples unidade de gambiarra implementada por um POGramador. Assim, é comum que um POGramador diga "eu fiz uma pog" quando descreve o **artefardo**[^fn-artefardo] resultante de seu trabalho.

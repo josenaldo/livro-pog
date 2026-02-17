@@ -9,7 +9,7 @@ name: dimensao-humana
 parent: requisitos
 isParent: false
 status: done
-image: "/images/capitulos/requisitos/dimensao-humana.jpg"
+icon: "tabler/IconUser"
 
 ---
 

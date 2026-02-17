@@ -9,7 +9,7 @@ name: dimensao-estrutural
 parent: requisitos
 isParent: false
 status: done
-image: "/images/capitulos/requisitos/dimensao-estrutural.jpg"
+icon: "tabler/IconHierarchy"
 
 ---
 

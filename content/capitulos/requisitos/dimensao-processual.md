@@ -9,7 +9,7 @@ name: dimensao-processual
 parent: requisitos
 isParent: false
 status: done
-image: "/images/capitulos/requisitos/dimensao-processual.jpg"
+icon: "tabler/IconGitMerge"
 
 ---
 

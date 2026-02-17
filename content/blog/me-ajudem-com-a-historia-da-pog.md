@@ -3,7 +3,7 @@ title: A História da POG precisa de sua ajuda
 description: O Livro POG necessida te sua colaboração!
 date: 2020-05-02 07:23:00 -0300
 author: Josenaldo Matos
-image: "/images/blog/me-ajudem-com-a-historia-da-pog.jpg"
+icon: "tabler/IconHelp"
 ---
 
 **Saudações, ruma de Faz Deploy por FTP!**

@@ -9,7 +9,7 @@ name: agradecimentos
 # parent: null
 isParent: false
 status: done
-image: "/images/capitulos/agradecimentos.jpg"
+icon: "tabler/IconHeart"
 
 ---
 

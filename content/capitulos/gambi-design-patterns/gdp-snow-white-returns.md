@@ -9,7 +9,7 @@ name: gdp-snow-white-returns
 parent: gambi-design-patterns
 isParent: false
 status: done
-image: "/images/capitulos/default.jpg"
+icon: "tabler/IconGhost"
 
 ---
 O **Snow White Returns** celebra multiplos pontos de retorno em funcoes gigantes. A ideia original era simplificar casos locais. O uso extremo transforma fluxo em labirinto.

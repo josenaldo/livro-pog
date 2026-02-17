@@ -29,7 +29,7 @@ const PostPage = ({ post }) => {
         <Layout
             title={post.title}
             description={post.description}
-            image={post?.image || null}
+            icon={post?.icon || null}
             url={post.url}
         >
             <Container>

@@ -3,7 +3,7 @@ title: Retomando o Projeto
 description: Nois trupica, mas num cai!
 date: 2022-10-12 20:10:00 -0300
 author: Josenaldo Matos
-image: "/images/blog/retomando-o-projeto.jpg"
+icon: "tabler/IconPlayerPlay"
 ---
 **Colé, Bandicão!!! Bão?**
 

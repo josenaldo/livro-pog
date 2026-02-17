@@ -9,7 +9,7 @@ name: tecnica-psychoding
 parent: tecnicas
 isParent: false
 status: done
-image: "/images/capitulos/default.jpg"
+icon: "tabler/IconBrain"
 
 ---
 **Psychoding** e a tecnica espiritual da POG: voce nao sabe como resolver, entao abre o navegador, entra em transe de busca, copia blocos de codigo de fontes aleatorias e monta uma solucao por intuicao.

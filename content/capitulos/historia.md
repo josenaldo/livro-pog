@@ -9,7 +9,7 @@ name: historia
 # parent:
 isParent: false
 status: done
-image: "/images/capitulos/historia.jpg"
+icon: "tabler/IconCalendar"
 
 ---
 

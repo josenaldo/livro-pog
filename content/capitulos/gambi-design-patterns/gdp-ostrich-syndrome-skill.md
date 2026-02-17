@@ -9,7 +9,7 @@ name: gdp-ostrich-syndrome-skill
 parent: gambi-design-patterns
 isParent: false
 status: done
-image: "/images/capitulos/default.jpg"
+icon: "tabler/IconEyeOff"
 
 ---
 O **Ostrich Syndrome Skill** e a habilidade de enterrar a cabeca tecnicamente: warning, deprecacao e alerta de analise estatica sao tratados como ruido de fundo.

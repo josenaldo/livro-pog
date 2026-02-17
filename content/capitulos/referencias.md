@@ -9,7 +9,7 @@ name: referencias
 # parent:
 isParent: false
 status: backlog
-image: "/images/capitulos/default.jpg"
+icon: "tabler/IconBooks"
 
 ---
 

@@ -9,7 +9,7 @@ name: gambi-design-patterns
 # parent:
 isParent: true
 status: done
-image: "/images/capitulos/gambi-design-patterns.jpg"
+icon: "tabler/IconComponents"
 
 ---
 Depois de entender os principios e dominar as tecnicas, chegamos ao ponto em que a POG finalmente ganha forma visivel no codigo.

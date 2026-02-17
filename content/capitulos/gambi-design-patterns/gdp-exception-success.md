@@ -9,7 +9,7 @@ name: gdp-exception-success
 parent: gambi-design-patterns
 isParent: false
 status: done
-image: "/images/capitulos/default.jpg"
+icon: "tabler/IconAlertTriangle"
 
 ---
 O **Exception Success** é o padrão em que a exceção deixa de representar situação excepcional e passa a ser usada como fluxo normal da aplicação. Em vez de retornar um resultado, o código "comunica" sucesso, validação, autorização e até regra de negócio por `throw`.

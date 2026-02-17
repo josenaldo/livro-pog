@@ -9,7 +9,7 @@ name: o-que-e-pog
 # parent:
 isParent: false
 status: done
-image: "/images/capitulos/o-que-e-pog.jpg"
+icon: "tabler/IconPlugConnected"
 
 ---
 

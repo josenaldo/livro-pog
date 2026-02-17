@@ -9,7 +9,7 @@ name: dimensao-tecnologica
 parent: requisitos
 isParent: false
 status: done
-image: "/images/capitulos/requisitos/dimensao-tecnologica.jpg"
+icon: "tabler/IconCpu"
 
 ---
 

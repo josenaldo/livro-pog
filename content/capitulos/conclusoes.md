@@ -9,7 +9,7 @@ name: conclusoes
 # parent:
 isParent: false
 status: done
-image: "/images/capitulos/default.jpg"
+icon: "tabler/IconChecks"
 
 ---
 Chegamos ao fim deste tomo maldito. Se voce leu ate aqui, ha duas possibilidades:

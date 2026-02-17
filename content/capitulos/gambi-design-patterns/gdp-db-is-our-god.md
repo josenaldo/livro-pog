@@ -9,7 +9,7 @@ name: gdp-db-is-our-god
 parent: gambi-design-patterns
 isParent: false
 status: done
-image: "/images/capitulos/default.jpg"
+icon: "tabler/IconDatabase"
 
 ---
 No **Db Is Our God**, o banco de dados deixa de ser camada de persistencia e vira centro do universo: regra de negocio, orquestracao de fluxo, validacao, transformacao, geracao de relatorio e ate HTML.

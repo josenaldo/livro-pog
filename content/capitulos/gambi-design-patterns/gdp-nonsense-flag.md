@@ -9,7 +9,7 @@ name: gdp-nonsense-flag
 parent: gambi-design-patterns
 isParent: false
 status: done
-image: "/images/capitulos/default.jpg"
+icon: "tabler/IconFlagOff"
 
 ---
 O **Nonsense Flag Nonsense Naming** transforma nomeacao em criptografia artesanal. Variaveis nao explicam intencao; elas insinuam, confundem e exigem mediunidade de quem le.

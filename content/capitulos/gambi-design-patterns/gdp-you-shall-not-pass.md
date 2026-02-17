@@ -9,7 +9,7 @@ name: gdp-you-shall-not-pass
 parent: gambi-design-patterns
 isParent: false
 status: done
-image: "/images/capitulos/default.jpg"
+icon: "tabler/IconShieldOff"
 
 ---
 O **You Shall Not Pass** é o padrão de captura total: tudo é envolvido por `try/catch` amplo, normalmente com `Exception` ou `Throwable`, para garantir que nada "escape".

@@ -9,7 +9,7 @@ name: gdp-reuse-by-copy-and-paste
 parent: gambi-design-patterns
 isParent: false
 status: done
-image: "/images/capitulos/default.jpg"
+icon: "tabler/IconCopy"
 
 ---
 O **RCP Pattern** (Reuse by Copy and Paste) e o coracao industrial da POG. A regra e objetiva: se um trecho resolveu um problema, multiplique ele sem pudor.

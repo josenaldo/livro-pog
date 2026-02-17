@@ -12,7 +12,7 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
 import { useSwipeable } from 'react-swipeable'
 
 import {
-    ContentMainImage,
+    ContentCover,
     ContentTitle,
     ContentNavButton,
     MDXContent,
@@ -76,7 +76,7 @@ const ContentView = ({ content, contentExtraInfo = null }) => {
             }}
             {...handlers}
         >
-            <ContentMainImage image={content.image} alt={content.title} />
+            <ContentCover icon={content.icon} title={content.title} />
 
             <Grid
                 container
@@ -124,7 +124,7 @@ const ContentView = ({ content, contentExtraInfo = null }) => {
                             title={content.title}
                             description={content.description}
                             url={content.url}
-                            image={`${process.env.NEXT_PUBLIC_SITE_URL}${content.image}`}
+                            icon={content.icon}
                         />
                     </Box>
                     {contentExtraInfo}

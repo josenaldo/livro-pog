@@ -9,7 +9,7 @@ name: gdp-commented-code-implementation
 parent: gambi-design-patterns
 isParent: false
 status: done
-image: "/images/capitulos/default.jpg"
+icon: "tabler/IconMessage"
 
 ---
 O **Commented Code Implementation** e o padrao em que codigo morto, codigo desativado e blocos de experimento ficam comentados para sempre no arquivo "por seguranca".

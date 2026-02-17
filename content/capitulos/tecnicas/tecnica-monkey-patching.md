@@ -9,7 +9,7 @@ name: tecnica-monkey-patching
 parent: tecnicas
 isParent: false
 status: done
-image: "/images/capitulos/default.jpg"
+icon: "tabler/IconBrandPython"
 
 ---
 **Monkey Patching** e a tecnica de alterar comportamento de codigo existente em tempo de execucao, geralmente sem mudar a origem oficial do componente. Em linguagem POG: e colocar remendo direto no macaco e mandar ele continuar o show.

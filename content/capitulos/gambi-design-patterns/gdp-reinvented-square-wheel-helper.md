@@ -9,7 +9,7 @@ name: gdp-reinvented-square-wheel-helper
 parent: gambi-design-patterns
 isParent: false
 status: done
-image: "/images/capitulos/default.jpg"
+icon: "tabler/IconSquare"
 
 ---
 O **Reinvented Square Wheel Helper** e o padrao de reimplementar manualmente algo que a linguagem, framework ou biblioteca ja fornece com qualidade melhor.

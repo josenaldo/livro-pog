@@ -9,7 +9,7 @@ name: gdp-que-porra-e-essa
 parent: gambi-design-patterns
 isParent: false
 status: done
-image: "/images/capitulos/default.jpg"
+icon: "tabler/IconMoodConfuzed"
 
 ---
 O **WTF / WTH / QPE** e o padrao do trecho inexplicavel que "funciona" e, justamente por isso, ninguem tem coragem de tocar. Ele nasce de acumulacao de microajustes sem modelo mental claro.

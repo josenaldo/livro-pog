@@ -9,7 +9,7 @@ name: dimensao-temporal
 parent: requisitos
 isParent: false
 status: done
-image: "/images/capitulos/requisitos/dimensao-temporal.jpg"
+icon: "tabler/IconHourglass"
 
 ---
 Se a Dimensão Humana é o motor da desgracença e a Dimensão Tecnológica é a oficina da calamidade, a **Dimensão Temporal** é o relógio amaldiçoado que garante que tudo dê errado no pior instante possível.

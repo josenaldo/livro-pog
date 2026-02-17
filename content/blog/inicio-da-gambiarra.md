@@ -4,7 +4,7 @@ description:
     "Toda grande caminhada começa com um pequeno passo. E toda grande gambiarra começa com um pequeno erro."
 date: 2020-04-17 02:52:00 -0300
 author: Josenaldo Matos
-image: "/images/blog/inicio-da-gambiarra.jpg"
+icon: "tabler/IconRun"
 ---
 **Saudações, ruma de POGramadores!**
 

@@ -9,7 +9,7 @@ name: gdp-controller-confusion
 parent: gambi-design-patterns
 isParent: false
 status: done
-image: "/images/capitulos/default.jpg"
+icon: "tabler/IconQuestionMark"
 
 ---
 O **Controller Confusion** é a evolução natural do MVC cansado. No discurso, o projeto ainda "usa camadas". No código real, o controller virou templo monolítico: valida, transforma, persiste, chama API externa, gera relatório e decide mensagem de tela.

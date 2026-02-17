@@ -9,7 +9,7 @@ name: gdp-forceps
 parent: gambi-design-patterns
 isParent: false
 status: done
-image: "/images/capitulos/default.jpg"
+icon: "tabler/IconTool"
 
 ---
 O **Forceps** e o padrao obstetrico da POG. Ele aparece quando uma variavel nao recebe o valor esperado e, em vez de investigar causa raiz, o POGramador "puxa" o valor correto no ponto de uso.

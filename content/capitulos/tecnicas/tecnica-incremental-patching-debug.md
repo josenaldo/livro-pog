@@ -9,7 +9,7 @@ name: tecnica-incremental-patching-debug
 parent: tecnicas
 isParent: false
 status: done
-image: "/images/capitulos/default.jpg"
+icon: "tabler/IconBug"
 
 ---
 A tecnica de **Incremental Patching Debug** resolve bug sem investigar causa raiz: aplica patch pequeno, testa, aplica outro patch, testa de novo, e repete ate o erro "sumir".

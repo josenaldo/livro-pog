@@ -9,7 +9,7 @@ name: introducao
 # parent:
 isParent: false
 status: done
-image: "/images/capitulos/introducao.jpg"
+icon: "tabler/IconPresentation"
 
 ---
 

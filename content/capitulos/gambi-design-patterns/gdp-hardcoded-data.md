@@ -9,7 +9,7 @@ name: gdp-hardcoded-data
 parent: gambi-design-patterns
 isParent: false
 status: done
-image: "/images/capitulos/default.jpg"
+icon: "tabler/IconLock"
 
 ---
 No **Hardcoded Data**, dado de configuracao, regra de negocio e detalhe de ambiente sao colocados diretamente no codigo-fonte. O mantra e simples: "se esta no codigo, eu sei onde esta".

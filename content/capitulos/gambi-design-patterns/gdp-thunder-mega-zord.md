@@ -9,7 +9,7 @@ name: gdp-thunder-mega-zord
 parent: gambi-design-patterns
 isParent: false
 status: done
-image: "/images/capitulos/default.jpg"
+icon: "tabler/IconBolt"
 
 ---
 O **Thunder Mega Zord** e a fusao entre duas potencias da gambiarra: metodo gigantesco + contrato opaco com `Map` de entrada e `Object[]` de saida. E a tempestade perfeita do acoplamento.

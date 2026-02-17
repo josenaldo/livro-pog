@@ -9,7 +9,7 @@ name: tecnicas
 # parent:
 isParent: true
 status: done
-image: "/images/capitulos/tecnicas.jpg"
+icon: "tabler/IconRefresh"
 
 ---
 Conhecer os principios da POG e importante. Mas principio sem execucao e so frase de caneca corporativa.

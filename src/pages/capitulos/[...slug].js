@@ -232,7 +232,7 @@ const PaginaCapitulo = ({ chapter, referencesData }) => {
                     : chapter.title
             }
             description={chapter.description}
-            image={chapter?.image?.url || null}
+            icon={chapter?.icon || null}
             url={chapter.url}
         >
             <Container>

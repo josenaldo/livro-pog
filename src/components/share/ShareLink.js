@@ -4,7 +4,7 @@ import { Box, IconButton } from '@mui/material'
 import ShareIcon from '@mui/icons-material/Share'
 import { ShareDialog } from '@pog/components/share'
 
-const ShareLink = ({ title, description, url, image, color = 'secondary' }) => {
+const ShareLink = ({ title, description, url, icon, color = 'secondary' }) => {
     const [open, setOpen] = React.useState(false)
     const [isNativeShare, setNativeShare] = React.useState(false)
 
@@ -25,17 +25,24 @@ const ShareLink = ({ title, description, url, image, color = 'secondary' }) => {
             url: url,
         }
 
-        if (image) {
-            const blob = await fetch(image).then((r) => r.blob())
-            const ext = blob.type.split('/')[1]
-            const files = [
-                new File([blob], `file.${ext}`, {
-                    type: blob.type,
-                }),
-            ]
+        // Se tiver ícone, construir URL da OG image
+        if (icon) {
+            const imageUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/api/og?icon=${encodeURIComponent(icon)}&title=${encodeURIComponent(title)}`
+            
+            try {
+                const blob = await fetch(imageUrl).then((r) => r.blob())
+                const ext = blob.type.split('/')[1]
+                const files = [
+                    new File([blob], `file.${ext}`, {
+                        type: blob.type,
+                    }),
+                ]
 
-            if (navigator.canShare && navigator.canShare({ files })) {
-                data.files = files
+                if (navigator.canShare && navigator.canShare({ files })) {
+                    data.files = files
+                }
+            } catch (error) {
+                console.warn('Failed to fetch OG image for sharing:', error)
             }
         }
 

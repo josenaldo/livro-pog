@@ -9,7 +9,7 @@ name: gdp-mega-zord
 parent: gambi-design-patterns
 isParent: false
 status: done
-image: "/images/capitulos/default.jpg"
+icon: "tabler/IconRobot"
 
 ---
 O **Mega Zord** e o padrao da superfuncao: um metodo gigante que concentra multiplas responsabilidades para "facilitar manutencao". Em vez de modularizar, funde tudo em uma unidade colossal.

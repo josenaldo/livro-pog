@@ -9,7 +9,7 @@ name: gdp-human-factor
 parent: gambi-design-patterns
 isParent: false
 status: done
-image: "/images/capitulos/default.jpg"
+icon: "tabler/IconUserHeart"
 
 ---
 O **Sleeper Human Factor** aplica atraso artificial para simular processamento, sincronizar corridas acidentais ou "melhorar percepcao" do usuario. O instrumento ritual e `sleep`.

@@ -26,9 +26,9 @@ const Post = defineDocumentType(() => ({
             description: 'The author of the post',
             required: true,
         },
-        image: {
+        icon: {
             type: 'string',
-            description: 'The image of the post',
+            description: 'The icon of the post (e.g., "tabler/IconRun")',
             required: true,
         },
     },
@@ -97,9 +97,9 @@ const Chapter = defineDocumentType(() => ({
             description: 'Status of the chapter',
             required: true,
         },
-        image: {
+        icon: {
             type: 'string',
-            description: 'The image of the post',
+            description: 'The icon of the chapter (e.g., "tabler/IconBooks")',
             required: true,
         },
     },

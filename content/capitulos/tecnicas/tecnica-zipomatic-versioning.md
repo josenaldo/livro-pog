@@ -9,7 +9,7 @@ name: tecnica-zipomatic-versioning
 parent: tecnicas
 isParent: false
 status: done
-image: "/images/capitulos/default.jpg"
+icon: "tabler/IconZip"
 
 ---
 O **Zipomatic Versioning** e a arte de fazer controle de versao sem ferramenta de versao. Cada entrega gera um arquivo comprimido com nome criativo, normalmente algo entre `Projeto_FINAL.zip` e `Projeto_FINAL_AGORA_VAI_2.zip`.

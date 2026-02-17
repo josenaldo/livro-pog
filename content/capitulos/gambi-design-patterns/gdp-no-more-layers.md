@@ -9,7 +9,7 @@ name: gdp-no-more-layers
 parent: gambi-design-patterns
 isParent: false
 status: done
-image: "/images/capitulos/default.jpg"
+icon: "tabler/IconLayersOff"
 
 ---
 No **No More Layers**, arquitetura em camadas e considerada burocracia. Tudo acontece no mesmo lugar, normalmente na tela/controlador: validacao, regra de negocio, acesso a dados e formatacao de resposta.
