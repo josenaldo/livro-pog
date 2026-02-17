@@ -1,11 +1,20 @@
 import { Box, Container } from '@mui/material'
 
 import { ContentTitle, ContentCard } from '@pog/components/content'
-import { getSortedChapters } from '@pog/data'
+import { getChaptersByNames } from '@pog/data'
 import { getOgImageUrl } from '@pog/lib'
 
+const FEATURED_CHAPTERS = [
+    'o-que-e-pog',
+    'historia',
+    'requisitos',
+    'principios',
+    'tecnicas',
+    'gambi-design-patterns',
+]
+
 const Features = () => {
-    const chapters = getSortedChapters().filter((c) => c.isParent)
+    const chapters = getChaptersByNames(FEATURED_CHAPTERS)
 
     return (
         <Box

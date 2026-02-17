@@ -70,9 +70,16 @@ const getChapterData = (slug) => {
     return chapter
 }
 
+const getChaptersByNames = (names = []) => {
+    return names
+        .map((name) => allChapters.find((c) => c.name === name))
+        .filter(Boolean)
+}
+
 export {
     getAllChapters,
     getSortedChapters,
     getAllChaptersPaths,
     getChapterData,
+    getChaptersByNames,
 }

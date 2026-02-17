@@ -3,6 +3,7 @@ export {
     getChapterData,
     getSortedChapters,
     getAllChaptersPaths,
+    getChaptersByNames,
 } from './Chapters'
 
 export {
