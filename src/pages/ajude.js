@@ -140,8 +140,8 @@ const AjudePage = () => {
                                                 <Image
                                                     src="/images/ajude/pix.png"
                                                     alt="QR Code do Pix"
-                                                    width="300"
-                                                    height="300"
+                                                    width={300}
+                                                    height={300}
                                                 />
                                             </CardMedia>
                                             <CardContent
@@ -169,8 +169,8 @@ const AjudePage = () => {
                                                 <Image
                                                     src="/images/ajude/picpay.png"
                                                     alt="QR Code do PicPay"
-                                                    width="300"
-                                                    height="300"
+                                                    width={300}
+                                                    height={300}
                                                 />
                                             </CardMedia>
                                             <CardContent
@@ -317,7 +317,7 @@ const LinkItem = ({ href, children }) => {
         <Box component="li">
             <Typography variant="body1">
                 <Link href={href} target="_blank" rel="noopener noreferrer">
-                    <a>{children}</a>
+                    {children}
                 </Link>
             </Typography>
         </Box>

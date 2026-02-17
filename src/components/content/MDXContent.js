@@ -27,7 +27,7 @@ const bibFile = `${libDir}/library.bib`
 const styleFile = `${libDir}/abnt.csl`
 const localeFile = `${libDir}/locales-pt-PT.xml`
 
-const MDXContent = ({ content }) => {
+const MDXContent = ({ content, html = null }) => {
     const remarkPlugins = [
         remarkParse,
         remarkGfm,
@@ -60,6 +60,25 @@ const MDXContent = ({ content }) => {
         pre: Code,
         hr: Divider,
         blockquote: Blockquote,
+    }
+
+    if (html) {
+        return (
+            <Box
+                sx={{
+                    '& #refs': {
+                        marginBlockStart: '1em',
+                        marginBlockEnd: '1em',
+                        paddingInlineStart: '40px',
+                    },
+                    '& img': {
+                        maxWidth: '100%',
+                        height: 'auto',
+                    },
+                }}
+                dangerouslySetInnerHTML={{ __html: html }}
+            />
+        )
     }
 
     return (

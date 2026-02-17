@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 
 const runtimeCaching = require('next-pwa/cache')
-const { withContentlayer } = require('next-contentlayer')
+const { withContentlayer } = require('next-contentlayer2')
 
 const withPWA = require('next-pwa')({
     dest: 'public',
@@ -12,8 +12,8 @@ const withPWA = require('next-pwa')({
 
 const nextConfig = {
     env: {
-        NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL,
-        NEXT_PUBLIC_GA_ID: process.env.NEXT_PUBLIC_GA_ID,
+        NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL || '',
+        NEXT_PUBLIC_GA_ID: process.env.NEXT_PUBLIC_GA_ID || '',
     },
     images: {
         domains: ['localhost', 'livropog.com.br'],

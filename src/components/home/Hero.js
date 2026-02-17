@@ -61,26 +61,36 @@ const Hero = () => {
                                 xl: 'row',
                             },
                             gap: 2,
+                            width: '100%',
+                            maxWidth: { xs: 320, md: 520 },
                         }}
                     >
-                        <Link href="/capitulos">
-                            <Button
-                                variant="contained"
-                                color="primary"
-                                fullWidth
-                            >
-                                Começar a ler
-                            </Button>
-                        </Link>
-                        <Link href="/ajude">
-                            <Button
-                                variant="contained"
-                                color="secondary"
-                                fullWidth
-                            >
-                                Ajude esse projeto
-                            </Button>
-                        </Link>
+                        <Button
+                            component={Link}
+                            href="/capitulos"
+                            variant="contained"
+                            color="primary"
+                            fullWidth
+                            sx={{
+                                justifyContent: 'center',
+                                textAlign: 'center',
+                            }}
+                        >
+                            Começar a ler
+                        </Button>
+                        <Button
+                            component={Link}
+                            href="/ajude"
+                            variant="contained"
+                            color="secondary"
+                            fullWidth
+                            sx={{
+                                justifyContent: 'center',
+                                textAlign: 'center',
+                            }}
+                        >
+                            Ajude esse projeto
+                        </Button>
                     </Box>
                 </Box>
             </Container>

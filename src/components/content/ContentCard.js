@@ -31,41 +31,56 @@ const ContentCard = ({
                 backgroundColor: 'background.paper',
             }}
         >
-            <Link href={url}>
-                <CardActionArea
+            <CardActionArea
+                component={Link}
+                href={url}
+                style={{
+                    textDecoration: 'none',
+                    color: 'inherit',
+                }}
+                sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'stretch',
+                    justifyContent: 'stretch',
+                    height: '100%',
+                    gap: 1,
+                    '&, &:visited, &:hover, &:active': {
+                        textDecoration: 'none',
+                        color: 'inherit',
+                    },
+                    '& .MuiTypography-root': {
+                        textDecoration: 'none',
+                    },
+                }}
+            >
+                <CardMedia
+                    sx={{
+                        position: 'relative',
+                    }}
+                >
+                    <ContentCardImage image={image} alt={title} />
+                </CardMedia>
+                <CardContent
                     sx={{
                         display: 'flex',
                         flexDirection: 'column',
-                        alignItems: 'stretch',
-                        justifyContent: 'stretch',
-                        height: '100%',
-                        gap: 1,
+                        gap: 2,
+                        flexGrow: 1,
                     }}
                 >
-                    <CardMedia
-                        sx={{
-                            position: 'relative',
-                        }}
+                    <Typography component="h3" variant="h4" color="primary">
+                        {title}
+                    </Typography>
+                    <Typography
+                        component="p"
+                        variant="body2"
+                        color="text.primary"
                     >
-                        <ContentCardImage image={image} alt={title} />
-                    </CardMedia>
-                    <CardContent
-                        sx={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                            gap: 2,
-                            flexGrow: 1,
-                        }}
-                    >
-                        <Typography component="h3" variant="h4" color="primary">
-                            {title}
-                        </Typography>
-                        <Typography component="p" variant="body2">
-                            {text}
-                        </Typography>
-                    </CardContent>
-                </CardActionArea>
-            </Link>
+                        {text}
+                    </Typography>
+                </CardContent>
+            </CardActionArea>
             <CardActions
                 sx={{
                     display: 'flex',
@@ -75,11 +90,13 @@ const ContentCard = ({
                     p: 2,
                 }}
             >
-                <Link href={url}>
-                    <Button component="a" endIcon={<ArrowRightAltIcon />}>
-                        {moreLinkText}
-                    </Button>
-                </Link>
+                <Button
+                    component={Link}
+                    href={url}
+                    endIcon={<ArrowRightAltIcon />}
+                >
+                    {moreLinkText}
+                </Button>
                 <ShareLink
                     title={title}
                     description={text}

@@ -131,7 +131,10 @@ const ContentView = ({ content, contentExtraInfo = null }) => {
 
                     <Divider />
 
-                    <MDXContent content={content.body.raw} />
+                    <MDXContent
+                        content={content.body.raw}
+                        html={content.body.html}
+                    />
                 </Grid>
                 <Grid xs={1}>
                     <ContentNavButton

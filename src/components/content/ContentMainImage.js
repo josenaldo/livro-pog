@@ -21,8 +21,8 @@ const ContentMainImage = ({ image, alt, aspectRatio = '16/9' }) => {
                     <Image
                         src={contentImage}
                         alt={alt}
-                        layout="fill"
-                        objectFit="cover"
+                        fill
+                        style={{ objectFit: 'cover' }}
                         priority
                     />
                 </Box>

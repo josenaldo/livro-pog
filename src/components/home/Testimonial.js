@@ -50,8 +50,8 @@ const Testimonial = () => {
                         <Image
                             src="/images/avatar/author.png"
                             alt="Autor do livro"
-                            width="80"
-                            height="80"
+                            width={80}
+                            height={80}
                         />
                         <Box
                             sx={{

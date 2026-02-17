@@ -1,9 +1,7 @@
 import {
     defineDocumentType,
     makeSource,
-    defineNestedType,
-} from 'contentlayer/source-files'
-
+} from 'contentlayer2/source-files'
 const Post = defineDocumentType(() => ({
     name: 'Post',
     filePathPattern: `blog/**/*.md`,

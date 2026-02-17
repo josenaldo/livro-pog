@@ -4,15 +4,14 @@ import { Box, Typography } from '@mui/material'
 
 const ResponsiveImage = (props) => {
     const alt = props.alt?.replace(/ *\{[^)]*\} */g, '')
-    const metaWidth = props.alt.match(/{([^}]+)x/)
-    const metaHeight = props.alt.match(/x([^}]+)}/)
-    const width = metaWidth ? metaWidth[1] : '1000'
-    const height = metaHeight ? metaHeight[1] : '500'
+    const metaWidth = props.alt?.match(/{([^}]+)x/)
+    const metaHeight = props.alt?.match(/x([^}]+)}/)
+    const width = metaWidth ? Number(metaWidth[1]) : 1000
+    const height = metaHeight ? Number(metaHeight[1]) : 500
     const isPriority = props.alt?.toLowerCase().includes('{priority}')
     const hasCaption = props.alt?.toLowerCase().includes('{caption:')
     const caption = props.alt?.match(/{caption: (.*?)}/)?.pop()
 
-    console.log('IMAGES:', props)
     return (
         <Box
             sx={{
@@ -40,8 +39,11 @@ const ResponsiveImage = (props) => {
                         className="postImg"
                         alt={alt}
                         priority={isPriority}
-                        layout="responsive"
-                        loading="lazy"
+                        loading={isPriority ? undefined : 'lazy'}
+                        style={{
+                            width: '100%',
+                            height: 'auto',
+                        }}
                     />
                 </a>
             </Box>

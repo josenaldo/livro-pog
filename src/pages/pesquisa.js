@@ -171,65 +171,61 @@ const ContentResult = ({ result }) => {
                 flexDirection: 'row',
             }}
         >
-            <Link href={result.url}>
-                <CardActionArea
+            <CardActionArea
+                component={Link}
+                href={result.url}
+                sx={{
+                    display: 'grid',
+                    gridTemplateColumns: {
+                        xs: '1fr 2fr',
+                        sm: '1fr 4fr',
+                        md: '1fr 6fr',
+                        lg: '1fr 8fr',
+                        xl: '1fr 8fr',
+                    },
+                    alignItems: 'flex-start',
+                }}
+            >
+                <ContentMainImage
+                    image={result.image}
+                    alt={result.title}
+                    aspectRatio="1/1"
+                />
+                <CardContent
                     sx={{
-                        display: 'grid',
-                        gridTemplateColumns: {
-                            xs: '1fr 2fr',
-                            sm: '1fr 4fr',
-                            md: '1fr 6fr',
-                            lg: '1fr 8fr',
-                            xl: '1fr 8fr',
-                        },
+                        display: 'flex',
+                        flexDirection: 'column',
                         alignItems: 'flex-start',
+                        justifyContent: 'space-between',
+                        gap: 2,
+                        pt: 2,
+                        pl: 2,
+                        pb: 2,
+                        pr: 1,
                     }}
                 >
-                    <ContentMainImage
-                        image={result.image}
-                        alt={result.title}
-                        aspectRatio="1/1"
-                    />
-                    <CardContent
+                    <Box
                         sx={{
                             display: 'flex',
-                            flexDirection: 'column',
-                            alignItems: 'flex-start',
-                            justifyContent: 'space-between',
-                            gap: 2,
-                            pt: 2,
-                            pl: 2,
-                            pb: 2,
-                            pr: 1,
+                            flexDirection: 'row',
+                            gap: 1,
+                            alignItems: 'center',
                         }}
                     >
-                        <Box
-                            sx={{
-                                display: 'flex',
-                                flexDirection: 'row',
-                                gap: 1,
-                                alignItems: 'center',
-                            }}
-                        >
-                            <Typography
-                                variant="h6"
-                                component="h2"
-                                color="primary"
-                            >
-                                {result.title}
-                            </Typography>
-                            <Chip
-                                label={result.type}
-                                color="secondary"
-                                size="small"
-                            />
-                        </Box>
-                        <Typography variant="caption" component="p">
-                            {result.description}
+                        <Typography variant="h6" component="h2" color="primary">
+                            {result.title}
                         </Typography>
-                    </CardContent>
-                </CardActionArea>
-            </Link>
+                        <Chip
+                            label={result.type}
+                            color="secondary"
+                            size="small"
+                        />
+                    </Box>
+                    <Typography variant="caption" component="p">
+                        {result.description}
+                    </Typography>
+                </CardContent>
+            </CardActionArea>
             <Box sx={{ pt: 2, pr: 2, pl: 0 }}>
                 <ShareLink
                     title={result.title}

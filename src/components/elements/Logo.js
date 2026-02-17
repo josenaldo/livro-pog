@@ -8,22 +8,24 @@ const Logo = ({ textColor = 'text.primary', logoColor }) => {
 
     const logoStyle = logoColor ? logoColor : colorMode
     return (
-        <Link href="/" passHref>
+        <Link href="/"
+            style={{
+                textDecoration: 'none',
+                color: 'inherit',
+            }}
+        >
             <Box
-                component="a"
-                sx={{
-                    display: 'flex',
-                    flexDirection: 'row',
-                    alignItems: 'center',
-                    textDecoration: 'none',
-                    color: 'inherit',
-                }}
+            sx={{
+                display: 'flex',
+                flexDirection: 'row',
+                alignItems: 'center',
+            }}
             >
                 <Image
                     src={`/images/logo/brand-${logoStyle}.png`}
                     alt="Logo do livro Programação Orientada a Gambiarra"
-                    width="48px"
-                    height="48px"
+                    width={48}
+                    height={48}
                 />
                 <Typography
                     color={textColor}

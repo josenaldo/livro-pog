@@ -2,6 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import Script from 'next/script'
 import { useRouter } from 'next/router'
+import '@pog/styles/globals.css'
 
 import { DefaultSeo } from 'next-seo'
 import { SeoConfig } from '@pog/config'

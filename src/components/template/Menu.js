@@ -178,14 +178,12 @@ const Menu = () => {
 
 const ListItemLink = ({ text, href, icon }) => {
     return (
-        <Link href={href}>
-            <ListItem disablePadding>
-                <MuiListItemButton>
-                    <ListItemIcon>{icon}</ListItemIcon>
-                    <ListItemText primary={text} />
-                </MuiListItemButton>
-            </ListItem>
-        </Link>
+        <ListItem disablePadding>
+            <MuiListItemButton component={Link} href={href}>
+                <ListItemIcon>{icon}</ListItemIcon>
+                <ListItemText primary={text} />
+            </MuiListItemButton>
+        </ListItem>
     )
 }
 
