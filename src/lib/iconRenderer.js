@@ -1,6 +1,6 @@
 /**
  * Icon to SVG Renderer
- * 
+ *
  * Renders Tabler Icon components to SVG strings for OG image generation.
  */
 
@@ -30,20 +30,20 @@ function getBaseImageDataUrl() {
  */
 export function renderIconToSVG(iconString, size = 200, strokeWidth = 1.5, color = '#1976d2') {
     const IconComponent = getIcon(iconString)
-    
+
     if (!IconComponent) {
         return null
     }
-    
+
     try {
         const svgString = renderToStaticMarkup(
-            <IconComponent 
-                size={size} 
+            <IconComponent
+                size={size}
                 stroke={strokeWidth}
                 color={color}
             />
         )
-        
+
         return svgString
     } catch (error) {
         console.error(`Failed to render icon ${iconString}:`, error)
@@ -60,8 +60,8 @@ export function renderIconToSVG(iconString, size = 200, strokeWidth = 1.5, color
 export function createOGImageSVG(iconString, title = '') {
     const width = 1200
     const height = 630
-    const iconSize = 300
-    const iconColor = 'rgba(255,255,255,0.85)'
+    const iconSize = 400
+    const iconColor = 'rgba(255,255,255,0.8)'
 
     // Get icon SVG content (paths only, without the outer <svg> wrapper)
     const IconComponent = getIcon(iconString)
@@ -90,12 +90,9 @@ export function createOGImageSVG(iconString, title = '') {
 
     const svg = `<svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+    <!-- drop-shadow equivalente ao CSS: drop-shadow(0px 4px 8px rgba(0,0,0,0.3)) -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="black" flood-opacity="0.3"/>
     </filter>
   </defs>
 
@@ -107,7 +104,7 @@ export function createOGImageSVG(iconString, title = '') {
 
   <!-- Icon (centered, white with glow) -->
   ${iconContent ? `
-  <g transform="translate(${iconX}, ${iconY})" filter="url(#glow)">
+  <g transform="translate(${iconX}, ${iconY})" filter="url(#shadow)">
     <svg width="${iconSize}" height="${iconSize}" viewBox="0 0 24 24"
          fill="none"
          stroke="${iconColor}"
