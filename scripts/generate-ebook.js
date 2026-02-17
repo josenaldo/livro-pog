@@ -51,10 +51,12 @@ function getChapters(dir = CAPITULOS_DIR) {
   return chapters;
 }
 
-// Fix image paths for Pandoc (relative to public/)
+// Fix image paths for Pandoc
+// Images are in public/images/, markdown is in public/downloads/
+// So from downloads/livro-pog-combined.md, images are at ../images/
 function fixImagePaths(content) {
-  // Convert /images/... to ./images/... for Pandoc
-  return content.replace(/!\[([^\]]*)\]\(\/images\//g, '![$1](./images/');
+  // Convert /images/... to ../images/... (relative path from downloads/ to images/)
+  return content.replace(/!\[([^\]]*)\]\(\/images\//g, '![$1](../images/');
 }
 
 // Extract references from content (without removing)

@@ -24,10 +24,11 @@ if [ "$FORMAT" == "pdf" ] || [ "$FORMAT" == "all" ]; then
     echo "Generating PDF..."
     docker run --rm \
         -v "$(pwd)/public:/workspace" \
+        -w /workspace/downloads \
         -e LANG=pt_BR.UTF-8 \
         $IMAGE_NAME \
-        pandoc /workspace/downloads/livro-pog-combined.md \
-        -o /workspace/downloads/livro-pog.pdf \
+        pandoc livro-pog-combined.md \
+        -o livro-pog.pdf \
         --pdf-engine=xelatex \
         --toc \
         --toc-depth=2 \
@@ -49,16 +50,17 @@ if [ "$FORMAT" == "epub" ] || [ "$FORMAT" == "all" ]; then
     echo "Generating EPUB..."
     docker run --rm \
         -v "$(pwd)/public:/workspace" \
+        -w /workspace/downloads \
         -e LANG=pt_BR.UTF-8 \
         $IMAGE_NAME \
-        pandoc /workspace/downloads/livro-pog-combined.md \
-        -o /workspace/downloads/livro-pog.epub \
+        pandoc livro-pog-combined.md \
+        -o livro-pog.epub \
         --toc \
         --toc-depth=2 \
         --number-sections \
-        --epub-cover-image=/workspace/images/cover/capa.jpg \
-        --epub-embed-font=/workspace/styles/ebook.css \
-        --css=/workspace/styles/ebook.css \
+        --epub-cover-image=../images/cover/capa.jpg \
+        --epub-embed-font=../styles/ebook.css \
+        --css=../styles/ebook.css \
         --metadata title="Programação Orientada a Gambiarra" \
         --metadata author="Josenaldo Matos Filho" \
         --metadata lang=pt-BR
