@@ -1,6 +1,6 @@
 ---
 name: site-content-refresh
-description: Revisão e atualização de conteúdo antigo (blog, experiências e portfólio) com foco em clareza, consistência e manutenção do site (Next export estático + Contentlayer). Use esta skill quando o usuário pedir para revisar peças antigas, padronizar textos, ajustar títulos/descrições, melhorar navegação e rodar validações do build.
+description: Revisão e atualização de conteúdo antigo (blog e capítulos do livro) com foco em clareza, consistência e manutenção do site (Next.js + Contentlayer). Use esta skill quando o usuário pedir para revisar peças antigas, padronizar textos, ajustar títulos/descrições, melhorar navegação e rodar validações do build.
 ---
 
 # Skill: Site Content Refresh
@@ -15,14 +15,14 @@ Workflow de “manutenção editorial”: atualizar conteúdo sem reescrever à 
 ## Quando usar (gatilhos)
 
 - “Estou revisando posts antigos e preciso padronizar.”
-- “Quero revisar experiências/projetos antigos do site.”
+- “Quero revisar capítulos/posts antigos do site.”
 - “Quero melhorar clareza, cortar gordura e fortalecer argumentos.”
 - “Quero garantir que o build continue passando.”
 
 ## Exemplos de prompt
 
 - "Revise meus posts antigos de arquitetura: aponte o que cortar, o que expandir e o que reorganizar."
-- "Revise as experiências em `content/experiences/` para ficarem mais consistentes e objetivas."
+- "Revise os capítulos em `content/capitulos/` para ficarem mais consistentes e objetivos."
 
 ## Inputs (o que pedir ao usuário)
 
@@ -78,7 +78,7 @@ Opcional:
 ## Saída esperada
 
 - Lista de itens revisados com “mudanças feitas” + “pendências”.
-- Patches aplicados nos arquivos do `content/**`.
+- Patches aplicados nos arquivos do `content/blog/**` e/ou `content/capitulos/**`.
 
 ## Checklist
 

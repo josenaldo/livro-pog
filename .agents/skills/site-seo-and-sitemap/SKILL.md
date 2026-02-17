@@ -1,11 +1,11 @@
 ---
 name: site-seo-and-sitemap
-description: Maintain SEO metadata and sitemap/robots generation for this Next.js static site. Use when changing titles/descriptions/OG images, canonical URLs, NEXT_PUBLIC_SITE_URL, next-seo configuration, or when adding sitemap.xml/robots.txt via next-sitemap.
+description: Maintain SEO metadata and sitemap/robots generation for this Next.js site. Use when changing titles/descriptions/OG images, canonical URLs, NEXT_PUBLIC_SITE_URL, next-seo configuration, or when adding sitemap.xml/robots.txt via next-sitemap.
 ---
 
 # site-seo-and-sitemap
 
-Guia prático para manter SEO consistente em build estático.
+Guia prático para manter SEO consistente no build e em produção.
 
 ## Objetivo
 
@@ -35,7 +35,7 @@ Guia prático para manter SEO consistente em build estático.
 
 - `NEXT_PUBLIC_SITE_URL` deve existir no build (local e CI). Ele alimenta `SeoConfig` e OG images.
 - Canonical e OG devem ser URLs absolutas em produção.
-- Para site exportado, arquivos gerados (`sitemap.xml`, `robots.txt`) precisam cair em `public/` (para serem exportados) ou no diretório final publicado.
+- Arquivos gerados (`sitemap.xml`, `robots.txt`) precisam cair em `public/` para serem servidos em produção.
 
 ### Padrões recomendados
 
@@ -78,10 +78,3 @@ Guia prático para manter SEO consistente em build estático.
 
 - `web-design-guidelines` (skill instalada)
 
-Describe when this skill should be used.
-
-## Instructions
-
-1. First step
-2. Second step
-3. Additional steps as needed

@@ -1,6 +1,6 @@
 ---
 name: site-frontmatter-qc
-description: Checagem e padronização de frontmatter/metadata para arquivos Markdown em `content/**` conforme Contentlayer2. Use esta skill quando o usuário pedir para padronizar campos obrigatórios, corrigir erros de build do Contentlayer, ajustar categorias/imagens/URLs, ou fazer QA de conteúdo antes do build/export.
+description: Checagem e padronização de frontmatter/metadata para arquivos Markdown em `content/**` conforme o schema real deste repositório (Contentlayer). Use esta skill quando o usuário pedir para padronizar campos obrigatórios, corrigir erros de build do Contentlayer, ajustar imagens/URLs, ou fazer QA de conteúdo antes do build.
 ---
 
 # Skill: Site Frontmatter QC
@@ -55,13 +55,10 @@ Evita erros silenciosos e quebras no build: Contentlayer exige campos obrigatór
 
 Conforme `contentlayer.config.js`:
 
-- Blog (`content/blog/**/*.md`) → `title`, `description`, `date`, `author`, `category`, `image`
-- Pages (`content/pages/**/*.md`) → `title`, `description`, `image`
-- Projects (`content/projects/**/*.md`) → `id` (number), `title`, `description`, `projectUrl`, `pin` (boolean), `image`
-- Experiences (`content/experiences/**/*.md`) → `id` (number), `title`, `company`, `location`, `period`, `show` (boolean)
-- Testimonials (`content/testimonials/**/*.md`) → `name`, `position`, `testimonial`, `image`
-- Skills (`content/skills/**/*.md`) → `name`, `level`, `firstContact` (number)
-- Courses (`content/courses/**/*.md`) → `name`, `institution`, `completionDate` (date), `workload` (number), `courseLink`, `certificateLink`
+- Post (`content/blog/**/*.md`) → `title`, `description`, `date`, `author`, `image`
+- Chapter (`content/capitulos/**/*.md`) → `title`, `description`, `date`, `sentence`, `order_number`, `sentence_author`, `name`, `status`, `image`
+  - Opcionais: `parent` (default `null`), `isParent` (default `false`)
+  - `status`: `backlog` | `progress` | `review` | `done`
 
 1) Checar presença e tipo
 

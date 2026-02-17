@@ -49,3 +49,9 @@ public/workbox-eac1af49.js.map
 public/sitemap.xml
 public/sitemap-*.xml
 public/robots.txt
+
+# Agent tooling (Skills CLI / editors)
+.agent/
+.claude/
+.cursor/
+.junie/

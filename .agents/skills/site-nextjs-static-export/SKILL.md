@@ -1,22 +1,22 @@
 ---
 name: site-nextjs-static-export
-description: "Build, troubleshoot, and modernize this repository's Next.js static export pipeline (output: 'export') and GitHub Pages deploy workflow. Use when the user mentions GitHub Pages, static export, the out/ folder, next build/export errors, basePath/assetPrefix issues, or CI workflow fixes."
+description: "Build, troubleshoot, and modernize this repository's Next.js build pipeline (Next.js + Contentlayer + next-sitemap + next-pwa). Use when the user mentions build errors, dependency upgrades, env vars (NEXT_PUBLIC_SITE_URL), sitemap/robots generation, PWA issues, or deployment mismatches."
 ---
 
 # site-nextjs-static-export
 
-Workflow and guardrails for building and deploying this repo as a static Next.js site.
+Workflow and guardrails for building and deploying this repo (Vercel-style Next.js app).
 
 ## Objetivo
 
-- Produzir um build estável (local e CI) para `output: 'export'`.
-- Garantir que o workflow de deploy publique corretamente o diretório `out/`.
+- Produzir um build estável (local e CI) via `npm run build`.
+- Garantir que variáveis de ambiente e geração de artefatos (ex.: sitemap) estejam consistentes.
 
 ## Quando usar (gatilhos)
 
-- “O build no GitHub Actions falhou”, “GitHub Pages não atualiza”, “404 em assets”.
-- “Quero exportar o site”, “preciso do `out/`”, “Next.js export/static”.
-- Ajustes em `.github/workflows/nextjs.yml`, `next.config.js`, cache do Actions.
+- “O build falhou”, “subiu mas está com SEO errado”, “sitemap não aparece”, “PWA quebrou”.
+- “Vou modernizar Next.js/deps e preciso de um checklist de riscos.”
+- Ajustes em `next.config.js`, `next-sitemap.config.js`, `.env.*`, pipeline de CI (se existir).
 
 ## Exemplos de prompt
 
@@ -26,16 +26,15 @@ Workflow and guardrails for building and deploying this repo as a static Next.js
 
 ## Inputs (o que pedir ao usuário)
 
-- Onde vai rodar: GitHub Pages (user page vs project page) ou outro host estático.
-- URL pública final (ex.: `https://josenaldo.github.io`) para `NEXT_PUBLIC_SITE_URL`.
-- Erro completo do Actions (log) ou comando local que falhou.
+- Onde vai rodar: Vercel (atual) ou outro host.
+- URL pública final (ex.: `https://livropog.com.br`) para `NEXT_PUBLIC_SITE_URL`.
+- Erro completo do CI/log ou comando local que falhou.
 
 ## Princípios e regras
 
 ### Crítico (não negociar)
 
-- Para este repo, o build deve considerar Contentlayer: prefira `npm run build` (ver `package.json`) em vez de `next build` direto.
-- Para deploy estático, publique o `out/` gerado pelo Next (`output: 'export'`).
+- Para este repo, o build deve considerar Contentlayer e postbuild do sitemap: prefira `npm run build` (ver `package.json`) em vez de `next build` direto.
 - Qualquer link/canonical/OG que use `NEXT_PUBLIC_SITE_URL` precisa de valor correto no CI.
 
 ### Padrões recomendados
@@ -45,11 +44,7 @@ Workflow and guardrails for building and deploying this repo as a static Next.js
 
 ## Decision Tree
 
-1) O deploy é “user page” (`username.github.io`) ou “project page” (`username.github.io/repo`)?
-- User page → normalmente `basePath` vazio.
-- Project page → pode exigir `basePath` e ajuste de links/rotas.
-
-2) O erro é no CI ou só em produção?
+1) O erro é no CI ou só em produção?
 - CI → focar em Node/cache/commands/env vars.
 - Produção → focar em `NEXT_PUBLIC_SITE_URL`, caminhos absolutos, sitemap/robots, assets.
 
@@ -57,15 +52,15 @@ Workflow and guardrails for building and deploying this repo as a static Next.js
 
 1) Reproduzir localmente
 - Rodar `npm ci` (ou `npm install`) e `npm run build`.
-- Confirmar que existe `out/` após o build.
+- Confirmar que o build termina sem erros.
 
-2) Confirmar invariantes do Next export
-- `next.config.js` deve manter `output: 'export'`.
-- `images.unoptimized: true` faz sentido para export estático.
+2) Confirmar invariantes do projeto
+- `contentlayer.config.js` e `next.config.js` precisam estar compatíveis com a versão do Next.
+- `next-pwa` e `next-sitemap` precisam ser compatíveis com a versão do Next.
 
-3) Ajustar CI/Actions
-- No workflow, usar o script do projeto (`npm run build`) para incluir Contentlayer.
-- Publicar `./out` com `actions/upload-pages-artifact`.
+3) Ajustar CI/deploy (quando aplicável)
+- Usar o script do projeto (`npm run build`) para incluir Contentlayer e `postbuild` do `next-sitemap`.
+- Garantir `NEXT_PUBLIC_SITE_URL` no ambiente de build.
 
 4) Validar
 - Re-executar o workflow (ou simular via `npm run build`).
@@ -78,14 +73,13 @@ Workflow and guardrails for building and deploying this repo as a static Next.js
 
 ## Checklist
 
-- [ ] `npm run build` gera `out/`.
-- [ ] Workflow publica `out/`.
+- [ ] `npm run build` passa.
 - [ ] `NEXT_PUBLIC_SITE_URL` está definido no ambiente de build.
-- [ ] Não há 404 em assets (CSS/JS/imagens) em produção.
+- [ ] `sitemap.xml`/`robots.txt` são gerados (via `postbuild`).
 
 ## Limitações e recomendações futuras
 
-- Este skill assume deploy estático (sem SSR/API Routes). Para SSR, é outro pipeline.
+Este skill não cobre migração para App Router/RSC; use uma skill de upgrade/migração quando for o momento.
 
 ## Consulte também
 

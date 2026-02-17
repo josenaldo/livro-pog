@@ -75,7 +75,9 @@ Opcional:
 - Passo 3: voz (naturalidade)
 
 4) Validação para o site
-- Checar frontmatter mínimo (para blog: `title`, `description`, `date`, `author`, `image`, `category`).
+- Checar frontmatter mínimo conforme o schema do Contentlayer deste repo.
+  - Post (`content/blog/**/*.md`): `title`, `description`, `date`, `author`, `image`
+  - Chapter (`content/capitulos/**/*.md`): `title`, `description`, `date`, `sentence`, `order_number`, `sentence_author`, `name`, `status`, `image`
 - Sugerir melhoria de título/description para SEO sem clickbait.
 
 ## Saída esperada

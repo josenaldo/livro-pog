@@ -1,11 +1,11 @@
 ---
 name: site-contentlayer-authoring
-description: Authoring and maintenance workflow for this repo's Contentlayer2 content (content/*). Use when adding/editing Markdown pages, blog posts, projects, experiences, courses, testimonials, or skills; when frontmatter is missing/broken; or when Contentlayer build fails.
+description: Authoring and maintenance workflow for this repo's Contentlayer content (content/*). Use when adding/editing blog posts or chapters; when frontmatter is missing/broken; or when Contentlayer build fails.
 ---
 
 # site-contentlayer-authoring
 
-Este repositório usa `contentlayer2` para gerar tipos a partir de Markdown em `content/`.
+Este repositório usa `contentlayer` (via `next-contentlayer`) para gerar tipos a partir de Markdown em `content/`.
 
 ## Objetivo
 
@@ -26,7 +26,7 @@ Este repositório usa `contentlayer2` para gerar tipos a partir de Markdown em `
 
 ## Inputs (o que pedir ao usuário)
 
-- Tipo de conteúdo: `Post`, `Page`, `Project`, `Experience`, `Course`, `Testimonial`, `Skill`.
+- Tipo de conteúdo: `Post` (blog) ou `Chapter` (capítulos).
 - Path/slug desejado e imagens (se houver).
 - Para mudanças de schema: quais campos novos e se são `required`.
 
@@ -53,62 +53,26 @@ Fonte: `contentlayer.config.js`.
 - `description` (string)
 - `date` (date)
 - `author` (string)
-- `category` (string)
 - `image` (string)
 
 URL computada: `/${flattenedPath}` (ex.: `/blog/meu-post`).
 
-### Page (`content/pages/**/*.md`)
+### Chapter (`content/capitulos/**/*.md`)
 
 - `title` (string)
 - `description` (string)
+- `date` (date)
+- `sentence` (string)
+- `order_number` (number)
+- `sentence_author` (string)
+- `name` (string)
+- `status` (enum: `backlog` | `progress` | `review` | `done`)
 - `image` (string)
 
-URL computada: `/${flattenedPath sem pages/}` (ex.: `content/pages/about.md` → `/about`).
+Opcionais:
 
-### Project (`content/projects/**/*.md`)
-
-- `id` (number)
-- `title` (string)
-- `description` (string)
-- `projectUrl` (string)
-- `pin` (boolean)
-- `image` (string)
-
-### Experience (`content/experiences/**/*.md`)
-
-- `id` (number)
-- `title` (string)
-- `company` (string)
-- `location` (string)
-- `period` (string)
-- `show` (boolean)
-
-### Course (`content/courses/**/*.md`)
-
-- `name` (string)
-- `institution` (string)
-- `completionDate` (date)
-- `workload` (number)
-- `courseLink` (string)
-- `certificateLink` (string)
-
-Computed:
-- `url`: `/${flattenedPath}`
-- `slug`: baseado no path removendo `courses/`
-
-### Testimonial (`content/testimonials/**/*.md`)
-
-- `name` (string)
-- `position` (string)
-- `testimonial` (string)
-- `image` (string)
-
-### Skill (`content/skills/**/*.md`)
-
-- `name` (string)
-- `level` (string)
-- `firstContact` (number)
+- `parent` (string | null; default `null`)
+- `isParent` (boolean; default `false`)
 
 ## Workflow (faça em ordem)
 
@@ -120,7 +84,7 @@ Computed:
 - Se adicionar imagem, usar path absoluto do site (ex.: `/images/...`) quando apropriado.
 
 3) Validar localmente
-- Rodar `npm run dev` para validação rápida (Contentlayer2 + Next em watch).
+- Rodar `npm run dev` para validação rápida (Contentlayer + Next em watch).
 - Ou rodar `npm run build` para validação completa.
 
 4) Ajustar onde o conteúdo aparece (se necessário)
@@ -143,11 +107,4 @@ Computed:
 ## Consulte também
 
 - `site-nextjs-static-export` (skill do repo)
-
-Describe when this skill should be used.
-
-## Instructions
-
-1. First step
-2. Second step
-3. Additional steps as needed
+- `level` (string)
