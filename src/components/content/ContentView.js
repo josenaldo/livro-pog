@@ -12,13 +12,13 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
 import { useSwipeable } from 'react-swipeable'
 
 import {
-    ContentCover,
     ContentTitle,
     ContentNavButton,
     MDXContent,
 } from '@pog/components/content'
 
 import { ShareLink } from '@pog/components/share'
+import { getOgImageUrl } from '@pog/lib'
 
 const ContentView = ({ content, contentExtraInfo = null }) => {
     const router = useRouter()
@@ -76,7 +76,20 @@ const ContentView = ({ content, contentExtraInfo = null }) => {
             }}
             {...handlers}
         >
-            <ContentCover icon={content.icon} title={content.title} />
+            <Box
+                sx={{
+                    width: '100%',
+                    aspectRatio: '16/9',
+                    overflow: 'hidden',
+                }}
+            >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                    src={getOgImageUrl(content.icon)}
+                    alt={content.title}
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                />
+            </Box>
 
             <Grid
                 container
