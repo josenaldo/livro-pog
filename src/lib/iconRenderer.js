@@ -4,8 +4,21 @@
  * Renders Tabler Icon components to SVG strings for OG image generation.
  */
 
+import fs from 'fs'
+import path from 'path'
 import { renderToStaticMarkup } from 'react-dom/server'
 import { getIcon } from './iconMapper'
+
+// Cache the base64 image in memory to avoid repeated disk reads
+let _baseImageCache = null
+function getBaseImageDataUrl() {
+    if (!_baseImageCache) {
+        const filePath = path.join(process.cwd(), 'public', 'images', 'base.png')
+        const buffer = fs.readFileSync(filePath)
+        _baseImageCache = `data:image/png;base64,${buffer.toString('base64')}`
+    }
+    return _baseImageCache
+}
 
 /**
  * Render an icon to SVG string
@@ -47,113 +60,79 @@ export function renderIconToSVG(iconString, size = 200, strokeWidth = 1.5, color
 export function createOGImageSVG(iconString, title = '') {
     const width = 1200
     const height = 630
-    const iconSize = 200
-    
-    // Get icon SVG
-    const iconSVG = renderIconToSVG(iconString, iconSize, 1.5, '#1976d2')
-    
-    if (!iconSVG) {
-        // Return a default SVG if icon not found
-        return createDefaultSVG(width, height, title)
+    const iconSize = 300
+    const iconColor = 'rgba(255,255,255,0.85)'
+
+    // Get icon SVG content (paths only, without the outer <svg> wrapper)
+    const IconComponent = getIcon(iconString)
+    let iconContent = null
+
+    if (IconComponent) {
+        try {
+            const svgString = renderToStaticMarkup(
+                <IconComponent size={iconSize} stroke={1.5} color={iconColor} />
+            )
+            // Extract only the inner paths, preserving all attributes
+            iconContent = svgString
+                .replace(/<svg[^>]*>/, '')
+                .replace(/<\/svg>$/, '')
+        } catch (e) {
+            console.error(`Failed to render icon ${iconString}:`, e)
+        }
     }
-    
-    // Extract SVG content (remove outer <svg> tag)
-    const iconContent = iconSVG
-        .replace(/<svg[^>]*>/, '')
-        .replace(/<\/svg>/, '')
-    
-    // Calculate icon position (centered)
+
+    // Icon position (centered)
     const iconX = (width - iconSize) / 2
     const iconY = (height - iconSize) / 2
-    
-    // Create complete SVG with background pattern
-    const svg = `
-<svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background -->
-  <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
-    </linearGradient>
-    
-    <!-- Grid pattern -->
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-    </pattern>
-  </defs>
-  
-  <!-- Background gradient -->
-  <rect width="${width}" height="${height}" fill="url(#bg)"/>
-  
-  <!-- Grid overlay -->
-  <rect width="${width}" height="${height}" fill="url(#grid)"/>
-  
-  <!-- Icon with glow effect -->
-  <g transform="translate(${iconX}, ${iconY})">
-    <g filter="url(#glow)">
-      <svg width="${iconSize}" height="${iconSize}" viewBox="0 0 24 24">
-        ${iconContent}
-      </svg>
-    </g>
-  </g>
-  
-  <!-- Title (if provided) -->
-  ${title ? `
-  <g>
-    <rect y="${height - 100}" width="${width}" height="100" fill="rgba(0,0,0,0.7)"/>
-    <text 
-      x="${width / 2}" 
-      y="${height - 45}" 
-      font-family="system-ui, -apple-system, sans-serif" 
-      font-size="40" 
-      font-weight="bold"
-      fill="#ffffff" 
-      text-anchor="middle"
-    >${escapeXML(title)}</text>
-  </g>
-  ` : ''}
-  
-  <!-- Glow filter -->
+
+    // Background: base.png embedded as base64 (works inside <img> tags)
+    const baseImageDataUrl = getBaseImageDataUrl()
+
+    const svg = `<svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <filter id="glow">
-      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
       <feMerge>
         <feMergeNode in="coloredBlur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
   </defs>
-</svg>`.trim()
-    
-    return svg
-}
 
-/**
- * Create a default SVG when icon is not found
- */
-function createDefaultSVG(width, height, title) {
-    return `
-<svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
-  <rect width="${width}" height="${height}" fill="#1a1a2e"/>
-  <text 
-    x="${width / 2}" 
-    y="${height / 2}" 
-    font-family="system-ui" 
-    font-size="60" 
-    fill="#666" 
-    text-anchor="middle"
-  >Icon not found</text>
+  <!-- Background: base.png embedded as base64 -->
+  <image href="${baseImageDataUrl}" width="${width}" height="${height}" x="0" y="0" preserveAspectRatio="xMidYMid slice"/>
+
+  <!-- Dark overlay for contrast -->
+  <rect width="${width}" height="${height}" fill="rgba(0,0,0,0.35)"/>
+
+  <!-- Icon (centered, white with glow) -->
+  ${iconContent ? `
+  <g transform="translate(${iconX}, ${iconY})" filter="url(#glow)">
+    <svg width="${iconSize}" height="${iconSize}" viewBox="0 0 24 24"
+         fill="none"
+         stroke="${iconColor}"
+         stroke-width="1.5"
+         stroke-linecap="round"
+         stroke-linejoin="round">
+      ${iconContent}
+    </svg>
+  </g>` : ''}
+
+  <!-- Title bar -->
   ${title ? `
-  <text 
-    x="${width / 2}" 
-    y="${height / 2 + 60}" 
-    font-family="system-ui" 
-    font-size="30" 
-    fill="#999" 
+  <rect y="${height - 100}" width="${width}" height="100" fill="rgba(0,0,0,0.6)"/>
+  <text
+    x="${width / 2}"
+    y="${height - 40}"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="42"
+    font-weight="bold"
+    fill="#ffffff"
     text-anchor="middle"
-  >${escapeXML(title)}</text>
-  ` : ''}
+  >${escapeXML(title)}</text>` : ''}
 </svg>`.trim()
+
+    return svg
 }
 
 /**
@@ -169,3 +148,4 @@ function escapeXML(str) {
 }
 
 export default { renderIconToSVG, createOGImageSVG }
+
