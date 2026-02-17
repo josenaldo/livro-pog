@@ -1,11 +1,11 @@
 {
     "private": true,
     "scripts": {
-        "dev": "next dev",
+        "dev": "next dev -p 6500",
         "build:content": "contentlayer2 build",
         "build": "next build",
         "postbuild": "next-sitemap",
-        "start": "next start"
+        "start": "next start -p 6500"
     },
     "dependencies": {
         "@emotion/react": "^11.10.0",

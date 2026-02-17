@@ -22,15 +22,20 @@ import {
 
 const rehypeCitation = rehypeCitationGenerator(Cite)
 
-const libDir = `${process.env.NEXT_PUBLIC_SITE_URL}/data/bib`
-const bibFile = `${libDir}/library.bib`
-const styleFile = `${libDir}/abnt.csl`
-const localeFile = `${libDir}/locales-pt-PT.xml`
+const MDXContent = ({ content }) => {
+    const origin =
+        typeof window !== 'undefined'
+            ? window.location.origin
+            : process.env.NEXT_PUBLIC_SITE_URL || ''
 
-const MDXContent = ({ content, html = null }) => {
-    const remarkPlugins = [
-        remarkParse,
-        remarkGfm,
+    const bibFile = `${origin}/data/bib/library.bib`
+    const styleFile = `${origin}/data/bib/abnt.csl`
+    const localeFile = `${origin}/data/bib/locales-pt-PT.xml`
+
+    const remarkPlugins = [remarkParse, remarkGfm]
+
+    const rehypePlugins = [
+        rehypeRaw,
         [
             externalLinks,
             {
@@ -38,10 +43,6 @@ const MDXContent = ({ content, html = null }) => {
                 rel: ['nofollow', 'noopener', 'noreferrer'],
             },
         ],
-    ]
-
-    const rehypePlugins = [
-        rehypeRaw,
         [
             rehypeCitation,
             {
@@ -60,25 +61,6 @@ const MDXContent = ({ content, html = null }) => {
         pre: Code,
         hr: Divider,
         blockquote: Blockquote,
-    }
-
-    if (html) {
-        return (
-            <Box
-                sx={{
-                    '& #refs': {
-                        marginBlockStart: '1em',
-                        marginBlockEnd: '1em',
-                        paddingInlineStart: '40px',
-                    },
-                    '& img': {
-                        maxWidth: '100%',
-                        height: 'auto',
-                    },
-                }}
-                dangerouslySetInnerHTML={{ __html: html }}
-            />
-        )
     }
 
     return (

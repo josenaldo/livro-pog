@@ -97,7 +97,7 @@ const SeoConfig = {
         },
         {
             rel: 'manifest',
-            href: `${APP_URL}/manifest.json`,
+            href: '/manifest.json',
         },
     ],
 }
