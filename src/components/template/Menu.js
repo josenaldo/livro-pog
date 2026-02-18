@@ -12,6 +12,7 @@ import {
     ListItemText,
     Stack,
     Switch,
+    useMediaQuery,
 } from '@mui/material'
 
 import MenuIcon from '@mui/icons-material/Menu'
@@ -36,6 +37,9 @@ import { ShareLink } from '@pog/components/share'
 import { APP_TITLE, APP_DESCRIPTION, APP_URL } from '@pog/config'
 
 const Menu = () => {
+    const matches = useMediaQuery((theme) => theme.breakpoints.up('md'))
+    const edge = matches ? 'start' : false
+
     const chapters = getSortedChapters()
 
     const { colorMode, toggleColorMode, COLOR_MODES } = useConfig()
@@ -61,7 +65,7 @@ const Menu = () => {
                 onClick={() => {
                     setOpen(true)
                 }}
-                edge="start"
+                edge={edge}
                 color="inherit"
             >
                 <MenuIcon />
