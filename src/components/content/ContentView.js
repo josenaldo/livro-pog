@@ -1,5 +1,6 @@
 import React from 'react'
 
+import dynamic from 'next/dynamic'
 import { useRouter } from 'next/router'
 
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew'
@@ -12,9 +13,13 @@ import {
     ContentCover,
     ContentNavButton,
     ContentTitle,
-    MDXContent,
 } from '@pog/components/content'
 import { ShareLink } from '@pog/components/share'
+
+const MDXContent = dynamic(() => import('@pog/components/content/MDXContent').then(m => m.MDXContent), {
+    ssr: false,
+    loading: () => <CircularProgress color="inherit" sx={{ m: 4 }} />,
+})
 
 const ContentView = ({ content, contentExtraInfo = null }) => {
     const router = useRouter()

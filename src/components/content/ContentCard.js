@@ -11,7 +11,8 @@ import {
     Typography,
 } from '@mui/material'
 
-import { ContentCardImage, ContentCover } from '@pog/components/content'
+import { ContentCardImage } from '@pog/components/content/ContentCardImage'
+import { ContentCover } from '@pog/components/content/ContentCover'
 import { ShareLink } from '@pog/components/share'
 import { APP_URL } from '@pog/config'
 
