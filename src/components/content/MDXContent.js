@@ -75,7 +75,6 @@ const MDXContent = ({ content }) => {
             })
             .use(rehypePrism)
             .use(rehypeReact, {
-                // eslint-disable-next-line react/jsx-filename-extension
                 Fragment: prod.Fragment,
                 jsx: prod.jsx,
                 jsxs: prod.jsxs,
