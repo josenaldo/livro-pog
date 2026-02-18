@@ -67,7 +67,7 @@ const SearchPage = () => {
         <Layout
             title="Pesquisa"
             description="Pesquise por termos no livro Programação Orientada a Gambiarra."
-            image="/images/pages/pesquisa.jpg"
+            icon="tabler/IconHelp"
             url="/pesquisa"
         >
             <Container>

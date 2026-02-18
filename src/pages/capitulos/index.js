@@ -46,11 +46,11 @@ const PaginaCapitulos = ({ chapters }) => {
 
     const title = 'Capítulos'
     const description = 'Essa é a lista de capítulos do livro POG.'
-    const image = '/images/pages/capitulos.jpg'
+    const icon = 'tabler/IconFileText'
     const url = '/capitulos'
 
     return (
-        <Layout title={title} description={description} image={image} url={url}>
+        <Layout title={title} description={description} icon={icon} url={url}>
             <Container>
                 <Card
                     sx={{
@@ -76,8 +76,8 @@ const PaginaCapitulos = ({ chapters }) => {
                             <ShareLink
                                 title={title}
                                 description={description}
-                                url={`${process.env.NEXT_PUBLIC_SITE_URL}/ajude`}
-                                image={`${process.env.NEXT_PUBLIC_SITE_URL}${image}`}
+                                url={`${process.env.NEXT_PUBLIC_SITE_URL}/capitulos`}
+                                icon={icon}
                             />
                         </Box>
                         <List sx={{ my: 5 }}>

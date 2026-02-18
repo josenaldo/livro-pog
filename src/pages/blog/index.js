@@ -15,13 +15,13 @@ const getStaticProps = async () => {
 const BlogPage = ({ posts }) => {
     const title = 'B.L.O.G.'
     const description = 'Baboseira Línguística Orientada a Gambiarra'
-    const image = '/images/pages/blog.jpg'
+    const icon = 'tabler/IconMessage'
 
     return (
         <Layout
             title={title}
             description={description}
-            image={image}
+            icon={icon}
             url="/blog"
         >
             <Container>

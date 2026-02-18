@@ -13,7 +13,7 @@ const Home = () => {
         <Layout
             title="Descubra os segredos dos maiores experts da indústria da programação!"
             description="Como transformar o seu trabalho em uma amostra grátis do inferno!"
-            image="/images/pages/default.jpg"
+            icon="tabler/IconBooks"
             url="/"
         >
             <Hero />
