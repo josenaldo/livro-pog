@@ -5,6 +5,7 @@ import { Layout } from '@pog/components/template'
 import { ContentTitle, ContentCard } from '@pog/components/content'
 
 import { getSortedPosts } from '@pog/data'
+import { getOgImageUrl } from '@pog/lib'
 
 const getStaticProps = async () => {
     const posts = getSortedPosts()
@@ -47,7 +48,7 @@ const BlogPage = ({ posts }) => {
                                 title={post.title}
                                 text={post.description}
                                 url={post.url}
-                                image={post.image}
+                                image={getOgImageUrl(post.icon)}
                                 key={post.url}
                             />
                         ))}
