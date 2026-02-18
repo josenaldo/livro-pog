@@ -27,7 +27,7 @@ const Hero = () => {
                         alignItems: 'center',
                     }}
                 >
-                    <Typography variant="h1" component="h1" color="white">
+                    <Typography variant="h1" component="h1" color="white" textAlign="center">
                         Programação Orientada a Gambiarra
                     </Typography>
                     <Typography
