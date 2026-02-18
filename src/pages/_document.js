@@ -6,10 +6,7 @@ export default function Document() {
             <Head>
                 <link
                     rel="stylesheet"
-                    href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-darcula.css"
-                    integrity="sha512-GDAZ4WVai07by1+4lddBjO4anWI2wZFXT8gsfvahTctwsA/Qoe1GXkBpltYHCMvaLWA6L6eVdiF8Ky70Ssj3Fg=="
-                    crossOrigin="anonymous"
-                    referrerPolicy="no-referrer"
+                    href="/styles/prism-darcula.css"
                 />
             </Head>
             <body>
