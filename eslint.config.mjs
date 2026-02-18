@@ -3,7 +3,17 @@ import prettierConfig from 'eslint-config-prettier'
 import pluginReact from 'eslint-plugin-react'
 import simpleImportSort from 'eslint-plugin-simple-import-sort'
 
-export default [
+const config = [
+    // Ignore auto-generated and build output files
+    {
+        ignores: [
+            '.contentlayer/**',
+            '.next/**',
+            'node_modules/**',
+            'public/**',
+        ],
+    },
+
     // Next.js rules (includes react, react-hooks, import, jsx-a11y, @next/next)
     ...nextConfig,
 
@@ -67,3 +77,6 @@ export default [
         },
     },
 ]
+
+export default config
+
