@@ -1,54 +1,50 @@
 /**
  * OG Image Generation API
  * 
- * For now, returns a simple redirect to static images or generates
- * a basic HTML response. Full image generation requires additional
- * setup with image processing libraries.
- * 
- * TODO: Implement full image generation using:
- * - @vercel/og (recommended for Vercel deployment)
- * - OR canvas (for self-hosted)
- * - OR satori + resvg (for static exports)
+ * Generates Open Graph images dynamically using SVG.
+ * Returns SVG images that can be displayed directly by browsers
+ * and social media crawlers.
  * 
  * Usage: /api/og?icon=tabler/IconRun&title=Post Title
  */
 
-import { getIcon } from '@pog/lib/iconMapper'
+import { createOGImageSVG } from '@pog/lib/iconRenderer'
 
 export default async function handler(req, res) {
     try {
         const { 
             icon = 'tabler/IconBooks',
-            title = 'Livro POG'
+            title = ''
         } = req.query
 
-        // Verificar se o ícone existe
-        const IconComponent = getIcon(icon)
+        // Generate SVG
+        const svg = createOGImageSVG(icon, title)
         
-        if (!IconComponent) {
-            return res.status(404).json({ 
-                error: 'Icon not found',
-                icon 
-            })
-        }
-
-        // Por enquanto, retorna JSON com informações
-        // Em produção, isso geraria uma imagem PNG/JPEG
-        res.status(200).json({
-            message: 'OG Image generation endpoint',
-            icon,
-            title,
-            width: 1200,
-            height: 630,
-            note: 'Full image generation requires @vercel/og or canvas setup'
-        })
+        // Set headers for SVG response
+        res.setHeader('Content-Type', 'image/svg+xml')
+        res.setHeader('Cache-Control', 'public, max-age=31536000, immutable')
+        
+        // Send SVG
+        res.status(200).send(svg)
         
     } catch (error) {
-        console.error('Error in OG image endpoint:', error)
-        res.status(500).json({ 
-            error: 'Internal server error',
-            message: error.message 
-        })
+        console.error('Error generating OG image:', error)
+        
+        // Return error SVG
+        const errorSVG = `
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#1a1a2e"/>
+  <text x="600" y="315" font-family="system-ui" font-size="40" fill="#ff6b6b" text-anchor="middle">
+    Error generating image
+  </text>
+  <text x="600" y="360" font-family="system-ui" font-size="20" fill="#999" text-anchor="middle">
+    ${error.message}
+  </text>
+</svg>`
+        
+        res.setHeader('Content-Type', 'image/svg+xml')
+        res.status(500).send(errorSVG)
     }
 }
+
 

@@ -3,20 +3,20 @@ import { getIcon } from '@pog/lib/iconMapper'
 
 /**
  * ContentCover Component
- * 
+ *
  * Renders an icon over the base background image.
  * Replaces static OG images with dynamic icon-based covers.
- * 
+ *
  * @param {string} icon - Icon identifier (e.g., "tabler/IconRun")
  * @param {string} title - Title for accessibility
  * @param {string} aspectRatio - Aspect ratio (default: '16/9')
  * @param {number} iconSize - Icon size in pixels (default: 120)
  */
-const ContentCover = ({ 
-    icon, 
-    title, 
+const ContentCover = ({
+    icon,
+    title,
     aspectRatio = '16/9',
-    iconSize = 120 
+    iconSize = 400
 }) => {
     const IconComponent = getIcon(icon)
 
@@ -46,7 +46,7 @@ const ContentCover = ({
             {/* Icon overlay */}
             <Box
                 sx={{
-                    color: 'primary.main',
+                    color: 'white',
                     opacity: 0.9,
                     filter: 'drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.3))',
                 }}
