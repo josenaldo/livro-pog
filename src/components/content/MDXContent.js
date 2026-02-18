@@ -1,16 +1,19 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 import { Box, Divider } from '@mui/material'
 
-import { MDXProvider } from '@mdx-js/react'
-import { Remark } from 'react-remark'
-
+import { unified } from 'unified'
+import remarkParse from 'remark-parse'
 import remarkGfm from 'remark-gfm'
+import remarkRehype from 'remark-rehype'
+import rehypeReact from 'rehype-react'
 
 import externalLinks from 'rehype-external-links'
 import rehypePrism from 'rehype-prism-plus'
 import rehypeRaw from 'rehype-raw'
 import rehypeCitation from 'rehype-citation'
+
+import * as prod from 'react/jsx-runtime'
 
 import {
     Link,
@@ -20,59 +23,68 @@ import {
 } from '@pog/components/elements'
 
 const MDXContent = ({ content }) => {
-    const origin =
-        typeof window !== 'undefined'
-            ? window.location.origin
-            : process.env.NEXT_PUBLIC_SITE_URL || ''
+    const [renderedContent, setRenderedContent] = useState(null)
 
-    const bibFile = `${origin}/data/bib/library.bib`
-    const styleFile = `${origin}/data/bib/abnt.csl`
-    const localeFile = `${origin}/data/bib/locales-pt-PT.xml`
+    useEffect(() => {
+        if (!content) return
 
-    const remarkPlugins = [remarkGfm]
+        const origin = window.location.origin
+        const bibFile = `${origin}/data/bib/library.bib`
+        const styleFile = `${origin}/data/bib/abnt.csl`
+        const localeFile = `${origin}/data/bib/locales-pt-PT.xml`
 
-    const rehypePlugins = [
-        rehypeRaw,
-        [
-            externalLinks,
-            {
+        const components = {
+            img: ({ node, ...props }) => <ResponsiveImage {...props} />,
+            a: ({ node, ...props }) => <Link {...props} />,
+            pre: ({ node, ...props }) => <Code {...props} />,
+            hr: () => <Divider />,
+            blockquote: ({ node, ...props }) => <Blockquote {...props} />,
+            // Markdown wraps images in <p>, but ResponsiveImage renders a <div>.
+            p: ({ node, children, ...props }) => {
+                const hasBlock = React.Children.toArray(children).some(
+                    (child) =>
+                        React.isValidElement(child) &&
+                        child.props?.src !== undefined
+                )
+                return hasBlock ? (
+                    <div {...props}>{children}</div>
+                ) : (
+                    <p {...props}>{children}</p>
+                )
+            },
+        }
+
+        unified()
+            .use(remarkParse)
+            .use(remarkGfm)
+            .use(remarkRehype, {
+                allowDangerousHtml: true,
+                footnoteLabel: 'Notas de rodapé',
+                footnoteBackLabel: 'Voltar ao conteúdo',
+            })
+            .use(rehypeRaw)
+            .use(externalLinks, {
                 target: '_blank',
                 rel: ['nofollow', 'noopener', 'noreferrer'],
-            },
-        ],
-        [
-            rehypeCitation,
-            {
+            })
+            .use(rehypeCitation, {
                 bibliography: bibFile,
                 csl: styleFile,
                 lang: localeFile,
                 inlineClass: ['citation'],
-            },
-        ],
-        rehypePrism,
-    ]
-
-    const components = {
-        img: ResponsiveImage,
-        a: Link,
-        pre: Code,
-        hr: Divider,
-        blockquote: Blockquote,
-        // Markdown wraps images in <p>, but ResponsiveImage renders a <div>.
-        // Replace <p> with <div> when it contains block-level children to avoid
-        // the invalid <p><div> nesting that causes hydration errors.
-        p: ({ children, ...props }) => {
-            const hasBlock = React.Children.toArray(children).some(
-                (child) =>
-                    React.isValidElement(child) && child.type === ResponsiveImage
-            )
-            return hasBlock ? (
-                <div {...props}>{children}</div>
-            ) : (
-                <p {...props}>{children}</p>
-            )
-        },
-    }
+            })
+            .use(rehypePrism)
+            .use(rehypeReact, {
+                // eslint-disable-next-line react/jsx-filename-extension
+                Fragment: prod.Fragment,
+                jsx: prod.jsx,
+                jsxs: prod.jsxs,
+                components,
+            })
+            .process(content)
+            .then((file) => setRenderedContent(file.result))
+            .catch(console.error)
+    }, [content])
 
     return (
         <Box
@@ -84,23 +96,7 @@ const MDXContent = ({ content }) => {
                 },
             }}
         >
-            <MDXProvider>
-                <Remark
-                    remarkPlugins={remarkPlugins}
-                    rehypePlugins={rehypePlugins}
-                    remarkRehypeOptions={{
-                        allowDangerousHtml: true,
-                        footnoteLabel: 'Notas de rodapé',
-                        footnoteBackLabel: 'Voltar ao conteúdo',
-                    }}
-                    rehypeReactOptions={{ components: components }}
-                    onError={(error) => {
-                        console.error(error)
-                    }}
-                >
-                    {content}
-                </Remark>
-            </MDXProvider>
+            {renderedContent}
         </Box>
     )
 }
