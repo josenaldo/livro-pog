@@ -67,6 +67,7 @@ const ShareLink = ({ title, description, url, icon, color = 'secondary' }) => {
                 onClick={handleOnClick}
                 color={color}
                 variant="contained"
+                aria-label="Compartilhar"
             >
                 <ShareIcon />
             </IconButton>

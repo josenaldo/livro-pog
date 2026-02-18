@@ -155,7 +155,7 @@ const AjudePage = () => {
                                                     gap: 2,
                                                 }}
                                             >
-                                                <Typography variant="h5">
+                                                <Typography variant="h5" component="h3">
                                                     PIX
                                                 </Typography>
                                                 <Typography variant="body1">

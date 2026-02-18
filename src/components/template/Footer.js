@@ -49,6 +49,7 @@ const Footer = () => {
                         targetBlank
                         href="https://github.com/josenaldo/livro-pog-1/"
                         icon={<GitHubIcon />}
+                        label="Repositório do projeto no GitHub"
                     />
                 </Box>
                 <Box
@@ -62,7 +63,7 @@ const Footer = () => {
                     <Typography variant="footerH2" color={textColor}>
                         Ajude esse projeto
                     </Typography>
-                    <FooterIcon href="/ajude" icon={<HandshakeIcon />} />
+                    <FooterIcon href="/ajude" icon={<HandshakeIcon />} label="Ajude esse projeto" />
                 </Box>
                 <Box
                     sx={{
@@ -85,34 +86,40 @@ const Footer = () => {
                             targetBlank
                             href="https://github.com/josenaldo"
                             icon={<GitHubIcon />}
+                            label="GitHub de Josenaldo Matos"
                         />
                         <FooterIcon
                             targetBlank
                             href="mailto:josenaldo@gmail.com"
                             icon={<EmailIcon />}
+                            label="Enviar e-mail para Josenaldo"
                         />
 
                         <FooterIcon
                             targetBlank
                             href="https://twitter.com/josenaldomatos"
                             icon={<TwitterIcon />}
+                            label="Twitter de Josenaldo Matos"
                         />
                         <FooterIcon
                             targetBlank
                             href="https://linkedin.com/in/josenaldo"
                             icon={<LinkedInIcon />}
+                            label="LinkedIn de Josenaldo Matos"
                         />
 
                         <FooterIcon
                             targetBlank
                             href="https://facebook.com/josenaldo.matos"
                             icon={<FacebookIcon />}
+                            label="Facebook de Josenaldo Matos"
                         />
 
                         <FooterIcon
                             targetBlank
                             href="https://instagram.com/vudureverso"
                             icon={<InstagramIcon />}
+                            label="Instagram de Josenaldo Matos"
                         />
                     </Box>
                 </Box>
@@ -129,11 +136,12 @@ const Footer = () => {
     )
 }
 
-const FooterIcon = ({ href, icon, targetBlank = false }) => {
+const FooterIcon = ({ href, icon, targetBlank = false, label }) => {
     return (
         <IconButton
             href={href}
             target={targetBlank ? '_blank' : '_self'}
+            aria-label={label}
             sx={{
                 '& svg': {
                     fontSize: '48px',

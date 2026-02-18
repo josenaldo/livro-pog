@@ -30,6 +30,7 @@ const Testimonial = () => {
                 >
                     <Typography
                         variant="h5"
+                        component="p"
                         fontStyle="italic"
                         textAlign="center"
                     >

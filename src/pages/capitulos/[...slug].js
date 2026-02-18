@@ -156,7 +156,7 @@ const ReferencesList = ({ referencesData }) => {
                 backgroundColor: 'background.quote',
             }}
         >
-            <Typography variant="h5" color="primary" mb={2}>
+            <Typography variant="h5" component="h3" color="primary" mb={2}>
                 Referencias usadas no livro
             </Typography>
             <Typography variant="body2" mb={2}>

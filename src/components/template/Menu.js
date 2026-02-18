@@ -102,6 +102,7 @@ const Menu = () => {
                             image={`${APP_URL}/images/pages/default.jpg`}
                         />
                         <IconButton
+                            aria-label="Fechar menu"
                             onClick={() => {
                                 setOpen(false)
                             }}
