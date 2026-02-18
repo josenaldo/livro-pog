@@ -14,21 +14,23 @@ import Image from 'next/image'
 
 import { Layout } from '@pog/components/template'
 
-import { ContentMainImage, ContentTitle } from '@pog/components/content'
+import { ContentCardImage, ContentTitle } from '@pog/components/content'
 
 import { ShareLink } from '@pog/components/share'
+import { getOgImageUrl } from '@pog/lib'
+
+const AJUDE_ICON = 'tabler/IconHeart'
 
 const AjudePage = () => {
     const title = 'Ajude o Livro POG'
     const description =
         'Quer colaborar com a realização do livro POG? Veja aqui como ajudar!'
-    const image = '/images/pages/ajude.jpg'
 
     return (
         <Layout
             title={title}
             description={description}
-            image={image}
+            icon={AJUDE_ICON}
             url="/ajude"
         >
             <Container>
@@ -38,7 +40,10 @@ const AjudePage = () => {
                         padding: 0,
                     }}
                 >
-                    <ContentMainImage image={image} alt={title} />
+                    <ContentCardImage
+                        image={getOgImageUrl(AJUDE_ICON)}
+                        alt={title}
+                    />
 
                     <CardContent>
                         <Grid
@@ -70,7 +75,7 @@ const AjudePage = () => {
                                         title={title}
                                         description={description}
                                         url={`${process.env.NEXT_PUBLIC_SITE_URL}/ajude`}
-                                        image={`${process.env.NEXT_PUBLIC_SITE_URL}${image}`}
+                                        icon={AJUDE_ICON}
                                     />
                                 </Box>
 
