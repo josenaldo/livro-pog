@@ -36,7 +36,9 @@ function getChapters(dir = CAPITULOS_DIR) {
             title: data.title || 'Sem título',
             content: content.trim(),
             filename: item,
-            path: fullPath.replace(CAPITULOS_DIR, '').substring(1)
+            path: fullPath.replace(CAPITULOS_DIR, '').substring(1),
+            parent: data.parent || null,
+            isParent: data.isParent || false
           });
         }
       }
@@ -106,7 +108,15 @@ function generateCombinedMarkdown() {
       });
     }
     
-    combinedContent += `# ${chapter.title}\n\n`;
+    // Use ## for child chapters (have a parent), # for standalone and parent chapters
+    const headingLevel = chapter.parent ? '##' : '#';
+    combinedContent += `${headingLevel} ${chapter.title}\n\n`;
+    
+    // Add chapter cover image for top-level chapters only
+    if (!chapter.parent) {
+      combinedContent += `![${chapter.title}](../images/cover/capa.png)\n\n`;
+    }
+    
     combinedContent += fixImagePaths(chapterContent);
     combinedContent += '\n\n';
     

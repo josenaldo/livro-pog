@@ -45,9 +45,22 @@ $endif$
 
 % Estilo de capítulos
 \usepackage{titlesec}
+$if(cover-image)$
+\titleformat{\chapter}[display]
+  {\normalfont}{}
+  {0pt}
+  {%
+    \noindent\includegraphics[width=\linewidth,height=6cm,keepaspectratio=false]{$cover-image$}%
+    \par\vspace{0.8cm}%
+    \Huge\bfseries%
+  }
+  [\vspace{0.4cm}\hrule\vspace{0.6cm}]
+\titlespacing*{\chapter}{0pt}{0pt}{20pt}
+$else$
 \titleformat{\chapter}[display]
   {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
 \titlespacing*{\chapter}{0pt}{-20pt}{40pt}
+$endif$
 
 % Cores para links
 \usepackage{xcolor}
@@ -132,7 +145,13 @@ $endif$
 $if(title)$
 \begin{titlepage}
 \centering
+$if(cover-image)$
+\vspace*{1cm}
+\includegraphics[width=0.75\textwidth,keepaspectratio]{$cover-image$}
+\vspace{1.5cm}
+$else$
 \vspace*{2cm}
+$endif$
 
 {\Huge\bfseries $title$ \par}
 \vspace{1cm}

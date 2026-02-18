@@ -51,7 +51,8 @@ if [ "$FORMAT" == "pdf" ] || [ "$FORMAT" == "all" ]; then
         --metadata keywords="programação, gambiarra, humor, padrões de design, engenharia de software" \
         --metadata publisher="Auto-publicado" \
         --metadata rights="© 2026 Josenaldo Matos Filho. Licença CC BY-NC-SA 4.0" \
-        --metadata date="2026"
+        --metadata date="2026" \
+        -V cover-image=../images/cover/capa.png
     echo "✓ PDF generated: public/downloads/livro-pog.pdf"
 fi
 
@@ -69,7 +70,7 @@ if [ "$FORMAT" == "epub" ] || [ "$FORMAT" == "all" ]; then
         --toc-depth=3 \
         --top-level-division=chapter \
         --number-sections \
-        --epub-cover-image=../images/cover/capa.jpg \
+        --epub-cover-image=../images/cover/capa.png \
         --css=../styles/ebook.css \
         --metadata title="Programação Orientada a Gambiarra" \
         --metadata author="Josenaldo Matos Filho" \
