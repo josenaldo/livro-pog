@@ -10,6 +10,7 @@ import { SeoConfig } from '@pog/config'
 import { ConfigProvider } from '@pog/contexts'
 import { GA_TRACKING_ID, gaPageView } from '@pog/lib'
 
+import '@pog/styles/prism-darcula.css'
 import '@pog/styles/globals.css'
 
 const PogApp = ({ Component, pageProps }) => {

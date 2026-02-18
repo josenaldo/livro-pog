@@ -17,8 +17,7 @@ const ConfigProvider = ({ children }) => {
     const [colorMode, setColorMode] = React.useState(COLOR_MODES.dark)
 
     const theme = React.useMemo(() => {
-        BaseTheme.palette = Palettes[colorMode]
-        const theme = createTheme(BaseTheme)
+        const theme = createTheme({ ...BaseTheme, palette: Palettes[colorMode] })
         extendTheme(theme)
         return theme
     }, [colorMode])

@@ -145,5 +145,5 @@ function escapeXML(str) {
         .replace(/'/g, '&apos;')
 }
 
-export default { renderIconToSVG, createOGImageSVG }
+
 

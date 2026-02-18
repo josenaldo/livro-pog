@@ -36,7 +36,7 @@ const SearchPage = () => {
         setResults(res)
 
         setLoading(false)
-    }, [])
+    }, [router])
 
     const handleSearch = (e) => {
         e.preventDefault()

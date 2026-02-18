@@ -1,3 +1,5 @@
+import React from 'react'
+
 import { Box } from '@mui/material'
 
 import { getIcon } from '@pog/lib/iconMapper'
@@ -19,7 +21,7 @@ const ContentCover = ({
     aspectRatio = '16/9',
     iconSize = 400
 }) => {
-    const IconComponent = getIcon(icon)
+    const IconComponent = React.useMemo(() => getIcon(icon), [icon])
 
     // Se o ícone não existir, não renderiza nada
     if (!IconComponent) {
@@ -52,6 +54,7 @@ const ContentCover = ({
                     filter: 'drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.3))',
                 }}
             >
+                {/* eslint-disable-next-line react-hooks/static-components -- Tabler icons are stateless, safe to use as component reference */}
                 <IconComponent
                     size={iconSize}
                     stroke={1.5}

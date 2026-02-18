@@ -67,7 +67,7 @@ const ContentView = ({ content, contentExtraInfo = null }) => {
         return function cleanup() {
             document.removeEventListener('keydown', handleKeyDown)
         }
-    }, [])
+    }, [content.next, content.previous, router])
 
     return (
         <Card
