@@ -19,7 +19,7 @@ const ContentCover = ({
     icon,
     title,
     aspectRatio = '16/9',
-    iconSize = 120
+    iconSize = 400
 }) => {
     const IconComponent = React.useMemo(() => getIcon(icon), [icon])
 
@@ -49,6 +49,19 @@ const ContentCover = ({
             {/* Icon overlay */}
             <Box
                 sx={{
+                    width:
+                        typeof iconSize === 'number'
+                            ? `${iconSize}px`
+                            : iconSize,
+                    height:
+                        typeof iconSize === 'number'
+                            ? `${iconSize}px`
+                            : iconSize,
+                    maxWidth: '90%',
+                    maxHeight: '90%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
                     color: 'white',
                     opacity: 0.9,
                     filter: 'drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.3))',
@@ -56,7 +69,7 @@ const ContentCover = ({
             >
                 {/* eslint-disable-next-line react-hooks/static-components -- Tabler icons are stateless, safe to use as component reference */}
                 <IconComponent
-                    size={iconSize}
+                    size="100%"
                     stroke={1.5}
                     aria-hidden="true"
                 />

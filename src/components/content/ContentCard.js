@@ -62,7 +62,11 @@ const ContentCard = ({
                     }}
                 >
                     {icon ? (
-                        <ContentCover icon={icon} title={title} />
+                        <ContentCover
+                            icon={icon}
+                            title={title}
+                            iconSize="68%"
+                        />
                     ) : (
                         <ContentCardImage image={image} alt={title} />
                     )}
