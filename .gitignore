@@ -56,3 +56,6 @@ public/robots.txt
 .cursor/
 .junie/
 public/downloads/livro-pog-combined.md
+
+# Lighthouse / analysis temp files
+public/.tmp/
