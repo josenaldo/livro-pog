@@ -52,6 +52,8 @@
         "@types/node": "25.2.3",
         "@types/react": "19",
         "@types/react-dom": "19",
+        "browserslist": "^4.28.1",
+        "caniuse-lite": "^1.0.30001770",
         "eslint": "9",
         "eslint-plugin-react": "^7.37.5",
         "eslint-plugin-simple-import-sort": "^12.1.1",
