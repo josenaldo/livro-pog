@@ -10,9 +10,13 @@ import {
     CardContent,
     Container,
     Divider,
+    Icon,
+    IconButton,
     List,
+    ListItem,
     ListItemAvatar,
     ListItemButton,
+    ListItemIcon,
     ListItemSecondaryAction,
     ListItemText,
     Typography,
@@ -25,7 +29,16 @@ import { Layout } from '@pog/components/template'
 import { getSortedChapters } from '@pog/data'
 
 const getStaticProps = async () => {
-    const chapters = getSortedChapters()
+    const chapters = getSortedChapters().map(
+        ({ url, title, description, isParent, parent, status }) => ({
+            url,
+            title,
+            description,
+            isParent,
+            parent,
+            status,
+        })
+    )
 
     return { props: { chapters } }
 }
@@ -82,31 +95,37 @@ const PaginaCapitulos = ({ chapters }) => {
                         <List sx={{ my: 5 }}>
                             {chapters.map((chapter) => (
                                 <Box key={chapter.url}>
-                                    <ListItemButton
-                                        component={Link}
-                                        href={chapter.url}
+                                    <ListItem
                                         alignItems="flex-start"
                                         sx={{
-                                            pl: chapter.parent ? 5 : 0,
+                                            pl: chapter.parent ? 6 : 2,
+                                            borderBottom: '1px dotted',
+                                            borderColor: 'divider',
                                         }}
                                     >
-                                        <ListItemAvatar>
-                                            <Avatar>
-                                                {getChapterTypeIcon(chapter)}
-                                            </Avatar>
-                                        </ListItemAvatar>
-                                        <ListItemText
-                                            primary={chapter.title}
-                                            secondary={chapter.description}
-                                            sx={{
-                                                pr: 4,
-                                            }}
-                                        />
-                                        <ListItemSecondaryAction>
+                                        <ListItemButton href={chapter.url} sx={{
+                                            display: 'flex',
+                                            justifyContent: 'space-between',
+                                            alignItems: 'center',
+                                        }}>
+                                            <Box display="flex" alignItems="center" gap={2}>
+                                                <ListItemIcon>
+                                                    <Avatar>
+                                                        {getChapterTypeIcon(chapter)}
+                                                    </Avatar>
+                                                </ListItemIcon>
+                                                <ListItemText
+                                                    primary={chapter.title}
+                                                    secondary={chapter.description}
+                                                    sx={{
+                                                        pr: 4,
+                                                    }}
+                                                />
+                                            </Box>
+
                                             <ChapterProgress chapter={chapter} />
-                                        </ListItemSecondaryAction>
-                                    </ListItemButton>
-                                    <Divider variant="inset" component="li" />
+                                        </ListItemButton>
+                                    </ListItem>
                                 </Box>
                             ))}
                         </List>
