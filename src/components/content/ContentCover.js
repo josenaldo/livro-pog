@@ -19,7 +19,7 @@ const ContentCover = ({
     icon,
     title,
     aspectRatio = '16/9',
-    iconSize = 400
+    iconSize = 120
 }) => {
     const IconComponent = React.useMemo(() => getIcon(icon), [icon])
 
