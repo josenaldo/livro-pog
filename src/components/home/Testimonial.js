@@ -32,11 +32,11 @@ const Testimonial = () => {
                         fontStyle="italic"
                         textAlign="center"
                     >
-                        "Esse livro elevará o nível de suas habilidades
+                        &ldquo;Esse livro elevará o nível de suas habilidades
                         gambiarrizadoras e de sua capacidade de criar mais
                         problemas que soluções! Prepare-se pra descobrir que em
                         casa de ferreiro, quem com ferro fere tanto bate até que
-                        fura!!!"
+                        fura!!!&rdquo;
                     </Typography>
                     <Box
                         sx={{

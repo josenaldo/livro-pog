@@ -1,8 +1,9 @@
 import React from 'react'
+import Head from 'next/head'
 
 import { Box } from '@mui/material'
 
-import { NextSeo } from 'next-seo'
+import { generateNextSeo } from 'next-seo/pages'
 
 import { Header, Footer, Breadcrumbs } from '@pog/components/template'
 
@@ -42,7 +43,7 @@ const Layout = ({ title, description, icon, url, children }) => {
                 color: 'text.primary',
             }}
         >
-            <NextSeo title={title} description={description} openGraph={og} />
+            <Head>{generateNextSeo({ title, description, openGraph: og })}</Head>
             <Header />
             <Breadcrumbs items={breadcrumbsItems} />
 

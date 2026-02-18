@@ -4,7 +4,7 @@ import Script from 'next/script'
 import { useRouter } from 'next/router'
 import '@pog/styles/globals.css'
 
-import { DefaultSeo } from 'next-seo'
+import { generateDefaultSeo } from 'next-seo/pages'
 import { SeoConfig } from '@pog/config'
 
 import { ConfigProvider } from '@pog/contexts'
@@ -32,6 +32,7 @@ const PogApp = ({ Component, pageProps }) => {
                 src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
             />
             <Script
+                id="gtag-init"
                 strategy="afterInteractive"
                 dangerouslySetInnerHTML={{
                     __html: `
@@ -55,8 +56,8 @@ const PogApp = ({ Component, pageProps }) => {
                     name="viewport"
                     content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover"
                 />
+                {generateDefaultSeo(SeoConfig)}
             </Head>
-            <DefaultSeo {...SeoConfig} />
             <ConfigProvider>
                 <Component {...pageProps} />
             </ConfigProvider>
