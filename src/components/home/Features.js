@@ -2,7 +2,7 @@ import { Box, Container } from '@mui/material'
 
 import { ContentCard,ContentTitle } from '@pog/components/content'
 import { getChaptersByNames } from '@pog/data'
-import { getOgImageUrl } from '@pog/lib'
+
 
 const FEATURED_CHAPTERS = [
     'o-que-e-pog',
@@ -54,7 +54,7 @@ const Features = () => {
                             title={chapter.title}
                             text={chapter.description}
                             url={chapter.url}
-                            image={getOgImageUrl(chapter.icon)}
+                            icon={chapter.icon}
                         />
                     ))}
                 </Box>

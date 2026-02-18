@@ -11,7 +11,7 @@ import {
     Typography,
 } from '@mui/material'
 
-import { ContentCardImage } from '@pog/components/content'
+import { ContentCardImage, ContentCover } from '@pog/components/content'
 import { ShareLink } from '@pog/components/share'
 import { APP_URL } from '@pog/config'
 
@@ -20,6 +20,7 @@ const ContentCard = ({
     text,
     url,
     image,
+    icon,
     moreLinkText = 'Leia mais',
 }) => {
     return (
@@ -59,7 +60,11 @@ const ContentCard = ({
                         position: 'relative',
                     }}
                 >
-                    <ContentCardImage image={image} alt={title} />
+                    {icon ? (
+                        <ContentCover icon={icon} title={title} />
+                    ) : (
+                        <ContentCardImage image={image} alt={title} />
+                    )}
                 </CardMedia>
                 <CardContent
                     sx={{

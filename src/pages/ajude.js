@@ -12,10 +12,10 @@ import {
 } from '@mui/material'
 import Grid from '@mui/material/Grid'
 
-import { ContentCardImage, ContentTitle } from '@pog/components/content'
+import { ContentCover, ContentTitle } from '@pog/components/content'
 import { ShareLink } from '@pog/components/share'
 import { Layout } from '@pog/components/template'
-import { getOgImageUrl } from '@pog/lib'
+
 
 const AJUDE_ICON = 'tabler/IconHeart'
 
@@ -38,9 +38,9 @@ const AjudePage = () => {
                         padding: 0,
                     }}
                 >
-                    <ContentCardImage
-                        image={getOgImageUrl(AJUDE_ICON)}
-                        alt={title}
+                    <ContentCover
+                        icon={AJUDE_ICON}
+                        title={title}
                     />
 
                     <CardContent>

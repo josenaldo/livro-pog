@@ -9,13 +9,12 @@ import Grid from '@mui/material/Grid'
 import { useSwipeable } from 'react-swipeable'
 
 import {
-    ContentCardImage,
+    ContentCover,
     ContentNavButton,
     ContentTitle,
     MDXContent,
 } from '@pog/components/content'
 import { ShareLink } from '@pog/components/share'
-import { getOgImageUrl } from '@pog/lib'
 
 const ContentView = ({ content, contentExtraInfo = null }) => {
     const router = useRouter()
@@ -73,9 +72,9 @@ const ContentView = ({ content, contentExtraInfo = null }) => {
             }}
             {...handlers}
         >
-            <ContentCardImage
-                image={getOgImageUrl(content.icon)}
-                alt={content.title}
+            <ContentCover
+                icon={content.icon}
+                title={content.title}
             />
 
             <Grid
