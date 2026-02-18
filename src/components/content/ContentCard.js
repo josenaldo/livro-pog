@@ -1,19 +1,19 @@
 import Link from 'next/link'
 
+import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt'
 import {
+    Button,
     Card,
+    CardActionArea,
+    CardActions,
     CardContent,
     CardMedia,
-    CardActions,
     Typography,
-    CardActionArea,
-    Button,
 } from '@mui/material'
 
 import { ContentCardImage } from '@pog/components/content'
 import { ShareLink } from '@pog/components/share'
 import { APP_URL } from '@pog/config'
-import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt'
 
 const ContentCard = ({
     title,

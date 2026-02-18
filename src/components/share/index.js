@@ -1,2 +1,2 @@
-export { ShareLink } from './ShareLink'
 export { ShareDialog } from './ShareDialog'
+export { ShareLink } from './ShareLink'

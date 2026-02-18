@@ -1,4 +1,5 @@
 import { compareDesc } from 'date-fns'
+
 import { allPosts } from 'contentlayer/generated'
 
 const getAllPosts = () => {
@@ -57,4 +58,4 @@ const getPostData = (slug) => {
     return post
 }
 
-export { getAllPosts, getSortedPosts, getAllPostsPaths, getPostData }
+export { getAllPosts, getAllPostsPaths, getPostData,getSortedPosts }

@@ -1,7 +1,8 @@
 import React from 'react'
-import { Box, IconButton } from '@mui/material'
 
 import ShareIcon from '@mui/icons-material/Share'
+import { Box, IconButton } from '@mui/material'
+
 import { ShareDialog } from '@pog/components/share'
 
 const ShareLink = ({ title, description, url, icon, color = 'secondary' }) => {

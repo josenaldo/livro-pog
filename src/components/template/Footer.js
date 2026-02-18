@@ -1,12 +1,11 @@
-import { Container, Box, Typography, IconButton } from '@mui/material'
-
-import HandshakeIcon from '@mui/icons-material/Handshake'
-import GitHubIcon from '@mui/icons-material/GitHub'
 import EmailIcon from '@mui/icons-material/Email'
-import TwitterIcon from '@mui/icons-material/Twitter'
-import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import FacebookIcon from '@mui/icons-material/Facebook'
+import GitHubIcon from '@mui/icons-material/GitHub'
+import HandshakeIcon from '@mui/icons-material/Handshake'
 import InstagramIcon from '@mui/icons-material/Instagram'
+import LinkedInIcon from '@mui/icons-material/LinkedIn'
+import TwitterIcon from '@mui/icons-material/Twitter'
+import { Box, Container, IconButton,Typography } from '@mui/material'
 
 const iconColor = 'text.secondary'
 const textColor = 'text.secondary'

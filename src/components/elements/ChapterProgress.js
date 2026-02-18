@@ -1,9 +1,8 @@
-import { Box, CircularProgress } from '@mui/material'
-
 import BacklogIcon from '@mui/icons-material/Assignment'
 import ProgressIcon from '@mui/icons-material/AssignmentInd'
 import ReviewIcon from '@mui/icons-material/AssignmentReturn'
 import DoneIcon from '@mui/icons-material/AssignmentTurnedIn'
+import { Box, CircularProgress } from '@mui/material'
 
 const PROGRESS = {
     backlog: {

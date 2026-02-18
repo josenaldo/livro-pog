@@ -1,12 +1,11 @@
 import React from 'react'
+
 import Head from 'next/head'
 
 import { Box } from '@mui/material'
-
 import { generateNextSeo } from 'next-seo/pages'
 
-import { Header, Footer, Breadcrumbs } from '@pog/components/template'
-
+import { Breadcrumbs,Footer, Header } from '@pog/components/template'
 import { getBreadcrumbs } from '@pog/data'
 
 const Layout = ({ title, description, icon, url, children }) => {

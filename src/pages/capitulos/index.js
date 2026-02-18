@@ -1,8 +1,11 @@
 import Link from 'next/link'
 
+import ArticleIcon from '@mui/icons-material/Article'
+import SubdirectoryArrowRightIcon from '@mui/icons-material/SubdirectoryArrowRight'
+import TopicIcon from '@mui/icons-material/Topic'
 import {
-    Box,
     Avatar,
+    Box,
     Card,
     CardContent,
     Container,
@@ -15,14 +18,10 @@ import {
     Typography,
 } from '@mui/material'
 
-import SubdirectoryArrowRightIcon from '@mui/icons-material/SubdirectoryArrowRight'
-import TopicIcon from '@mui/icons-material/Topic'
-import ArticleIcon from '@mui/icons-material/Article'
-
-import { Layout } from '@pog/components/template'
-import { ChapterProgress } from '@pog/components/elements'
 import { ContentTitle } from '@pog/components/content'
+import { ChapterProgress } from '@pog/components/elements'
 import { ShareLink } from '@pog/components/share'
+import { Layout } from '@pog/components/template'
 import { getSortedChapters } from '@pog/data'
 
 const getStaticProps = async () => {

@@ -1,27 +1,27 @@
 import React from 'react'
-import { useRouter } from 'next/router'
-import axios from 'axios'
+
 import Link from 'next/link'
+import { useRouter } from 'next/router'
+
+import SearchIcon from '@mui/icons-material/Search'
 import {
     Box,
-    Chip,
     Card,
-    CardContent,
     CardActionArea,
+    CardContent,
+    Chip,
     Container,
-    TextField,
-    InputAdornment,
     IconButton,
+    InputAdornment,
     LinearProgress,
+    TextField,
     Typography,
 } from '@mui/material'
-import SearchIcon from '@mui/icons-material/Search'
+import axios from 'axios'
 
-import { Layout } from '@pog/components/template'
-
-import { ContentTitle, ContentMainImage } from '@pog/components/content'
-
+import { ContentMainImage,ContentTitle } from '@pog/components/content'
 import { ShareLink } from '@pog/components/share'
+import { Layout } from '@pog/components/template'
 
 const SearchPage = () => {
     const [query, setQuery] = React.useState('')

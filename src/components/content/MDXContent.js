@@ -1,25 +1,22 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect,useState } from 'react'
+import * as prod from 'react/jsx-runtime'
 
 import { Box, Divider } from '@mui/material'
-
-import { unified } from 'unified'
-import remarkParse from 'remark-parse'
-import remarkGfm from 'remark-gfm'
-import remarkRehype from 'remark-rehype'
-import rehypeReact from 'rehype-react'
-
+import rehypeCitation from 'rehype-citation'
 import externalLinks from 'rehype-external-links'
 import rehypePrism from 'rehype-prism-plus'
 import rehypeRaw from 'rehype-raw'
-import rehypeCitation from 'rehype-citation'
-
-import * as prod from 'react/jsx-runtime'
+import rehypeReact from 'rehype-react'
+import remarkGfm from 'remark-gfm'
+import remarkParse from 'remark-parse'
+import remarkRehype from 'remark-rehype'
+import { unified } from 'unified'
 
 import {
+    Blockquote,
+    Code,
     Link,
     ResponsiveImage,
-    Code,
-    Blockquote,
 } from '@pog/components/elements'
 
 const MDXContent = ({ content }) => {

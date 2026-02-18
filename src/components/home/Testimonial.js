@@ -1,5 +1,6 @@
 import Image from 'next/image'
-import { Container, Box, Typography } from '@mui/material'
+
+import { Box, Container, Typography } from '@mui/material'
 
 const Testimonial = () => {
     return (

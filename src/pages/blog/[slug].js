@@ -1,9 +1,8 @@
 import { Box, Container } from '@mui/material'
 
-import { getAllPostsPaths, getPostData } from '@pog/data'
-
+import { ContentMeta,ContentView } from '@pog/components/content'
 import { Layout } from '@pog/components/template'
-import { ContentView, ContentMeta } from '@pog/components/content'
+import { getAllPostsPaths, getPostData } from '@pog/data'
 
 const getStaticPaths = async () => {
     const paths = getAllPostsPaths()

@@ -1,7 +1,8 @@
 import React from 'react'
-import { ThemeProvider, createTheme } from '@mui/material/styles'
+
 import { GlobalStyles } from '@mui/material'
 import CssBaseline from '@mui/material/CssBaseline'
+import { createTheme,ThemeProvider } from '@mui/material/styles'
 
 import { BaseTheme, extendTheme, Palettes } from '@pog/styles'
 

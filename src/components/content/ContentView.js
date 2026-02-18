@@ -2,22 +2,18 @@ import React from 'react'
 
 import { useRouter } from 'next/router'
 
-import { Box, Card, Divider, Backdrop, CircularProgress } from '@mui/material'
-
-import Grid from '@mui/material/Grid'
-
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
-
+import { Backdrop, Box, Card, CircularProgress,Divider } from '@mui/material'
+import Grid from '@mui/material/Grid'
 import { useSwipeable } from 'react-swipeable'
 
 import {
     ContentCardImage,
-    ContentTitle,
     ContentNavButton,
+    ContentTitle,
     MDXContent,
 } from '@pog/components/content'
-
 import { ShareLink } from '@pog/components/share'
 import { getOgImageUrl } from '@pog/lib'
 

@@ -1,19 +1,18 @@
-import {
-    Button,
-    IconButton,
-    Dialog,
-    DialogTitle,
-    DialogContent,
-    DialogContentText,
-    DialogActions,
-    Typography,
-} from '@mui/material'
-
+import CloseIcon from '@mui/icons-material/Close'
 import FacebookIcon from '@mui/icons-material/Facebook'
+import TelegramIcon from '@mui/icons-material/Telegram'
 import TwitterIcon from '@mui/icons-material/Twitter'
 import WhatsAppIcon from '@mui/icons-material/WhatsApp'
-import TelegramIcon from '@mui/icons-material/Telegram'
-import CloseIcon from '@mui/icons-material/Close'
+import {
+    Button,
+    Dialog,
+    DialogActions,
+    DialogContent,
+    DialogContentText,
+    DialogTitle,
+    IconButton,
+    Typography,
+} from '@mui/material'
 
 const iconFontSize = {
     xs: 40,

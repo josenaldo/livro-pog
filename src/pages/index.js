@@ -1,12 +1,11 @@
-import { Layout } from '@pog/components/template'
-
 import {
-    Hero,
-    Features,
-    Testimonial,
     DownloadSection,
+    Features,
+    Hero,
     LastNews,
+    Testimonial,
 } from '@pog/components/home'
+import { Layout } from '@pog/components/template'
 
 const Home = () => {
     return (

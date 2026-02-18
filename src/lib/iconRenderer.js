@@ -7,6 +7,7 @@
 import fs from 'fs'
 import path from 'path'
 import { renderToStaticMarkup } from 'react-dom/server'
+
 import { getIcon } from './iconMapper'
 
 // Cache the base64 image in memory to avoid repeated disk reads

@@ -1,9 +1,7 @@
-import { Container, Box, Typography, Link as MuiLink } from '@mui/material'
+import { Box, Container, Link as MuiLink,Typography } from '@mui/material'
 
+import { ContentQuote,ContentView } from '@pog/components/content'
 import { Layout } from '@pog/components/template'
-
-import { ContentView, ContentQuote } from '@pog/components/content'
-
 import { getAllChaptersPaths, getChapterData } from '@pog/data'
 
 const CITE_KEY_PATTERN = /@([A-Za-z0-9_:.#$%&\-+?<>~]+)/g

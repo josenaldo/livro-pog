@@ -78,8 +78,8 @@ const getChaptersByNames = (names = []) => {
 
 export {
     getAllChapters,
-    getSortedChapters,
     getAllChaptersPaths,
     getChapterData,
     getChaptersByNames,
+    getSortedChapters,
 }

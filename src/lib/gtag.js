@@ -16,4 +16,4 @@ const gaEvent = ({ action, category, label, value }) => {
     })
 }
 
-export { GA_TRACKING_ID, gaPageView, gaEvent }
+export { GA_TRACKING_ID, gaEvent,gaPageView }

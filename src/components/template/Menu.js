@@ -1,40 +1,37 @@
 import React from 'react'
+
 import Link from 'next/link'
+
+import AnnouncementIcon from '@mui/icons-material/Announcement'
+import ArticleIcon from '@mui/icons-material/Article'
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
+import DarkModeIcon from '@mui/icons-material/DarkMode'
+import HomeIcon from '@mui/icons-material/Home'
+import MenuIcon from '@mui/icons-material/Menu'
+import SearchIcon from '@mui/icons-material/Search'
+import SosIcon from '@mui/icons-material/Sos'
+import SubdirectoryArrowRightIcon from '@mui/icons-material/SubdirectoryArrowRight'
+import TopicIcon from '@mui/icons-material/Topic'
 import {
     Box,
-    IconButton,
-    Drawer,
     Divider,
+    Drawer,
+    IconButton,
     List,
     ListItem,
-    ListItemIcon,
     ListItemButton as MuiListItemButton,
+    ListItemIcon,
     ListItemText,
     Stack,
     Switch,
     useMediaQuery,
 } from '@mui/material'
 
-import MenuIcon from '@mui/icons-material/Menu'
-import HomeIcon from '@mui/icons-material/Home'
-import SosIcon from '@mui/icons-material/Sos'
-import AnnouncementIcon from '@mui/icons-material/Announcement'
-import SearchIcon from '@mui/icons-material/Search'
-import DarkModeIcon from '@mui/icons-material/DarkMode'
-
-import SubdirectoryArrowRightIcon from '@mui/icons-material/SubdirectoryArrowRight'
-import TopicIcon from '@mui/icons-material/Topic'
-import ArticleIcon from '@mui/icons-material/Article'
-
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
-
 import { Logo } from '@pog/components/elements'
-
-import { getSortedChapters } from '@pog/data'
-import { useConfig } from '@pog/contexts'
-
 import { ShareLink } from '@pog/components/share'
-import { APP_TITLE, APP_DESCRIPTION, APP_URL } from '@pog/config'
+import { APP_DESCRIPTION, APP_TITLE, APP_URL } from '@pog/config'
+import { useConfig } from '@pog/contexts'
+import { getSortedChapters } from '@pog/data'
 
 const Menu = () => {
     const matches = useMediaQuery((theme) => theme.breakpoints.up('md'))

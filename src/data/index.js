@@ -1,16 +1,14 @@
+export { getBreadcrumbs } from './Breadcrumbs'
 export {
     getAllChapters,
-    getChapterData,
-    getSortedChapters,
     getAllChaptersPaths,
+    getChapterData,
     getChaptersByNames,
+    getSortedChapters,
 } from './Chapters'
-
 export {
     getAllPosts,
-    getSortedPosts,
     getAllPostsPaths,
     getPostData,
+    getSortedPosts,
 } from './Posts'
-
-export { getBreadcrumbs } from './Breadcrumbs'

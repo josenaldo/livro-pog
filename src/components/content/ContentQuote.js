@@ -1,5 +1,5 @@
-import { Typography, Box } from '@mui/material'
 import FormatQuoteIcon from '@mui/icons-material/FormatQuote'
+import { Box,Typography } from '@mui/material'
 
 const ContentQuote = ({ quote, author }) => {
     return (

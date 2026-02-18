@@ -1,4 +1,5 @@
 import { Box } from '@mui/material'
+
 import { getIcon } from '@pog/lib/iconMapper'
 
 /**

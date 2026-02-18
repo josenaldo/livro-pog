@@ -1,8 +1,8 @@
 import { AppBar, Box, Toolbar } from '@mui/material'
 
 import { Logo } from '@pog/components/elements'
-import { Menu } from '@pog/components/template'
 import { SearchInput } from '@pog/components/elements'
+import { Menu } from '@pog/components/template'
 
 const Header = () => {
     return (

@@ -1,22 +1,20 @@
-import {
-    Box,
-    Container,
-    Card,
-    CardMedia,
-    CardContent,
-    Stack,
-    Typography,
-    Divider,
-} from '@mui/material'
-
-import Grid from '@mui/material/Grid'
 import Image from 'next/image'
 
-import { Layout } from '@pog/components/template'
+import {
+    Box,
+    Card,
+    CardContent,
+    CardMedia,
+    Container,
+    Divider,
+    Stack,
+    Typography,
+} from '@mui/material'
+import Grid from '@mui/material/Grid'
 
 import { ContentCardImage, ContentTitle } from '@pog/components/content'
-
 import { ShareLink } from '@pog/components/share'
+import { Layout } from '@pog/components/template'
 import { getOgImageUrl } from '@pog/lib'
 
 const AJUDE_ICON = 'tabler/IconHeart'

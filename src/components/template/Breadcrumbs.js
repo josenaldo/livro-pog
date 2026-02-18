@@ -1,9 +1,10 @@
 import {
     Box,
-    Container,
     Breadcrumbs as MuiBreadcrumbs,
+    Container,
     Typography,
 } from '@mui/material'
+
 import { Link } from '@pog/components/elements'
 
 const Breadcrumbs = ({ items }) => {

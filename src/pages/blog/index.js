@@ -1,9 +1,7 @@
 import { Box, Container } from '@mui/material'
 
+import { ContentCard,ContentTitle } from '@pog/components/content'
 import { Layout } from '@pog/components/template'
-
-import { ContentTitle, ContentCard } from '@pog/components/content'
-
 import { getSortedPosts } from '@pog/data'
 import { getOgImageUrl } from '@pog/lib'
 

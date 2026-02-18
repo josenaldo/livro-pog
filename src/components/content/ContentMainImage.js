@@ -1,5 +1,7 @@
 import Image from 'next/image'
+
 import { Box, CardMedia } from '@mui/material'
+
 import { APP_IMAGE } from '@pog/config'
 
 const ContentMainImage = ({ image, alt, aspectRatio = '16/9' }) => {

@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { Box, Container, Button, Typography, Paper } from '@mui/material'
 import DownloadIcon from '@mui/icons-material/Download'
+import { Box, Button, Container, Paper,Typography } from '@mui/material'
 
 import { ContentTitle } from '@pog/components/content'
 

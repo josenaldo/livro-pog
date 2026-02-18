@@ -1,6 +1,6 @@
 import { Box, Container } from '@mui/material'
 
-import { ContentTitle, ContentCard } from '@pog/components/content'
+import { ContentCard,ContentTitle } from '@pog/components/content'
 import { getChaptersByNames } from '@pog/data'
 import { getOgImageUrl } from '@pog/lib'
 

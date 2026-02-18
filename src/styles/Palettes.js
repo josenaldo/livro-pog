@@ -1,16 +1,16 @@
 import {
-    pink,
-    blueGrey,
-    green,
-    lightGreen,
     blue,
-    orange,
-    red,
-    grey,
+    blueGrey,
+    cyan,
     deepOrange,
     deepPurple,
-    cyan,
+    green,
+    grey,
+    lightGreen,
+    orange,
+    pink,
     purple,
+    red,
 } from '@mui/material/colors'
 
 const primaryColor = purple

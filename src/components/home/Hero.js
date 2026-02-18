@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { Container, Box, Typography, Button } from '@mui/material'
+
+import { Box, Button,Container, Typography } from '@mui/material'
 
 const Hero = () => {
     return (

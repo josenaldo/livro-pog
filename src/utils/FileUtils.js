@@ -1,5 +1,5 @@
-import path from 'path'
 import fs from 'fs'
+import path from 'path'
 
 const getDataFileAbsolutePath = (relativeFilePath) => {
     const pathParts = [process.cwd(), 'public', 'data', relativeFilePath]

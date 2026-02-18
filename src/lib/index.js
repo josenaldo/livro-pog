@@ -1,2 +1,2 @@
-export { GA_TRACKING_ID, gaPageView, gaEvent } from './gtag'
+export { GA_TRACKING_ID, gaEvent,gaPageView } from './gtag'
 export { getOgImageUrl } from './ogImage'

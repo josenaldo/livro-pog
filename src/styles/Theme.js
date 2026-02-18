@@ -1,5 +1,6 @@
-import { Palettes } from '@pog/styles'
 import { grey } from '@mui/material/colors'
+
+import { Palettes } from '@pog/styles'
 
 const scroll = {
     '&::-webkit-scrollbar': {

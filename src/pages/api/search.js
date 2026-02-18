@@ -1,4 +1,5 @@
 import lunr from 'lunr'
+
 import { getSortedChapters, getSortedPosts } from '@pog/data'
 
 const handler = async (req, res) => {

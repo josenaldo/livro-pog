@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
+
 import { Box, Typography } from '@mui/material'
+
 import { useConfig } from '@pog/contexts'
 
 const Logo = ({ textColor = 'text.primary', logoColor }) => {

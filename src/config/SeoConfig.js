@@ -103,11 +103,11 @@ const SeoConfig = {
 }
 
 export {
-    SeoConfig,
-    APP_NAME,
-    APP_TITLE,
     APP_DESCRIPTION,
-    APP_URL,
     APP_IMAGE,
     APP_IMAGE_OBJECT,
+    APP_NAME,
+    APP_TITLE,
+    APP_URL,
+    SeoConfig,
 }

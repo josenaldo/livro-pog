@@ -1,16 +1,17 @@
 import React from 'react'
+
 import Head from 'next/head'
-import Script from 'next/script'
 import { useRouter } from 'next/router'
-import '@pog/styles/globals.css'
+import Script from 'next/script'
 
 import { generateDefaultSeo } from 'next-seo/pages'
-import { SeoConfig } from '@pog/config'
 
-import { ConfigProvider } from '@pog/contexts'
 import { Layout } from '@pog/components/template'
-
+import { SeoConfig } from '@pog/config'
+import { ConfigProvider } from '@pog/contexts'
 import { GA_TRACKING_ID, gaPageView } from '@pog/lib'
+
+import '@pog/styles/globals.css'
 
 const PogApp = ({ Component, pageProps }) => {
     const router = useRouter()
