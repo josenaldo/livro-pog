@@ -6,7 +6,6 @@ import Script from 'next/script'
 
 import { generateDefaultSeo } from 'next-seo/pages'
 
-import { Layout } from '@pog/components/template'
 import { SeoConfig } from '@pog/config'
 import { ConfigProvider } from '@pog/contexts'
 import { GA_TRACKING_ID, gaPageView } from '@pog/lib'
