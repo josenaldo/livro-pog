@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 
 import { Box, Card, Divider, Backdrop, CircularProgress } from '@mui/material'
 
-import Grid from '@mui/material/Unstable_Grid2'
+import Grid from '@mui/material/Grid'
 
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
