@@ -33,7 +33,7 @@ const ContentCover = ({
                 aspectRatio: aspectRatio,
                 position: 'relative',
                 width: '100%',
-                backgroundImage: 'url(/images/base.png)',
+                backgroundImage: 'url(/images/base.webp)',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 display: 'flex',

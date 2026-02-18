@@ -2,12 +2,16 @@ import Link from 'next/link'
 
 import { Box, Button,Container, Typography } from '@mui/material'
 
+const gradient = 'linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.8))'
+
 const Hero = () => {
     return (
         <Box
             sx={{
-                backgroundImage:
-                    'linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.8)), url("/images/cover/hero-hd.jpg")',
+                backgroundImage: {
+                    xs: `${gradient}, url("/images/cover/hero-md.webp")`,
+                    md: `${gradient}, url("/images/cover/hero-lg.webp")`,
+                },
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
                 backgroundPosition: 'top',
