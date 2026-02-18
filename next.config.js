@@ -1,14 +1,20 @@
 /** @type {import('next').NextConfig} */
 
-const runtimeCaching = require('next-pwa/cache')
 const { withContentlayer } = require('next-contentlayer2')
 
-const withPWA = require('next-pwa')({
+const withPWA = require('@ducanh2912/next-pwa').default({
     dest: 'public',
-    runtimeCaching,
-    exclude: [/^\/api\/og/],
     disable: process.env.NODE_ENV === 'development',
-    mode: 'production',
+    extendDefaultRuntimeCaching: true,
+    workboxOptions: {
+        runtimeCaching: [
+            {
+                // Não cacheia a API de geração de OG images — sempre busca da rede
+                urlPattern: /^\/api\/og/,
+                handler: 'NetworkOnly',
+            },
+        ],
+    },
 })
 
 const nextConfig = {
