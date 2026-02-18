@@ -54,12 +54,12 @@ const AjudePage = () => {
                             }}
                         >
                             <Grid
-                                xs={1}
+                                size={1}
                                 sx={{
                                     display: 'block',
                                 }}
                             ></Grid>
-                            <Grid xs={10} padding={2}>
+                            <Grid size={10} padding={2}>
                                 <Box
                                     sx={{
                                         display: 'grid',
@@ -273,7 +273,7 @@ const AjudePage = () => {
                                     </Typography>
                                 </Stack>
                             </Grid>
-                            <Grid xs={1}></Grid>
+                            <Grid size={1}></Grid>
                         </Grid>
                     </CardContent>
                 </Card>

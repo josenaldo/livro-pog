@@ -18,12 +18,16 @@ const withPWA = require('@ducanh2912/next-pwa').default({
 })
 
 const nextConfig = {
+    turbopack: {},
     env: {
         NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL || '',
         NEXT_PUBLIC_GA_ID: process.env.NEXT_PUBLIC_GA_ID || '',
     },
     images: {
-        domains: ['localhost', 'livropog.com.br'],
+        remotePatterns: [
+            { protocol: 'http', hostname: 'localhost' },
+            { protocol: 'https', hostname: 'livropog.com.br' },
+        ],
     },
 }
 

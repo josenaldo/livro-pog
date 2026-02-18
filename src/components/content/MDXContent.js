@@ -6,12 +6,11 @@ import { MDXProvider } from '@mdx-js/react'
 import { Remark } from 'react-remark'
 
 import remarkGfm from 'remark-gfm'
-import remarkParse from 'remark-parse'
 
 import externalLinks from 'rehype-external-links'
 import rehypePrism from 'rehype-prism-plus'
 import rehypeRaw from 'rehype-raw'
-import { Cite, rehypeCitationGenerator } from 'rehype-citation'
+import rehypeCitation from 'rehype-citation'
 
 import {
     Link,
@@ -19,8 +18,6 @@ import {
     Code,
     Blockquote,
 } from '@pog/components/elements'
-
-const rehypeCitation = rehypeCitationGenerator(Cite)
 
 const MDXContent = ({ content }) => {
     const origin =
@@ -32,7 +29,7 @@ const MDXContent = ({ content }) => {
     const styleFile = `${origin}/data/bib/abnt.csl`
     const localeFile = `${origin}/data/bib/locales-pt-PT.xml`
 
-    const remarkPlugins = [remarkParse, remarkGfm]
+    const remarkPlugins = [remarkGfm]
 
     const rehypePlugins = [
         rehypeRaw,
@@ -61,6 +58,20 @@ const MDXContent = ({ content }) => {
         pre: Code,
         hr: Divider,
         blockquote: Blockquote,
+        // Markdown wraps images in <p>, but ResponsiveImage renders a <div>.
+        // Replace <p> with <div> when it contains block-level children to avoid
+        // the invalid <p><div> nesting that causes hydration errors.
+        p: ({ children, ...props }) => {
+            const hasBlock = React.Children.toArray(children).some(
+                (child) =>
+                    React.isValidElement(child) && child.type === ResponsiveImage
+            )
+            return hasBlock ? (
+                <div {...props}>{children}</div>
+            ) : (
+                <p {...props}>{children}</p>
+            )
+        },
     }
 
     return (

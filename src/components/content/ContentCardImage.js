@@ -18,6 +18,7 @@ const ContentCardImage = ({ image, alt, aspectRatio = '16/9' }) => {
                         src={contentImage}
                         alt={alt}
                         fill
+                        priority
                         unoptimized={isOgImage}
                         style={{ objectFit: 'cover' }}
                     />

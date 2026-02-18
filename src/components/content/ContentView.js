@@ -90,7 +90,7 @@ const ContentView = ({ content, contentExtraInfo = null }) => {
                 }}
             >
                 <Grid
-                    xs={1}
+                    size={1}
                     sx={{
                         display: 'block',
                     }}
@@ -104,7 +104,7 @@ const ContentView = ({ content, contentExtraInfo = null }) => {
                     />
                 </Grid>
                 <Grid
-                    xs={10}
+                    size={10}
                     padding={2}
                     sx={{
                         display: 'flex',
@@ -137,7 +137,7 @@ const ContentView = ({ content, contentExtraInfo = null }) => {
 
                     <MDXContent content={content.body.raw} />
                 </Grid>
-                <Grid xs={1}>
+                <Grid size={1}>
                     <ContentNavButton
                         url={content.next.url}
                         icon={<ArrowForwardIosIcon />}

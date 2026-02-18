@@ -22,6 +22,7 @@ const ContentMainImage = ({ image, alt, aspectRatio = '16/9' }) => {
                         src={contentImage}
                         alt={alt}
                         fill
+                        loading="lazy"
                         style={{ objectFit: 'cover' }}
                         priority
                     />
