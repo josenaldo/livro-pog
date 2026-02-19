@@ -1,0 +1,43 @@
+# Pandoc defaults for generating the PDF version of the ebook.
+# Usage:
+#   pandoc --defaults=scripts/pandoc/ebook-pdf.yaml
+
+to: pdf
+
+input-files:
+  - public/downloads/livro-pog-combined.md
+
+output-file: public/downloads/livro-pog.pdf
+
+pdf-engine: xelatex
+
+template: templates/ebook.latex
+
+toc: true
+toc-depth: 3
+
+top-level-division: chapter
+number-sections: true
+
+filters:
+  - pandoc-citeproc
+
+bibliography: public/downloads/livro-pog.bib
+
+metadata:
+  reference-section-title: "Referências"
+  nocite: |
+    @*
+  title: "Programação Orientada a Gambiarra"
+  author: "Josenaldo Matos Filho"
+
+variables:
+  toc-title: "Sumário"
+  geometry: "top=2.5cm,bottom=2.5cm,left=3cm,right=2.5cm"
+  linestretch: "1.3"
+  documentclass: book
+  classoption:
+    - openany
+    - oneside
+  lang: pt-BR
+  cover-image: "../images/cover/capa.png"

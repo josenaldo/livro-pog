@@ -1,0 +1,34 @@
+# Pandoc defaults for generating the EPUB version of the ebook.
+# Usage:
+#   pandoc --defaults=scripts/pandoc/ebook-epub.yaml
+
+to: epub
+
+input-files:
+  - public/downloads/livro-pog-combined.md
+
+output-file: public/downloads/livro-pog.epub
+
+toc: true
+toc-depth: 3
+
+top-level-division: chapter
+number-sections: true
+
+filters:
+  - pandoc-citeproc
+
+bibliography: public/downloads/livro-pog.bib
+
+metadata:
+  reference-section-title: "Referências"
+  nocite: |
+    @*
+  title: "Programação Orientada a Gambiarra"
+  author: "Josenaldo Matos Filho"
+  lang: pt-BR
+
+css:
+  - public/styles/ebook.css
+
+epub-cover-image: public/images/cover/capa.png

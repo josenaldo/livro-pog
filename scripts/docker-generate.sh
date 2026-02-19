@@ -4,6 +4,10 @@ set -e
 FORMAT=$1
 IMAGE_NAME="livro-pog-ebook-builder"
 
+KEEP_TEX=${KEEP_TEX:-0}
+PANDOC_LOG=${PANDOC_LOG:-0}
+CLEAN_DOWNLOADS=${CLEAN_DOWNLOADS:-1}
+
 if [ -z "$FORMAT" ]; then
     echo "Usage: $0 [pdf|epub|all]"
     exit 1
@@ -22,65 +26,76 @@ node scripts/generate-ebook.js
 # Generate PDF
 if [ "$FORMAT" == "pdf" ] || [ "$FORMAT" == "all" ]; then
     echo "Generating PDF..."
-    docker run --rm \
-        -v "$(pwd)/public:/workspace" \
-        -v "$(pwd)/templates:/templates" \
-        -w /workspace/downloads \
-        -e LANG=pt_BR.UTF-8 \
-        $IMAGE_NAME \
-        pandoc livro-pog-combined.md \
-        -o livro-pog.pdf \
-        --template=/templates/ebook.latex \
-        --pdf-engine=xelatex \
-        --toc \
-        --toc-depth=3 \
-        -V toc-title="Sumário" \
-        --top-level-division=chapter \
-        --number-sections \
-        -V geometry:top=2.5cm,bottom=2.5cm,left=3cm,right=2.5cm \
-        -V linestretch=1.3 \
-        -V documentclass=book \
-        -V lang=pt-BR \
-        -V mainfont="EB Garamond" \
-        -V sansfont="Liberation Sans" \
-        -V monofont="DejaVu Sans Mono" \
-        --metadata title="Programação Orientada a Gambiarra" \
-        --metadata subtitle="Um guia (não tão) prático de como programar com humor" \
-        --metadata author="Josenaldo Matos Filho" \
-        --metadata subject="Humor e Técnicas de Programação" \
-        --metadata keywords="programação, gambiarra, humor, padrões de design, engenharia de software" \
-        --metadata publisher="Auto-publicado" \
-        --metadata rights="© 2026 Josenaldo Matos Filho. Licença CC BY-NC-SA 4.0" \
-        --metadata date="2026" \
-        -V cover-image=../images/cover/capa.png
+
+    PDF_EXTRA_ARGS=()
+    if [ "$PANDOC_LOG" == "1" ]; then
+        PDF_EXTRA_ARGS+=(--log=livro-pog-pandoc-pdf.log)
+    fi
+
+    if [ "$KEEP_TEX" == "1" ]; then
+        docker run --rm \
+            -v "$(pwd)/public:/workspace" \
+            -v "$(pwd)/templates:/templates" \
+            -v "$(pwd)/scripts/pandoc:/pandoc-defaults:ro" \
+            -w /workspace/downloads \
+            -e LANG=pt_BR.UTF-8 \
+            $IMAGE_NAME \
+            bash -lc 'set -e; pandoc --defaults=/pandoc-defaults/docker-ebook-pdf.yaml -t latex -o livro-pog.tex '"${PDF_EXTRA_ARGS[*]}"' && xelatex -file-line-error -interaction=nonstopmode -halt-on-error livro-pog.tex && xelatex -file-line-error -interaction=nonstopmode -halt-on-error livro-pog.tex'
+    else
+        docker run --rm \
+            -v "$(pwd)/public:/workspace" \
+            -v "$(pwd)/templates:/templates" \
+            -v "$(pwd)/scripts/pandoc:/pandoc-defaults:ro" \
+            -w /workspace/downloads \
+            -e LANG=pt_BR.UTF-8 \
+            $IMAGE_NAME \
+            pandoc --defaults=/pandoc-defaults/docker-ebook-pdf.yaml "${PDF_EXTRA_ARGS[@]}"
+    fi
     echo "✓ PDF generated: public/downloads/livro-pog.pdf"
 fi
 
 # Generate EPUB
 if [ "$FORMAT" == "epub" ] || [ "$FORMAT" == "all" ]; then
     echo "Generating EPUB..."
+
+    EPUB_EXTRA_ARGS=()
+    if [ "$PANDOC_LOG" == "1" ]; then
+        EPUB_EXTRA_ARGS+=(--log=livro-pog-pandoc-epub.log)
+    fi
+
     docker run --rm \
         -v "$(pwd)/public:/workspace" \
+        -v "$(pwd)/scripts/pandoc:/pandoc-defaults:ro" \
         -w /workspace/downloads \
         -e LANG=pt_BR.UTF-8 \
         $IMAGE_NAME \
-        pandoc livro-pog-combined.md \
-        -o livro-pog.epub \
-        --toc \
-        --toc-depth=3 \
-        --top-level-division=chapter \
-        --number-sections \
-        --epub-cover-image=../images/cover/capa.png \
-        --css=../styles/ebook.css \
-        --metadata title="Programação Orientada a Gambiarra" \
-        --metadata author="Josenaldo Matos Filho" \
-        --metadata lang=pt-BR \
-        --metadata subject="Humor e Técnicas de Programação" \
-        --metadata keywords="programação, gambiarra, humor, padrões de design, engenharia de software" \
-        --metadata publisher="Auto-publicado" \
-        --metadata rights="© 2026 Josenaldo Matos Filho. Licença CC BY-NC-SA 4.0" \
-        --metadata creator="Josenaldo Matos Filho"
+        pandoc --defaults=/pandoc-defaults/docker-ebook-epub.yaml "${EPUB_EXTRA_ARGS[@]}"
     echo "✓ EPUB generated: public/downloads/livro-pog.epub"
+fi
+
+cleanup_downloads_dir() {
+    local downloads_dir="$(pwd)/public/downloads"
+
+    if [ ! -d "$downloads_dir" ]; then
+        return 0
+    fi
+
+    # Keep only final artifacts in downloads/
+    # (Combined markdown, bibliography, .tex/.aux/.log/etc are regenerated on each run.)
+    find "$downloads_dir" -maxdepth 1 -type f \
+        ! -name 'livro-pog.pdf' \
+        ! -name 'livro-pog.epub' \
+        -delete
+}
+
+if [ "$CLEAN_DOWNLOADS" == "1" ]; then
+    # When debugging, keep intermediates/logs around unless user explicitly forces cleanup.
+    if [ "$KEEP_TEX" == "1" ] || [ "$PANDOC_LOG" == "1" ]; then
+        echo "Skipping downloads cleanup (KEEP_TEX=$KEEP_TEX, PANDOC_LOG=$PANDOC_LOG). Set CLEAN_DOWNLOADS=1 and disable KEEP_TEX/PANDOC_LOG to auto-clean."
+    else
+        echo "Cleaning temporary files from public/downloads (keeping only PDF/EPUB)..."
+        cleanup_downloads_dir
+    fi
 fi
 
 echo ""

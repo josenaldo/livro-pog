@@ -14,6 +14,7 @@ RUN apt-get update && apt-get install -y locales && \
 # Install Pandoc and LaTeX with additional packages
 RUN apt-get update && apt-get install -y \
     pandoc \
+    pandoc-citeproc \
     texlive-xetex \
     texlive-fonts-recommended \
     texlive-fonts-extra \
@@ -21,7 +22,9 @@ RUN apt-get update && apt-get install -y \
     texlive-lang-portuguese \
     texlive-latex-extra \
     fonts-ebgaramond \
-    fonts-liberation2 \
+    fonts-liberation \
+    && rm -rf /usr/share/fonts/woff/ \
+    && fc-cache -fv \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /workspace

@@ -12,34 +12,35 @@ on:
 jobs:
   generate:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
           cache: 'yarn'
-      
+
       - name: Install dependencies
         run: yarn install --frozen-lockfile
-      
+
       - name: Install Pandoc and LaTeX
         run: |
           sudo apt-get update
           sudo apt-get install -y \
             pandoc \
+            pandoc-citeproc \
             texlive-xetex \
             texlive-fonts-recommended \
             texlive-fonts-extra \
             texlive-plain-generic \
             texlive-lang-portuguese
-      
+
       - name: Generate combined Markdown
         run: node scripts/generate-ebook.js
-      
+
       - name: Generate PDF
         run: |
           pandoc public/downloads/livro-pog-combined.md \
@@ -48,16 +49,21 @@ jobs:
             --toc \
             --toc-depth=2 \
             --number-sections \
+            --filter pandoc-citeproc \
+            --bibliography=public/downloads/livro-pog.bib \
+            --metadata reference-section-title="Referências" \
             -V geometry:top=2.5cm,bottom=2.5cm,left=3cm,right=2.5cm \
             -V linestretch=1.3 \
             -V documentclass=book \
+            -V classoption=openany \
+            -V classoption=oneside \
             -V lang=pt-BR \
             -V mainfont="DejaVu Serif" \
             -V sansfont="DejaVu Sans" \
             -V monofont="DejaVu Sans Mono" \
             --metadata title="Programação Orientada a Gambiarra" \
             --metadata author="Josenaldo Matos Filho"
-      
+
       - name: Generate EPUB
         run: |
           pandoc public/downloads/livro-pog-combined.md \
@@ -65,18 +71,21 @@ jobs:
             --toc \
             --toc-depth=2 \
             --number-sections \
+            --filter pandoc-citeproc \
+            --bibliography=public/downloads/livro-pog.bib \
+            --metadata reference-section-title="Referências" \
             --epub-cover-image=public/images/cover/capa.jpg \
             --css=public/styles/ebook.css \
             --metadata title="Programação Orientada a Gambiarra" \
             --metadata author="Josenaldo Matos Filho" \
             --metadata lang=pt-BR
-      
+
       - name: Commit generated files
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "actions@github.com"
           git add public/downloads/*.pdf public/downloads/*.epub
           git diff --quiet && git diff --staged --quiet || git commit -m "chore: update generated eBook files [skip ci]
-          
+
           Co-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>"
           git push

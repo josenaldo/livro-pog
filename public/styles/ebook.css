@@ -154,3 +154,29 @@ hr {
   border-top: 1px solid #ccc;
   margin: 2em 0;
 }
+
+/* ── Página de Parte (epub:type="part") ─────────────────────────────── */
+section.part-page {
+  page-break-before: always;
+  page-break-after: always;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 80vh;
+  text-align: center;
+  padding: 4em 2em;
+  border-top: 3px solid #333;
+  border-bottom: 3px solid #333;
+  margin: 0;
+}
+
+section.part-page h1.part-title {
+  font-size: 2.2em;
+  font-weight: bold;
+  text-align: center;
+  page-break-before: avoid;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}

@@ -1,0 +1,40 @@
+# Pandoc defaults for Docker-based EPUB generation.
+# This file is meant to be used inside the container.
+# See scripts/docker-generate.sh
+
+to: epub
+
+input-files:
+  - livro-pog-combined.md
+
+output-file: livro-pog.epub
+
+toc: true
+toc-depth: 3
+
+top-level-division: chapter
+number-sections: true
+
+filters:
+  - pandoc-citeproc
+
+bibliography: livro-pog.bib
+
+metadata:
+  reference-section-title: "Referências"
+  nocite: |
+    @*
+  title: "Programação Orientada a Gambiarra"
+  subtitle: "Um guia (não tão) prático de como programar com humor"
+  author: "Josenaldo de Oliveira Matos Filho"
+  lang: pt-BR
+  subject: "Humor e Técnicas de Programação"
+  keywords: "programação, gambiarra, humor, padrões de design, engenharia de software"
+  publisher: "Auto-publicado"
+  rights: "© 2026 Josenaldo de Oliveira Matos Filho. Licença CC BY-NC-SA 4.0"
+  date: "2026"
+
+css:
+  - ../styles/ebook.css
+
+epub-cover-image: ../images/cover/capa.png

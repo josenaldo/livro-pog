@@ -1,0 +1,147 @@
+# =============================================================================
+# ESTRUTURA DO LIVRO - PROGRAMAÇÃO ORIENTADA A GAMBIARRA
+# =============================================================================
+#
+# Como editar este arquivo:
+#
+#   PARTE: Nome da Parte
+#     → Insere uma capa interna de parte (ver opções no final do arquivo)
+#     → Pode ficar em qualquer posição na hierarquia
+#
+#   CAP   arquivo.md  |  order_number  |  Título
+#     → Capítulo de topo (heading # no markdown, \chapter no PDF)
+#     → Deve ter isParent: false ou isParent: true no frontmatter
+#
+#     SUB   pasta/arquivo.md  |  order_number  |  Título
+#       → Subcapítulo (heading ## no markdown, \section no PDF)
+#       → Deve ter parent: nome-do-pai no frontmatter
+#
+# Regras:
+#   - A ordem aqui define a ordem no livro (o order_number é atualizado pelo gerador)
+#   - Recuo com 2 espaços define hierarquia (CAP = nível 1, SUB = nível 2)
+#   - Linhas começando com # são comentários e ignoradas
+#   - Não altere os nomes de arquivo (primeira coluna) — só reordene as linhas
+#
+# =============================================================================
+
+CAP   agradecimentos.md                                    |  1000  |  Agradecimentos
+
+PARTE: Introdução
+
+CAP   introducao.md                                        |  2000  |  Introdução
+CAP   o-que-e-pog.md                                       |  3000  |  O que é POG?
+CAP   historia.md                                          |  4000  |  História da POG
+CAP   requisitos.md                                        |  5000  |  Requisitos da POG
+  SUB   requisitos/dimensao-humana.md                      |  5100  |  Dimensão Humana
+  SUB   requisitos/dimensao-tecnologica.md                 |  5200  |  Dimensão Tecnológica
+  SUB   requisitos/dimensao-estrutural.md                  |  5300  |  Dimensão Estrutural
+  SUB   requisitos/dimensao-processual.md                  |  5400  |  Dimensão Processual
+  SUB   requisitos/dimensao-temporal.md                    |  5500  |  Dimensão Temporal
+CAP   principios.md                                        |  6000  |  Príncípios da POG
+
+PARTE: Técnicas
+
+CAP   tecnicas.md                                          |  7000  |  Técnicas da POG
+  SUB   tecnicas/tecnica-zipomatic-versioning.md           |  7100  |  Zipomatic versioning
+  SUB   tecnicas/tecnica-monkey-patching.md                |  7200  |  Monkey Patching
+  SUB   tecnicas/tecnica-incremental-patching-debug.md     |  7300  |  Incremental patching debug
+  SUB   tecnicas/tecnica-my-precious.md                    |  7400  |  My precious
+  SUB   tecnicas/tecnica-psychoding.md                     |  7500  |  Psychoding
+
+PARTE: Gambi Design Patterns
+
+CAP   gambi-design-patterns.md                             |  8000  |  Gambi Design Patterns
+  SUB   gambi-design-patterns/gdp-que-porra-e-essa.md              |  8100  |  WTF / WTH / QPE
+  SUB   gambi-design-patterns/gdp-reuse-by-copy-and-paste.md       |  8200  |  RCP Pattern (Reuse by Copy and Paste)
+  SUB   gambi-design-patterns/gdp-hardcoded-data.md                |  8300  |  Hardcoded Data
+  SUB   gambi-design-patterns/gdp-forceps.md                       |  8400  |  Forceps
+  SUB   gambi-design-patterns/gdp-ostrich-syndrome-skill.md        |  8500  |  Ostrich Syndrome Skill
+  SUB   gambi-design-patterns/gdp-nonsense-flag.md                 |  8600  |  Nonsense Flag Nonsense Naming
+  SUB   gambi-design-patterns/gdp-commented-code-implementation.md |  8700  |  Commented Code Implementation Comments Forever
+  SUB   gambi-design-patterns/gdp-reinvented-square-wheel-helper.md|  8800  |  Reinvented Square Wheel Helper
+  SUB   gambi-design-patterns/gdp-you-shall-not-pass.md            |  8900  |  You Shall Not Pass
+  SUB   gambi-design-patterns/gdp-bulletproof.md                   |  9000  |  Perfectness Execution Bulletproof
+  SUB   gambi-design-patterns/gdp-exception-success.md             |  9100  |  Exception Success
+  SUB   gambi-design-patterns/gdp-string-sushiman.md               |  9200  |  String Sushiman
+  SUB   gambi-design-patterns/gdp-human-factor.md                  |  9300  |  Sleeper Human Factor
+  SUB   gambi-design-patterns/gdp-black-cat-in-a-dark-room.md      |  9400  |  Black Cat In A Dark Room
+  SUB   gambi-design-patterns/gdp-mega-zord.md                     |  9500  |  Mega Zord
+  SUB   gambi-design-patterns/gdp-thunder-mega-zord.md             |  9600  |  THUNDER MEGA ZORD
+  SUB   gambi-design-patterns/gdp-controller-confusion.md          |  9700  |  Controller Confusion
+  SUB   gambi-design-patterns/gdp-no-more-layers.md                |  9800  |  No More Layers
+  SUB   gambi-design-patterns/gdp-db-is-our-god.md                 |  9900  |  Db Is Our God
+  SUB   gambi-design-patterns/gdp-snow-white-returns.md            | 10000  |  Snow White Returns
+
+CAP   conclusoes.md                                        | 99000  |  Conclusões
+
+
+# =============================================================================
+# OPÇÕES PARA CAPAS INTERNAS DE PARTE
+# =============================================================================
+#
+# Tenho 3 opções para implementar as capas de parte. Escolha uma.
+#
+# ─────────────────────────────────────────────────────────────────────────────
+# OPÇÃO A — \part{} nativo do LaTeX  [RECOMENDADA para PDF]
+# ─────────────────────────────────────────────────────────────────────────────
+#   O que é:
+#     O LaTeX `book` gera automaticamente uma página de parte com número romano
+#     (Parte I, Parte II...) e o título. É personalizável via `titlesec`.
+#
+#   O que precisa informar:
+#     Nada além do que já está aqui (a linha "PARTE: Nome").
+#     O gerador injeta `\part{Nome}` no markdown combinado.
+#
+#   Aparência padrão:
+#     Página em branco + página com "Parte I" + título centralizado.
+#     Pode customizar cor de fundo, imagem, etc. via \titleformat{\part}.
+#
+#   Limitação:
+#     No EPUB, `\part` vira apenas um heading grande — sem "capa interna" visual.
+#
+# ─────────────────────────────────────────────────────────────────────────────
+# OPÇÃO B — Arquivo markdown dedicado por parte  [MELHOR para PDF + EPUB]
+# ─────────────────────────────────────────────────────────────────────────────
+#   O que é:
+#     Cada parte tem um arquivo .md próprio (ex: content/capitulos/parte-introducao.md)
+#     com frontmatter `type: part`. O gerador cria uma página visual completa:
+#     imagem de fundo, título, descrição da parte — tanto no PDF quanto no EPUB.
+#
+#   O que precisa informar (por arquivo de parte):
+#     ---
+#     title: Introdução
+#     type: part                    ← obrigatório
+#     part_number: I                ← ex: I, II, III
+#     description: "Texto breve sobre esta parte do livro"
+#     cover_image: /images/partes/introducao.png   ← opcional, imagem da parte
+#     status: done
+#     order_number: 1900
+#     ---
+#
+#   Vantagem: cada parte pode ter imagem própria, texto de abertura e funciona
+#             bem em PDF, EPUB e na leitura no site.
+#
+# ─────────────────────────────────────────────────────────────────────────────
+# OPÇÃO C — Campo `part` no frontmatter do primeiro capítulo de cada parte
+# ─────────────────────────────────────────────────────────────────────────────
+#   O que é:
+#     Sem arquivos extras. Quando o gerador encontra um capítulo com
+#     `part: "Nome da Parte"` no frontmatter, injeta a capa de parte antes dele.
+#
+#   O que precisa informar (no frontmatter do primeiro CAP de cada parte):
+#     part: "Introdução"            ← nome da parte
+#     part_number: I                ← opcional
+#
+#   Vantagem: mais simples, sem criar novos arquivos.
+#   Limitação: a capa de parte não tem descrição nem imagem própria.
+#
+# =============================================================================
+# QUAL ESCOLHER?
+#
+#   → Só PDF importa, quer algo rápido?         → OPÇÃO A
+#   → Quer capas ricas com imagem/texto?        → OPÇÃO B
+#   → Não quer criar novos arquivos?            → OPÇÃO C
+#
+# Depois que você editar a estrutura acima e escolher a opção de PARTE,
+# eu implemento o gerador para ler este arquivo e montar o ebook.
+# =============================================================================
