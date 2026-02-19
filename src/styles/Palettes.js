@@ -121,7 +121,7 @@ const darkPalette = {
 
     text: {
         primary: lightTextColor,
-        secondary: lightTextColor,
+        secondary: grey[400],
         disabled: lightTextColor,
         quote: neutralColor[400],
     },

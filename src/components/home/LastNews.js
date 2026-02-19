@@ -45,10 +45,10 @@ const LastNews = () => {
                             key={post.url}
                             title={post.title}
                             text={post.description}
+                            url={post.url}
                             author={post.author}
                             date={post.date}
                             icon={post.icon}
-                            url={post.url}
                         />
                     ))}
                 </Box>

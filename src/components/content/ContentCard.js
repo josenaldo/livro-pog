@@ -8,13 +8,16 @@ import {
     CardActions,
     CardContent,
     CardMedia,
+    Stack,
     Typography,
 } from '@mui/material'
 
+import { ContentAuthorAndDate } from '@pog/components/content/ContateAuthorAndDate'
 import { ContentCardImage } from '@pog/components/content/ContentCardImage'
 import { ContentCover } from '@pog/components/content/ContentCover'
 import { ShareLink } from '@pog/components/share'
 import { APP_URL } from '@pog/config'
+import { formatDate } from '@pog/utils/DateUtils'
 
 const ContentCard = ({
     title,
@@ -22,6 +25,8 @@ const ContentCard = ({
     url,
     image,
     icon,
+    author,
+    date,
     moreLinkText = 'Leia mais',
 }) => {
     return (
@@ -79,13 +84,21 @@ const ContentCard = ({
                         flexGrow: 1,
                     }}
                 >
-                    <Typography component="h3" variant="h4" color="primary">
-                        {title}
-                    </Typography>
+                    <Stack>
+                        <ContentAuthorAndDate author={author} date={date} />
+
+                        <Typography component="h3" variant="h5" color="primary">
+                            {title}
+                        </Typography>
+                    </Stack>
+
+
                     <Typography
                         component="p"
                         variant="body2"
-                        color="text.primary"
+                        sx={(theme) => ({
+                            color: theme.palette.text.primary,
+                        })}
                     >
                         {text}
                     </Typography>

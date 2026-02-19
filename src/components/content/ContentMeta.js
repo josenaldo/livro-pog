@@ -1,7 +1,8 @@
-import { Box, Chip } from '@mui/material'
-import { format, parseISO } from 'date-fns'
+import { Box } from '@mui/material'
 
-const ContentMeta = ({ date, author, color = 'secondary' }) => {
+import { ContentAuthorAndDate } from '@pog/components/content/ContateAuthorAndDate'
+
+const ContentMeta = ({ date, author }) => {
     return (
         <Box
             sx={{
@@ -9,12 +10,8 @@ const ContentMeta = ({ date, author, color = 'secondary' }) => {
                 gap: 2,
             }}
         >
-            <Chip
-                color={color}
-                size="small"
-                label={format(parseISO(date), 'dd/MM/yyyy')}
-            />
-            <Chip color={color} size="small" label={author} />
+            <ContentAuthorAndDate author={author} date={date} />
+
         </Box>
     )
 }

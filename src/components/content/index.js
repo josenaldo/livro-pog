@@ -1,3 +1,4 @@
+export { ContentAuthorAndDate } from './ContateAuthorAndDate'
 export { ContentCard } from './ContentCard'
 export { ContentCardImage } from './ContentCardImage'
 export { ContentCover } from './ContentCover'
