@@ -1,5 +1,3 @@
-import Link from 'next/link'
-
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt'
 import {
     Button,
@@ -39,7 +37,7 @@ const ContentCard = ({
             }}
         >
             <CardActionArea
-                component={Link}
+                component="a"
                 href={url}
                 style={{
                     textDecoration: 'none',
@@ -70,7 +68,7 @@ const ContentCard = ({
                         <ContentCover
                             icon={icon}
                             title={title}
-                            iconSize="68%"
+                            iconSize={130}
                         />
                     ) : (
                         <ContentCardImage image={image} alt={title} />
@@ -96,9 +94,7 @@ const ContentCard = ({
                     <Typography
                         component="p"
                         variant="body2"
-                        sx={(theme) => ({
-                            color: theme.palette.text.primary,
-                        })}
+                        sx={{ color: 'text.primary' }}
                     >
                         {text}
                     </Typography>
@@ -114,7 +110,7 @@ const ContentCard = ({
                 }}
             >
                 <Button
-                    component={Link}
+                    component="a"
                     href={url}
                     endIcon={<ArrowRightAltIcon />}
                 >

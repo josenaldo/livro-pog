@@ -1,8 +1,10 @@
-import React from 'react'
+'use client'
+
+import * as React from 'react'
 
 import { GlobalStyles } from '@mui/material'
 import CssBaseline from '@mui/material/CssBaseline'
-import { createTheme,ThemeProvider } from '@mui/material/styles'
+import { createTheme, ThemeProvider } from '@mui/material/styles'
 
 import { BaseTheme, extendTheme, Palettes } from '@pog/styles'
 
@@ -47,16 +49,18 @@ const ConfigProvider = ({ children }) => {
                 theme,
             }}
         >
-            <CssBaseline />
-            <GlobalStyles
-                styles={{
-                    body: {
-                        ...theme.scroll,
-                    },
-                }}
-            />
-
-            <ThemeProvider theme={theme}>{children}</ThemeProvider>
+            <ThemeProvider theme={theme}>
+                <CssBaseline />
+                <GlobalStyles
+                    styles={{
+                        body:
+                            typeof theme.scroll === 'function'
+                                ? theme.scroll({ theme })
+                                : theme.scroll,
+                    }}
+                />
+                {children}
+            </ThemeProvider>
         </ConfigContext.Provider>
     )
 }

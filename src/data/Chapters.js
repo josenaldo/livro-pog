@@ -5,11 +5,9 @@ const getAllChapters = () => {
 }
 
 const getSortedChapters = () => {
-    const chapters = allChapters.sort((a, b) => {
+    return [...allChapters].sort((a, b) => {
         return a.order_number - b.order_number
     })
-
-    return chapters
 }
 
 const getAllChaptersPaths = () => {
@@ -18,56 +16,42 @@ const getAllChaptersPaths = () => {
 }
 
 const getChapterData = (slug) => {
-    const url = `/capitulos/${slug}`
+    if (!slug) return null
+
+    const normalizedSlug = String(slug)
+        .replace(/^\/+/, '')
+        .replace(/^capitulos\//, '')
+        .replace(/^\/capitulos\//, '')
+
+    const url = normalizedSlug.startsWith('/capitulos/')
+        ? normalizedSlug
+        : `/capitulos/${normalizedSlug}`
+
     const chapters = getSortedChapters()
+    const index = chapters.findIndex((c) => c.url === url)
+    if (index === -1) return null
 
-    const chapter = chapters.find((chapter, index, chapters) => {
-        if (chapter.url === url) {
-            const isFirst = index === 0
-            const isLast = index === chapters.length - 1
-            const previousChapter = !isFirst ? chapters[index - 1] : null
-            const nextChapter = !isLast ? chapters[index + 1] : null
+    const current = chapters[index]
+    const isFirst = index === 0
+    const isLast = index === chapters.length - 1
+    const previousChapter = !isFirst ? chapters[index - 1] : null
+    const nextChapter = !isLast ? chapters[index + 1] : null
 
-            if (previousChapter) {
-                chapter.previous = {
-                    url: previousChapter.url,
-                    title: previousChapter.title,
-                }
-            } else {
-                chapter.previous = {
-                    url: '/capitulos',
-                }
-            }
+    const hasParent = Boolean(current.parent)
+    const parentChapter = hasParent
+        ? chapters.find((chap) => chap.name === current.parent)
+        : null
 
-            if (nextChapter) {
-                chapter.next = {
-                    url: nextChapter.url,
-                    title: nextChapter.title,
-                }
-            } else {
-                chapter.next = {
-                    url: '/capitulos',
-                }
-            }
-
-            return chapter
-        }
-    })
-
-    const hasParent = chapter.parent || false
-    if (hasParent) {
-        const parentChapter = chapters.find((chap) => {
-            if (chap.name === chapter.parent) {
-                return chapter
-            }
-        })
-
-        chapter.parentTitle = parentChapter.title
-    } else {
-        chapter.parentTitle = ''
+    return {
+        ...current,
+        previous: previousChapter
+            ? { url: previousChapter.url, title: previousChapter.title }
+            : { url: '/capitulos' },
+        next: nextChapter
+            ? { url: nextChapter.url, title: nextChapter.title }
+            : { url: '/capitulos' },
+        parentTitle: parentChapter?.title || '',
     }
-
-    return chapter
 }
 
 const getChaptersByNames = (names = []) => {

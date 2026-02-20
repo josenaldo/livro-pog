@@ -8,7 +8,7 @@
  */
 const getOgImageUrl = (icon, title = '') => {
     if (!icon) return null
-    const params = new URLSearchParams({ icon, title })
+    const params = new URLSearchParams({ icon, title, v: '2' })
     return `/api/og?${params.toString()}`
 }
 

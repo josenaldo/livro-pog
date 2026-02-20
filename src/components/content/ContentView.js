@@ -1,13 +1,14 @@
-import React from 'react'
+'use client'
+
+import * as React from 'react'
 
 import dynamic from 'next/dynamic'
-import { useRouter } from 'next/router'
+import { usePathname, useRouter } from 'next/navigation'
 
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
-import { Backdrop, Box, Card, CircularProgress,Divider } from '@mui/material'
+import { Backdrop, Box, Card, CircularProgress, Divider } from '@mui/material'
 import Grid from '@mui/material/Grid'
-import { useSwipeable } from 'react-swipeable'
 
 import {
     ContentCover,
@@ -23,28 +24,13 @@ const MDXContent = dynamic(() => import('@pog/components/content/MDXContent').th
 
 const ContentView = ({ content, contentExtraInfo = null }) => {
     const router = useRouter()
+    const pathname = usePathname()
 
     const [loading, setLoading] = React.useState(false)
 
-    const handlers = useSwipeable({
-        swipeDuration: 500,
-        onSwipedLeft: (eventData) => {
-            if (content.next) {
-                setLoading(true)
-                router.push(content.next.url)
-            }
-        },
-        onSwipedRight: (eventData) => {
-            if (content.previous) {
-                setLoading(true)
-                router.push(content.previous.url)
-            }
-        },
-    })
-
     React.useEffect(() => {
         setLoading(false)
-    }, [router.query.slug])
+    }, [pathname])
 
     React.useEffect(() => {
         function handleKeyDown(e) {
@@ -75,7 +61,6 @@ const ContentView = ({ content, contentExtraInfo = null }) => {
                 my: 5,
                 padding: 0,
             }}
-            {...handlers}
         >
             <ContentCover
                 icon={content.icon}
@@ -90,6 +75,7 @@ const ContentView = ({ content, contentExtraInfo = null }) => {
                 }}
             >
                 <Grid
+                    key="prev"
                     size={1}
                     sx={{
                         display: 'block',
@@ -104,6 +90,7 @@ const ContentView = ({ content, contentExtraInfo = null }) => {
                     />
                 </Grid>
                 <Grid
+                    key="content"
                     size={10}
                     padding={2}
                     sx={{
@@ -137,7 +124,7 @@ const ContentView = ({ content, contentExtraInfo = null }) => {
 
                     <MDXContent content={content.body.raw} />
                 </Grid>
-                <Grid size={1}>
+                <Grid key="next" size={1}>
                     <ContentNavButton
                         url={content.next.url}
                         icon={<ArrowForwardIosIcon />}

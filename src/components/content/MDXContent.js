@@ -1,4 +1,7 @@
-import React, { useEffect,useState } from 'react'
+
+'use client'
+
+import * as React from 'react'
 import * as prod from 'react/jsx-runtime'
 
 import { Box, Divider } from '@mui/material'
@@ -20,9 +23,9 @@ import {
 } from '@pog/components/elements'
 
 const MDXContent = ({ content }) => {
-    const [renderedContent, setRenderedContent] = useState(null)
+    const [renderedContent, setRenderedContent] = React.useState(null)
 
-    useEffect(() => {
+    React.useEffect(() => {
         if (!content) return
 
         const origin = window.location.origin

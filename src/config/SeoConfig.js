@@ -2,12 +2,14 @@ const APP_NAME = 'POG'
 const APP_TITLE = 'Programação Orientada a Gambiarra'
 const APP_DESCRIPTION =
     'Como transformar o seu trabalho em uma amostra grátis do inferno!'
-const APP_URL = process.env.NEXT_PUBLIC_SITE_URL
+const APP_URL = (
+    process.env.NEXT_PUBLIC_SITE_URL || 'https://livropog.com.br'
+).replace(/\/$/, '')
 const APP_IMAGE = `${APP_URL}/images/default.jpg`
 const APP_IMAGE_OBJECT = {
     url: APP_IMAGE,
-    width: '1200px',
-    height: '630px',
+    width: 1200,
+    height: 630,
 }
 
 const SeoConfig = {
@@ -24,11 +26,11 @@ const SeoConfig = {
         site_name: APP_TITLE,
         images: [
             {
-                url: `${APP_URL}/images/pages/default.jpg`,
+                url: APP_IMAGE,
                 width: 1200,
                 height: 630,
                 alt: APP_TITLE,
-                type: 'image/png',
+                type: 'image/jpeg',
             },
         ],
     },

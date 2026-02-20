@@ -46,16 +46,17 @@ const getBreadcrumbs = (url) => {
 
     const breadcrumbs = []
 
-    const urlParts = url === '/' ? [''] : url.split('/')
+    const urlParts = url === '/' ? [''] : String(url || '').split('/')
 
     let urlPath = ''
 
     urlParts.forEach((urlPart) => {
         if (urlPart == '') {
-            breadcrumbs.push(pages['/'])
+            if (pages['/']) breadcrumbs.push(pages['/'])
         } else if (urlPart) {
             urlPath += `/${urlPart}`
-            breadcrumbs.push(pages[urlPath])
+            const crumb = pages[urlPath]
+            if (crumb) breadcrumbs.push(crumb)
         }
     })
 

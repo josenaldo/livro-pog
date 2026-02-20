@@ -1,33 +1,31 @@
+import { NextResponse } from 'next/server'
+
 import lunr from 'lunr'
 
 import { getSortedChapters, getSortedPosts } from '@pog/data'
 
-const handler = async (req, res) => {
-    const { query, method } = req
+export const runtime = 'nodejs'
 
-    if (method !== 'GET') {
-        return res.status(404).json({ message: 'Serviço não encontrado' })
-    }
-
-    const { q } = query
+export async function GET(request) {
+    const { searchParams } = new URL(request.url)
+    const q = searchParams.get('q')
 
     if (!q) {
-        return res.end(JSON.stringify([]))
+        return NextResponse.json([])
     }
 
     try {
         const chapters = getSortedChapters()
         const posts = getSortedPosts()
-        const documentList = chapters.map((chapter) => {
-            return {
-                url: chapter.url,
-                title: chapter.title,
-                description: chapter.description,
-                content: chapter.body.raw,
-                image: chapter.image,
-                type: 'Capítulo',
-            }
-        })
+
+        const documentList = chapters.map((chapter) => ({
+            url: chapter.url,
+            title: chapter.title,
+            description: chapter.description,
+            content: chapter.body.raw,
+            image: chapter.image,
+            type: 'Capítulo',
+        }))
 
         posts.forEach((post) => {
             documentList.push({
@@ -40,7 +38,7 @@ const handler = async (req, res) => {
             })
         })
 
-        const documents = documentList.reduce(function (memo, doc) {
+        const documents = documentList.reduce((memo, doc) => {
             memo[doc.url] = {
                 url: doc.url,
                 title: doc.title,
@@ -63,16 +61,14 @@ const handler = async (req, res) => {
         })
 
         const results = index.search(q)
-
         const searchResults = results.map((result) => documents[result.ref])
 
-        res.statusCode = 200
-        res.setHeader('Content-Type', 'application/json')
-        return res.end(JSON.stringify(searchResults))
+        return NextResponse.json(searchResults)
     } catch (error) {
-        console.log(error)
-        return res.status(error.status || 500).json(error)
+        console.error(error)
+        return NextResponse.json(
+            { message: 'Erro ao processar busca' },
+            { status: 500 }
+        )
     }
 }
-
-export default handler

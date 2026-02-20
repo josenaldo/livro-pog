@@ -1,7 +1,9 @@
-import React from 'react'
+'use client'
+
+import * as React from 'react'
 
 import Link from 'next/link'
-import { useRouter } from 'next/router'
+import { useRouter, useSearchParams } from 'next/navigation'
 
 import SearchIcon from '@mui/icons-material/Search'
 import {
@@ -19,92 +21,82 @@ import {
 } from '@mui/material'
 import axios from 'axios'
 
-import { ContentMainImage,ContentTitle } from '@pog/components/content'
+import { ContentMainImage, ContentTitle } from '@pog/components/content'
 import { ShareLink } from '@pog/components/share'
-import { Layout } from '@pog/components/template'
 
-const SearchPage = () => {
+export function SearchPageClient() {
     const [query, setQuery] = React.useState('')
     const [loading, setLoading] = React.useState(false)
     const [results, setResults] = React.useState([])
+
     const router = useRouter()
-    const { q } = router.query
+    const searchParams = useSearchParams()
 
-    const search = React.useCallback(async (query) => {
-        router.push('/pesquisa?q=' + query, undefined, { shallow: true })
-        const { data: res } = await axios.get(`/api/search?q=${query}`)
-        setResults(res)
+    const q = searchParams?.get('q') || ''
 
-        setLoading(false)
-    }, [router])
+    const runSearch = React.useCallback(
+        async (nextQuery) => {
+            router.push('/pesquisa?q=' + encodeURIComponent(nextQuery))
+            const { data: res } = await axios.get(
+                `/api/search?q=${encodeURIComponent(nextQuery)}`
+            )
+            setResults(res)
+            setLoading(false)
+        },
+        [router]
+    )
 
     const handleSearch = (e) => {
         e.preventDefault()
+        if (!query) return
         setLoading(true)
-        search(query)
+        runSearch(query)
     }
 
     React.useEffect(() => {
-        if (!router.isReady) return
-
-        const { q } = router.query
-
         if (!q) return
         setLoading(true)
+        setQuery(q)
 
-        const firstSearch = async (q) => {
-            const { data: res } = await axios.get(`/api/search?q=${q}`)
+        const firstSearch = async () => {
+            const { data: res } = await axios.get(
+                `/api/search?q=${encodeURIComponent(q)}`
+            )
             setResults(res)
-
             setLoading(false)
         }
 
-        setQuery(q)
-        firstSearch(q)
-    }, [router.isReady, router.query, setQuery])
+        firstSearch()
+    }, [q])
 
     return (
-        <Layout
-            title="Pesquisa"
-            description="Pesquise por termos no livro Programação Orientada a Gambiarra."
-            icon="tabler/IconHelp"
-            url="/pesquisa"
-        >
-            <Container>
+        <Container>
+            <Box sx={{ my: 5 }}>
+                <ContentTitle title="Pesquisa" />
+                <SearchForm
+                    query={query}
+                    setQuery={setQuery}
+                    handleSearch={handleSearch}
+                    loading={loading}
+                />
+
                 <Box
                     sx={{
-                        my: 5,
+                        display: 'flex',
+                        flexDirection: 'column',
+                        gap: 2,
                     }}
                 >
-                    <ContentTitle title="Pesquisa" />
-                    <SearchForm
-                        query={query}
-                        setQuery={setQuery}
-                        handleSearch={handleSearch}
-                        loading={loading}
-                    />
-                    <Box
-                        sx={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                            gap: 2,
-                        }}
-                    >
-                        {results &&
-                            results.map((result) => (
-                                <ContentResult
-                                    result={result}
-                                    key={result.url}
-                                />
-                            ))}
-                    </Box>
+                    {results?.map((result) => (
+                        <ContentResult result={result} key={result.url} />
+                    ))}
                 </Box>
-            </Container>
-        </Layout>
+            </Box>
+        </Container>
     )
 }
 
-const SearchForm = ({ handleSearch, query, setQuery, loading }) => {
+function SearchForm({ handleSearch, query, setQuery, loading }) {
     return (
         <Box
             sx={{
@@ -150,20 +142,14 @@ const SearchForm = ({ handleSearch, query, setQuery, loading }) => {
                     }}
                 />
             </Box>
-            <Box
-                sx={{
-                    height: '4px',
-                    width: '40%',
-                    py: 1,
-                }}
-            >
+            <Box sx={{ height: '4px', width: '40%', py: 1 }}>
                 {loading && <LinearProgress />}
             </Box>
         </Box>
     )
 }
 
-const ContentResult = ({ result }) => {
+function ContentResult({ result }) {
     return (
         <Card
             sx={{
@@ -215,11 +201,7 @@ const ContentResult = ({ result }) => {
                         <Typography variant="h6" component="h2" color="primary">
                             {result.title}
                         </Typography>
-                        <Chip
-                            label={result.type}
-                            color="secondary"
-                            size="small"
-                        />
+                        <Chip label={result.type} color="secondary" size="small" />
                     </Box>
                     <Typography variant="caption" component="p">
                         {result.description}
@@ -237,5 +219,3 @@ const ContentResult = ({ result }) => {
         </Card>
     )
 }
-
-export default SearchPage

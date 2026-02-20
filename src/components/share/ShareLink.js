@@ -1,4 +1,6 @@
-import React from 'react'
+'use client'
+
+import * as React from 'react'
 
 import ShareIcon from '@mui/icons-material/Share'
 import { Box, IconButton } from '@mui/material'
@@ -28,8 +30,8 @@ const ShareLink = ({ title, description, url, icon, color = 'secondary' }) => {
 
         // Se tiver ícone, construir URL da OG image
         if (icon) {
-            const imageUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/api/og?icon=${encodeURIComponent(icon)}&title=${encodeURIComponent(title)}`
-            
+            const imageUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/api/og?icon=${encodeURIComponent(icon)}&title=${encodeURIComponent(title)}&v=2`
+
             try {
                 const blob = await fetch(imageUrl).then((r) => r.blob())
                 const ext = blob.type.split('/')[1]

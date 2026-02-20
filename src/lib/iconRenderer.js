@@ -14,9 +14,9 @@ import { getIcon } from './iconMapper'
 let _baseImageCache = null
 function getBaseImageDataUrl() {
     if (!_baseImageCache) {
-        const filePath = path.join(process.cwd(), 'public', 'images', 'base.png')
+        const filePath = path.join(process.cwd(), 'public', 'images', 'base.webp')
         const buffer = fs.readFileSync(filePath)
-        _baseImageCache = `data:image/png;base64,${buffer.toString('base64')}`
+        _baseImageCache = `data:image/webp;base64,${buffer.toString('base64')}`
     }
     return _baseImageCache
 }
@@ -63,6 +63,7 @@ export function createOGImageSVG(iconString, title = '') {
     const height = 630
     const iconSize = 400
     const iconColor = 'rgba(255,255,255,0.8)'
+    const titleFontFamily = 'Roboto, system-ui, -apple-system, Segoe UI, Arial, sans-serif'
 
     // Get icon SVG content (paths only, without the outer <svg> wrapper)
     const IconComponent = getIcon(iconString)
@@ -86,8 +87,10 @@ export function createOGImageSVG(iconString, title = '') {
     const iconX = (width - iconSize) / 2
     const iconY = (height - iconSize) / 2
 
-    // Background: base.png embedded as base64 (works inside <img> tags)
+    // Background: base.webp embedded as base64 (works inside <img> tags)
     const baseImageDataUrl = getBaseImageDataUrl()
+
+    const titleLayout = getTitleLayout(title, width)
 
     const svg = `<svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg">
   <defs>
@@ -97,7 +100,7 @@ export function createOGImageSVG(iconString, title = '') {
     </filter>
   </defs>
 
-  <!-- Background: base.png embedded as base64 -->
+  <!-- Background: base.webp embedded as base64 -->
   <image href="${baseImageDataUrl}" width="${width}" height="${height}" x="0" y="0" preserveAspectRatio="xMidYMid slice"/>
 
   <!-- Dark overlay for contrast -->
@@ -117,17 +120,18 @@ export function createOGImageSVG(iconString, title = '') {
   </g>` : ''}
 
   <!-- Title bar -->
-  ${title ? `
-  <rect y="${height - 100}" width="${width}" height="100" fill="rgba(0,0,0,0.6)"/>
-  <text
-    x="${width / 2}"
-    y="${height - 40}"
-    font-family="system-ui, -apple-system, sans-serif"
-    font-size="42"
-    font-weight="bold"
-    fill="#ffffff"
-    text-anchor="middle"
-  >${escapeXML(title)}</text>` : ''}
+    ${titleLayout ? `
+    <rect y="${titleLayout.barY}" width="${width}" height="${titleLayout.barHeight}" fill="rgba(0,0,0,0.62)"/>
+    <text
+        x="${width / 2}"
+        y="${titleLayout.textY}"
+        font-family="${titleFontFamily}"
+        font-size="${titleLayout.fontSize}"
+        font-weight="700"
+        fill="#ffffff"
+        text-anchor="middle"
+        dominant-baseline="middle"
+    >${titleLayout.tspans}</text>` : ''}
 </svg>`.trim()
 
     return svg
@@ -145,5 +149,118 @@ function escapeXML(str) {
         .replace(/'/g, '&apos;')
 }
 
+function normalizeTitle(title) {
+    return String(title || '')
+        .trim()
+        .replace(/\s+/g, ' ')
+}
+
+function splitLongWord(word, maxChars) {
+    if (word.length <= maxChars) return [word]
+    const parts = []
+    for (let i = 0; i < word.length; i += maxChars) {
+        parts.push(word.slice(i, i + maxChars))
+    }
+    return parts
+}
+
+function wrapTextByWords(text, maxCharsPerLine, maxLines) {
+    if (!text) return []
+
+    const words = text.split(' ')
+    const lines = []
+    let current = ''
+
+    for (const word of words) {
+        const safeWords = splitLongWord(word, Math.max(8, maxCharsPerLine))
+        for (const w of safeWords) {
+            const next = current ? `${current} ${w}` : w
+            if (next.length <= maxCharsPerLine) {
+                current = next
+                continue
+            }
+
+            if (current) lines.push(current)
+            current = w
+
+            if (lines.length >= maxLines) {
+                return null
+            }
+        }
+    }
+
+    if (current) lines.push(current)
+    if (lines.length > maxLines) return null
+    return lines
+}
+
+function truncateLine(line, maxChars) {
+    if (line.length <= maxChars) return line
+    const clipped = line.slice(0, Math.max(0, maxChars - 1)).trimEnd()
+    return `${clipped}…`
+}
+
+function getTitleLayout(title, width) {
+    const clean = normalizeTitle(title)
+    if (!clean) return null
+
+    // Layout tuning
+    const maxLines = 2
+    const minFontSize = 28
+    const maxFontSize = 48
+    const paddingX = 72
+    const paddingY = 18
+    const availableWidth = width - paddingX * 2
+
+    // Rough average width per character in Roboto Bold.
+    const charWidthFactor = 0.58
+
+    for (let fontSize = maxFontSize; fontSize >= minFontSize; fontSize -= 2) {
+        const maxCharsPerLine = Math.max(
+            14,
+            Math.floor(availableWidth / (fontSize * charWidthFactor))
+        )
+
+        const lines = wrapTextByWords(clean, maxCharsPerLine, maxLines)
+        if (!lines) continue
+
+        const lineHeight = Math.round(fontSize * 1.22)
+        const barHeight = paddingY * 2 + lineHeight * lines.length
+        const barY = 630 - barHeight
+        const textY = barY + barHeight / 2
+
+        const firstDy = lines.length === 1 ? 0 : -(lineHeight / 2)
+        const tspans = lines
+            .map((l, idx) => {
+                const dy = idx === 0 ? firstDy : lineHeight
+                return `<tspan x="${width / 2}" dy="${dy}">${escapeXML(l)}</tspan>`
+            })
+            .join('')
+
+        return { fontSize, barHeight, barY, textY, tspans }
+    }
+
+    // Fallback: force 2 lines and truncate the last one.
+    const fontSize = minFontSize
+    const maxCharsPerLine = Math.max(14, Math.floor(availableWidth / (fontSize * charWidthFactor)))
+    const roughLines = wrapTextByWords(clean, maxCharsPerLine, maxLines) || [clean]
+    const lines = roughLines.slice(0, maxLines)
+    if (lines.length === maxLines) {
+        lines[maxLines - 1] = truncateLine(lines[maxLines - 1], maxCharsPerLine)
+    }
+    const lineHeight = Math.round(fontSize * 1.22)
+    const barHeight = paddingY * 2 + lineHeight * lines.length
+    const barY = 630 - barHeight
+    const textY = barY + barHeight / 2
+    const firstDy = lines.length === 1 ? 0 : -(lineHeight / 2)
+    const tspans = lines
+        .map((l, idx) => {
+            const dy = idx === 0 ? firstDy : lineHeight
+            return `<tspan x="${width / 2}" dy="${dy}">${escapeXML(l)}</tspan>`
+        })
+        .join('')
+
+    return { fontSize, barHeight, barY, textY, tspans }
+}
 
 

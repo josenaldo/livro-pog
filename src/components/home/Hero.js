@@ -1,6 +1,4 @@
-import Link from 'next/link'
-
-import { Box, Button,Container, Typography } from '@mui/material'
+import { Box, Button, Container, Typography } from '@mui/material'
 
 const gradient = 'linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.8))'
 
@@ -71,7 +69,7 @@ const Hero = () => {
                         }}
                     >
                         <Button
-                            component={Link}
+                            component="a"
                             href="/capitulos"
                             variant="contained"
                             color="primary"
@@ -84,7 +82,7 @@ const Hero = () => {
                             Começar a ler
                         </Button>
                         <Button
-                            component={Link}
+                            component="a"
                             href="/ajude"
                             variant="contained"
                             color="secondary"

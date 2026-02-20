@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -17,11 +19,11 @@ const Logo = ({ textColor = 'text.primary', logoColor }) => {
             }}
         >
             <Box
-            sx={{
-                display: 'flex',
-                flexDirection: 'row',
-                alignItems: 'center',
-            }}
+                sx={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                }}
             >
                 <Image
                     src={`/images/logo/brand-${logoStyle}.png`}

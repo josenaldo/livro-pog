@@ -1,4 +1,6 @@
-import React from 'react'
+'use client'
+
+import * as React from 'react'
 
 import Link from 'next/link'
 
@@ -117,27 +119,32 @@ const Menu = () => {
                             href="/"
                             text="Home"
                             icon={<HomeIcon />}
+                            onClick={() => setOpen(false)}
                         />
 
                         <ListItemLink
                             href="/capitulos"
                             text="Capítulos"
                             icon={<ArticleIcon />}
+                            onClick={() => setOpen(false)}
                         />
                         <ListItemLink
                             href="/ajude"
                             text="Ajude este projeto"
                             icon={<SosIcon />}
+                            onClick={() => setOpen(false)}
                         />
                         <ListItemLink
                             href="/blog"
                             text="BLOG"
                             icon={<AnnouncementIcon />}
+                            onClick={() => setOpen(false)}
                         />
                         <ListItemLink
                             href="/pesquisa"
                             text="Pesquisa"
                             icon={<SearchIcon />}
+                            onClick={() => setOpen(false)}
                         />
 
                         <Divider />
@@ -169,6 +176,7 @@ const Menu = () => {
                                     href={chapter.url}
                                     text={chapter.title}
                                     icon={getChapterTypeIcon(chapter)}
+                                    onClick={() => setOpen(false)}
                                 />
                             ))}
                     </List>
@@ -178,10 +186,10 @@ const Menu = () => {
     )
 }
 
-const ListItemLink = ({ text, href, icon }) => {
+const ListItemLink = ({ text, href, icon, onClick }) => {
     return (
         <ListItem disablePadding>
-            <MuiListItemButton component={Link} href={href}>
+            <MuiListItemButton component={Link} href={href} onClick={onClick}>
                 <ListItemIcon>{icon}</ListItemIcon>
                 <ListItemText primary={text} />
             </MuiListItemButton>

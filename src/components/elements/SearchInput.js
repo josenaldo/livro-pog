@@ -1,9 +1,11 @@
-import React from 'react'
+'use client'
 
-import { useRouter } from 'next/router'
+import * as React from 'react'
+
+import { useRouter } from 'next/navigation'
 
 import SearchIcon from '@mui/icons-material/Search'
-import { Box, IconButton,InputAdornment, TextField } from '@mui/material'
+import { Box, IconButton, InputAdornment, TextField } from '@mui/material'
 
 const SearchInput = ({ id = 'search-input' }) => {
     const [query, setQuery] = React.useState('')
@@ -11,7 +13,7 @@ const SearchInput = ({ id = 'search-input' }) => {
 
     const handleSearch = (event) => {
         event.preventDefault()
-        router.push('/pesquisa?q=' + query)
+        router.push('/pesquisa?q=' + encodeURIComponent(query))
     }
 
     return (

@@ -13,9 +13,7 @@ function ContentAuthorAndDate({ author, date }) {
         <Typography
             component="p"
             variant="caption"
-            sx={(theme) => ({
-                color: theme.palette.text.secondary,
-            })}
+            sx={{ color: 'text.secondary' }}
         >
             {`${authorText} ${dateText}`}
         </Typography>
