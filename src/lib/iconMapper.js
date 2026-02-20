@@ -1,6 +1,6 @@
 /**
  * Icon Mapper
- * 
+ *
  * Maps icon strings (e.g., "tabler/IconRun") to actual icon components.
  * This explicit mapping ensures perfect tree-shaking - only imported icons
  * are included in the bundle (~2-5KB each).
@@ -10,6 +10,7 @@
 import {
     IconAlertTriangle,
     IconBolt,
+    IconBook,
     IconBooks,
     IconBrain,
     IconBrandPython,
@@ -65,6 +66,7 @@ import {
  */
 export const iconMap = {
     // Blog Posts
+    'tabler/IconBook': IconBook,
     'tabler/IconRun': IconRun,
     'tabler/IconHelp': IconHelp,
     'tabler/IconFlag': IconFlag,

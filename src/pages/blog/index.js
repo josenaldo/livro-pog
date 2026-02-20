@@ -1,6 +1,6 @@
 import { Box, Container } from '@mui/material'
 
-import { ContentCard,ContentTitle } from '@pog/components/content'
+import { ContentCard, ContentTitle } from '@pog/components/content'
 import { Layout } from '@pog/components/template'
 import { getSortedPosts } from '@pog/data'
 import { getOgImageUrl } from '@pog/lib'
@@ -46,6 +46,8 @@ const BlogPage = ({ posts }) => {
                                 title={post.title}
                                 text={post.description}
                                 url={post.url}
+                                author={post.author}
+                                date={post.date}
                                 image={getOgImageUrl(post.icon)}
                                 key={post.url}
                             />

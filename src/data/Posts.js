@@ -58,4 +58,4 @@ const getPostData = (slug) => {
     return post
 }
 
-export { getAllPosts, getAllPostsPaths, getPostData,getSortedPosts }
+export { getAllPosts, getAllPostsPaths, getPostData, getSortedPosts }
