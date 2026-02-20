@@ -58,4 +58,4 @@ public/robots.txt
 public/downloads/livro-pog-combined.md
 
 # Lighthouse / analysis temp files
-public/.tmp/
+.tmp

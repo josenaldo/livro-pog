@@ -61,10 +61,18 @@ const Testimonial = () => {
                                 flexDirection: 'column',
                             }}
                         >
-                            <Typography variant="subtitle1" fontWeight="bold">
+                            <Typography
+                                component="p"
+                                variant="subtitle1"
+                                fontWeight="bold"
+                            >
                                 Josenaldo Matos
                             </Typography>
-                            <Typography variant="subtitle2" fontWeight="bold">
+                            <Typography
+                                component="p"
+                                variant="subtitle2"
+                                fontWeight="bold"
+                            >
                                 Autor Irrelevante Anônimo
                             </Typography>
                         </Box>

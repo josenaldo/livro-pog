@@ -37,6 +37,13 @@ const Post = defineDocumentType(() => ({
             type: 'string',
             resolve: (doc) => `/${doc._raw.flattenedPath}`,
         },
+        image: {
+            type: 'string',
+            resolve: (doc) => {
+                const params = new URLSearchParams({ icon: doc.icon, title: doc.title, v: '2' })
+                return `/api/og?${params.toString()}`
+            },
+        },
     },
 }))
 
@@ -107,6 +114,13 @@ const Chapter = defineDocumentType(() => ({
         url: {
             type: 'string',
             resolve: (doc) => `/${doc._raw.flattenedPath}`,
+        },
+        image: {
+            type: 'string',
+            resolve: (doc) => {
+                const params = new URLSearchParams({ icon: doc.icon, title: doc.title, v: '2' })
+                return `/api/og?${params.toString()}`
+            },
         },
     },
 }))

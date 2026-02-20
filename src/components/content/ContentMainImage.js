@@ -2,10 +2,10 @@ import Image from 'next/image'
 
 import { Box, CardMedia } from '@mui/material'
 
-import { APP_IMAGE } from '@pog/config'
+const DEFAULT_IMAGE = '/images/default.jpg'
 
-const ContentMainImage = ({ image, alt, aspectRatio = '16/9' }) => {
-    const contentImage = image || APP_IMAGE
+const ContentMainImage = ({ image, alt, aspectRatio = '16/9', priority = false }) => {
+    const contentImage = image || DEFAULT_IMAGE
     return (
         <CardMedia
             sx={{
@@ -24,9 +24,9 @@ const ContentMainImage = ({ image, alt, aspectRatio = '16/9' }) => {
                         src={contentImage}
                         alt={alt}
                         fill
-                        loading="lazy"
+                        loading={priority ? 'eager' : 'lazy'}
                         style={{ objectFit: 'cover' }}
-                        priority
+                        priority={priority}
                     />
                 </Box>
             )}

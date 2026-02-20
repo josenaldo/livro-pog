@@ -32,6 +32,7 @@ const SearchInput = ({ id = 'search-input' }) => {
                         <InputAdornment position="end">
                             <IconButton
                                 color="secondary"
+                                aria-label="Pesquisar"
                                 disabled={!query}
                                 onClick={handleSearch}
                             >

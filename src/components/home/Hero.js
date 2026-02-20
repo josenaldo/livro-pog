@@ -1,22 +1,40 @@
-import { Box, Button, Container, Typography } from '@mui/material'
+import Image from 'next/image'
 
-const gradient = 'linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.8))'
+import { Box, Button, Container, Typography } from '@mui/material'
 
 const Hero = () => {
     return (
         <Box
             sx={{
-                backgroundImage: {
-                    xs: `${gradient}, url("/images/cover/hero-md.webp")`,
-                    md: `${gradient}, url("/images/cover/hero-lg.webp")`,
-                },
-                backgroundRepeat: 'no-repeat',
-                backgroundSize: 'cover',
-                backgroundPosition: 'top',
+                position: 'relative',
+                overflow: 'hidden',
             }}
         >
+            <Image
+                src="/images/cover/hero-md.webp"
+                alt=""
+                fill
+                priority
+                fetchPriority="high"
+                aria-hidden="true"
+                sizes="100vw"
+                style={{
+                    objectFit: 'cover',
+                    objectPosition: 'top',
+                }}
+            />
+            <Box
+                sx={{
+                    position: 'absolute',
+                    inset: 0,
+                    background:
+                        'linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.8))',
+                }}
+            />
             <Container
                 sx={{
+                    position: 'relative',
+                    zIndex: 1,
                     pt: 5,
                     pb: 5,
                 }}
