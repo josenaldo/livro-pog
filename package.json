@@ -6,6 +6,7 @@
         "build": "next build --webpack",
         "postbuild": "next-sitemap",
         "start": "next start -p 6500",
+        "lint": "eslint src",
         "ebook:markdown": "node scripts/generate-ebook.js",
         "ebook:pdf": "yarn ebook:markdown && pandoc --defaults=scripts/pandoc/ebook-pdf.yaml",
         "ebook:epub": "yarn ebook:markdown && pandoc --defaults=scripts/pandoc/ebook-epub.yaml",

@@ -50,6 +50,11 @@ const nextConfig = {
         NEXT_PUBLIC_GA_ID: process.env.NEXT_PUBLIC_GA_ID || '',
     },
     images: {
+        localPatterns: [
+            { pathname: '/api/og' },
+            { pathname: '/images/**' },
+            { pathname: '/icons/**' },
+        ],
         remotePatterns: [
             { protocol: 'http', hostname: 'localhost' },
             { protocol: 'https', hostname: 'livropog.com.br' },

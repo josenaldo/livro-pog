@@ -1,5 +1,5 @@
-import { createOgImageResponse, OG_HEIGHT, OG_WIDTH } from '../../../../lib/ogImageResponse'
 import { getPostData } from '../../../../data'
+import { createOgImageResponse, OG_HEIGHT, OG_WIDTH } from '../../../../lib/ogImageResponse'
 
 export const runtime = 'nodejs'
 export const size = { width: OG_WIDTH, height: OG_HEIGHT }
