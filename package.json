@@ -15,7 +15,8 @@
         "ebook:docker:pdf": "bash scripts/docker-generate.sh pdf",
         "ebook:docker:epub": "bash scripts/docker-generate.sh epub",
         "ebook:docker:all": "bash scripts/docker-generate.sh all",
-        "lighthouse": "lighthouse http://localhost:6500 --view --chrome-flags='--headless' --output json --output-path .tmp/lighthouse-report.json"
+        "lighthouse": "lighthouse http://localhost:6500 --view --chrome-flags='--headless' --output json --output-path .tmp/lighthouse-report.json",
+        "lighthouse-prod": "lighthouse https://livropog.com.br --view --chrome-flags='--headless' --output json --output-path .tmp/lighthouse-prod-report.json"
     },
     "dependencies": {
         "@ducanh2912/next-pwa": "^10.2.9",
