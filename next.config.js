@@ -46,7 +46,9 @@ const additionalManifestEntries = Array.from(new Set(bookOfflineRoutes)).map(
 
 const withPWA = require('@ducanh2912/next-pwa').default({
     dest: 'public',
-    disable: process.env.NODE_ENV === 'development',
+    disable:
+        process.env.NODE_ENV === 'development' &&
+        process.env.NEXT_PUBLIC_PWA_DEV !== 'true',
     extendDefaultRuntimeCaching: true,
     dynamicStartUrl: false,
     fallbacks: {
@@ -63,8 +65,22 @@ const withPWA = require('@ducanh2912/next-pwa').default({
         additionalManifestEntries,
         runtimeCaching: [
             {
+                urlPattern: ({ url }) =>
+                    url.pathname === '/capitulos' ||
+                    url.pathname.startsWith('/capitulos/'),
+                handler: 'NetworkFirst',
+                options: {
+                    cacheName: 'book-chapters-pages',
+                    networkTimeoutSeconds: 3,
+                    expiration: {
+                        maxEntries: 128,
+                        maxAgeSeconds: 7 * 24 * 60 * 60,
+                    },
+                },
+            },
+            {
                 // Não cacheia a API de geração de OG images — sempre busca da rede
-                urlPattern: /^\/api\/og/,
+                urlPattern: ({ url }) => url.pathname.startsWith('/api/og'),
                 handler: 'NetworkOnly',
             },
         ],
