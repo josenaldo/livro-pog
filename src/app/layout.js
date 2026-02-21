@@ -34,7 +34,6 @@ export const metadata = {
     creator: 'Josenaldo de Oliveira Matos Filho',
     publisher: 'Josenaldo de Oliveira Matos Filho',
     category: 'technology',
-    themeColor: '#673ab7',
     appleWebApp: {
         capable: true,
         title: 'POG',
@@ -73,6 +72,10 @@ export const metadata = {
         description: APP_DESCRIPTION,
         images: [APP_IMAGE],
     },
+}
+
+export const viewport = {
+    themeColor: '#673ab7',
 }
 
 export default function RootLayout({ children }) {

@@ -65,9 +65,34 @@ const withPWA = require('@ducanh2912/next-pwa').default({
         additionalManifestEntries,
         runtimeCaching: [
             {
-                urlPattern: ({ url }) =>
-                    url.pathname === '/capitulos' ||
-                    url.pathname.startsWith('/capitulos/'),
+                urlPattern: ({ request, url }) =>
+                    request.headers.get('RSC') === '1' &&
+                    (url.pathname === '/capitulos' ||
+                        url.pathname.startsWith('/capitulos/')),
+                handler: 'NetworkFirst',
+                options: {
+                    cacheName: 'book-chapters-rsc',
+                    networkTimeoutSeconds: 3,
+                    expiration: {
+                        maxEntries: 256,
+                        maxAgeSeconds: 7 * 24 * 60 * 60,
+                    },
+                    plugins: [
+                        {
+                            cacheKeyWillBeUsed: async ({ request }) => {
+                                const requestUrl = new URL(request.url);
+                                requestUrl.searchParams.delete('_rsc');
+                                return requestUrl.toString()
+                            },
+                        },
+                    ],
+                },
+            },
+            {
+                urlPattern: ({ request, url }) =>
+                    request.mode === 'navigate' &&
+                    (url.pathname === '/capitulos' ||
+                        url.pathname.startsWith('/capitulos/')),
                 handler: 'NetworkFirst',
                 options: {
                     cacheName: 'book-chapters-pages',
