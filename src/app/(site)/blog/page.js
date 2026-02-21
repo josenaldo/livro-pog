@@ -1,6 +1,7 @@
 import { Box, Container } from '@mui/material'
 
-import { ContentCard, ContentTitle } from '@pog/components/content'
+import { ContentCard } from '@pog/components/content/ContentCard'
+import { ContentTitle } from '@pog/components/content/ContentTitle'
 import { getSortedPosts } from '@pog/data'
 
 export const metadata = {

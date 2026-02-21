@@ -3,7 +3,7 @@ import * as React from 'react'
 import DownloadIcon from '@mui/icons-material/Download'
 import { Box, Button, Container, Paper, Typography } from '@mui/material'
 
-import { ContentTitle } from '@pog/components/content'
+import { ContentTitle } from '@pog/components/content/ContentTitle'
 
 const DownloadSection = () => {
     return (

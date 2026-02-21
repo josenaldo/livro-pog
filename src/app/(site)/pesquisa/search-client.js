@@ -21,7 +21,8 @@ import {
 } from '@mui/material'
 import axios from 'axios'
 
-import { ContentMainImage, ContentTitle } from '@pog/components/content'
+import { ContentMainImage } from '@pog/components/content/ContentMainImage'
+import { ContentTitle } from '@pog/components/content/ContentTitle'
 import { ShareLink } from '@pog/components/share'
 
 export function SearchPageClient() {

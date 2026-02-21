@@ -12,7 +12,8 @@ import {
 } from '@mui/material'
 import Grid from '@mui/material/Grid'
 
-import { ContentCover, ContentTitle } from '@pog/components/content'
+import { ContentCover } from '@pog/components/content/ContentCover'
+import { ContentTitle } from '@pog/components/content/ContentTitle'
 import { ShareLink } from '@pog/components/share'
 
 const AJUDE_ICON = 'tabler/IconHeart'

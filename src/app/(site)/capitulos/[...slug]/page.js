@@ -2,7 +2,8 @@ import { notFound } from 'next/navigation'
 
 import { Box, Container, Link as MuiLink, Typography } from '@mui/material'
 
-import { ContentQuote, ContentView } from '@pog/components/content'
+import { ContentQuote } from '@pog/components/content/ContentQuote'
+import { ContentView } from '@pog/components/content/ContentView'
 import { getAllChaptersPaths, getChapterData } from '@pog/data'
 
 const CITE_KEY_PATTERN = /@([A-Za-z0-9_:.#$%&\-+?<>~]+)/g

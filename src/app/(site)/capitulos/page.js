@@ -14,7 +14,7 @@ import {
     ListItemText,
 } from '@mui/material'
 
-import { ContentTitle } from '@pog/components/content'
+import { ContentTitle } from '@pog/components/content/ContentTitle'
 import { ChapterProgress } from '@pog/components/elements'
 import { ShareLink } from '@pog/components/share'
 import { getSortedChapters } from '@pog/data'

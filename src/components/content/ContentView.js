@@ -10,11 +10,9 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
 import { Backdrop, Box, Card, CircularProgress, Divider } from '@mui/material'
 import Grid from '@mui/material/Grid'
 
-import {
-    ContentCover,
-    ContentNavButton,
-    ContentTitle,
-} from '@pog/components/content'
+import { ContentCover } from '@pog/components/content/ContentCover'
+import { ContentNavButton } from '@pog/components/content/ContentNavButton'
+import { ContentTitle } from '@pog/components/content/ContentTitle'
 import { ShareLink } from '@pog/components/share'
 
 const MDXContent = dynamic(() => import('@pog/components/content/MDXContent').then(m => m.MDXContent), {

@@ -2,7 +2,8 @@ import { notFound } from 'next/navigation'
 
 import { Box, Container } from '@mui/material'
 
-import { ContentMeta, ContentView } from '@pog/components/content'
+import { ContentMeta } from '@pog/components/content/ContentMeta'
+import { ContentView } from '@pog/components/content/ContentView'
 import { getAllPostsPaths, getPostData } from '@pog/data'
 
 export function generateStaticParams() {
