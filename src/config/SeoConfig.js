@@ -1,11 +1,9 @@
 const APP_NAME = 'POG'
 const APP_TITLE = 'Programação Orientada a Gambiarra'
 const APP_DESCRIPTION =
-    'Como transformar o seu trabalho em uma amostra grátis do inferno!'
-const APP_URL = (
-    process.env.NEXT_PUBLIC_SITE_URL || 'https://livropog.com.br'
-).replace(/\/$/, '')
-const APP_IMAGE = `${APP_URL}/images/default.jpg`
+    'Como transformar o seu trabalho em uma amostra grátis do inferno, com histórias, técnicas e padrões de gambiarra aplicados ao caos real do desenvolvimento de software.'
+const APP_URL = 'https://livropog.com.br'
+const APP_IMAGE = `${APP_URL}/images/default.jpg?v=3`
 const APP_IMAGE_OBJECT = {
     url: APP_IMAGE,
     width: 1200,
@@ -40,6 +38,7 @@ const SeoConfig = {
         cardType: 'summary_large_image',
     },
     additionalMetaTags: [
+        { name: 'author', content: 'Josenaldo de Oliveira Matos Filho' },
         { name: 'application-name', content: APP_NAME },
         { name: 'apple-mobile-web-app-capable', content: 'yes' },
         { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },

@@ -3,7 +3,7 @@ import { Suspense } from 'react'
 import Script from 'next/script'
 
 import { Footer, Header } from '@pog/components/template'
-import { APP_DESCRIPTION, APP_TITLE, APP_URL } from '@pog/config'
+import { APP_DESCRIPTION, APP_IMAGE, APP_TITLE, APP_URL } from '@pog/config'
 import { GA_TRACKING_ID } from '@pog/lib'
 
 import { Analytics } from './analytics'
@@ -27,7 +27,27 @@ export const metadata = {
         default: APP_TITLE,
         template: '%s | Programação Orientada a Gambiarra',
     },
+    manifest: '/manifest.json',
+    applicationName: 'POG',
     description: APP_DESCRIPTION,
+    authors: [{ name: 'Josenaldo de Oliveira Matos Filho', url: APP_URL }],
+    creator: 'Josenaldo de Oliveira Matos Filho',
+    publisher: 'Josenaldo de Oliveira Matos Filho',
+    category: 'technology',
+    themeColor: '#673ab7',
+    appleWebApp: {
+        capable: true,
+        title: 'POG',
+        statusBarStyle: 'default',
+    },
+    icons: {
+        icon: [
+            { url: '/icons/favicon.ico' },
+            { url: '/icons/32x32-icon.png', sizes: '32x32', type: 'image/png' },
+            { url: '/icons/192x192-icon.png', sizes: '192x192', type: 'image/png' },
+        ],
+        apple: [{ url: '/icons/180x180-icon.png', sizes: '180x180', type: 'image/png' }],
+    },
     alternates: metadataBase ? { canonical: metadataBase } : undefined,
     openGraph: {
         title: APP_TITLE,
@@ -38,7 +58,7 @@ export const metadata = {
         type: 'website',
         images: [
             {
-                url: '/images/default.jpg',
+                url: APP_IMAGE,
                 width: 1200,
                 height: 630,
                 alt: APP_TITLE,
@@ -49,6 +69,9 @@ export const metadata = {
         card: 'summary_large_image',
         creator: '@josenaldomatos',
         site: '@josenaldomatos',
+        title: APP_TITLE,
+        description: APP_DESCRIPTION,
+        images: [APP_IMAGE],
     },
 }
 

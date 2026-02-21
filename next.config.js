@@ -1,12 +1,66 @@
 /** @type {import('next').NextConfig} */
 
+const fs = require('node:fs')
+const path = require('node:path')
+
 const { withContentlayer } = require('next-contentlayer2')
+
+function listMarkdownFiles(dirPath) {
+    const entries = fs.readdirSync(dirPath, { withFileTypes: true })
+    const files = []
+
+    entries.forEach((entry) => {
+        const fullPath = path.join(dirPath, entry.name)
+        if (entry.isDirectory()) {
+            files.push(...listMarkdownFiles(fullPath))
+            return
+        }
+
+        if (entry.isFile() && entry.name.endsWith('.md')) {
+            files.push(fullPath)
+        }
+    })
+
+    return files
+}
+
+function getChapterRoutes() {
+    const chaptersDir = path.join(process.cwd(), 'content', 'capitulos')
+    const chapterFiles = listMarkdownFiles(chaptersDir)
+
+    return chapterFiles
+        .map((absolutePath) => path.relative(chaptersDir, absolutePath))
+        .map((relativePath) => relativePath.replace(/\.md$/, ''))
+        .map((slug) => slug.split(path.sep).join('/'))
+        .map((slug) => `/capitulos/${slug}`)
+        .sort((a, b) => a.localeCompare(b))
+}
+
+const bookOfflineRoutes = ['/', '/capitulos', ...getChapterRoutes()]
+const additionalManifestEntries = Array.from(new Set(bookOfflineRoutes)).map(
+    (url) => ({
+        url,
+        revision: null,
+    })
+)
 
 const withPWA = require('@ducanh2912/next-pwa').default({
     dest: 'public',
     disable: process.env.NODE_ENV === 'development',
     extendDefaultRuntimeCaching: true,
+    dynamicStartUrl: false,
+    fallbacks: {
+        document: '/offline',
+    },
+    publicExcludes: [
+        '!downloads/**/*',
+        '!.tmp/**/*',
+        '!images/cover/**/*',
+        '!images/extras/**/*',
+        '!**/*.xcf',
+    ],
     workboxOptions: {
+        additionalManifestEntries,
         runtimeCaching: [
             {
                 // Não cacheia a API de geração de OG images — sempre busca da rede
