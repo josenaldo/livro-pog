@@ -87,6 +87,8 @@ O efeito colateral mais poderoso desse cenário é a **mutação semântica**:
 - "MVP" vira "produto completo"
 - "ajuste visual" vira "reestruturação arquitetural"
 
+Quando essa mutação chega ao ápice, o requisito vira *technobabble*: parece sofisticado, mas ninguém consegue traduzir em critério de aceite.
+
 Quando requisitos surgem sem trilha clara, o time passa mais tempo discutindo o que precisa ser feito do que fazendo. E quando finalmente faz, implementa metade da regra certa em cima da premissa errada, com ótima performance e total inutilidade.
 
 ### Upfront design (BDUF – geralmente associado ao modelo Waterfall/Cascata)

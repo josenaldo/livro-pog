@@ -23,6 +23,8 @@ anterior5, atual5, anteriorDoAnterior5
 
 Esse padrao costuma vir acompanhado de flags booleans caoticas (`isOk`, `isReady2`, `podeTalvez`), criando fluxo de decisao que parece enquete de rede social.
 
+No limite, a nomeacao vira technobabble: muita pose tecnica, pouca semantica util.
+
 ## Efeito semantico
 
 Nome ruim nao e so "feio". Ele altera custo cognitivo:

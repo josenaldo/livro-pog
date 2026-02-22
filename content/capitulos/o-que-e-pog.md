@@ -60,6 +60,8 @@ Dentre estes sinônimos, temos:
 - **RTI** - Recurso Técnico Inteligente
 - **STCT** - Solução Técnica de Cunho Temporário
 
+Quando a criatividade verbal atinge níveis olímpicos, esse festival de siglas e nomes pomposos vira puro *technobabble*.
+
 No contexto da POGramação, temos também os seguintes sinônimos:
 
 - **ADP** - Adaptação De Programador
@@ -96,6 +98,8 @@ O POGramador deve se utilizar de todo artifício verbal em seu arsenal para most
 Por essa razão, é muito comum o uso do vocábulo *workaround*.
 
 Sempre que você ver um profissional usando o termo *workaround*, saiba que esse profissional é o POGramador de alto nível.
+
+E quando o discurso fica técnico demais sem dizer nada de concreto, não se engane: é *technobabble* em seu estado mais puro.
 
 Outros sinônimos, em inglês, que são poucos usados no Brasil e, portanto, podem aumentar a pontuação do POGramador, são as expressões *kludge*, *jugaad*, *jury rig* e *"quick and dirt"*.
 

@@ -45,6 +45,8 @@ Esse padrão conversa diretamente com smells conhecidos:
 
 Na prática, você troca uma assinatura verbosa por acoplamento implícito: todo mundo precisa "saber de cabeça" os nomes mágicos das chaves.
 
+Quando ninguém mais consegue explicar o contrato sem abrir cinco chamadas diferentes, o que resta é technobabble operacional.
+
 ## Exemplo didático de evolução
 
 ### Versão POG

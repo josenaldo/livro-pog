@@ -16,7 +16,7 @@ Além de empregar POG como acrônimo para Programação Orientada a Gambiarra, t
 
 No mundo do desenvolvimento de software, existe a noção de que uma pog é resultado do esforço laboral de um POGramador. Tal noção, apesar de parecer bastante lógica, é um engano tão ardiloso que é capaz de enganar até mesmo as mentes mais sagazes.
 
-Um POGramador não é o criador da pog. Ele é apenas um conduíte para uma pog que deseja vir a este mundo. O trabalho do POGramador é apenas sumonar essa pog, tal qual faria para sumonar um demônio. Portanto, uma pog não é criada, ela é sumonada. E, para que este ritual seja bem sucedido, é preciso que certos Requisitos sejam cumpridos.
+Um POGramador não é o criador da pog. Ele é apenas um conduíte para uma pog que deseja vir a este mundo. O trabalho do POGramador é apenas sumonar essa pog, tal qual faria para sumonar um demônio. Portanto, uma pog não é criada, ela é sumonada. Em alguns rituais mais avançados, surge até a figura do cangro simondrônico: uma entidade técnico-mística usada para explicar o inexplicável. E, para que este ritual seja bem sucedido, é preciso que certos Requisitos sejam cumpridos.
 
 De que Requisitos estamos falando? Não, não estamos falando de sacrificar um virgem[^fn-virgem]. Estamos falando de condições que afetam as probabilidades do nascimento de uma pog.
 

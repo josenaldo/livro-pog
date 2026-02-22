@@ -16,6 +16,8 @@ icon: "tabler/IconBrain"
 
 Nao e estudo. E incorporacao tecnica.
 
+Quando a defesa da solucao comeca a soar como explicacao pseudo-cientifica improvisada, temos um cangro simondrônico em plena manifestacao.
+
 ## Etapas do transe
 
 1. abre o Google com desespero sincero
