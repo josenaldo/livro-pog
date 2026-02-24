@@ -5,7 +5,8 @@ import HandshakeIcon from '@mui/icons-material/Handshake'
 import InstagramIcon from '@mui/icons-material/Instagram'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import TwitterIcon from '@mui/icons-material/Twitter'
-import { Box, Container, IconButton,Typography } from '@mui/material'
+import { Box, Container, IconButton, Typography } from '@mui/material'
+import { IconBrandBluesky, IconBrandGithub, IconBrandGithubFilled, IconBrandLinkedinFilled, IconGlobeFilled, IconHeartHandshake, IconMail, IconMailFilled, IconRecordMail } from '@tabler/icons-react'
 
 const iconColor = 'text.secondary'
 const textColor = 'text.secondary'
@@ -48,7 +49,7 @@ const Footer = () => {
                     <FooterIcon
                         targetBlank
                         href="https://github.com/josenaldo/livro-pog-1/"
-                        icon={<GitHubIcon />}
+                        icon={<IconBrandGithubFilled size={48} />}
                         label="Repositório do projeto no GitHub"
                     />
                 </Box>
@@ -63,7 +64,7 @@ const Footer = () => {
                     <Typography variant="footerH2" color={textColor}>
                         Ajude esse projeto
                     </Typography>
-                    <FooterIcon href="/ajude" icon={<HandshakeIcon />} label="Ajude esse projeto" />
+                    <FooterIcon href="/ajude" icon={<IconHeartHandshake size={48} />} label="Ajude esse projeto" />
                 </Box>
                 <Box
                     sx={{
@@ -79,48 +80,42 @@ const Footer = () => {
                     <Box
                         sx={{
                             display: 'grid',
-                            gridTemplateColumns: '1fr 1fr 1fr',
+                            gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr',
                         }}
                     >
                         <FooterIcon
                             targetBlank
                             href="https://github.com/josenaldo"
-                            icon={<GitHubIcon />}
+                            icon={<IconBrandGithubFilled />}
                             label="GitHub de Josenaldo Matos"
                         />
                         <FooterIcon
                             targetBlank
                             href="mailto:josenaldo@gmail.com"
-                            icon={<EmailIcon />}
+                            icon={<IconMailFilled />}
                             label="Enviar e-mail para Josenaldo"
                         />
 
                         <FooterIcon
                             targetBlank
-                            href="https://twitter.com/josenaldomatos"
-                            icon={<TwitterIcon />}
-                            label="Twitter de Josenaldo Matos"
+                            href="https://bsky.app/profile/josenaldo.com.br"
+                            icon={<IconBrandBluesky />}
+                            label="Bluesky de Josenaldo Matos"
                         />
                         <FooterIcon
                             targetBlank
                             href="https://linkedin.com/in/josenaldo"
-                            icon={<LinkedInIcon />}
+                            icon={<IconBrandLinkedinFilled />}
                             label="LinkedIn de Josenaldo Matos"
                         />
 
                         <FooterIcon
                             targetBlank
-                            href="https://facebook.com/josenaldo.matos"
-                            icon={<FacebookIcon />}
-                            label="Facebook de Josenaldo Matos"
+                            href="https://josenaldo.com.br"
+                            icon={<IconGlobeFilled />}
+                            label="Site de Josenaldo Matos"
                         />
 
-                        <FooterIcon
-                            targetBlank
-                            href="https://instagram.com/vudureverso"
-                            icon={<InstagramIcon />}
-                            label="Instagram de Josenaldo Matos"
-                        />
                     </Box>
                 </Box>
             </Container>
