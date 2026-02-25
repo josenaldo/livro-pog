@@ -152,4 +152,3 @@ export const getAvailableIcons = () => {
     return Object.keys(iconMap)
 }
 
-export default iconMap
