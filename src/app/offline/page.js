@@ -1,7 +1,7 @@
 import { Box, Button, Container, Typography } from '@mui/material'
 
 export const metadata = {
-    title: 'Offline',
+    title: 'Livro POG Offline',
     robots: { index: false, follow: false },
 }
 

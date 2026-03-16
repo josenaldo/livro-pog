@@ -16,11 +16,13 @@ import {
 
 import { ContentTitle } from '@pog/components/content/ContentTitle'
 import { ChapterProgress } from '@pog/components/elements'
+import { StructuredDataScript } from '@pog/components/seo'
 import { ShareLink } from '@pog/components/share'
 import { getSortedChapters } from '@pog/data'
+import { buildWebPageSchema } from '@pog/lib'
 
 export const metadata = {
-    title: 'Capítulos',
+    title: 'Capitulos do Livro POG',
     description: 'Essa é a lista de capítulos do livro POG.',
 }
 
@@ -42,12 +44,18 @@ export default function CapitulosIndexPage() {
         return <ArticleIcon />
     }
 
-    const title = 'Capítulos'
+    const title = 'Capitulos do Livro POG'
     const description = 'Essa é a lista de capítulos do livro POG.'
     const icon = 'tabler/IconFileText'
+    const pageSchema = buildWebPageSchema({
+        title,
+        description,
+        pathname: '/capitulos',
+    })
 
     return (
         <Container>
+            <StructuredDataScript id="chapters-index-structured-data" data={pageSchema} />
             <Card sx={{ my: 5 }}>
                 <CardContent
                     sx={{

@@ -1,3 +1,4 @@
+export { AeoContent, homeFaqItems } from './AeoContent'
 export { DownloadSection } from './DownloadSection'
 export { Features } from './Features'
 export { Hero } from './Hero'

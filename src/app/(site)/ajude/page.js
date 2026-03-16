@@ -14,9 +14,33 @@ import Grid from '@mui/material/Grid'
 
 import { ContentCover } from '@pog/components/content/ContentCover'
 import { ContentTitle } from '@pog/components/content/ContentTitle'
+import { StructuredDataScript } from '@pog/components/seo'
 import { ShareLink } from '@pog/components/share'
+import { buildFaqSchema, buildWebPageSchema } from '@pog/lib'
 
 const AJUDE_ICON = 'tabler/IconHeart'
+const faqItems = [
+    {
+        question: 'O que e isso aqui?',
+        answer:
+            'O Livro Programacao Orientada a Gambiarra e um projeto autoral de humor tecnico sobre desenvolvimento de software, gambiarra, manutencao e caos em projetos reais.',
+    },
+    {
+        question: 'Como eu posso ajudar?',
+        answer:
+            'Voce pode apoiar o projeto via PIX para incentivar a continuidade da escrita e viabilizar novos materiais relacionados ao livro.',
+    },
+    {
+        question: 'Quando ele fica pronto?',
+        answer:
+            'Nao existe um prazo fechado. O livro evolui continuamente e novos capitulos sao publicados conforme o projeto avanca.',
+    },
+    {
+        question: 'Voce vai lancar uma versao impressa?',
+        answer:
+            'Existe interesse em publicar outros formatos, incluindo ebook e possivelmente impresso, mas isso depende da evolucao do projeto.',
+    },
+]
 
 export const metadata = {
     title: 'Ajude o Livro POG',
@@ -27,9 +51,16 @@ export default function AjudePage() {
     const title = 'Ajude o Livro POG'
     const description =
         'Quer colaborar com a realização do livro POG? Veja aqui como ajudar!'
+    const pageSchema = buildWebPageSchema({
+        title,
+        description: 'Quer colaborar com a realizacao do livro POG? Veja aqui como ajudar!',
+        pathname: '/ajude',
+    })
+    const faqSchema = buildFaqSchema(faqItems)
 
     return (
         <Container>
+            <StructuredDataScript id="ajude-structured-data" data={[pageSchema, faqSchema]} />
             <Card
                 sx={{
                     my: 5,

@@ -12,11 +12,10 @@ const Hero = () => {
         >
             <Image
                 src="/images/cover/hero-md.webp"
-                alt=""
+                alt="Capa ilustrada do livro Programacao Orientada a Gambiarra"
                 fill
                 priority
                 fetchPriority="high"
-                aria-hidden="true"
                 sizes="100vw"
                 style={{
                     objectFit: 'cover',

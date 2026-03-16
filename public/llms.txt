@@ -9,7 +9,7 @@ optimized for consumption by Large Language Models (LLMs) and AI assistants.
 
 ## Pages
 
-- [Descubra os segredos dos maiores experts da indústria da programação!](https://livropog.com.br)
+- [Livro POG: Programacao Orientada a Gambiarra](https://livropog.com.br)
   Como transformar o seu trabalho em uma amostra grátis do inferno com histórias, técnicas e padrões de gambiarra aplicados ao caos real do desenvolvimento de software.
 
 ## Documentation

@@ -22,6 +22,25 @@ function buildBreadcrumbSchema(items = []) {
     }
 }
 
+function buildFaqSchema(items = []) {
+    if (!items.length) {
+        return null
+    }
+
+    return {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: items.map((item) => ({
+            '@type': 'Question',
+            name: item.question,
+            acceptedAnswer: {
+                '@type': 'Answer',
+                text: item.answer,
+            },
+        })),
+    }
+}
+
 function buildSiteSchemas() {
     return [
         {
@@ -110,6 +129,7 @@ export {
     absoluteUrl,
     buildArticleSchema,
     buildBreadcrumbSchema,
+    buildFaqSchema,
     buildSiteSchemas,
     buildWebPageSchema,
 }

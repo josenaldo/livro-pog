@@ -1,14 +1,18 @@
 import {
+    AeoContent,
     DownloadSection,
     Features,
     Hero,
+    homeFaqItems,
     LastNews,
     Testimonial,
 } from '@pog/components/home'
+import { StructuredDataScript } from '@pog/components/seo'
 import { APP_IMAGE, APP_URL } from '@pog/config'
+import { buildFaqSchema, buildWebPageSchema } from '@pog/lib'
 
 export const metadata = {
-    title: 'Descubra os segredos dos maiores experts da indústria da programação!',
+    title: 'Livro POG: Programacao Orientada a Gambiarra',
     description:
         'Como transformar o seu trabalho em uma amostra grátis do inferno com histórias, técnicas e padrões de gambiarra aplicados ao caos real do desenvolvimento de software.',
     authors: [{ name: 'Josenaldo de Oliveira Matos Filho', url: APP_URL }],
@@ -43,10 +47,20 @@ export const metadata = {
 }
 
 export default function HomePage() {
+    const pageSchema = buildWebPageSchema({
+        title: 'Livro POG: Programacao Orientada a Gambiarra',
+        description:
+            'Como transformar o seu trabalho em uma amostra gratis do inferno com historias, tecnicas e padroes de gambiarra aplicados ao caos real do desenvolvimento de software.',
+        pathname: '/',
+    })
+    const faqSchema = buildFaqSchema(homeFaqItems)
+
     return (
         <>
+            <StructuredDataScript id="home-structured-data" data={[pageSchema, faqSchema]} />
             <Hero />
             <Features />
+            <AeoContent />
             <Testimonial />
             <DownloadSection />
             <LastNews />

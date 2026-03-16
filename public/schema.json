@@ -26,8 +26,46 @@
     "/": [
       {
         "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "O que e o Livro POG?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "O Livro Programacao Orientada a Gambiarra e um projeto editorial de humor tecnico sobre caos em software, manutencao dificil, requisitos absurdos, processos falhos e padroes de gambiarra que surgem em projetos reais."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quem deve ler este livro?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "O livro e voltado para desenvolvedores, liderancas tecnicas, estudantes e qualquer pessoa que ja tenha convivido com bugs misteriosos, codigo confuso, prazos irreais, decisoes arquiteturais duvidosas e improvisos que viram regra."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "O conteudo e tecnico ou humoristico?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Os dois. O texto usa satira e exagero como linguagem, mas organiza os exemplos em categorias, tecnicas e padroes que ajudam a reconhecer sintomas reais de degradacao tecnica e operacional em equipes de software."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "O livro esta pronto?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "O projeto continua em evolucao. Ja existem capitulos publicados sobre historia da POG, requisitos, principios, tecnicas e Gambi Design Patterns, e novos trechos sao publicados conforme a escrita avanca."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
         "@type": "WebPage",
-        "name": "Descubra os segredos dos maiores experts da indústria da programação!",
+        "name": "Livro POG: Programacao Orientada a Gambiarra",
         "url": "https://livropog.com.br",
         "description": "Como transformar o seu trabalho em uma amostra grátis do inferno com histórias, técnicas e padrões de gambiarra aplicados ao caos real do desenvolvimento de software."
       }

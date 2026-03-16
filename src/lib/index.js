@@ -4,6 +4,7 @@ export {
     absoluteUrl,
     buildArticleSchema,
     buildBreadcrumbSchema,
+    buildFaqSchema,
     buildSiteSchemas,
     buildWebPageSchema,
 } from './structuredData'
