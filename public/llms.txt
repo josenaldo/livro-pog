@@ -1,0 +1,134 @@
+# Programação Orientada a Gambiarra
+
+> Como transformar o seu trabalho em uma amostra grátis do inferno, com histórias, técnicas e padrões de gambiarra aplicados ao caos real do desenvolvimento de software.
+
+## About
+
+This file provides a structured overview of the documentation and content available on this site,
+optimized for consumption by Large Language Models (LLMs) and AI assistants.
+
+## Pages
+
+- [Descubra os segredos dos maiores experts da indústria da programação!](https://livropog.com.br)
+  Como transformar o seu trabalho em uma amostra grátis do inferno com histórias, técnicas e padrões de gambiarra aplicados ao caos real do desenvolvimento de software.
+
+## Documentation
+
+### blog
+
+- [O Início da gambiarra](https://livropog.com.br/blog/inicio-da-gambiarra)
+- [A História da POG precisa de sua ajuda](https://livropog.com.br/blog/me-ajudem-com-a-historia-da-pog)
+  O Livro POG necessida te sua colaboração!
+- [O Primeiro Rascunho Existe (e eu quase não existi junto)](https://livropog.com.br/blog/primeiro-rascunho)
+  Após quebrar as duas pernas, quase morrer de infecção e sobreviver a uma equipe de IAs mais atrapalhadas que úteis, o primeiro rascunho do livro está pronto.
+- [Primeiros capítulos](https://livropog.com.br/blog/primeiros-capitulos)
+  O não, eu já tenho. Agora eu quero a humilhação!
+- [Quem não tem história, inventa](https://livropog.com.br/blog/quem-nao-tem-historia-inventa)
+  O mergulho na história da POG pode acabar sendo mais profundo do que eu imaginava
+- [Retomando o Projeto](https://livropog.com.br/blog/retomando-o-projeto)
+  Nois trupica, mas num cai!
+
+### capitulos
+
+- [Agradecimentos](https://livropog.com.br/capitulos/agradecimentos)
+  Obrigado a todas as pessoas que contribuíram para meu sucesso e para meu crescimento. Sou o resultado das gambiarras de cada um de vocês.
+- [Conclusões](https://livropog.com.br/capitulos/conclusoes)
+  Conclusões opinativas completamente irrelevantes
+- [Black Cat In A Dark Room](https://livropog.com.br/capitulos/gambi-design-patterns/gdp-black-cat-in-a-dark-room)
+  Black Cat In A Dark Room
+- [Perfectness Execution Bulletproof](https://livropog.com.br/capitulos/gambi-design-patterns/gdp-bulletproof)
+  Perfectness Execution Bulletproof
+- [Commented Code Implementation Comments Forever](https://livropog.com.br/capitulos/gambi-design-patterns/gdp-commented-code-implementation)
+  Commented Code Implementation Comments Forever
+- [Controller Confusion](https://livropog.com.br/capitulos/gambi-design-patterns/gdp-controller-confusion)
+  Controller Confusion
+- [Db Is Our God](https://livropog.com.br/capitulos/gambi-design-patterns/gdp-db-is-our-god)
+  Db Is Our God
+- [Exception Success](https://livropog.com.br/capitulos/gambi-design-patterns/gdp-exception-success)
+  Exception Success
+- [Forceps](https://livropog.com.br/capitulos/gambi-design-patterns/gdp-forceps)
+  Forceps
+- [Hardcoded Data](https://livropog.com.br/capitulos/gambi-design-patterns/gdp-hardcoded-data)
+  Hardcoded Data
+- [Sleeper Human Factor](https://livropog.com.br/capitulos/gambi-design-patterns/gdp-human-factor)
+  Sleeper Human Factor
+- [Mega Zord](https://livropog.com.br/capitulos/gambi-design-patterns/gdp-mega-zord)
+  Mega Zord
+- [No More Layers](https://livropog.com.br/capitulos/gambi-design-patterns/gdp-no-more-layers)
+  No More Layers
+- [Nonsense Flag Nonsense Naming](https://livropog.com.br/capitulos/gambi-design-patterns/gdp-nonsense-flag)
+  Nonsense Flag Nonsense Naming
+- [Ostrich Syndrome Skill](https://livropog.com.br/capitulos/gambi-design-patterns/gdp-ostrich-syndrome-skill)
+  Ostrich Syndrome Skill
+- [WTF / WTH / QPE](https://livropog.com.br/capitulos/gambi-design-patterns/gdp-que-porra-e-essa)
+  WTF / WTH / QPE
+- [Reinvented Square Wheel Helper](https://livropog.com.br/capitulos/gambi-design-patterns/gdp-reinvented-square-wheel-helper)
+  Reinvented Square Wheel Helper
+- [RCP Pattern (Reuse by Copy and Paste)](https://livropog.com.br/capitulos/gambi-design-patterns/gdp-reuse-by-copy-and-paste)
+  RCP Pattern (Reuse by Copy and Paste)
+- [Snow White Returns](https://livropog.com.br/capitulos/gambi-design-patterns/gdp-snow-white-returns)
+  Snow White Returns
+- [String Sushiman](https://livropog.com.br/capitulos/gambi-design-patterns/gdp-string-sushiman)
+  String Sushiman
+- [THUNDER MEGA ZORD](https://livropog.com.br/capitulos/gambi-design-patterns/gdp-thunder-mega-zord)
+  THUNDER MEGA ZORD
+- [You Shall Not Pass](https://livropog.com.br/capitulos/gambi-design-patterns/gdp-you-shall-not-pass)
+  You Shall Not Pass
+- [Gambi Design Patterns](https://livropog.com.br/capitulos/gambi-design-patterns)
+  Padrões de projetos de gambiarra
+- [História da POG](https://livropog.com.br/capitulos/historia)
+  Como assim um papa foi o primeiro POGramador da história?
+- [Introdução](https://livropog.com.br/capitulos/introducao)
+  Como está estruturado o livro Programação Orientada a Gambiearra e o que você vai aprender com ele.
+- [O que é POG?](https://livropog.com.br/capitulos/o-que-e-pog)
+  O que é a Programação Orientada a Gambiarra e qual a importância desses conceitos para o desenvolvimento de software?
+- [Príncípios da POG](https://livropog.com.br/capitulos/principios)
+  Normas que o POGramador deve ter cravadas na alma
+- [Referências](https://livropog.com.br/capitulos/referencias)
+  Trabalhos que viajaram no tempo e copiaram deste livro.
+- [Dimensão Estrutural](https://livropog.com.br/capitulos/requisitos/dimensao-estrutural)
+  Quando a infra estrutura é um berço de capirotagens
+- [Dimensão Humana](https://livropog.com.br/capitulos/requisitos/dimensao-humana)
+  Quando o ser humano cria as condições para a invocação do mal
+- [Dimensão Processual](https://livropog.com.br/capitulos/requisitos/dimensao-processual)
+  Quando os processos são uma receita para o desastre
+- [Dimensão Tecnológica](https://livropog.com.br/capitulos/requisitos/dimensao-tecnologica)
+  Quando a tecnologia age como cúmplice da desgracença
+- [Dimensão Temporal](https://livropog.com.br/capitulos/requisitos/dimensao-temporal)
+  Quando o tempo se resume a uma contagem para o apocalipse
+- [Requisitos da POG](https://livropog.com.br/capitulos/requisitos)
+  Pré-condições para o despertar do Capiroto POGramador
+- [Incremental patching debug](https://livropog.com.br/capitulos/tecnicas/tecnica-incremental-patching-debug)
+  Incremental patching debug
+- [Monkey Patching](https://livropog.com.br/capitulos/tecnicas/tecnica-monkey-patching)
+  Monkey Patching
+- [My precious](https://livropog.com.br/capitulos/tecnicas/tecnica-my-precious)
+  My precious
+- [Psychoding](https://livropog.com.br/capitulos/tecnicas/tecnica-psychoding)
+  Psychoding
+- [Zipomatic versioning](https://livropog.com.br/capitulos/tecnicas/tecnica-zipomatic-versioning)
+  Cada zip, uma versão
+- [Técnicas da POG](https://livropog.com.br/capitulos/tecnicas)
+  POG é fácil de fazer, difícil de masterizar
+
+## Quick Links
+
+- Full Documentation: https://livropog.com.br/llms-full.txt
+- Documentation Manifest: https://livropog.com.br/docs.json
+- AI-Optimized Index: https://livropog.com.br/ai-index.json
+- Sitemap: https://livropog.com.br/sitemap.xml
+
+## For LLMs
+
+To get the complete documentation in a single file, request:
+https://livropog.com.br/llms-full.txt
+
+For structured access to individual pages with metadata:
+https://livropog.com.br/docs.json
+
+For RAG (Retrieval Augmented Generation) systems:
+https://livropog.com.br/ai-index.json
+
+---
+Generated by aeo.js - Answer Engine Optimization for the modern web
+Learn more at https://aeojs.org

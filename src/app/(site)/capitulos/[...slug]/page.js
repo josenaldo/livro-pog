@@ -4,7 +4,10 @@ import { Box, Container, Link as MuiLink, Typography } from '@mui/material'
 
 import { ContentQuote } from '@pog/components/content/ContentQuote'
 import { ContentView } from '@pog/components/content/ContentView'
-import { getAllChaptersPaths, getChapterData } from '@pog/data'
+import { StructuredDataScript } from '@pog/components/seo'
+import { APP_URL } from '@pog/config'
+import { getAllChaptersPaths, getBreadcrumbs, getChapterData } from '@pog/data'
+import { absoluteUrl, buildBreadcrumbSchema, buildWebPageSchema } from '@pog/lib'
 
 const CITE_KEY_PATTERN = /@([A-Za-z0-9_:.#$%&\-+?<>~]+)/g
 const OG_VERSION = '2'
@@ -144,9 +147,14 @@ export async function generateMetadata({ params }) {
     return {
         title,
         description,
+        alternates: {
+            canonical: absoluteUrl(chapter.url),
+        },
         openGraph: {
             title,
             description,
+            type: 'article',
+            url: absoluteUrl(chapter.url),
             images: [
                 {
                     url: ogImage,
@@ -247,9 +255,26 @@ export default async function PaginaCapituloPage({ params }) {
         chapter?.name === 'referencias' ? getUsedReferences({ fs, path }) : null
 
     const isReferencesChapter = chapter.name === 'referencias'
+    const title = chapter.parent ? `${chapter.parentTitle} | ${chapter.title}` : chapter.title
+    const ogImage = chapter.icon
+        ? `${APP_URL}/api/og?icon=${encodeURIComponent(chapter.icon)}&title=${encodeURIComponent(
+            title
+        )}&v=${OG_VERSION}`
+        : undefined
+    const breadcrumbSchema = buildBreadcrumbSchema(getBreadcrumbs(chapter.url))
+    const webPageSchema = buildWebPageSchema({
+        title,
+        description: chapter.description || '',
+        pathname: chapter.url,
+        image: ogImage,
+    })
 
     return (
         <Container>
+            <StructuredDataScript
+                id={`chapter-structured-data-${chapter.name}`}
+                data={[breadcrumbSchema, webPageSchema]}
+            />
             <ContentView
                 content={chapter}
                 contentExtraInfo={

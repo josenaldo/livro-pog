@@ -15,7 +15,7 @@ export const metadata = {
     creator: 'Josenaldo de Oliveira Matos Filho',
     publisher: 'Josenaldo de Oliveira Matos Filho',
     openGraph: {
-        type: 'article',
+        type: 'website',
         title: 'Programação Orientada a Gambiarra',
         description:
             'Como transformar o seu trabalho em uma amostra grátis do inferno com histórias, técnicas e padrões de gambiarra aplicados ao caos real do desenvolvimento de software.',

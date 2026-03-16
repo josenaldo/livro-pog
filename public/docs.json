@@ -1,0 +1,297 @@
+{
+  "version": "1.0",
+  "generated": "2026-03-16T18:58:53.532Z",
+  "site": {
+    "title": "Programação Orientada a Gambiarra",
+    "description": "Como transformar o seu trabalho em uma amostra grátis do inferno, com histórias, técnicas e padrões de gambiarra aplicados ao caos real do desenvolvimento de software.",
+    "url": "https://livropog.com.br"
+  },
+  "documents": [
+    {
+      "url": "https://livropog.com.br",
+      "title": "Descubra os segredos dos maiores experts da indústria da programação!",
+      "description": "Como transformar o seu trabalho em uma amostra grátis do inferno com histórias, técnicas e padrões de gambiarra aplicados ao caos real do desenvolvimento de software."
+    },
+    {
+      "url": "https://livropog.com.br/blog/inicio-da-gambiarra",
+      "title": "O Início da gambiarra",
+      "description": "",
+      "lastModified": "2026-02-17T13:54:59.973Z"
+    },
+    {
+      "url": "https://livropog.com.br/blog/me-ajudem-com-a-historia-da-pog",
+      "title": "A História da POG precisa de sua ajuda",
+      "description": "O Livro POG necessida te sua colaboração!",
+      "lastModified": "2026-02-17T13:54:59.975Z"
+    },
+    {
+      "url": "https://livropog.com.br/blog/primeiro-rascunho",
+      "title": "O Primeiro Rascunho Existe (e eu quase não existi junto)",
+      "description": "Após quebrar as duas pernas, quase morrer de infecção e sobreviver a uma equipe de IAs mais atrapalhadas que úteis, o primeiro rascunho do livro está pronto.",
+      "lastModified": "2026-02-20T00:01:23.941Z"
+    },
+    {
+      "url": "https://livropog.com.br/blog/primeiros-capitulos",
+      "title": "Primeiros capítulos",
+      "description": "O não, eu já tenho. Agora eu quero a humilhação!",
+      "lastModified": "2026-02-17T13:54:59.976Z"
+    },
+    {
+      "url": "https://livropog.com.br/blog/quem-nao-tem-historia-inventa",
+      "title": "Quem não tem história, inventa",
+      "description": "O mergulho na história da POG pode acabar sendo mais profundo do que eu imaginava",
+      "lastModified": "2026-02-17T13:54:59.978Z"
+    },
+    {
+      "url": "https://livropog.com.br/blog/retomando-o-projeto",
+      "title": "Retomando o Projeto",
+      "description": "Nois trupica, mas num cai!",
+      "lastModified": "2026-02-17T13:54:59.980Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/agradecimentos",
+      "title": "Agradecimentos",
+      "description": "Obrigado a todas as pessoas que contribuíram para meu sucesso e para meu crescimento. Sou o resultado das gambiarras de cada um de vocês.",
+      "lastModified": "2026-02-17T13:54:59.982Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/conclusoes",
+      "title": "Conclusões",
+      "description": "Conclusões opinativas completamente irrelevantes",
+      "lastModified": "2026-02-17T13:54:59.984Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/gambi-design-patterns",
+      "title": "Gambi Design Patterns",
+      "description": "Padrões de projetos de gambiarra",
+      "lastModified": "2026-02-17T13:54:59.987Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/gambi-design-patterns/gdp-black-cat-in-a-dark-room",
+      "title": "Black Cat In A Dark Room",
+      "description": "Black Cat In A Dark Room",
+      "lastModified": "2026-02-22T18:59:52.520Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/gambi-design-patterns/gdp-bulletproof",
+      "title": "Perfectness Execution Bulletproof",
+      "description": "Perfectness Execution Bulletproof",
+      "lastModified": "2026-02-17T13:55:00.023Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/gambi-design-patterns/gdp-commented-code-implementation",
+      "title": "Commented Code Implementation Comments Forever",
+      "description": "Commented Code Implementation Comments Forever",
+      "lastModified": "2026-02-17T13:55:00.024Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/gambi-design-patterns/gdp-controller-confusion",
+      "title": "Controller Confusion",
+      "description": "Controller Confusion",
+      "lastModified": "2026-02-17T13:55:00.026Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/gambi-design-patterns/gdp-db-is-our-god",
+      "title": "Db Is Our God",
+      "description": "Db Is Our God",
+      "lastModified": "2026-02-17T13:55:00.027Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/gambi-design-patterns/gdp-exception-success",
+      "title": "Exception Success",
+      "description": "Exception Success",
+      "lastModified": "2026-02-17T13:55:00.028Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/gambi-design-patterns/gdp-forceps",
+      "title": "Forceps",
+      "description": "Forceps",
+      "lastModified": "2026-02-17T13:55:00.030Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/gambi-design-patterns/gdp-hardcoded-data",
+      "title": "Hardcoded Data",
+      "description": "Hardcoded Data",
+      "lastModified": "2026-02-17T13:55:00.031Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/gambi-design-patterns/gdp-human-factor",
+      "title": "Sleeper Human Factor",
+      "description": "Sleeper Human Factor",
+      "lastModified": "2026-02-17T13:55:00.033Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/gambi-design-patterns/gdp-mega-zord",
+      "title": "Mega Zord",
+      "description": "Mega Zord",
+      "lastModified": "2026-02-17T13:55:00.034Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/gambi-design-patterns/gdp-no-more-layers",
+      "title": "No More Layers",
+      "description": "No More Layers",
+      "lastModified": "2026-02-17T13:55:00.036Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/gambi-design-patterns/gdp-nonsense-flag",
+      "title": "Nonsense Flag Nonsense Naming",
+      "description": "Nonsense Flag Nonsense Naming",
+      "lastModified": "2026-02-22T18:59:52.520Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/gambi-design-patterns/gdp-ostrich-syndrome-skill",
+      "title": "Ostrich Syndrome Skill",
+      "description": "Ostrich Syndrome Skill",
+      "lastModified": "2026-02-17T13:55:00.039Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/gambi-design-patterns/gdp-que-porra-e-essa",
+      "title": "WTF / WTH / QPE",
+      "description": "WTF / WTH / QPE",
+      "lastModified": "2026-02-17T19:52:44.242Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/gambi-design-patterns/gdp-reinvented-square-wheel-helper",
+      "title": "Reinvented Square Wheel Helper",
+      "description": "Reinvented Square Wheel Helper",
+      "lastModified": "2026-02-17T13:55:00.042Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/gambi-design-patterns/gdp-reuse-by-copy-and-paste",
+      "title": "RCP Pattern (Reuse by Copy and Paste)",
+      "description": "RCP Pattern (Reuse by Copy and Paste)",
+      "lastModified": "2026-02-17T13:55:00.044Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/gambi-design-patterns/gdp-snow-white-returns",
+      "title": "Snow White Returns",
+      "description": "Snow White Returns",
+      "lastModified": "2026-02-17T13:55:00.046Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/gambi-design-patterns/gdp-string-sushiman",
+      "title": "String Sushiman",
+      "description": "String Sushiman",
+      "lastModified": "2026-02-17T13:55:00.048Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/gambi-design-patterns/gdp-thunder-mega-zord",
+      "title": "THUNDER MEGA ZORD",
+      "description": "THUNDER MEGA ZORD",
+      "lastModified": "2026-02-17T13:55:00.049Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/gambi-design-patterns/gdp-you-shall-not-pass",
+      "title": "You Shall Not Pass",
+      "description": "You Shall Not Pass",
+      "lastModified": "2026-02-17T13:55:00.051Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/historia",
+      "title": "História da POG",
+      "description": "Como assim um papa foi o primeiro POGramador da história?",
+      "lastModified": "2026-02-17T13:54:59.989Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/introducao",
+      "title": "Introdução",
+      "description": "Como está estruturado o livro Programação Orientada a Gambiearra e o que você vai aprender com ele.",
+      "lastModified": "2026-02-17T13:54:59.991Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/o-que-e-pog",
+      "title": "O que é POG?",
+      "description": "O que é a Programação Orientada a Gambiarra e qual a importância desses conceitos para o desenvolvimento de software?",
+      "lastModified": "2026-02-22T18:59:52.518Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/principios",
+      "title": "Príncípios da POG",
+      "description": "Normas que o POGramador deve ter cravadas na alma",
+      "lastModified": "2026-02-17T13:54:59.996Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/referencias",
+      "title": "Referências",
+      "description": "Trabalhos que viajaram no tempo e copiaram deste livro.",
+      "lastModified": "2026-02-18T02:05:16.742Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/requisitos",
+      "title": "Requisitos da POG",
+      "description": "Pré-condições para o despertar do Capiroto POGramador",
+      "lastModified": "2026-02-22T20:37:12.709Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/requisitos/dimensao-estrutural",
+      "title": "Dimensão Estrutural",
+      "description": "Quando a infra estrutura é um berço de capirotagens",
+      "lastModified": "2026-02-17T13:55:00.004Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/requisitos/dimensao-humana",
+      "title": "Dimensão Humana",
+      "description": "Quando o ser humano cria as condições para a invocação do mal",
+      "lastModified": "2026-02-17T13:55:00.006Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/requisitos/dimensao-processual",
+      "title": "Dimensão Processual",
+      "description": "Quando os processos são uma receita para o desastre",
+      "lastModified": "2026-02-22T18:59:52.520Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/requisitos/dimensao-tecnologica",
+      "title": "Dimensão Tecnológica",
+      "description": "Quando a tecnologia age como cúmplice da desgracença",
+      "lastModified": "2026-02-17T13:55:00.009Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/requisitos/dimensao-temporal",
+      "title": "Dimensão Temporal",
+      "description": "Quando o tempo se resume a uma contagem para o apocalipse",
+      "lastModified": "2026-02-17T13:55:00.011Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/tecnicas",
+      "title": "Técnicas da POG",
+      "description": "POG é fácil de fazer, difícil de masterizar",
+      "lastModified": "2026-02-17T13:55:00.002Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/tecnicas/tecnica-incremental-patching-debug",
+      "title": "Incremental patching debug",
+      "description": "Incremental patching debug",
+      "lastModified": "2026-02-17T13:55:00.013Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/tecnicas/tecnica-monkey-patching",
+      "title": "Monkey Patching",
+      "description": "Monkey Patching",
+      "lastModified": "2026-02-17T13:55:00.015Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/tecnicas/tecnica-my-precious",
+      "title": "My precious",
+      "description": "My precious",
+      "lastModified": "2026-02-17T13:55:00.016Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/tecnicas/tecnica-psychoding",
+      "title": "Psychoding",
+      "description": "Psychoding",
+      "lastModified": "2026-02-22T19:00:07.710Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/tecnicas/tecnica-zipomatic-versioning",
+      "title": "Zipomatic versioning",
+      "description": "Cada zip, uma versão",
+      "lastModified": "2026-02-17T13:55:00.020Z"
+    }
+  ],
+  "metadata": {
+    "totalDocuments": 47,
+    "generator": "aeo.js",
+    "generatorUrl": "https://aeojs.org"
+  }
+}

@@ -2,9 +2,10 @@ import { Suspense } from 'react'
 
 import Script from 'next/script'
 
+import { StructuredDataScript } from '@pog/components/seo'
 import { Footer, Header } from '@pog/components/template'
 import { APP_DESCRIPTION, APP_IMAGE, APP_TITLE, APP_URL } from '@pog/config'
-import { GA_TRACKING_ID } from '@pog/lib'
+import { buildSiteSchemas, GA_TRACKING_ID } from '@pog/lib'
 
 import { Analytics } from './analytics'
 import { BreadcrumbsAuto } from './breadcrumbs-auto'
@@ -47,7 +48,21 @@ export const metadata = {
         ],
         apple: [{ url: '/icons/180x180-icon.png', sizes: '180x180', type: 'image/png' }],
     },
-    alternates: metadataBase ? { canonical: metadataBase } : undefined,
+    alternates: metadataBase
+        ? {
+            canonical: metadataBase,
+            types: {
+                'text/plain': [
+                    { url: '/llms.txt', title: 'LLM Summary' },
+                    { url: '/llms-full.txt', title: 'Full Content for LLMs' },
+                ],
+                'application/json': [
+                    { url: '/docs.json', title: 'Documentation Manifest' },
+                    { url: '/ai-index.json', title: 'AI-Optimized Index' },
+                ],
+            },
+        }
+        : undefined,
     openGraph: {
         title: APP_TITLE,
         description: APP_DESCRIPTION,
@@ -79,9 +94,12 @@ export const viewport = {
 }
 
 export default function RootLayout({ children }) {
+    const siteSchemas = buildSiteSchemas()
+
     return (
         <html lang="pt-BR">
             <body suppressHydrationWarning>
+                <StructuredDataScript id="site-structured-data" data={siteSchemas} />
                 {/* Global Site Tag (gtag.js) - Google Analytics */}
                 {GA_TRACKING_ID ? (
                     <>

@@ -3,7 +3,9 @@
 const fs = require('node:fs')
 const path = require('node:path')
 
+const { withAeo } = require('aeo.js/next')
 const { withContentlayer } = require('next-contentlayer2')
+const aeoConfig = require('./aeo.config')
 
 function listMarkdownFiles(dirPath) {
     const entries = fs.readdirSync(dirPath, { withFileTypes: true })
@@ -113,6 +115,7 @@ const withPWA = require('@ducanh2912/next-pwa').default({
 })
 
 const nextConfig = {
+    aeo: aeoConfig,
     turbopack: {
         resolveAlias: {
             'contentlayer/generated': './.contentlayer/generated',
@@ -126,12 +129,14 @@ const nextConfig = {
             '@pog/components/content/MDXContent': './src/components/content/MDXContent',
             '@pog/components/elements': './src/components/elements',
             '@pog/components/home': './src/components/home',
+            '@pog/components/seo': './src/components/seo',
             '@pog/components/share': './src/components/share',
             '@pog/components/template': './src/components/template',
             '@pog/config': './src/config',
             '@pog/contexts': './src/contexts',
             '@pog/data': './src/data',
             '@pog/lib': './src/lib',
+            '@pog/lib/contentSource': './src/lib/contentSource',
             '@pog/lib/iconMapper': './src/lib/iconMapper',
             '@pog/styles': './src/styles',
             '@pog/styles/globals.css': './src/styles/globals.css',
@@ -157,6 +162,7 @@ const nextConfig = {
     },
 }
 
-const contentLayerConfig = withContentlayer(nextConfig)
+const aeoEnabledConfig = withAeo(nextConfig)
+const contentLayerConfig = withContentlayer(aeoEnabledConfig)
 
 module.exports = withPWA(contentLayerConfig)
