@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated": "2026-03-16T19:49:08.673Z",
+  "generated": "2026-03-18T10:15:45.796Z",
   "site": {
     "title": "Programação Orientada a Gambiarra",
     "description": "Como transformar o seu trabalho em uma amostra grátis do inferno, com histórias, técnicas e padrões de gambiarra aplicados ao caos real do desenvolvimento de software.",
@@ -208,7 +208,109 @@
       "url": "https://livropog.com.br/capitulos/principios",
       "title": "Príncípios da POG",
       "description": "Normas que o POGramador deve ter cravadas na alma",
-      "lastModified": "2026-02-17T13:54:59.996Z"
+      "lastModified": "2026-03-17T14:34:14.577Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/principios/principio-abstracao-ignorancial",
+      "title": "Abstração Ignorancial",
+      "description": "A prática de ignorar tratamento de erros como se erros não existissem",
+      "lastModified": "2026-03-17T21:36:04.909Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/principios/principio-criatividade-diversificativa",
+      "title": "Criatividade Diversificativa",
+      "description": "A compulsao por fazer diferente do que já existe, só por fazer",
+      "lastModified": "2026-03-18T09:08:27.826Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/principios/principio-criptocodagem",
+      "title": "Criptocodagem",
+      "description": "A arte de escrever código que só o autor entende (e olhe lá)",
+      "lastModified": "2026-03-18T09:01:26.272Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/principios/principio-devaneio-entusiasmado",
+      "title": "Devaneio Entusiasmado",
+      "description": "O otimismo irracional de que nada pode dar errado",
+      "lastModified": "2026-03-17T21:37:01.815Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/principios/principio-documentacao-espartana",
+      "title": "Documentação Espartana",
+      "description": "A crença de que código bom se explica sozinho e comentários são fraqueza",
+      "lastModified": "2026-03-18T09:01:26.272Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/principios/principio-economia-linear",
+      "title": "Economia Linear",
+      "description": "A obsessao por reduzir linhas de código a qualquer custo",
+      "lastModified": "2026-03-18T09:03:40.134Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/principios/principio-enjambracao-criativistica",
+      "title": "Enjambração Criativística",
+      "description": "A arte de reutilizar código de forma criativa, ignorando completamente o propósito original",
+      "lastModified": "2026-03-18T09:01:09.233Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/principios/principio-foco-morcegativo",
+      "title": "Foco Morcegativo",
+      "description": "A procrastinação elevada a prática de engenharia",
+      "lastModified": "2026-03-18T09:04:35.904Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/principios/principio-imperativo-funcional",
+      "title": "Imperativo Funcional",
+      "description": "O princípio supremo de que, se funciona, está pronto",
+      "lastModified": "2026-03-18T09:02:18.702Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/principios/principio-insistimento-determinante",
+      "title": "Insistimento Determinante",
+      "description": "A fé inabalável de que, na próxima tentativa, vai funcionar",
+      "lastModified": "2026-03-17T21:36:04.831Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/principios/principio-onisciencia-finita",
+      "title": "Onisciência Finita",
+      "description": "A convicção de que o que você já sabe é suficiente para qualquer desafio",
+      "lastModified": "2026-03-18T09:07:13.551Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/principios/principio-proatividade-egocentrica",
+      "title": "Proatividade Egocêntrica",
+      "description": "A convicção inabalável de que seu jeito é o melhor jeito",
+      "lastModified": "2026-03-17T21:32:42.973Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/principios/principio-redirecao-tangencial",
+      "title": "Redireção Tangencial",
+      "description": "A arte milenar de desviar a culpa para qualquer entidade que não seja você",
+      "lastModified": "2026-03-18T09:04:17.158Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/principios/principio-reflexao-reprodutoria",
+      "title": "Reflexão Reprodutória",
+      "description": "Copiar código alheio como se fosse seu, sem remorso nem compreensão",
+      "lastModified": "2026-03-18T09:04:05.898Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/principios/principio-shit",
+      "title": "SHIT — Sem Habilidade, Improviso Total",
+      "description": "Quando falta conhecimento técnico e sobra criatividade desesperada",
+      "lastModified": "2026-03-18T09:03:19.965Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/principios/principio-simplicidade-indolente",
+      "title": "Simplicidade Indolente",
+      "description": "Se está funcionando sem isso, não precisa adicionar",
+      "lastModified": "2026-03-18T09:02:18.718Z"
+    },
+    {
+      "url": "https://livropog.com.br/capitulos/principios/principio-teorema-de-namarra",
+      "title": "O Teorema de Namarra",
+      "description": "Quando nada funciona, muda na marra que uma hora resolve",
+      "lastModified": "2026-03-18T09:01:26.273Z"
     },
     {
       "url": "https://livropog.com.br/capitulos/referencias",
@@ -262,7 +364,7 @@
       "url": "https://livropog.com.br/capitulos/tecnicas/tecnica-incremental-patching-debug",
       "title": "Incremental patching debug",
       "description": "Incremental patching debug",
-      "lastModified": "2026-02-17T13:55:00.013Z"
+      "lastModified": "2026-03-18T00:06:03.014Z"
     },
     {
       "url": "https://livropog.com.br/capitulos/tecnicas/tecnica-monkey-patching",
@@ -290,7 +392,7 @@
     }
   ],
   "metadata": {
-    "totalDocuments": 47,
+    "totalDocuments": 64,
     "generator": "aeo.js",
     "generatorUrl": "https://aeojs.org"
   }

@@ -82,6 +82,40 @@ optimized for consumption by Large Language Models (LLMs) and AI assistants.
   Como está estruturado o livro Programação Orientada a Gambiearra e o que você vai aprender com ele.
 - [O que é POG?](https://livropog.com.br/capitulos/o-que-e-pog)
   O que é a Programação Orientada a Gambiarra e qual a importância desses conceitos para o desenvolvimento de software?
+- [Abstração Ignorancial](https://livropog.com.br/capitulos/principios/principio-abstracao-ignorancial)
+  A prática de ignorar tratamento de erros como se erros não existissem
+- [Criatividade Diversificativa](https://livropog.com.br/capitulos/principios/principio-criatividade-diversificativa)
+  A compulsao por fazer diferente do que já existe, só por fazer
+- [Criptocodagem](https://livropog.com.br/capitulos/principios/principio-criptocodagem)
+  A arte de escrever código que só o autor entende (e olhe lá)
+- [Devaneio Entusiasmado](https://livropog.com.br/capitulos/principios/principio-devaneio-entusiasmado)
+  O otimismo irracional de que nada pode dar errado
+- [Documentação Espartana](https://livropog.com.br/capitulos/principios/principio-documentacao-espartana)
+  A crença de que código bom se explica sozinho e comentários são fraqueza
+- [Economia Linear](https://livropog.com.br/capitulos/principios/principio-economia-linear)
+  A obsessao por reduzir linhas de código a qualquer custo
+- [Enjambração Criativística](https://livropog.com.br/capitulos/principios/principio-enjambracao-criativistica)
+  A arte de reutilizar código de forma criativa, ignorando completamente o propósito original
+- [Foco Morcegativo](https://livropog.com.br/capitulos/principios/principio-foco-morcegativo)
+  A procrastinação elevada a prática de engenharia
+- [Imperativo Funcional](https://livropog.com.br/capitulos/principios/principio-imperativo-funcional)
+  O princípio supremo de que, se funciona, está pronto
+- [Insistimento Determinante](https://livropog.com.br/capitulos/principios/principio-insistimento-determinante)
+  A fé inabalável de que, na próxima tentativa, vai funcionar
+- [Onisciência Finita](https://livropog.com.br/capitulos/principios/principio-onisciencia-finita)
+  A convicção de que o que você já sabe é suficiente para qualquer desafio
+- [Proatividade Egocêntrica](https://livropog.com.br/capitulos/principios/principio-proatividade-egocentrica)
+  A convicção inabalável de que seu jeito é o melhor jeito
+- [Redireção Tangencial](https://livropog.com.br/capitulos/principios/principio-redirecao-tangencial)
+  A arte milenar de desviar a culpa para qualquer entidade que não seja você
+- [Reflexão Reprodutória](https://livropog.com.br/capitulos/principios/principio-reflexao-reprodutoria)
+  Copiar código alheio como se fosse seu, sem remorso nem compreensão
+- [SHIT — Sem Habilidade, Improviso Total](https://livropog.com.br/capitulos/principios/principio-shit)
+  Quando falta conhecimento técnico e sobra criatividade desesperada
+- [Simplicidade Indolente](https://livropog.com.br/capitulos/principios/principio-simplicidade-indolente)
+  Se está funcionando sem isso, não precisa adicionar
+- [O Teorema de Namarra](https://livropog.com.br/capitulos/principios/principio-teorema-de-namarra)
+  Quando nada funciona, muda na marra que uma hora resolve
 - [Príncípios da POG](https://livropog.com.br/capitulos/principios)
   Normas que o POGramador deve ter cravadas na alma
 - [Referências](https://livropog.com.br/capitulos/referencias)
