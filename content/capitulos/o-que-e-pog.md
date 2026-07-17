@@ -73,6 +73,13 @@ No contexto da POGramação, temos também os seguintes sinônimos:
 - **RAP** - Recurso Avançado de Programação
 - **TAPA** - Técnica Alternativa de Programação Avançada
 
+Já no contexto das discussões técnicas e científicas, a gambiarra se apresenta com os seguintes sinônimos:
+
+- **CHUTE** - Conjectura Heurística Utilizando Tentativas Empíricas
+- **Análise KICK** - Knowledge Intensive Creative Konjecture
+
+Você pode aplicar esses termos, por exemplo, afirmando que vai fazer uma análise KICK para resolver um problema de programação, ou que vai usar um CHUTE para embasar uma decisão de projeto ou para refutar uma argumentação com a qual nao concorda.
+
 Podemos notar como o uso de siglas é comum na denominação da Gambiarra. Portanto, a lógica é clara: se algo, na computação, é nomeado com uma sigla, provavelmente é uma Gambiarra.
 
 O exemplo mais notório dessa regra é o acrônimo recursivo GNU, que significa "GNU is Not Unix", e denota uma Gambiarra que se gambiarriza em si mesma.
